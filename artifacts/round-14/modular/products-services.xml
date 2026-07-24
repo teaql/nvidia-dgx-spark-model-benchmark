@@ -1,18 +1,18 @@
-<product id="0u64" name="Unknown" _module_key="products-services" merchant_id="0u64"/>
-<service id="0u64" name="Unknown" _module_key="products-services" merchant_id="0u64"/>
-<moving_service id="0u64" name="Unknown" _module_key="products-services" merchant_id="0u64"/>
-<cleaning_service id="0u64" name="Unknown" _module_key="products-services" merchant_id="0u64"/>
-<box_rental id="0u64" name="Unknown" _module_key="products-services" merchant_id="0u64"/>
-<service_configuration id="0u64" name="Unknown" _module_key="products-services" merchant_id="0u64"/>
-<price_list id="0u64" name="Unknown" _module_key="products-services" merchant_id="0u64"/>
-<service_price id="0u64" name="Unknown" _module_key="products-services" merchant_id="0u64"/>
-<service_bundle id="0u64" name="Unknown" _module_key="products-services" merchant_id="0u64"/>
-<storage_unit id="0u64" name="Unknown" _module_key="products-services" merchant_id="0u64"/>
-<packing_material id="0u64" name="Unknown" _module_key="products-services" merchant_id="0u64"/>
-<insurance_addon id="0u64" name="Unknown" _module_key="products-services" merchant_id="0u64"/>
-<piano_handling id="0u64" name="Unknown" _module_key="products-services" merchant_id="0u64"/>
-<stair_fee id="0u64" name="Unknown" _module_key="products-services" merchant_id="0u64"/>
-<long_carry_fee id="0u64" name="Unknown" _module_key="products-services" merchant_id="0u64"/>
-<hoisting_service id="0u64" name="Unknown" _module_key="products-services" merchant_id="0u64"/>
-<vehicle_transport id="0u64" name="Unknown" _module_key="products-services" merchant_id="0u64"/>
-<pet_relocation_service id="0u64" name="Unknown" _module_key="products-services" merchant_id="0u64"/>
+<product _module_key="products-services" merchant_id="0u64"/>
+<service _module_key="products-services" merchant_id="0u64"/>
+<moving_service _module_key="products-services" merchant_id="0u64"/>
+<cleaning_service _module_key="products-services" merchant_id="0u64"/>
+<box_rental _module_key="products-services" merchant_id="0u64"/>
+<service_configuration _module_key="products-services" merchant_id="0u64"/>
+<price_list _module_key="products-services" merchant_id="0u64"/>
+<service_price _module_key="products-services" merchant_id="0u64"/>
+<service_bundle _module_key="products-services" merchant_id="0u64"/>
+<storage_unit _module_key="products-services" merchant_id="0u64"/>
+<packing_material _module_key="products-services" merchant_id="0u64"/>
+<insurance_addon _module_key="products-services" merchant_id="0u64"/>
+<piano_handling _module_key="products-services" merchant_id="0u64"/>
+<stair_fee _module_key="products-services" merchant_id="0u64"/>
+<long_carry_fee _module_key="products-services" merchant_id="0u64"/>
+<hoisting_service _module_key="products-services" merchant_id="0u64"/>
+<vehicle_transport _module_key="products-services" merchant_id="0u64"/>
+<pet_relocation_service _module_key="products-services" merchant_id="0u64"/>

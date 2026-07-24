@@ -1,7 +1,7 @@
-<api_client id="0u64" name="Unknown" _module_key="api-integrations" merchant_id="0u64"/>
-<api_endpoint id="0u64" name="Unknown" _module_key="api-integrations" merchant_id="0u64"/>
-<webhook id="0u64" name="Unknown" _module_key="api-integrations" merchant_id="0u64"/>
-<webhook_delivery id="0u64" name="Unknown" _module_key="api-integrations" merchant_id="0u64"/>
-<integration_mapping id="0u64" name="Unknown" _module_key="api-integrations" merchant_id="0u64"/>
-<sync_job id="0u64" name="Unknown" _module_key="api-integrations" merchant_id="0u64"/>
-<api_rate_limit id="0u64" name="Unknown" _module_key="api-integrations" merchant_id="0u64"/>
+<api_client _module_key="api-integrations" merchant_id="0u64"/>
+<api_endpoint _module_key="api-integrations" merchant_id="0u64"/>
+<webhook _module_key="api-integrations" merchant_id="0u64"/>
+<webhook_delivery _module_key="api-integrations" merchant_id="0u64"/>
+<integration_mapping _module_key="api-integrations" merchant_id="0u64"/>
+<sync_job _module_key="api-integrations" merchant_id="0u64"/>
+<api_rate_limit _module_key="api-integrations" merchant_id="0u64"/>

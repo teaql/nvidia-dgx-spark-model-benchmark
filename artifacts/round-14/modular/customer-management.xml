@@ -1,16 +1,16 @@
-<customer id="0u64" name="Unknown" _module_key="customer-management" merchant_id="0u64"/>
-<private_customer_profile id="0u64" name="Unknown" _module_key="customer-management" merchant_id="0u64"/>
-<corporate_customer_profile id="0u64" name="Unknown" _module_key="customer-management" merchant_id="0u64"/>
-<customer_contact id="0u64" name="Unknown" _module_key="customer-management" merchant_id="0u64"/>
-<billing_profile id="0u64" name="Unknown" _module_key="customer-management" merchant_id="0u64"/>
-<customer_history id="0u64" name="Unknown" _module_key="customer-management" merchant_id="0u64"/>
-<customer_preference id="0u64" name="Unknown" _module_key="customer-management" merchant_id="0u64"/>
-<customer_consent id="0u64" name="Unknown" _module_key="customer-management" merchant_id="0u64"/>
-<referral_code id="0u64" name="Unknown" _module_key="customer-management" merchant_id="0u64"/>
-<loyalty_tier id="0u64" name="Unknown" _module_key="customer-management" merchant_id="0u64"/>
-<complaint_ticket id="0u64" name="Unknown" _module_key="customer-management" merchant_id="0u64"/>
-<resolution_offer id="0u64" name="Unknown" _module_key="customer-management" merchant_id="0u64"/>
-<vip_status id="0u64" name="Unknown" _module_key="customer-management" merchant_id="0u64"/>
-<do_not_contact_list id="0u64" name="Unknown" _module_key="customer-management" merchant_id="0u64"/>
-<customer_note id="0u64" name="Unknown" _module_key="customer-management" merchant_id="0u64"/>
-<communication_log id="0u64" name="Unknown" _module_key="customer-management" merchant_id="0u64"/>
+<customer _module_key="customer-management" merchant_id="0u64"/>
+<private_customer_profile _module_key="customer-management" merchant_id="0u64"/>
+<corporate_customer_profile _module_key="customer-management" merchant_id="0u64"/>
+<customer_contact _module_key="customer-management" merchant_id="0u64"/>
+<billing_profile _module_key="customer-management" merchant_id="0u64"/>
+<customer_history _module_key="customer-management" merchant_id="0u64"/>
+<customer_preference _module_key="customer-management" merchant_id="0u64"/>
+<customer_consent _module_key="customer-management" merchant_id="0u64"/>
+<referral_code _module_key="customer-management" merchant_id="0u64"/>
+<loyalty_tier _module_key="customer-management" merchant_id="0u64"/>
+<complaint_ticket _module_key="customer-management" merchant_id="0u64"/>
+<resolution_offer _module_key="customer-management" merchant_id="0u64"/>
+<vip_status _module_key="customer-management" merchant_id="0u64"/>
+<do_not_contact_list _module_key="customer-management" merchant_id="0u64"/>
+<customer_note _module_key="customer-management" merchant_id="0u64"/>
+<communication_log _module_key="customer-management" merchant_id="0u64"/>

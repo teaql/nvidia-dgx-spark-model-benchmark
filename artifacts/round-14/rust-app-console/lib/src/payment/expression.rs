@@ -27,13 +27,8 @@ impl<'a> PaymentExpression<'a> {
         self.resolve().expect("Relation was legitimately null in database!")
     }
 
-    pub fn get_id(self) -> crate::ValueExpression<'a, String> {
+    pub fn get_id(self) -> crate::ValueExpression<'a, u64> {
         let next = self.result.and_then("id", |entity| entity.eval_id());
-        crate::ValueExpression::new(next, self.root_desc.clone())
-    }
-
-    pub fn get_name(self) -> crate::ValueExpression<'a, String> {
-        let next = self.result.and_then("name", |entity| entity.eval_name());
         crate::ValueExpression::new(next, self.root_desc.clone())
     }
 

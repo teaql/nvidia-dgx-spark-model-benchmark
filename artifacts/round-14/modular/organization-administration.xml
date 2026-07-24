@@ -1,3 +1,3 @@
-<merchant id="0u64" name="Unknown" _module_key="organization-administration"/>
-<branch id="0u64" name="Unknown" _module_key="organization-administration" merchant_id="0u64"/>
-<franchise id="0u64" name="Unknown" _module_key="organization-administration" merchant_id="0u64"/>
+<merchant _module_key="organization-administration"/>
+<branch _module_key="organization-administration" merchant_id="0u64"/>
+<franchise _module_key="organization-administration" merchant_id="0u64"/>

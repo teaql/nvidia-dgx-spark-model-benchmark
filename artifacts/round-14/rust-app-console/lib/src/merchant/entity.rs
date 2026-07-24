@@ -12,11 +12,8 @@ use teaql_macros::TeaqlEntity;
 #[derive(Clone, Debug, PartialEq, TeaqlEntity)]
 #[teaql(entity = "Merchant", table = "merchant_data", data_service = "sqlite")]
 pub struct Merchant {
-// @source organization-administration.xml:1
-    id: String,
-
-// @source organization-administration.xml:1
-    name: String,
+#[teaql(id)]
+    id: u64,
 #[teaql(version)]
     version: i64,
     #[teaql(dynamic)]
@@ -34,8 +31,7 @@ impl Merchant {
 
     pub(crate) fn runtime_new(root: teaql_runtime::EntityRoot) -> Self {
         Self {
-            id: String::new(),
-            name: String::new(),
+            id: 0_u64,
             version: 0_i64,
             dynamic: BTreeMap::new(),
             root,
@@ -59,13 +55,13 @@ impl Merchant {
         self.__load_state = state;
     }
 
-    pub fn id(&self) -> String {
-        self.changed_id().and_then(|value| value.try_text().map(|value| value.to_owned())).unwrap_or_else(|| self.id.clone())
+    pub fn id(&self) -> u64 {
+        self.changed_id().and_then(|value| value.try_u64()).unwrap_or(self.id)
     }
 
     pub fn update_id(&mut self, value: impl Into<teaql_core::Value>) -> &mut Self {
         let value = value.into();
-        self.id = value.try_text().map(|value| value.trim().to_owned()).unwrap_or_else(|| self.id.clone());
+        self.id = value.try_u64().unwrap_or(self.id.clone());
         self.root.set(self.entity_key(), "id", value);
         self
     }
@@ -74,33 +70,11 @@ impl Merchant {
         self.root.get(&self.entity_key(), "id")
     }
 
-    pub fn eval_id(&self) -> teaql_core::eval::EvalResult<String> {
+    pub fn eval_id(&self) -> teaql_core::eval::EvalResult<u64> {
         if !self.is_loaded("id") {
                     teaql_core::eval::EvalResult::NotLoaded { failed_node: "id".to_string(), attempted_path: "id".to_string() }
                 } else {
                     teaql_core::eval::EvalResult::Value(self.id())
-                }}
-
-    pub fn name(&self) -> String {
-        self.changed_name().and_then(|value| value.try_text().map(|value| value.to_owned())).unwrap_or_else(|| self.name.clone())
-    }
-
-    pub fn update_name(&mut self, value: impl Into<teaql_core::Value>) -> &mut Self {
-        let value = value.into();
-        self.name = value.try_text().map(|value| value.trim().to_owned()).unwrap_or_else(|| self.name.clone());
-        self.root.set(self.entity_key(), "name", value);
-        self
-    }
-
-    pub fn changed_name(&self) -> Option<teaql_core::Value> {
-        self.root.get(&self.entity_key(), "name")
-    }
-
-    pub fn eval_name(&self) -> teaql_core::eval::EvalResult<String> {
-        if !self.is_loaded("name") {
-                    teaql_core::eval::EvalResult::NotLoaded { failed_node: "name".to_string(), attempted_path: "name".to_string() }
-                } else {
-                    teaql_core::eval::EvalResult::Value(self.name())
                 }}
 
     pub fn version(&self) -> i64 {

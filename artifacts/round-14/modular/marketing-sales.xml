@@ -1,15 +1,15 @@
-<campaign id="0u64" name="Unknown" _module_key="marketing-sales" merchant_id="0u64"/>
-<discount_code id="0u64" name="Unknown" _module_key="marketing-sales" merchant_id="0u64"/>
-<lead id="0u64" name="Unknown" _module_key="marketing-sales" merchant_id="0u64"/>
-<sales_opportunity id="0u64" name="Unknown" _module_key="marketing-sales" merchant_id="0u64"/>
-<lead_activity id="0u64" name="Unknown" _module_key="marketing-sales" merchant_id="0u64"/>
-<conversion_event id="0u64" name="Unknown" _module_key="marketing-sales" merchant_id="0u64"/>
-<conversion_metric id="0u64" name="Unknown" _module_key="marketing-sales" merchant_id="0u64"/>
-<ad_spend id="0u64" name="Unknown" _module_key="marketing-sales" merchant_id="0u64"/>
-<social_media_post id="0u64" name="Unknown" _module_key="marketing-sales" merchant_id="0u64"/>
-<email_blast id="0u64" name="Unknown" _module_key="marketing-sales" merchant_id="0u64"/>
-<sms_campaign id="0u64" name="Unknown" _module_key="marketing-sales" merchant_id="0u64"/>
-<sales_script id="0u64" name="Unknown" _module_key="marketing-sales" merchant_id="0u64"/>
-<objection_handling_guide id="0u64" name="Unknown" _module_key="marketing-sales" merchant_id="0u64"/>
-<competitor_analysis id="0u64" name="Unknown" _module_key="marketing-sales" merchant_id="0u64"/>
-<sales_territory id="0u64" name="Unknown" _module_key="marketing-sales" merchant_id="0u64"/>
+<campaign _module_key="marketing-sales" merchant_id="0u64"/>
+<discount_code _module_key="marketing-sales" merchant_id="0u64"/>
+<lead _module_key="marketing-sales" merchant_id="0u64"/>
+<sales_opportunity _module_key="marketing-sales" merchant_id="0u64"/>
+<lead_activity _module_key="marketing-sales" merchant_id="0u64"/>
+<conversion_event _module_key="marketing-sales" merchant_id="0u64"/>
+<conversion_metric _module_key="marketing-sales" merchant_id="0u64"/>
+<ad_spend _module_key="marketing-sales" merchant_id="0u64"/>
+<social_media_post _module_key="marketing-sales" merchant_id="0u64"/>
+<email_blast _module_key="marketing-sales" merchant_id="0u64"/>
+<sms_campaign _module_key="marketing-sales" merchant_id="0u64"/>
+<sales_script _module_key="marketing-sales" merchant_id="0u64"/>
+<objection_handling_guide _module_key="marketing-sales" merchant_id="0u64"/>
+<competitor_analysis _module_key="marketing-sales" merchant_id="0u64"/>
+<sales_territory _module_key="marketing-sales" merchant_id="0u64"/>

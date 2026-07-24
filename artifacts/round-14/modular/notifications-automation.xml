@@ -1,7 +1,7 @@
-<notification id="0u64" name="Unknown" _module_key="notifications-automation" merchant_id="0u64"/>
-<notification_template id="0u64" name="Unknown" _module_key="notifications-automation" merchant_id="0u64"/>
-<automation_rule id="0u64" name="Unknown" _module_key="notifications-automation" merchant_id="0u64"/>
-<automation_trigger id="0u64" name="Unknown" _module_key="notifications-automation" merchant_id="0u64"/>
-<automation_action id="0u64" name="Unknown" _module_key="notifications-automation" merchant_id="0u64"/>
-<sms_delivery_receipt id="0u64" name="Unknown" _module_key="notifications-automation" merchant_id="0u64"/>
-<email_bounce_log id="0u64" name="Unknown" _module_key="notifications-automation" merchant_id="0u64"/>
+<notification _module_key="notifications-automation" merchant_id="0u64"/>
+<notification_template _module_key="notifications-automation" merchant_id="0u64"/>
+<automation_rule _module_key="notifications-automation" merchant_id="0u64"/>
+<automation_trigger _module_key="notifications-automation" merchant_id="0u64"/>
+<automation_action _module_key="notifications-automation" merchant_id="0u64"/>
+<sms_delivery_receipt _module_key="notifications-automation" merchant_id="0u64"/>
+<email_bounce_log _module_key="notifications-automation" merchant_id="0u64"/>

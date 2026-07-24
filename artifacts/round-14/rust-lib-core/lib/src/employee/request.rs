@@ -46,6 +46,7 @@ impl<R> EmployeeRequest<R> {
     pub(crate) fn new() -> Self {
         Self {
             query: SelectQuery::new("Employee")
+                .project("id")
                 .project("version"),
             relation_selections: Vec::new(),
             relation_filters: Vec::new(),
@@ -461,7 +462,6 @@ impl<R> EmployeeRequest<R> {
     fn dynamic_json_self_field(field: &str) -> Option<&'static str> {
         match field {
             "id" => Some("id"),
-            "name" => Some("name"),
             "merchant_id" => Some("merchant_id"),
             "version" => Some("version"),
             _ => None,
@@ -549,7 +549,6 @@ impl<R> EmployeeRequest<R> {
 
     pub fn select_self(mut self) -> Self {
         self.query = self.query.project("id");
-        self.query = self.query.project("name");
         self.query = self.query.project("merchant_id");
         self.query = self.query.project("version");
         self
@@ -670,26 +669,6 @@ impl<R> EmployeeRequest<R> {
         self
     }
 
-    pub fn select_id(mut self) -> Self {
-        self.query = self.query.project("id");
-        self
-    }
-
-    pub fn project_id(self) -> Self {
-        self.select_id()
-    }
-
-    pub fn select_id_raw(self, raw_sql_segment: impl Into<String>) -> Self {
-        self.select_id_unsafe_raw(UnsafeRawSqlSegment::trusted(raw_sql_segment))
-    }
-
-    pub fn select_id_unsafe_raw(mut self, raw_sql_segment: UnsafeRawSqlSegment) -> Self {
-        self.query_options
-            .raw_projections
-            .push(RawProjection::new("id", raw_sql_segment));
-        self
-    }
-
     pub fn group_by_id(self) -> Self {
         self.group_by("id")
     }
@@ -752,12 +731,6 @@ impl<R> EmployeeRequest<R> {
         self.aggregate_max("id", alias)
     }
 
-    pub fn unselect_id(mut self) -> Self {
-        self.query.projection.retain(|field| field != "id");
-        self.query_options.raw_projections.retain(|projection| projection.property_name != "id");
-        self
-    }
-
 
     pub fn with_id(
         mut self,
@@ -795,47 +768,6 @@ impl<R> EmployeeRequest<R> {
         self
     }
 
-    pub fn with_id_greater_than(mut self, value: impl Into<teaql_core::Value>) -> Self {
-        self.query = self.query.and_filter(Expr::gt("id", value));
-        self
-    }
-
-    pub fn with_id_greater_than_or_equal_to(mut self, value: impl Into<teaql_core::Value>) -> Self {
-        self.query = self.query.and_filter(Expr::gte("id", value));
-        self
-    }
-
-    pub fn with_id_less_than(mut self, value: impl Into<teaql_core::Value>) -> Self {
-        self.query = self.query.and_filter(Expr::lt("id", value));
-        self
-    }
-
-    pub fn with_id_less_than_or_equal_to(mut self, value: impl Into<teaql_core::Value>) -> Self {
-        self.query = self.query.and_filter(Expr::lte("id", value));
-        self
-    }
-
-    pub fn with_id_between(
-        mut self,
-        lower: impl Into<teaql_core::Value>,
-        upper: impl Into<teaql_core::Value>,
-    ) -> Self {
-        self.query = self.query.and_filter(Expr::between("id", lower, upper));
-        self
-    }
-
-    pub fn with_id_between_range<T>(mut self, range: DateRange<T>) -> Self
-    where
-        T: Into<teaql_core::Value>,
-    {
-        self.query = self.query.and_filter(Expr::between(
-            "id",
-            range.start,
-            range.end,
-        ));
-        self
-    }
-
     pub fn with_id_in(
         mut self,
         values: impl IntoIterator<Item = impl Into<teaql_core::Value>>,
@@ -858,63 +790,6 @@ impl<R> EmployeeRequest<R> {
         self
     }
 
-    pub fn with_id_containing(mut self, value: impl Into<String>) -> Self {
-        self.query = self.query.and_filter(Expr::contain("id", value));
-        self
-    }
-
-    pub fn with_id_not_containing(mut self, value: impl Into<String>) -> Self {
-        self.query = self.query.and_filter(Expr::not_contain("id", value));
-        self
-    }
-
-    pub fn with_id_starting_with(mut self, value: impl Into<String>) -> Self {
-        self.query = self.query.and_filter(Expr::begin_with("id", value));
-        self
-    }
-
-    pub fn with_id_not_starting_with(mut self, value: impl Into<String>) -> Self {
-        self.query = self.query.and_filter(Expr::not_begin_with("id", value));
-        self
-    }
-
-    pub fn with_id_ending_with(mut self, value: impl Into<String>) -> Self {
-        self.query = self.query.and_filter(Expr::end_with("id", value));
-        self
-    }
-
-    pub fn with_id_not_ending_with(mut self, value: impl Into<String>) -> Self {
-        self.query = self.query.and_filter(Expr::not_end_with("id", value));
-        self
-    }
-
-    pub fn with_id_sounding_like(mut self, value: impl Into<teaql_core::Value>) -> Self {
-        self.query = self.query.and_filter(Expr::sound_like("id", value));
-        self
-    }
-    pub fn with_id_before(mut self, value: impl Into<teaql_core::Value>) -> Self {
-        self.query = self.query.and_filter(Expr::lt("id", value));
-        self
-    }
-
-    pub fn with_id_after(mut self, value: impl Into<teaql_core::Value>) -> Self {
-        self.query = self.query.and_filter(Expr::gt("id", value));
-        self
-    }
-
-    pub fn with_id_is_unknown(mut self) -> Self {
-        self.query = self.query.and_filter(Expr::is_null("id"));
-        self
-    }
-
-
-
-    pub fn with_id_is_known(mut self) -> Self {
-        self.query = self.query.and_filter(Expr::is_not_null("id"));
-        self
-    }
-
-
     pub fn order_by_id_asc(mut self) -> Self {
         self.query = self.query.order_asc("id");
         self
@@ -932,272 +807,6 @@ impl<R> EmployeeRequest<R> {
 
     pub fn order_by_id_desc_using_gbk(mut self) -> Self {
         self.query = self.query.order_gbk_desc("id");
-        self
-    }
-
-
-    pub fn select_name(mut self) -> Self {
-        self.query = self.query.project("name");
-        self
-    }
-
-    pub fn project_name(self) -> Self {
-        self.select_name()
-    }
-
-    pub fn select_name_raw(self, raw_sql_segment: impl Into<String>) -> Self {
-        self.select_name_unsafe_raw(UnsafeRawSqlSegment::trusted(raw_sql_segment))
-    }
-
-    pub fn select_name_unsafe_raw(mut self, raw_sql_segment: UnsafeRawSqlSegment) -> Self {
-        self.query_options
-            .raw_projections
-            .push(RawProjection::new("name", raw_sql_segment));
-        self
-    }
-
-    pub fn group_by_name(self) -> Self {
-        self.group_by("name")
-    }
-
-    pub fn group_by_name_as(self, alias: impl Into<String>) -> Self {
-        let alias = alias.into();
-        let mut request = self.group_by("name");
-        request.query = request
-            .query
-            .project_expr(alias, Expr::column("name"));
-        request
-    }
-
-    pub fn group_by_name_with_function(
-        self,
-        alias: impl Into<String>,
-        function: AggregateFunction,
-    ) -> Self {
-        self.group_by("name")
-            .aggregate_with_function("name", alias, function)
-    }
-
-    pub fn count_name(self) -> Self {
-        self.count_name_as("name_count")
-    }
-
-    pub fn count_name_as(self, alias: impl Into<String>) -> Self {
-        self.aggregate_count_field("name", alias)
-    }
-
-    pub fn sum_name(self) -> Self {
-        self.sum_name_as("sum_name")
-    }
-
-    pub fn sum_name_as(self, alias: impl Into<String>) -> Self {
-        self.aggregate_sum("name", alias)
-    }
-
-    pub fn avg_name(self) -> Self {
-        self.avg_name_as("avg_name")
-    }
-
-    pub fn avg_name_as(self, alias: impl Into<String>) -> Self {
-        self.aggregate_avg("name", alias)
-    }
-
-    pub fn min_name(self) -> Self {
-        self.min_name_as("min_name")
-    }
-
-    pub fn min_name_as(self, alias: impl Into<String>) -> Self {
-        self.aggregate_min("name", alias)
-    }
-
-    pub fn max_name(self) -> Self {
-        self.max_name_as("max_name")
-    }
-
-    pub fn max_name_as(self, alias: impl Into<String>) -> Self {
-        self.aggregate_max("name", alias)
-    }
-
-    pub fn unselect_name(mut self) -> Self {
-        self.query.projection.retain(|field| field != "name");
-        self.query_options.raw_projections.retain(|projection| projection.property_name != "name");
-        self
-    }
-
-
-    pub fn with_name(
-        mut self,
-        operator: FieldOperator,
-        values: impl IntoIterator<Item = impl Into<teaql_core::Value>>,
-    ) -> Self {
-        self.query = self.query.and_filter(field_operator_expr(
-            "name",
-            operator,
-            values.into_iter().map(Into::into).collect(),
-        ));
-        self
-    }
-
-    pub fn create_name_criteria(
-        operator: FieldOperator,
-        values: impl IntoIterator<Item = impl Into<teaql_core::Value>>,
-    ) -> Expr {
-        field_operator_expr(
-            "name",
-            operator,
-            values.into_iter().map(Into::into).collect(),
-        )
-    }
-
-    pub fn with_name_is(mut self, value: impl Into<teaql_core::Value>) -> Self {
-        self.query = self.query.and_filter(Expr::eq("name", value));
-        self
-    }
-
-
-
-    pub fn with_name_is_not(mut self, value: impl Into<teaql_core::Value>) -> Self {
-        self.query = self.query.and_filter(Expr::ne("name", value));
-        self
-    }
-
-    pub fn with_name_greater_than(mut self, value: impl Into<teaql_core::Value>) -> Self {
-        self.query = self.query.and_filter(Expr::gt("name", value));
-        self
-    }
-
-    pub fn with_name_greater_than_or_equal_to(mut self, value: impl Into<teaql_core::Value>) -> Self {
-        self.query = self.query.and_filter(Expr::gte("name", value));
-        self
-    }
-
-    pub fn with_name_less_than(mut self, value: impl Into<teaql_core::Value>) -> Self {
-        self.query = self.query.and_filter(Expr::lt("name", value));
-        self
-    }
-
-    pub fn with_name_less_than_or_equal_to(mut self, value: impl Into<teaql_core::Value>) -> Self {
-        self.query = self.query.and_filter(Expr::lte("name", value));
-        self
-    }
-
-    pub fn with_name_between(
-        mut self,
-        lower: impl Into<teaql_core::Value>,
-        upper: impl Into<teaql_core::Value>,
-    ) -> Self {
-        self.query = self.query.and_filter(Expr::between("name", lower, upper));
-        self
-    }
-
-    pub fn with_name_between_range<T>(mut self, range: DateRange<T>) -> Self
-    where
-        T: Into<teaql_core::Value>,
-    {
-        self.query = self.query.and_filter(Expr::between(
-            "name",
-            range.start,
-            range.end,
-        ));
-        self
-    }
-
-    pub fn with_name_in(
-        mut self,
-        values: impl IntoIterator<Item = impl Into<teaql_core::Value>>,
-    ) -> Self {
-        self.query = self.query.and_filter(Expr::in_list(
-            "name",
-            values.into_iter().map(Into::into),
-        ));
-        self
-    }
-
-    pub fn with_name_not_in(
-        mut self,
-        values: impl IntoIterator<Item = impl Into<teaql_core::Value>>,
-    ) -> Self {
-        self.query = self.query.and_filter(Expr::not_in_list(
-            "name",
-            values.into_iter().map(Into::into),
-        ));
-        self
-    }
-
-    pub fn with_name_containing(mut self, value: impl Into<String>) -> Self {
-        self.query = self.query.and_filter(Expr::contain("name", value));
-        self
-    }
-
-    pub fn with_name_not_containing(mut self, value: impl Into<String>) -> Self {
-        self.query = self.query.and_filter(Expr::not_contain("name", value));
-        self
-    }
-
-    pub fn with_name_starting_with(mut self, value: impl Into<String>) -> Self {
-        self.query = self.query.and_filter(Expr::begin_with("name", value));
-        self
-    }
-
-    pub fn with_name_not_starting_with(mut self, value: impl Into<String>) -> Self {
-        self.query = self.query.and_filter(Expr::not_begin_with("name", value));
-        self
-    }
-
-    pub fn with_name_ending_with(mut self, value: impl Into<String>) -> Self {
-        self.query = self.query.and_filter(Expr::end_with("name", value));
-        self
-    }
-
-    pub fn with_name_not_ending_with(mut self, value: impl Into<String>) -> Self {
-        self.query = self.query.and_filter(Expr::not_end_with("name", value));
-        self
-    }
-
-    pub fn with_name_sounding_like(mut self, value: impl Into<teaql_core::Value>) -> Self {
-        self.query = self.query.and_filter(Expr::sound_like("name", value));
-        self
-    }
-    pub fn with_name_before(mut self, value: impl Into<teaql_core::Value>) -> Self {
-        self.query = self.query.and_filter(Expr::lt("name", value));
-        self
-    }
-
-    pub fn with_name_after(mut self, value: impl Into<teaql_core::Value>) -> Self {
-        self.query = self.query.and_filter(Expr::gt("name", value));
-        self
-    }
-
-    pub fn with_name_is_unknown(mut self) -> Self {
-        self.query = self.query.and_filter(Expr::is_null("name"));
-        self
-    }
-
-
-
-    pub fn with_name_is_known(mut self) -> Self {
-        self.query = self.query.and_filter(Expr::is_not_null("name"));
-        self
-    }
-
-
-    pub fn order_by_name_asc(mut self) -> Self {
-        self.query = self.query.order_asc("name");
-        self
-    }
-
-    pub fn order_by_name_desc(mut self) -> Self {
-        self.query = self.query.order_desc("name");
-        self
-    }
-
-    pub fn order_by_name_asc_using_gbk(mut self) -> Self {
-        self.query = self.query.order_gbk_asc("name");
-        self
-    }
-
-    pub fn order_by_name_desc_using_gbk(mut self) -> Self {
-        self.query = self.query.order_gbk_desc("name");
         self
     }
 
@@ -1548,38 +1157,6 @@ impl<R> EmployeeRequest<R> {
         self.query = self.query.order_gbk_desc("version");
         self
     }
-    pub fn id_is_value_0u64(self) -> Self {
-        self.with_id_is("0u64")
-    }
-
-    pub fn with_id_is_value_0u64(self) -> Self {
-        self.with_id_is("0u64")
-    }
-
-
-
-    pub fn with_id_is_not_value_0u64(self) -> Self {
-        self.with_id_is_not("0u64")
-    }
-
-
-
-    pub fn name_is_unknown(self) -> Self {
-        self.with_name_is("Unknown")
-    }
-
-    pub fn with_name_is_unknown(self) -> Self {
-        self.with_name_is("Unknown")
-    }
-
-
-
-    pub fn with_name_is_not_unknown(self) -> Self {
-        self.with_name_is_not("Unknown")
-    }
-
-
-
     pub fn merchant_id_is_value_0u64(self) -> Self {
         self.with_merchant_id_is("0u64")
     }
