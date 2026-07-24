@@ -59,3 +59,21 @@ By shifting from a **Monolithic Single-Shot** paradigm to a **Concurrent Modular
 1. **Infinite Scalability**: Since the model only ever processes 15-25 objects per module, the cognitive load remains safely below the "30-object biological threshold". A 180-object system is computationally identical to 14 separate 13-object systems.
 2. **Speed & Throughput**: Because modules are entirely isolated during generation, we dispatched 14 concurrent threads to the DGX Nemotron endpoint. Instead of taking hours, a massive 180-object enterprise system was designed, evaluated, and compiled into Rust in under 9 minutes.
 3. **Absolute Precision**: The DGX Nemotron-3-Super model demonstrated perfect XML tag hygiene when kept within bounded contexts, achieving 100% compilation success without needing an automated error-fix loop.
+
+---
+
+## Future Benchmarking Rule: Version Tracking
+Moving forward, all test rounds and benchmark reports MUST record the exact version matrix of the ecosystem to ensure reproducibility. The tracking matrix must include:
+
+1. **Agent Version** (e.g., Antigravity 2.0)
+2. **Programming Language Version** (e.g., Rust 1.96.0 or Java 21)
+3. **TeaQL Runtime Frameworks** (e.g., teaql-java or teaql-rs)
+4. **TeaQL Code Generator Service** (fetched from https://api.teaql.io/latest/version/)
+
+### Current Version Snapshot (As of Round 14):
+- **Agent / Workflow Manager**: Antigravity 2.0
+- **Rust Compiler**: `rustc 1.96.0`
+- **Cargo TeaQL CLI**: `teaql 2.0.8`
+- **teaql-code-gen API**: `development`
+- **teaql-java Runtime**: `1.525-RELEASE`
+- **teaql-rs Runtime**: `4.1.1`
