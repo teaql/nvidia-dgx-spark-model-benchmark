@@ -206,11 +206,7 @@ authenticated reverse proxy.
 
 ## Artifacts
 
-- `teaql-vibe-kit/app-playground-round3/TEAQL_QUICK_TRY_REPORT.md`
-- `teaql-vibe-kit/app-playground-round3/models/model.xml`
-- `teaql-vibe-kit/app-playground-round3/MODEL_REVIEW.md`
-- `teaql-vibe-kit/app-playground-round3/rust-app-console/src/`
-- `teaql-vibe-kit/app-playground-round3/rust-app-console/tests/q_e_scenario.rs`
+- [Complete archived source tree](../artifacts/round-3/source-evidence/)
 - [Machine-readable summary](../artifacts/round-3/summary.json)
 
 No artifact contains SSH credentials, proxy credentials, or the remote host

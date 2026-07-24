@@ -80,5 +80,13 @@
     "public_bind": true,
     "api_key_configured": false,
     "recommendation": "restrict source addresses or add an authenticated reverse proxy"
+  },
+  "source_evidence": {
+    "archive": "artifacts/round-4/source-evidence/teaql-vibe-kit-round4.tar.gz",
+    "source_repository": "teaql/teaql-agent-kit",
+    "source_branch": "autonomous",
+    "source_commit": "8069ca81ba2a50b5d1e466ed0c2f5fe1a520e302",
+    "tracked_files": 2702,
+    "sha256": "a531fd50d96916c506a1e2a188f4f4da3e71e5e942144f9290079c57defd564a"
   }
 }

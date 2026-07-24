@@ -161,10 +161,8 @@ authenticated reverse proxy.
 
 ## Artifacts
 
-- Moving-company model and Rust code:
-  `/Users/Philip/githome/teaql-vibe-kit/app-playground`
-- Archived Round 3 school scenario:
-  `/Users/Philip/githome/teaql-vibe-kit/app-playground-round3`
+- [Complete Round 4 source tree](../artifacts/round-4/source-evidence/)
+- [Archived Round 3 source tree](../artifacts/round-3/source-evidence/)
 - [Machine-readable summary](../artifacts/round-4/summary.json)
 - [Fixed validator](../scripts/validate_round4_model.py)
 - [Deterministic migration script](../scripts/prepare_round4_model.py)

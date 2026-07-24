@@ -20,11 +20,13 @@ remain inside the customer's engineering environment.
 - [Local agent smoke-test data](artifacts/round-2/local-agent-smoke.json)
 - [Round 3: Nemotron agent and Rust TeaQL Q/E report](reports/round-3-nemotron-agent-rust-teaql.md)
 - [Round 3 machine-readable summary](artifacts/round-3/summary.json)
+- [Round 3 complete TeaQL source evidence](artifacts/round-3/source-evidence/)
 - [Round 4 preparation and acceptance criteria](reports/round-4-preparation.md)
 - [Round 4 fixed moving-company task](benchmarks/round-4/moving-company-180-object-task.md)
 - [Round 4: 223-object moving-company Rust TeaQL report](reports/round-4-nemotron-moving-company.md)
 - [Round 4 machine-readable summary](artifacts/round-4/summary.json)
 - [Round 4 SQL evidence](artifacts/round-4/sql-evidence.md)
+- [Round 4 complete TeaQL source evidence](artifacts/round-4/source-evidence/)
 
 ## Evidence policy
 
