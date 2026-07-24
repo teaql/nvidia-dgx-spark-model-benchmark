@@ -1,0 +1,14 @@
+<contract id="0u64" name="Unknown" _module_key="administration-compliance" merchant_id="0u64"/>
+<insurance_policy id="0u64" name="Unknown" _module_key="administration-compliance" merchant_id="0u64"/>
+<insurance_claim id="0u64" name="Unknown" _module_key="administration-compliance" merchant_id="0u64"/>
+<document id="0u64" name="Unknown" _module_key="administration-compliance" merchant_id="0u64"/>
+<document_version id="0u64" name="Unknown" _module_key="administration-compliance" merchant_id="0u64"/>
+<compliance_check id="0u64" name="Unknown" _module_key="administration-compliance" merchant_id="0u64"/>
+<data_retention_policy id="0u64" name="Unknown" _module_key="administration-compliance" merchant_id="0u64"/>
+<recovery_request id="0u64" name="Unknown" _module_key="administration-compliance" merchant_id="0u64"/>
+<nda_agreement id="0u64" name="Unknown" _module_key="administration-compliance" merchant_id="0u64"/>
+<terms_of_service id="0u64" name="Unknown" _module_key="administration-compliance" merchant_id="0u64"/>
+<privacy_policy id="0u64" name="Unknown" _module_key="administration-compliance" merchant_id="0u64"/>
+<cookie_consent id="0u64" name="Unknown" _module_key="administration-compliance" merchant_id="0u64"/>
+<gdpr_request id="0u64" name="Unknown" _module_key="administration-compliance" merchant_id="0u64"/>
+<osha_incident id="0u64" name="Unknown" _module_key="administration-compliance" merchant_id="0u64"/>

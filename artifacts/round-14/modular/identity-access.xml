@@ -1,0 +1,10 @@
+<user_account id="0u64" name="Unknown" _module_key="identity-access" merchant_id="0u64"/>
+<role id="0u64" name="Unknown" _module_key="identity-access" merchant_id="0u64"/>
+<permission id="0u64" name="Unknown" _module_key="identity-access" merchant_id="0u64"/>
+<user_role_assignment id="0u64" name="Unknown" _module_key="identity-access" merchant_id="0u64"/>
+<role_permission id="0u64" name="Unknown" _module_key="identity-access" merchant_id="0u64"/>
+<magic_link id="0u64" name="Unknown" _module_key="identity-access" merchant_id="0u64"/>
+<user_session id="0u64" name="Unknown" _module_key="identity-access" merchant_id="0u64"/>
+<password_reset id="0u64" name="Unknown" _module_key="identity-access" merchant_id="0u64"/>
+<two_factor_auth id="0u64" name="Unknown" _module_key="identity-access" merchant_id="0u64"/>
+<access_token id="0u64" name="Unknown" _module_key="identity-access" merchant_id="0u64"/>
