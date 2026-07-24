@@ -83,3 +83,9 @@ Moving forward, all test rounds and benchmark reports MUST record the exact vers
 - **NVIDIA-SMI**: 580.159.03
 - **Driver Version**: 580.159.03
 - **CUDA Version**: 13.0
+- **LLM Service Parameters**: Required (e.g., Context Window Size, KV Cache settings, etc.)
+
+### LLM Service Context (As of Round 14):
+- **Model**: DGX nemotron-3-super
+- **Context Window Setting (Service-level)**: 128K (or equivalent max context supported by endpoint)
+- **Generation Context Limits**: max_tokens=16384, reasoning_budget=2048
