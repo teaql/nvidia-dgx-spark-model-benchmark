@@ -1,0 +1,27 @@
+<root>
+<truck id="0" name="Unknown"/>
+<dispatch id="0" name="Unknown"/>
+<routes id="0" name="Unknown"/>
+<schedules id="0" name="Unknown"/>
+<drivers id="0" name="Unknown"/>
+<warehouses id="0" name="Unknown"/>
+<inventory id="0" name="Unknown"/>
+<shipments id="0" name="Unknown"/>
+<loads id="0" name="Unknown"/>
+<maintenance id="0" name="Unknown"/>
+<fuel id="0" name="Unknown"/>
+<tolls id="0" name="Unknown"/>
+<compliance id="0" name="Unknown"/>
+<tracking id="0" name="Unknown"/>
+<geofence id="0" name="Unknown"/>
+<capacity id="0" name="Unknown"/>
+<utilization id="0" name="Unknown"/>
+<KPI id="0" name="Unknown"/>
+<incidents id="0" name="Unknown"/>
+<reports id="0" name="Unknown"/>
+<audits id="0" name="Unknown"/>
+<vendors id="0" name="Unknown"/>
+<customers id="0" name="Unknown"/>
+<carriers id="0" name="Unknown"/>
+<pallets id="0" name="Unknown"/>
+</root>

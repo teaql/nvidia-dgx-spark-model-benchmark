@@ -1,0 +1,18 @@
+<root>
+  <users id="0" name="Unknown"/>
+  <profiles id="0" name="Unknown"/>
+  <addresses id="0" name="Unknown"/>
+  <preferences id="0" name="Unknown"/>
+  <orders id="0" name="Unknown"/>
+  <tickets id="0" name="Unknown"/>
+  <feedback id="0" name="Unknown"/>
+  <support_cases id="0" name="Unknown"/>
+  <loyalty id="0" name="Unknown"/>
+  <subscriptions id="0" name="Unknown"/>
+  <notifications id="0" name="Unknown"/>
+  <documents id="0" name="Unknown"/>
+  <payments id="0" name="Unknown"/>
+  <contacts id="0" name="Unknown"/>
+  <sessions id="0" name="Unknown"/>
+  <audit_logs id="0" name="Unknown"/>
+</root>

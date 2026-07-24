@@ -1,0 +1,24 @@
+<root>
+    <staff id="0" name="Unknown"/>
+    <roles id="0" name="Unknown"/>
+    <salaries id="0" name="Unknown"/>
+    <attendance id="0" name="Unknown"/>
+    <departments id="0" name="Unknown"/>
+    <contracts id="0" name="Unknown"/>
+    <benefits id="0" name="Unknown"/>
+    <payroll id="0" name="Unknown"/>
+    <timesheets id="0" name="Unknown"/>
+    <leaves id="0" name="Unknown"/>
+    <performance id="0" name="Unknown"/>
+    <training id="0" name="Unknown"/>
+    <certifications id="0" name="Unknown"/>
+    <expenses id="0" name="Unknown"/>
+    <overtime id="0" name="Unknown"/>
+    <shifts id="0" name="Unknown"/>
+    <evaluations id="0" name="Unknown"/>
+    <bonuses id="0" name="Unknown"/>
+    <deductions id="0" name="Unknown"/>
+    <tax id="0" name="Unknown"/>
+    <recruitment id="0" name="Unknown"/>
+    <onboarding id="0" name="Unknown"/>
+</root>

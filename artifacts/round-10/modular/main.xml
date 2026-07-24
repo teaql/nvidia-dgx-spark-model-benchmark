@@ -1,0 +1,7 @@
+<root name="moving-company-service" data_service="sqlite">
+  <_include file="operations-logistics.xml" />
+  <_include file="employees-payroll.xml" />
+  <_include file="customer-management.xml" />
+  <_include file="finance-accounting.xml" />
+  <_include file="identity-access.xml" />
+</root>

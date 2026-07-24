@@ -1,0 +1,12 @@
+<root>
+  <authtoken id="0" name="Unknown"/>
+  <session id="0" name="Unknown"/>
+  <permission id="0" name="Unknown"/>
+  <role id="0" name="Unknown"/>
+  <user id="0" name="Unknown"/>
+  <group id="0" name="Unknown"/>
+  <apikey id="0" name="Unknown"/>
+  <refreshtoken id="0" name="Unknown"/>
+  <accesscontrollist id="0" name="Unknown"/>
+  <auditlog id="0" name="Unknown"/>
+</root>

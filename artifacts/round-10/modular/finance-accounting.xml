@@ -1,0 +1,19 @@
+<root>
+  <invoices id="0" name="Unknown"/>
+  <payments id="0" name="Unknown"/>
+  <taxes id="0" name="Unknown"/>
+  <refunds id="0" name="Unknown"/>
+  <ledger id="0" name="Unknown"/>
+  <accounts_receivable id="0" name="Unknown"/>
+  <accounts_payable id="0" name="Unknown"/>
+  <budget id="0" name="Unknown"/>
+  <expense id="0" name="Unknown"/>
+  <revenue id="0" name="Unknown"/>
+  <asset id="0" name="Unknown"/>
+  <liability id="0" name="Unknown"/>
+  <equity id="0" name="Unknown"/>
+  <cash_flow id="0" name="Unknown"/>
+  <audit id="0" name="Unknown"/>
+  <payroll id="0" name="Unknown"/>
+  <billing id="0" name="Unknown"/>
+</root>
