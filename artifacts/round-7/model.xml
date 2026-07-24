@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root name="hr-payroll-microservice" data_service="sqlite">
+  <!-- Constants -->
+  <leave_type _name="Leave Type" _module="HR &amp; Payroll" _module_key="hr-payroll" _constant="true" platform="platform()" id="id()" name="string()" code="string()" _identifier="code">
+    <_value id="1001" name="Annual" code="ANNUAL" />
+    <_value id="1002" name="Sick" code="SICK" />
+    <_value id="1003" name="Unpaid" code="UNPAID" />
+  </leave_type>
+  
+  <employee_status _name="Employee Status" _module="HR &amp; Payroll" _module_key="hr-payroll" _constant="true" platform="platform()" id="id()" name="string()" code="string()" _identifier="code">
+    <_value id="1001" name="Active" code="ACTIVE" />
+    <_value id="1002" name="Probation" code="PROBATION" />
+    <_value id="1003" name="Terminated" code="TERMINATED" />
+  </employee_status>
+
+  <contract_type _name="Contract Type" _module="HR &amp; Payroll" _module_key="hr-payroll" _constant="true" platform="platform()" id="id()" name="string()" code="string()" _identifier="code">
+    <_value id="1001" name="Full Time" code="FULL_TIME" />
+    <_value id="1002" name="Part Time" code="PART_TIME" />
+    <_value id="1003" name="Contractor" code="CONTRACTOR" />
+  </contract_type>
+
+  <review_grade _name="Review Grade" _module="HR &amp; Payroll" _module_key="hr-payroll" _constant="true" platform="platform()" id="id()" name="string()" code="string()" _identifier="code">
+    <_value id="1001" name="Excellent" code="EXCELLENT" />
+    <_value id="1002" name="Good" code="GOOD" />
+    <_value id="1003" name="Needs Improvement" code="NEEDS_IMPROVEMENT" />
+  </review_grade>
+
+  <application_status _name="Application Status" _module="HR &amp; Payroll" _module_key="hr-payroll" _constant="true" platform="platform()" id="id()" name="string()" code="string()" _identifier="code">
+    <_value id="1001" name="Applied" code="APPLIED" />
+    <_value id="1002" name="Interviewing" code="INTERVIEWING" />
+    <_value id="1003" name="Offered" code="OFFERED" />
+  </application_status>
+
+  <!-- Core Baseline -->
+  <platform
+      _name="System Platform"
+      _module="Platform Administration"
+      _module_key="platform-administration"
+      name="Moving Company Platform"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <merchant
+      _name="Merchant"
+      _module="Organization Administration"
+      _module_key="organization-administration"
+      name="Nordic Moving Services"
+      tax_number="FI12345678"
+      address="Mannerheimintie 10, Helsinki"
+      external_id="MERCHANT_NORDIC_001"
+      platform="platform()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <!-- HR & Payroll -->
+  <department _name="Department" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      dept_name="string()"
+      manager_name="string()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <position _name="Position" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      title="string()"
+      level="string()"
+      department="department()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <employee _name="Employee" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      first_name="string()"
+      last_name="string()"
+      email="string()"
+      status="employee_status()"
+      position="position()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <salary_record _name="Salary Record" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      base_salary="string()"
+      currency="string()"
+      effective_date="string()"
+      employee="employee()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <attendance_log _name="Attendance Log" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      date_logged="string()"
+      check_in="string()"
+      check_out="string()"
+      employee="employee()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <leave_request _name="Leave Request" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      start_date="string()"
+      end_date="string()"
+      leave_type="leave_type()"
+      employee="employee()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <performance_review _name="Performance Review" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      review_period="string()"
+      grade="review_grade()"
+      comments="string()"
+      employee="employee()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <training_record _name="Training Record" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      course_name="string()"
+      completion_date="string()"
+      employee="employee()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <benefit_plan _name="Benefit Plan" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      plan_name="string()"
+      provider="string()"
+      employee="employee()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <expense_claim _name="Expense Claim" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      amount="string()"
+      description="string()"
+      claim_date="string()"
+      employee="employee()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <payroll_run _name="Payroll Run" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      run_period="string()"
+      total_amount="string()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <tax_form _name="Tax Form" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      form_type="string()"
+      tax_year="string()"
+      employee="employee()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <contract _name="Contract" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      start_date="string()"
+      contract_type="contract_type()"
+      employee="employee()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <resignation _name="Resignation" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      last_working_day="string()"
+      reason="string()"
+      employee="employee()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <warning_letter _name="Warning Letter" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      issue_date="string()"
+      reason="string()"
+      employee="employee()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <bonus_record _name="Bonus Record" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      amount="string()"
+      bonus_reason="string()"
+      employee="employee()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <shift_schedule _name="Shift Schedule" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      shift_date="string()"
+      start_time="string()"
+      end_time="string()"
+      employee="employee()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <time_off_balance _name="Time Off Balance" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      remaining_days="string()"
+      accrued_days="string()"
+      employee="employee()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <recruitment_post _name="Recruitment Post" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      job_description="string()"
+      posting_date="string()"
+      position="position()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <job_application _name="Job Application" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      candidate_name="string()"
+      resume_url="string()"
+      status="application_status()"
+      recruitment_post="recruitment_post()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <interview _name="Interview" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      interview_date="string()"
+      feedback="string()"
+      job_application="job_application()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <offer_letter _name="Offer Letter" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      offer_amount="string()"
+      valid_until="string()"
+      job_application="job_application()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <onboarding_checklist _name="Onboarding Checklist" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      is_completed="string()"
+      employee="employee()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <offboarding_checklist _name="Offboarding Checklist" _module="HR &amp; Payroll" _module_key="hr-payroll"
+      is_completed="string()"
+      employee="employee()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+</root>

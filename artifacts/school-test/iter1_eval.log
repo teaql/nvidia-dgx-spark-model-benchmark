@@ -1,0 +1,57 @@
+model input: artifacts/school-test/model.xml
+using https://api.teaql.io/latest/evaluate
+# KSML Evaluation Report
+
+## 📊 Summary
+- **Errors**: 11
+- **Warnings**: 4
+- **Suggestions**: 0
+- **Solids**: 3
+
+## Error Pattern Summary
+
+11 errors total. Fix the largest repeated pattern first, then rerun evaluation.
+
+| Count | Pattern | Explanation | Action |
+|-------|---------|-------------|--------|
+| 1 | `Invalid document root element` (`KSML-XML-003`) | The document root element must be <root>, but found <ksml>. | Check agents/ERROR-FIX.md, apply the smallest fix, then rerun evaluation. |
+| 1 | `Invalid wrapper tag` (`KSML-XML-004`) | The tag <ksml> is invalid. Do not wrap model objects inside <ksml>. | Check agents/ERROR-FIX.md, apply the smallest fix, then rerun evaluation. |
+| 1 | `Missing root name` (`KSML-ROOT-001`) | The <root> element must define a non-empty name attribute. | Check agents/ERROR-FIX.md, apply the smallest fix, then rerun evaluation. |
+| 1 | `Nested object definition` (`KSML-STRUCTURE-001`) | Object <ksml> must be a direct child of <root>. | Check agents/ERROR-FIX.md, apply the smallest fix, then rerun evaluation. |
+| 7 | `field-as-child-element` (`KSML-STRUCTURE-004`) | Business object fields were written as XML child elements. Did you mean to use XML attributes? | Move each child value onto the parent object, for example <school name="..." phone="..."/>. Only constant object values should be <_value> children. |
+
+
+## ❌ Errors (Must Fix)
+
+| Rule ID | Target | Error Message | Action |
+|---------|--------|---------------|--------|
+| `KSML-XML-003` | `` | The document root element must be <root>, but found <ksml>. | Check `agents/ERROR-FIX.md` |
+| `KSML-XML-004` | `` | The tag <ksml> is invalid. Do not wrap model objects inside <ksml>. | Check `agents/ERROR-FIX.md` |
+| `KSML-ROOT-001` | `` | The <root> element must define a non-empty name attribute. | Check `agents/ERROR-FIX.md` |
+| `KSML-STRUCTURE-001` | `` | Object <ksml> must be a direct child of <root>. | Check `agents/ERROR-FIX.md` |
+| `KSML-STRUCTURE-004` | `platform.id` | Field 'id' is written as a child element under business object 'platform'. KSML business object fields must be XML attributes. Replace <platform><id>...</id></platform> with <platform id="..."/>. Only constant objects use <_value> child elements. | Check `agents/ERROR-FIX.md` |
+| `KSML-STRUCTURE-004` | `platform.name` | Field 'name' is written as a child element under business object 'platform'. KSML business object fields must be XML attributes. Replace <platform><name>...</name></platform> with <platform name="..."/>. Only constant objects use <_value> child elements. | Check `agents/ERROR-FIX.md` |
+| `KSML-STRUCTURE-004` | `school.id` | Field 'id' is written as a child element under business object 'school'. KSML business object fields must be XML attributes. Replace <school><id>...</id></school> with <school id="..."/>. Only constant objects use <_value> child elements. | Check `agents/ERROR-FIX.md` |
+| `KSML-STRUCTURE-004` | `school.name` | Field 'name' is written as a child element under business object 'school'. KSML business object fields must be XML attributes. Replace <school><name>...</name></school> with <school name="..."/>. Only constant objects use <_value> child elements. | Check `agents/ERROR-FIX.md` |
+| `KSML-STRUCTURE-004` | `school.school_type_id` | Field 'school_type_id' is written as a child element under business object 'school'. KSML business object fields must be XML attributes. Replace <school><school_type_id>...</school_type_id></school> with <school school_type_id="..."/>. Only constant objects use <_value> child elements. | Check `agents/ERROR-FIX.md` |
+| `KSML-STRUCTURE-004` | `school_type.id` | Field 'id' is written as a child element under business object 'school_type'. KSML business object fields must be XML attributes. Replace <school_type><id>...</id></school_type> with <school_type id="..."/>. Only constant objects use <_value> child elements. | Check `agents/ERROR-FIX.md` |
+| `KSML-STRUCTURE-004` | `school_type.name` | Field 'name' is written as a child element under business object 'school_type'. KSML business object fields must be XML attributes. Replace <school_type><name>...</name></school_type> with <school_type name="..."/>. Only constant objects use <_value> child elements. | Check `agents/ERROR-FIX.md` |
+
+
+## ⚠️ Warnings
+
+| Rule ID | Target | Warning Message |
+|---------|--------|-----------------|
+| `KSML-OBJECT-001` | `platform` | Object 'platform' is missing display metadata: _name, _module, _module_key |
+| `KSML-OBJECT-001` | `school` | Object 'school' is missing display metadata: _name, _module, _module_key |
+| `KSML-OBJECT-001` | `school_type` | Object 'school_type' is missing display metadata: _name, _module, _module_key |
+| `KSML-DOMAIN-ROOT-002` | `` | Multiple independent business objects found: platform, school, school_type. The model may have disconnected graphs. |
+
+
+## ✅ Solids
+
+| Rule ID | Target | Message |
+|---------|--------|---------|
+| `KSML-UPLOAD-001` | `` | The upload contains 1 files. |
+| `KSML-UPLOAD-005` | `` | Resolved entrypoint: model.xml |
+| `KSML-XML-002` | `` | The XML document model.xml was parsed successfully. |

@@ -1,0 +1,7 @@
+<notification id="0" name="Unknown" _module_key="notifications-automation" merchant_id="0"/>
+<notification_template id="0" name="Unknown" _module_key="notifications-automation" merchant_id="0"/>
+<automation_rule id="0" name="Unknown" _module_key="notifications-automation" merchant_id="0"/>
+<automation_trigger id="0" name="Unknown" _module_key="notifications-automation" merchant_id="0"/>
+<automation_action id="0" name="Unknown" _module_key="notifications-automation" merchant_id="0"/>
+<sms_delivery_receipt id="0" name="Unknown" _module_key="notifications-automation" merchant_id="0"/>
+<email_bounce_log id="0" name="Unknown" _module_key="notifications-automation" merchant_id="0"/>

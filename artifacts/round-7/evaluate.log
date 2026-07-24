@@ -1,0 +1,232 @@
+model input: artifacts/round-7/model.xml
+using https://api.teaql.io/latest/evaluate
+# KSML Evaluation Report
+
+## 📊 Summary
+- **Errors**: 2
+- **Warnings**: 54
+- **Suggestions**: 13
+- **Solids**: 112
+
+## Error Pattern Summary
+
+2 errors total. Fix the largest repeated pattern first, then rerun evaluation.
+
+| Count | Pattern | Explanation | Action |
+|-------|---------|-------------|--------|
+| 2 | `Field name conflicts with reserved keyword` (`KSML-KEYWORD-002`) | Field 'type' in object 'leave_request' conflicts with reserved keywords in: Rust, Go. (Defined at model.xml:106, attribute 'type'). Please rename the field to avoid generation/compilation errors. | Check agents/ERROR-FIX.md, apply the smallest fix, then rerun evaluation. |
+
+
+## ❌ Errors (Must Fix)
+
+| Rule ID | Target | Error Message | Action |
+|---------|--------|---------------|--------|
+| `KSML-KEYWORD-002` | `leave_request.type` | Field 'type' in object 'leave_request' conflicts with reserved keywords in: Rust, Go. (Defined at model.xml:106, attribute 'type'). Please rename the field to avoid generation/compilation errors. | Check `agents/ERROR-FIX.md` |
+| `KSML-KEYWORD-002` | `contract.type` | Field 'type' in object 'contract' conflicts with reserved keywords in: Rust, Go. (Defined at model.xml:163, attribute 'type'). Please rename the field to avoid generation/compilation errors. | Check `agents/ERROR-FIX.md` |
+
+
+## ⚠️ Warnings
+
+| Rule ID | Target | Warning Message |
+|---------|--------|-----------------|
+| `KSML-ROOT-002` | `` | Root name should preferably be lowercase kebab-case and end with -service (e.g. crm-service), but found 'hr-payroll-microservice'. |
+| `KSML-BUSINESS-002` | `department.dept_name` | Field 'dept_name' in business object 'department' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `department.manager_name` | Field 'manager_name' in business object 'department' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `position.level` | Field 'level' in business object 'position' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `position.title` | Field 'title' in business object 'position' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `employee.email` | Field 'email' in business object 'employee' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `employee.first_name` | Field 'first_name' in business object 'employee' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `employee.last_name` | Field 'last_name' in business object 'employee' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `salary_record.base_salary` | Field 'base_salary' in business object 'salary_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `salary_record.currency` | Field 'currency' in business object 'salary_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `salary_record.effective_date` | Field 'effective_date' in business object 'salary_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `attendance_log.check_in` | Field 'check_in' in business object 'attendance_log' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `attendance_log.check_out` | Field 'check_out' in business object 'attendance_log' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `attendance_log.date_logged` | Field 'date_logged' in business object 'attendance_log' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `leave_request.end_date` | Field 'end_date' in business object 'leave_request' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `leave_request.start_date` | Field 'start_date' in business object 'leave_request' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `performance_review.comments` | Field 'comments' in business object 'performance_review' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `performance_review.review_period` | Field 'review_period' in business object 'performance_review' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `training_record.completion_date` | Field 'completion_date' in business object 'training_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `training_record.course_name` | Field 'course_name' in business object 'training_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `benefit_plan.plan_name` | Field 'plan_name' in business object 'benefit_plan' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `benefit_plan.provider` | Field 'provider' in business object 'benefit_plan' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `expense_claim.amount` | Field 'amount' in business object 'expense_claim' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `expense_claim.claim_date` | Field 'claim_date' in business object 'expense_claim' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `expense_claim.description` | Field 'description' in business object 'expense_claim' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `payroll_run.run_period` | Field 'run_period' in business object 'payroll_run' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `payroll_run.total_amount` | Field 'total_amount' in business object 'payroll_run' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `tax_form.form_type` | Field 'form_type' in business object 'tax_form' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `tax_form.tax_year` | Field 'tax_year' in business object 'tax_form' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `contract.start_date` | Field 'start_date' in business object 'contract' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `resignation.last_working_day` | Field 'last_working_day' in business object 'resignation' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `resignation.reason` | Field 'reason' in business object 'resignation' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `warning_letter.issue_date` | Field 'issue_date' in business object 'warning_letter' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `warning_letter.reason` | Field 'reason' in business object 'warning_letter' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `bonus_record.amount` | Field 'amount' in business object 'bonus_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `bonus_record.bonus_reason` | Field 'bonus_reason' in business object 'bonus_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `shift_schedule.end_time` | Field 'end_time' in business object 'shift_schedule' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `shift_schedule.shift_date` | Field 'shift_date' in business object 'shift_schedule' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `shift_schedule.start_time` | Field 'start_time' in business object 'shift_schedule' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `time_off_balance.accrued_days` | Field 'accrued_days' in business object 'time_off_balance' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `time_off_balance.remaining_days` | Field 'remaining_days' in business object 'time_off_balance' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `recruitment_post.job_description` | Field 'job_description' in business object 'recruitment_post' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `recruitment_post.posting_date` | Field 'posting_date' in business object 'recruitment_post' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `job_application.candidate_name` | Field 'candidate_name' in business object 'job_application' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `job_application.resume_url` | Field 'resume_url' in business object 'job_application' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `interview.feedback` | Field 'feedback' in business object 'interview' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `interview.interview_date` | Field 'interview_date' in business object 'interview' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `offer_letter.offer_amount` | Field 'offer_amount' in business object 'offer_letter' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `offer_letter.valid_until` | Field 'valid_until' in business object 'offer_letter' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `onboarding_checklist.is_completed` | Field 'is_completed' in business object 'onboarding_checklist' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `offboarding_checklist.is_completed` | Field 'is_completed' in business object 'offboarding_checklist' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-MODULE-003` | `merchant` | Module 'Organization Administration' contains only one object (merchant). Standard modules should group multiple related objects. |
+| `KSML-TENANCY-001` | `offboarding_checklist` | Almost all business objects (25/26) contain tenant/merchant fields. Ensure that tenancy is explicitly required, rather than just copied from examples. |
+| `KSML-PRIVACY-001-WARN` | `employee.email` | Contact identifier on person-like subject. Add `email` to `_audit_mask_fields`. |
+
+
+## 💡 Suggestions
+
+| Rule ID | Target | Suggestion |
+|---------|--------|------------|
+| `KSML-LOG-007` | `attendance_log` | Object 'attendance_log' has a name ending with '_log' but is not marked as a logging object. Consider adding _log="true" if this object represents append-only log entries. |
+| `KSML-UI-002` | `leave_type` | Constant object 'leave_type' can add display_order="number()" for stable UI sorting. |
+| `KSML-UI-001` | `employee_status` | Status-like constant 'employee_status' can add color="string()" to declare visual badge colors for values. |
+| `KSML-UI-002` | `employee_status` | Constant object 'employee_status' can add display_order="number()" for stable UI sorting. |
+| `KSML-UI-003` | `employee_status` | Status-like constant 'employee_status' can add progress="number()" to visualize completion progress percentage (0-100). |
+| `KSML-UI-002` | `contract_type` | Constant object 'contract_type' can add display_order="number()" for stable UI sorting. |
+| `KSML-UI-002` | `review_grade` | Constant object 'review_grade' can add display_order="number()" for stable UI sorting. |
+| `KSML-UI-001` | `application_status` | Status-like constant 'application_status' can add color="string()" to declare visual badge colors for values. |
+| `KSML-UI-002` | `application_status` | Constant object 'application_status' can add display_order="number()" for stable UI sorting. |
+| `KSML-UI-003` | `application_status` | Status-like constant 'application_status' can add progress="number()" to visualize completion progress percentage (0-100). |
+| `KSML-PRIVACY-001-SUG` | `employee.first_name` | Personal attribute on person-like subject. Add `first_name` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-SUG` | `employee.last_name` | Personal attribute on person-like subject. Add `last_name` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-SUG` | `salary_record.base_salary` | Financial data field. Add `base_salary` to `_audit_mask_fields`. |
+
+
+## Privacy Findings
+
+| Severity | Target | Reason | Recommended Action | Regulatory Basis |
+|----------|--------|--------|--------------------|------------------|
+| Suggestion | `employee.first_name` | Personal attribute on person-like subject. | Add to `_audit_mask_fields="first_name"`. | GDPR Art. 4: identifier |
+| Suggestion | `employee.last_name` | Personal attribute on person-like subject. | Add to `_audit_mask_fields="last_name"`. | GDPR Art. 4: identifier |
+| Warning | `employee.email` | Contact identifier on person-like subject. | Add to `_audit_mask_fields="email"`. | CCPA/CPRA 1798.140: identifiers |
+| Suggestion | `salary_record.base_salary` | Financial data field. | Add to `_audit_mask_fields="base_salary"`. | PIPL Art. 28: financial accounts |
+
+
+## ✅ Solids
+
+| Rule ID | Target | Message |
+|---------|--------|---------|
+| `KSML-UPLOAD-001` | `` | The upload contains 1 files. |
+| `KSML-UPLOAD-005` | `` | Resolved entrypoint: model.xml |
+| `KSML-XML-002` | `` | The XML document model.xml was parsed successfully. |
+| `KSML-OBJECT-001` | `leave_type` | Object 'leave_type' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `employee_status` | Object 'employee_status' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `contract_type` | Object 'contract_type' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `review_grade` | Object 'review_grade' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `application_status` | Object 'application_status' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `platform` | Object 'platform' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `merchant` | Object 'merchant' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `department` | Object 'department' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `position` | Object 'position' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `employee` | Object 'employee' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `salary_record` | Object 'salary_record' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `attendance_log` | Object 'attendance_log' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `leave_request` | Object 'leave_request' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `performance_review` | Object 'performance_review' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `training_record` | Object 'training_record' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `benefit_plan` | Object 'benefit_plan' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `expense_claim` | Object 'expense_claim' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `payroll_run` | Object 'payroll_run' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `tax_form` | Object 'tax_form' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `contract` | Object 'contract' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `resignation` | Object 'resignation' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `warning_letter` | Object 'warning_letter' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `bonus_record` | Object 'bonus_record' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `shift_schedule` | Object 'shift_schedule' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `time_off_balance` | Object 'time_off_balance' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `recruitment_post` | Object 'recruitment_post' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `job_application` | Object 'job_application' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `interview` | Object 'interview' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `offer_letter` | Object 'offer_letter' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `onboarding_checklist` | Object 'onboarding_checklist' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `offboarding_checklist` | Object 'offboarding_checklist' defines display name, module, and module key metadata. |
+| `KSML-CONSTANT-001` | `leave_type` | Constant object 'leave_type' has correctly defined constant properties. |
+| `KSML-CONSTANT-002` | `leave_type.platform` | Constant object 'leave_type' is correctly associated with the root object. |
+| `KSML-CONSTANT-004` | `leave_type` | Constant object 'leave_type' has 3 constant value records. |
+| `KSML-CONSTANT-001` | `employee_status` | Constant object 'employee_status' has correctly defined constant properties. |
+| `KSML-CONSTANT-002` | `employee_status.platform` | Constant object 'employee_status' is correctly associated with the root object. |
+| `KSML-CONSTANT-004` | `employee_status` | Constant object 'employee_status' has 3 constant value records. |
+| `KSML-CONSTANT-001` | `contract_type` | Constant object 'contract_type' has correctly defined constant properties. |
+| `KSML-CONSTANT-002` | `contract_type.platform` | Constant object 'contract_type' is correctly associated with the root object. |
+| `KSML-CONSTANT-004` | `contract_type` | Constant object 'contract_type' has 3 constant value records. |
+| `KSML-CONSTANT-001` | `review_grade` | Constant object 'review_grade' has correctly defined constant properties. |
+| `KSML-CONSTANT-002` | `review_grade.platform` | Constant object 'review_grade' is correctly associated with the root object. |
+| `KSML-CONSTANT-004` | `review_grade` | Constant object 'review_grade' has 3 constant value records. |
+| `KSML-CONSTANT-001` | `application_status` | Constant object 'application_status' has correctly defined constant properties. |
+| `KSML-CONSTANT-002` | `application_status.platform` | Constant object 'application_status' is correctly associated with the root object. |
+| `KSML-CONSTANT-004` | `application_status` | Constant object 'application_status' has 3 constant value records. |
+| `KSML-REFERENCE-003` | `leave_type.platform` | Reference 'platform' in 'leave_type' successfully resolves to target object 'platform'. |
+| `KSML-REFERENCE-003` | `employee_status.platform` | Reference 'platform' in 'employee_status' successfully resolves to target object 'platform'. |
+| `KSML-REFERENCE-003` | `contract_type.platform` | Reference 'platform' in 'contract_type' successfully resolves to target object 'platform'. |
+| `KSML-REFERENCE-003` | `review_grade.platform` | Reference 'platform' in 'review_grade' successfully resolves to target object 'platform'. |
+| `KSML-REFERENCE-003` | `application_status.platform` | Reference 'platform' in 'application_status' successfully resolves to target object 'platform'. |
+| `KSML-REFERENCE-003` | `merchant.platform` | Reference 'platform' in 'merchant' successfully resolves to target object 'platform'. |
+| `KSML-REFERENCE-003` | `department.merchant` | Reference 'merchant' in 'department' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `position.department` | Reference 'department' in 'position' successfully resolves to target object 'department'. |
+| `KSML-REFERENCE-003` | `position.merchant` | Reference 'merchant' in 'position' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `employee.merchant` | Reference 'merchant' in 'employee' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `employee.position` | Reference 'position' in 'employee' successfully resolves to target object 'position'. |
+| `KSML-REFERENCE-003` | `employee.status` | Reference 'status' in 'employee' successfully resolves to target object 'employee_status'. |
+| `KSML-REFERENCE-003` | `salary_record.employee` | Reference 'employee' in 'salary_record' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `salary_record.merchant` | Reference 'merchant' in 'salary_record' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `attendance_log.employee` | Reference 'employee' in 'attendance_log' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `attendance_log.merchant` | Reference 'merchant' in 'attendance_log' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `leave_request.employee` | Reference 'employee' in 'leave_request' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `leave_request.merchant` | Reference 'merchant' in 'leave_request' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `leave_request.type` | Reference 'type' in 'leave_request' successfully resolves to target object 'leave_type'. |
+| `KSML-REFERENCE-003` | `performance_review.employee` | Reference 'employee' in 'performance_review' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `performance_review.grade` | Reference 'grade' in 'performance_review' successfully resolves to target object 'review_grade'. |
+| `KSML-REFERENCE-003` | `performance_review.merchant` | Reference 'merchant' in 'performance_review' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `training_record.employee` | Reference 'employee' in 'training_record' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `training_record.merchant` | Reference 'merchant' in 'training_record' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `benefit_plan.employee` | Reference 'employee' in 'benefit_plan' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `benefit_plan.merchant` | Reference 'merchant' in 'benefit_plan' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `expense_claim.employee` | Reference 'employee' in 'expense_claim' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `expense_claim.merchant` | Reference 'merchant' in 'expense_claim' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `payroll_run.merchant` | Reference 'merchant' in 'payroll_run' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `tax_form.employee` | Reference 'employee' in 'tax_form' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `tax_form.merchant` | Reference 'merchant' in 'tax_form' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `contract.employee` | Reference 'employee' in 'contract' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `contract.merchant` | Reference 'merchant' in 'contract' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `contract.type` | Reference 'type' in 'contract' successfully resolves to target object 'contract_type'. |
+| `KSML-REFERENCE-003` | `resignation.employee` | Reference 'employee' in 'resignation' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `resignation.merchant` | Reference 'merchant' in 'resignation' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `warning_letter.employee` | Reference 'employee' in 'warning_letter' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `warning_letter.merchant` | Reference 'merchant' in 'warning_letter' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `bonus_record.employee` | Reference 'employee' in 'bonus_record' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `bonus_record.merchant` | Reference 'merchant' in 'bonus_record' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `shift_schedule.employee` | Reference 'employee' in 'shift_schedule' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `shift_schedule.merchant` | Reference 'merchant' in 'shift_schedule' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `time_off_balance.employee` | Reference 'employee' in 'time_off_balance' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `time_off_balance.merchant` | Reference 'merchant' in 'time_off_balance' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `recruitment_post.merchant` | Reference 'merchant' in 'recruitment_post' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `recruitment_post.position` | Reference 'position' in 'recruitment_post' successfully resolves to target object 'position'. |
+| `KSML-REFERENCE-003` | `job_application.merchant` | Reference 'merchant' in 'job_application' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `job_application.recruitment_post` | Reference 'recruitment_post' in 'job_application' successfully resolves to target object 'recruitment_post'. |
+| `KSML-REFERENCE-003` | `job_application.status` | Reference 'status' in 'job_application' successfully resolves to target object 'application_status'. |
+| `KSML-REFERENCE-003` | `interview.job_application` | Reference 'job_application' in 'interview' successfully resolves to target object 'job_application'. |
+| `KSML-REFERENCE-003` | `interview.merchant` | Reference 'merchant' in 'interview' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `offer_letter.job_application` | Reference 'job_application' in 'offer_letter' successfully resolves to target object 'job_application'. |
+| `KSML-REFERENCE-003` | `offer_letter.merchant` | Reference 'merchant' in 'offer_letter' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `onboarding_checklist.employee` | Reference 'employee' in 'onboarding_checklist' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `onboarding_checklist.merchant` | Reference 'merchant' in 'onboarding_checklist' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `offboarding_checklist.employee` | Reference 'employee' in 'offboarding_checklist' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `offboarding_checklist.merchant` | Reference 'merchant' in 'offboarding_checklist' successfully resolves to target object 'merchant'. |
+| `KSML-MODULE-004` | `leave_type` | Constant object 'leave_type' is local to business area 'leave_request' and correctly shares its _module_key 'hr-payroll'. |
+| `KSML-MODULE-004` | `employee_status` | Constant object 'employee_status' is local to business area 'employee' and correctly shares its _module_key 'hr-payroll'. |
+| `KSML-MODULE-004` | `contract_type` | Constant object 'contract_type' is local to business area 'contract' and correctly shares its _module_key 'hr-payroll'. |
+| `KSML-MODULE-004` | `review_grade` | Constant object 'review_grade' is local to business area 'performance_review' and correctly shares its _module_key 'hr-payroll'. |
+| `KSML-MODULE-004` | `application_status` | Constant object 'application_status' is local to business area 'job_application' and correctly shares its _module_key 'hr-payroll'. |
+| `KSML-DOMAIN-ROOT-003` | `` | Exactly one domain root candidate 'platform' was found. |

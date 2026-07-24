@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+
+export ANTHROPIC_BASE_URL="http://222.128.77.232:30704/v1"
+export ANTHROPIC_API_KEY="dummy_key"
+
+exec claude \
+    --model nemotron-3-super \
+    --tools Bash,Edit,Read \
+    "$@"

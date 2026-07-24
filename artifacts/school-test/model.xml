@@ -1,0 +1,5 @@
+<root name="school-management-service" data_service="sqlite">
+  <platform id="0" name="Unknown Platform"/>
+  <school id="0" name="Unknown School" school_type_id="0"/>
+  <school_type id="0" name="Primary"/>
+</root>

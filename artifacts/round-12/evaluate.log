@@ -1,0 +1,296 @@
+model input: artifacts/round-12/model.xml
+using https://api.teaql.io/latest/evaluate
+# KSML Evaluation Report
+
+## 📊 Summary
+- **Errors**: 0
+- **Warnings**: 211
+- **Suggestions**: 8
+- **Solids**: 34
+
+## ⚠️ Warnings
+
+| Rule ID | Target | Warning Message |
+|---------|--------|-----------------|
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'Truck'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'Driver'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'DispatchLog'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'Route'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'Schedule'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'Cargo'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'FuelRecord'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'MaintenanceLog'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'Warehouse'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'InventorySlot'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'LoadingBay'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'MileageTracker'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'FuelCard'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'TollPass'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'VehicleInspection'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'User'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'UserProfile'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'Address'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'ContactInfo'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'PaymentMethod'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'BillingRecord'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'Preference'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'NotificationSetting'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'Review'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'ReferralCode'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'LoyaltyPoint'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'SupportTicket'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'ServiceRequest'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'Quote'. |
+| `KSML-STRUCTURE-003` | `` | Object name should be lowercase snake_case (e.g. stock_item), but found 'Contract'. |
+| `KSML-BUSINESS-002` | `Truck.capacity_kg` | Field 'capacity_kg' in business object 'Truck' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Truck.id` | Field 'id' in business object 'Truck' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Truck.last_service_date` | Field 'last_service_date' in business object 'Truck' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Truck.license_plate` | Field 'license_plate' in business object 'Truck' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Truck.status` | Field 'status' in business object 'Truck' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Driver.full_name` | Field 'full_name' in business object 'Driver' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Driver.id` | Field 'id' in business object 'Driver' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Driver.license_number` | Field 'license_number' in business object 'Driver' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Driver.phone` | Field 'phone' in business object 'Driver' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Driver.rating` | Field 'rating' in business object 'Driver' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `DispatchLog.driver_id` | Field 'driver_id' in business object 'DispatchLog' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `DispatchLog.id` | Field 'id' in business object 'DispatchLog' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `DispatchLog.notes` | Field 'notes' in business object 'DispatchLog' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `DispatchLog.status` | Field 'status' in business object 'DispatchLog' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `DispatchLog.timestamp` | Field 'timestamp' in business object 'DispatchLog' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `DispatchLog.truck_id` | Field 'truck_id' in business object 'DispatchLog' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Route.distance_km` | Field 'distance_km' in business object 'Route' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Route.end_location` | Field 'end_location' in business object 'Route' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Route.estimated_hours` | Field 'estimated_hours' in business object 'Route' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Route.id` | Field 'id' in business object 'Route' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Route.start_location` | Field 'start_location' in business object 'Route' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Schedule.driver_id` | Field 'driver_id' in business object 'Schedule' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Schedule.end_time` | Field 'end_time' in business object 'Schedule' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Schedule.id` | Field 'id' in business object 'Schedule' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Schedule.route_id` | Field 'route_id' in business object 'Schedule' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Schedule.start_time` | Field 'start_time' in business object 'Schedule' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Schedule.truck_id` | Field 'truck_id' in business object 'Schedule' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Cargo.dimensions` | Field 'dimensions' in business object 'Cargo' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Cargo.handling_instructions` | Field 'handling_instructions' in business object 'Cargo' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Cargo.id` | Field 'id' in business object 'Cargo' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Cargo.shipment_id` | Field 'shipment_id' in business object 'Cargo' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Cargo.weight_kg` | Field 'weight_kg' in business object 'Cargo' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `FuelRecord.cost` | Field 'cost' in business object 'FuelRecord' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `FuelRecord.date` | Field 'date' in business object 'FuelRecord' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `FuelRecord.id` | Field 'id' in business object 'FuelRecord' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `FuelRecord.liters` | Field 'liters' in business object 'FuelRecord' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `FuelRecord.station_name` | Field 'station_name' in business object 'FuelRecord' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `FuelRecord.truck_id` | Field 'truck_id' in business object 'FuelRecord' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `MaintenanceLog.cost` | Field 'cost' in business object 'MaintenanceLog' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `MaintenanceLog.description` | Field 'description' in business object 'MaintenanceLog' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `MaintenanceLog.id` | Field 'id' in business object 'MaintenanceLog' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `MaintenanceLog.mechanic` | Field 'mechanic' in business object 'MaintenanceLog' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `MaintenanceLog.service_date` | Field 'service_date' in business object 'MaintenanceLog' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `MaintenanceLog.truck_id` | Field 'truck_id' in business object 'MaintenanceLog' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Warehouse.capacity_sqm` | Field 'capacity_sqm' in business object 'Warehouse' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Warehouse.id` | Field 'id' in business object 'Warehouse' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Warehouse.location` | Field 'location' in business object 'Warehouse' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Warehouse.manager_id` | Field 'manager_id' in business object 'Warehouse' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Warehouse.operating_hours` | Field 'operating_hours' in business object 'Warehouse' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `InventorySlot.current_items` | Field 'current_items' in business object 'InventorySlot' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `InventorySlot.id` | Field 'id' in business object 'InventorySlot' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `InventorySlot.max_capacity` | Field 'max_capacity' in business object 'InventorySlot' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `InventorySlot.slot_code` | Field 'slot_code' in business object 'InventorySlot' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `InventorySlot.warehouse_id` | Field 'warehouse_id' in business object 'InventorySlot' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `LoadingBay.assigned_truck_id` | Field 'assigned_truck_id' in business object 'LoadingBay' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `LoadingBay.bay_number` | Field 'bay_number' in business object 'LoadingBay' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `LoadingBay.id` | Field 'id' in business object 'LoadingBay' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `LoadingBay.status` | Field 'status' in business object 'LoadingBay' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `LoadingBay.warehouse_id` | Field 'warehouse_id' in business object 'LoadingBay' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `MileageTracker.date` | Field 'date' in business object 'MileageTracker' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `MileageTracker.id` | Field 'id' in business object 'MileageTracker' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `MileageTracker.odometer_reading` | Field 'odometer_reading' in business object 'MileageTracker' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `MileageTracker.trip_purpose` | Field 'trip_purpose' in business object 'MileageTracker' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `MileageTracker.truck_id` | Field 'truck_id' in business object 'MileageTracker' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `FuelCard.balance` | Field 'balance' in business object 'FuelCard' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `FuelCard.card_number` | Field 'card_number' in business object 'FuelCard' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `FuelCard.expiry_date` | Field 'expiry_date' in business object 'FuelCard' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `FuelCard.id` | Field 'id' in business object 'FuelCard' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `FuelCard.linked_truck_id` | Field 'linked_truck_id' in business object 'FuelCard' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `TollPass.balance` | Field 'balance' in business object 'TollPass' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `TollPass.id` | Field 'id' in business object 'TollPass' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `TollPass.linked_truck_id` | Field 'linked_truck_id' in business object 'TollPass' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `TollPass.pass_id` | Field 'pass_id' in business object 'TollPass' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `TollPass.renewal_date` | Field 'renewal_date' in business object 'TollPass' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `VehicleInspection.id` | Field 'id' in business object 'VehicleInspection' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `VehicleInspection.inspection_date` | Field 'inspection_date' in business object 'VehicleInspection' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `VehicleInspection.inspector` | Field 'inspector' in business object 'VehicleInspection' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `VehicleInspection.pass_fail` | Field 'pass_fail' in business object 'VehicleInspection' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `VehicleInspection.remarks` | Field 'remarks' in business object 'VehicleInspection' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `VehicleInspection.truck_id` | Field 'truck_id' in business object 'VehicleInspection' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `User.created_at` | Field 'created_at' in business object 'User' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `User.email` | Field 'email' in business object 'User' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `User.id` | Field 'id' in business object 'User' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `User.password_hash` | Field 'password_hash' in business object 'User' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `User.username` | Field 'username' in business object 'User' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `UserProfile.date_of_birth` | Field 'date_of_birth' in business object 'UserProfile' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `UserProfile.first_name` | Field 'first_name' in business object 'UserProfile' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `UserProfile.gender` | Field 'gender' in business object 'UserProfile' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `UserProfile.id` | Field 'id' in business object 'UserProfile' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `UserProfile.last_name` | Field 'last_name' in business object 'UserProfile' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `UserProfile.user_id` | Field 'user_id' in business object 'UserProfile' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Address.city` | Field 'city' in business object 'Address' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Address.country` | Field 'country' in business object 'Address' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Address.id` | Field 'id' in business object 'Address' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Address.state` | Field 'state' in business object 'Address' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Address.street` | Field 'street' in business object 'Address' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Address.user_id` | Field 'user_id' in business object 'Address' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Address.zip_code` | Field 'zip_code' in business object 'Address' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `ContactInfo.alternate_phone` | Field 'alternate_phone' in business object 'ContactInfo' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `ContactInfo.id` | Field 'id' in business object 'ContactInfo' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `ContactInfo.phone` | Field 'phone' in business object 'ContactInfo' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `ContactInfo.preferred_contact_method` | Field 'preferred_contact_method' in business object 'ContactInfo' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `ContactInfo.user_id` | Field 'user_id' in business object 'ContactInfo' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `PaymentMethod.billing_address_id` | Field 'billing_address_id' in business object 'PaymentMethod' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `PaymentMethod.card_number` | Field 'card_number' in business object 'PaymentMethod' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `PaymentMethod.expiry` | Field 'expiry' in business object 'PaymentMethod' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `PaymentMethod.id` | Field 'id' in business object 'PaymentMethod' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `PaymentMethod.is_default` | Field 'is_default' in business object 'PaymentMethod' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `PaymentMethod.user_id` | Field 'user_id' in business object 'PaymentMethod' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `BillingRecord.amount` | Field 'amount' in business object 'BillingRecord' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `BillingRecord.currency` | Field 'currency' in business object 'BillingRecord' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `BillingRecord.id` | Field 'id' in business object 'BillingRecord' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `BillingRecord.invoice_date` | Field 'invoice_date' in business object 'BillingRecord' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `BillingRecord.status` | Field 'status' in business object 'BillingRecord' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `BillingRecord.user_id` | Field 'user_id' in business object 'BillingRecord' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Preference.communication_channel` | Field 'communication_channel' in business object 'Preference' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Preference.furniture_protection` | Field 'furniture_protection' in business object 'Preference' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Preference.id` | Field 'id' in business object 'Preference' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Preference.packing_style` | Field 'packing_style' in business object 'Preference' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Preference.user_id` | Field 'user_id' in business object 'Preference' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `NotificationSetting.email_alerts` | Field 'email_alerts' in business object 'NotificationSetting' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `NotificationSetting.frequency` | Field 'frequency' in business object 'NotificationSetting' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `NotificationSetting.id` | Field 'id' in business object 'NotificationSetting' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `NotificationSetting.push_notifications` | Field 'push_notifications' in business object 'NotificationSetting' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `NotificationSetting.sms_alerts` | Field 'sms_alerts' in business object 'NotificationSetting' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `NotificationSetting.user_id` | Field 'user_id' in business object 'NotificationSetting' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Review.comment` | Field 'comment' in business object 'Review' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Review.id` | Field 'id' in business object 'Review' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Review.rating` | Field 'rating' in business object 'Review' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Review.service_id` | Field 'service_id' in business object 'Review' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Review.submission_date` | Field 'submission_date' in business object 'Review' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Review.user_id` | Field 'user_id' in business object 'Review' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `ReferralCode.code` | Field 'code' in business object 'ReferralCode' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `ReferralCode.discount_percent` | Field 'discount_percent' in business object 'ReferralCode' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `ReferralCode.expiration_date` | Field 'expiration_date' in business object 'ReferralCode' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `ReferralCode.id` | Field 'id' in business object 'ReferralCode' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `ReferralCode.usage_count` | Field 'usage_count' in business object 'ReferralCode' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `ReferralCode.user_id` | Field 'user_id' in business object 'ReferralCode' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `LoyaltyPoint.earned_date` | Field 'earned_date' in business object 'LoyaltyPoint' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `LoyaltyPoint.id` | Field 'id' in business object 'LoyaltyPoint' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `LoyaltyPoint.points_balance` | Field 'points_balance' in business object 'LoyaltyPoint' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `LoyaltyPoint.redemption_status` | Field 'redemption_status' in business object 'LoyaltyPoint' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `LoyaltyPoint.user_id` | Field 'user_id' in business object 'LoyaltyPoint' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `SupportTicket.created_at` | Field 'created_at' in business object 'SupportTicket' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `SupportTicket.description` | Field 'description' in business object 'SupportTicket' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `SupportTicket.id` | Field 'id' in business object 'SupportTicket' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `SupportTicket.priority` | Field 'priority' in business object 'SupportTicket' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `SupportTicket.status` | Field 'status' in business object 'SupportTicket' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `SupportTicket.subject` | Field 'subject' in business object 'SupportTicket' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `SupportTicket.user_id` | Field 'user_id' in business object 'SupportTicket' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `ServiceRequest.assigned_team` | Field 'assigned_team' in business object 'ServiceRequest' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `ServiceRequest.id` | Field 'id' in business object 'ServiceRequest' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `ServiceRequest.request_date` | Field 'request_date' in business object 'ServiceRequest' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `ServiceRequest.service_type` | Field 'service_type' in business object 'ServiceRequest' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `ServiceRequest.status` | Field 'status' in business object 'ServiceRequest' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `ServiceRequest.user_id` | Field 'user_id' in business object 'ServiceRequest' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Quote.estimated_cost` | Field 'estimated_cost' in business object 'Quote' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Quote.id` | Field 'id' in business object 'Quote' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Quote.items_list` | Field 'items_list' in business object 'Quote' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Quote.status` | Field 'status' in business object 'Quote' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Quote.user_id` | Field 'user_id' in business object 'Quote' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Quote.valid_until` | Field 'valid_until' in business object 'Quote' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Contract.id` | Field 'id' in business object 'Contract' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Contract.quote_id` | Field 'quote_id' in business object 'Contract' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Contract.signature_hash` | Field 'signature_hash' in business object 'Contract' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Contract.signed_date` | Field 'signed_date' in business object 'Contract' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Contract.terms` | Field 'terms' in business object 'Contract' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `Contract.user_id` | Field 'user_id' in business object 'Contract' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-REFERENCE-005` | `Truck.status` | Field 'status' in 'Truck' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `DispatchLog.status` | Field 'status' in 'DispatchLog' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `LoadingBay.status` | Field 'status' in 'LoadingBay' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `UserProfile.gender` | Field 'gender' in 'UserProfile' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `BillingRecord.status` | Field 'status' in 'BillingRecord' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `SupportTicket.priority` | Field 'priority' in 'SupportTicket' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `SupportTicket.status` | Field 'status' in 'SupportTicket' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `ServiceRequest.status` | Field 'status' in 'ServiceRequest' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `Quote.status` | Field 'status' in 'Quote' represents a finite set and should preferably reference a constant object. |
+| `KSML-DOMAIN-ROOT-002` | `` | Multiple independent business objects found: Truck, Driver, DispatchLog, Route, Schedule, Cargo, FuelRecord, MaintenanceLog, Warehouse, InventorySlot, LoadingBay, MileageTracker, FuelCard, TollPass, VehicleInspection, User, UserProfile, Address, ContactInfo, PaymentMethod, BillingRecord, Preference, NotificationSetting, Review, ReferralCode, LoyaltyPoint, SupportTicket, ServiceRequest, Quote, Contract. The model may have disconnected graphs. |
+| `KSML-PRIVACY-001-WARN` | `Driver.phone` | Contact identifier on person-like subject. Add `phone` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-WARN` | `User.email` | Contact identifier on person-like subject. Add `email` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-WARN` | `PaymentMethod.billing_address_id` | Location data on high-risk privacy subject. Add `billing_address_id` to `_audit_mask_fields`. |
+
+
+## 💡 Suggestions
+
+| Rule ID | Target | Suggestion |
+|---------|--------|------------|
+| `KSML-PRIVACY-001-SUG` | `Driver.full_name` | Personal attribute on person-like subject. Add `full_name` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-SUG` | `FuelCard.balance` | Financial data field. Add `balance` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-SUG` | `TollPass.balance` | Financial data field. Add `balance` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-SUG` | `User.username` | Personal attribute on person-like subject. Add `username` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-SUG` | `ContactInfo.phone` | Contact identifier field. Add `phone` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-SUG` | `ContactInfo.alternate_phone` | Contact identifier field. Add `alternate_phone` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-SUG` | `NotificationSetting.email_alerts` | Contact identifier field. Add `email_alerts` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-SUG` | `LoyaltyPoint.points_balance` | Financial data field. Add `points_balance` to `_audit_mask_fields`. |
+
+
+## Privacy Findings
+
+| Severity | Target | Reason | Recommended Action | Regulatory Basis |
+|----------|--------|--------|--------------------|------------------|
+| Suggestion | `Driver.full_name` | Personal attribute on person-like subject. | Add to `_audit_mask_fields="full_name"`. | GDPR Art. 4: identifier |
+| Warning | `Driver.phone` | Contact identifier on person-like subject. | Add to `_audit_mask_fields="phone"`. | CCPA/CPRA 1798.140: identifiers |
+| Suggestion | `FuelCard.balance` | Financial data field. | Add to `_audit_mask_fields="card_number,balance"`. | PIPL Art. 28: financial accounts |
+| Suggestion | `TollPass.balance` | Financial data field. | Add to `_audit_mask_fields="balance"`. | PIPL Art. 28: financial accounts |
+| Suggestion | `User.username` | Personal attribute on person-like subject. | Add to `_audit_mask_fields="password_hash,username"`. | GDPR Art. 4: identifier |
+| Warning | `User.email` | Contact identifier on person-like subject. | Add to `_audit_mask_fields="password_hash,email"`. | CCPA/CPRA 1798.140: identifiers |
+| Suggestion | `ContactInfo.phone` | Contact identifier field. | Add to `_audit_mask_fields="phone"`. | CCPA/CPRA 1798.140: identifiers |
+| Suggestion | `ContactInfo.alternate_phone` | Contact identifier field. | Add to `_audit_mask_fields="alternate_phone"`. | CCPA/CPRA 1798.140: identifiers |
+| Warning | `PaymentMethod.billing_address_id` | Location data on high-risk privacy subject. | Add to `_audit_mask_fields="card_number,billing_address_id"`. | CCPA/CPRA 1798.140: precise geolocation; PIPL Art. 28: whereabouts |
+| Suggestion | `NotificationSetting.email_alerts` | Contact identifier field. | Add to `_audit_mask_fields="email_alerts"`. | CCPA/CPRA 1798.140: identifiers |
+| Suggestion | `LoyaltyPoint.points_balance` | Financial data field. | Add to `_audit_mask_fields="points_balance"`. | PIPL Art. 28: financial accounts |
+
+
+## ✅ Solids
+
+| Rule ID | Target | Message |
+|---------|--------|---------|
+| `KSML-UPLOAD-001` | `` | The upload contains 1 files. |
+| `KSML-UPLOAD-005` | `` | Resolved entrypoint: model.xml |
+| `KSML-XML-002` | `` | The XML document model.xml was parsed successfully. |
+| `KSML-ROOT-003` | `` | Root name 'moving-company-service' is well-formed. |
+| `KSML-OBJECT-001` | `Truck` | Object 'Truck' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `Driver` | Object 'Driver' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `DispatchLog` | Object 'DispatchLog' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `Route` | Object 'Route' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `Schedule` | Object 'Schedule' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `Cargo` | Object 'Cargo' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `FuelRecord` | Object 'FuelRecord' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `MaintenanceLog` | Object 'MaintenanceLog' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `Warehouse` | Object 'Warehouse' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `InventorySlot` | Object 'InventorySlot' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `LoadingBay` | Object 'LoadingBay' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `MileageTracker` | Object 'MileageTracker' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `FuelCard` | Object 'FuelCard' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `TollPass` | Object 'TollPass' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `VehicleInspection` | Object 'VehicleInspection' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `User` | Object 'User' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `UserProfile` | Object 'UserProfile' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `Address` | Object 'Address' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `ContactInfo` | Object 'ContactInfo' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `PaymentMethod` | Object 'PaymentMethod' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `BillingRecord` | Object 'BillingRecord' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `Preference` | Object 'Preference' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `NotificationSetting` | Object 'NotificationSetting' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `Review` | Object 'Review' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `ReferralCode` | Object 'ReferralCode' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `LoyaltyPoint` | Object 'LoyaltyPoint' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `SupportTicket` | Object 'SupportTicket' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `ServiceRequest` | Object 'ServiceRequest' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `Quote` | Object 'Quote' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `Contract` | Object 'Contract' defines display name, module, and module key metadata. |

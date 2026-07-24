@@ -1,0 +1,379 @@
+// ⛔ AI agents: DO NOT read this file for API discovery. Instead run: cargo teaql --input modeling/MODEL.xml rust-assist-query/position
+use std::collections::BTreeMap;
+
+use teaql_core::SmartList;
+use teaql_macros::TeaqlEntity;
+
+/// [TEAQL AI WARNING]
+/// TeaQL was explicitly designed to PREVENT AI hallucinations and random guessing.
+/// DO NOT GUESS METHOD NAMES!
+/// The methods listed below are the ONLY valid ways to interact with this entity.
+/// If you encounter compilation errors (e.g., method not found), DO NOT guess another method name.
+/// Read the method signatures in this file before proceeding.
+#[derive(Clone, Debug, PartialEq, TeaqlEntity)]
+#[teaql(entity = "Position", table = "position_data", data_service = "sqlite")]
+pub struct Position {
+#[teaql(id)]
+    id: u64,
+
+// @source model.xml:69
+    title: String,
+
+// @source model.xml:69
+    level: String,
+
+// @source model.xml:69
+    create_time: chrono::DateTime<chrono::Utc>,
+
+// @source model.xml:69
+    update_time: chrono::DateTime<chrono::Utc>,
+#[teaql(version)]
+    version: i64,
+// @source model.xml:69
+#[teaql(column = "department")]
+    department_id: u64,
+
+// @source model.xml:69
+#[teaql(column = "merchant")]
+    merchant_id: u64,
+// @source model.xml:69
+#[teaql(relation(target = "Department", local_key = "department_id", foreign_key = "id"))]
+    department: Option<crate::Department>,
+
+// @source model.xml:69
+#[teaql(relation(target = "Merchant", local_key = "merchant_id", foreign_key = "id"))]
+    merchant: Option<crate::Merchant>,
+#[teaql(relation(target = "Employee", local_key = "id", foreign_key = "position_id", many))]
+    employee_list: SmartList<crate::Employee>,
+#[teaql(relation(target = "RecruitmentPost", local_key = "id", foreign_key = "position_id", many))]
+    recruitment_post_list: SmartList<crate::RecruitmentPost>,
+    #[teaql(dynamic)]
+    dynamic: BTreeMap<String, teaql_core::Value>,
+    #[teaql(skip)]
+    root: teaql_runtime::EntityRoot,
+    #[teaql(skip)]
+    pub __load_state: teaql_core::eval::LoadState,
+}
+
+impl Position {
+    pub fn with_id(id: u64) -> teaql_core::Value {
+        teaql_core::Value::U64(id)
+    }
+
+    pub(crate) fn runtime_new(root: teaql_runtime::EntityRoot) -> Self {
+        Self {
+            id: 0_u64,
+            title: String::new(),
+            level: String::new(),
+            create_time: chrono::Utc::now(),
+            update_time: chrono::Utc::now(),
+            version: 0_i64,
+            department_id: 0_u64,
+            merchant_id: 0_u64,
+            department: None,
+            merchant: None,
+            employee_list: Default::default(),
+            recruitment_post_list: Default::default(),
+            dynamic: BTreeMap::new(),
+            root,
+            __load_state: teaql_core::eval::LoadState::FullyLoaded,
+        }
+    }
+
+    pub fn entity_key(&self) -> teaql_runtime::EntityKey {
+        teaql_runtime::EntityKey::new("Position", self.id)
+    }
+
+    pub fn attach_root_recursive(&mut self, root: teaql_runtime::EntityRoot) {
+        self.root = root.clone();
+        if let Some(entity) = &mut self.department {
+            entity.attach_root_recursive(root.clone());
+        }
+        if let Some(entity) = &mut self.merchant {
+            entity.attach_root_recursive(root.clone());
+        }
+        for entity in &mut self.employee_list {
+            entity.attach_root_recursive(root.clone());
+        }
+        for entity in &mut self.recruitment_post_list {
+            entity.attach_root_recursive(root.clone());
+        }
+    }
+
+    pub fn is_loaded(&self, field_or_relation: &str) -> bool {
+        self.__load_state.is_loaded(field_or_relation)
+    }
+
+    pub fn set_load_state(&mut self, state: teaql_core::eval::LoadState) {
+        self.__load_state = state;
+    }
+
+    pub fn id(&self) -> u64 {
+        self.changed_id().and_then(|value| value.try_u64()).unwrap_or(self.id)
+    }
+
+    pub fn update_id(&mut self, value: impl Into<teaql_core::Value>) -> &mut Self {
+        let value = value.into();
+        self.id = value.try_u64().unwrap_or(self.id.clone());
+        self.root.set(self.entity_key(), "id", value);
+        self
+    }
+
+    pub fn changed_id(&self) -> Option<teaql_core::Value> {
+        self.root.get(&self.entity_key(), "id")
+    }
+
+    pub fn eval_id(&self) -> teaql_core::eval::EvalResult<u64> {
+        if !self.is_loaded("id") {
+                    teaql_core::eval::EvalResult::NotLoaded { failed_node: "id".to_string(), attempted_path: "id".to_string() }
+                } else {
+                    teaql_core::eval::EvalResult::Value(self.id())
+                }}
+
+    pub fn title(&self) -> String {
+        self.changed_title().and_then(|value| value.try_text().map(|value| value.to_owned())).unwrap_or_else(|| self.title.clone())
+    }
+
+    pub fn update_title(&mut self, value: impl Into<teaql_core::Value>) -> &mut Self {
+        let value = value.into();
+        self.title = value.try_text().map(|value| value.trim().to_owned()).unwrap_or_else(|| self.title.clone());
+        self.root.set(self.entity_key(), "title", value);
+        self
+    }
+
+    pub fn changed_title(&self) -> Option<teaql_core::Value> {
+        self.root.get(&self.entity_key(), "title")
+    }
+
+    pub fn eval_title(&self) -> teaql_core::eval::EvalResult<String> {
+        if !self.is_loaded("title") {
+                    teaql_core::eval::EvalResult::NotLoaded { failed_node: "title".to_string(), attempted_path: "title".to_string() }
+                } else {
+                    teaql_core::eval::EvalResult::Value(self.title())
+                }}
+
+    pub fn level(&self) -> String {
+        self.changed_level().and_then(|value| value.try_text().map(|value| value.to_owned())).unwrap_or_else(|| self.level.clone())
+    }
+
+    pub fn update_level(&mut self, value: impl Into<teaql_core::Value>) -> &mut Self {
+        let value = value.into();
+        self.level = value.try_text().map(|value| value.trim().to_owned()).unwrap_or_else(|| self.level.clone());
+        self.root.set(self.entity_key(), "level", value);
+        self
+    }
+
+    pub fn changed_level(&self) -> Option<teaql_core::Value> {
+        self.root.get(&self.entity_key(), "level")
+    }
+
+    pub fn eval_level(&self) -> teaql_core::eval::EvalResult<String> {
+        if !self.is_loaded("level") {
+                    teaql_core::eval::EvalResult::NotLoaded { failed_node: "level".to_string(), attempted_path: "level".to_string() }
+                } else {
+                    teaql_core::eval::EvalResult::Value(self.level())
+                }}
+
+    pub fn create_time(&self) -> chrono::DateTime<chrono::Utc> {
+        self.changed_create_time().and_then(|value| value.try_timestamp()).unwrap_or(self.create_time)
+    }
+
+    pub fn update_create_time(&mut self, value: impl Into<teaql_core::Value>) -> &mut Self {
+        let value = value.into();
+        self.create_time = value.try_timestamp().unwrap_or(self.create_time.clone());
+        self.root.set(self.entity_key(), "create_time", value);
+        self
+    }
+
+    pub fn changed_create_time(&self) -> Option<teaql_core::Value> {
+        self.root.get(&self.entity_key(), "create_time")
+    }
+
+    pub fn eval_create_time(&self) -> teaql_core::eval::EvalResult<chrono::DateTime<chrono::Utc>> {
+        if !self.is_loaded("create_time") {
+                    teaql_core::eval::EvalResult::NotLoaded { failed_node: "create_time".to_string(), attempted_path: "create_time".to_string() }
+                } else {
+                    teaql_core::eval::EvalResult::Value(self.create_time())
+                }}
+
+    pub fn update_time(&self) -> chrono::DateTime<chrono::Utc> {
+        self.changed_update_time().and_then(|value| value.try_timestamp()).unwrap_or(self.update_time)
+    }
+
+    pub fn update_update_time(&mut self, value: impl Into<teaql_core::Value>) -> &mut Self {
+        let value = value.into();
+        self.update_time = value.try_timestamp().unwrap_or(self.update_time.clone());
+        self.root.set(self.entity_key(), "update_time", value);
+        self
+    }
+
+    pub fn changed_update_time(&self) -> Option<teaql_core::Value> {
+        self.root.get(&self.entity_key(), "update_time")
+    }
+
+    pub fn eval_update_time(&self) -> teaql_core::eval::EvalResult<chrono::DateTime<chrono::Utc>> {
+        if !self.is_loaded("update_time") {
+                    teaql_core::eval::EvalResult::NotLoaded { failed_node: "update_time".to_string(), attempted_path: "update_time".to_string() }
+                } else {
+                    teaql_core::eval::EvalResult::Value(self.update_time())
+                }}
+
+    pub fn version(&self) -> i64 {
+        self.changed_version().and_then(|value| value.try_i64()).unwrap_or(self.version)
+    }
+
+    pub fn update_version(&mut self, value: impl Into<teaql_core::Value>) -> &mut Self {
+        let value = value.into();
+        self.version = value.try_i64().unwrap_or(self.version.clone());
+        self.root.set(self.entity_key(), "version", value);
+        self
+    }
+
+    pub fn changed_version(&self) -> Option<teaql_core::Value> {
+        self.root.get(&self.entity_key(), "version")
+    }
+
+    pub fn eval_version(&self) -> teaql_core::eval::EvalResult<i64> {
+        if !self.is_loaded("version") {
+                    teaql_core::eval::EvalResult::NotLoaded { failed_node: "version".to_string(), attempted_path: "version".to_string() }
+                } else {
+                    teaql_core::eval::EvalResult::Value(self.version())
+                }}
+    pub fn department_id(&self) -> u64 {
+        self.changed_department_id().and_then(|value| value.try_u64()).unwrap_or(self.department_id)
+    }
+
+    pub fn update_department_id(&mut self, value: impl Into<teaql_core::Value>) -> &mut Self {
+        let value = value.into();
+        self.department_id = value.try_u64().unwrap_or(self.department_id.clone());
+        self.root.set(self.entity_key(), "department_id", value);
+        self
+    }
+
+    pub fn changed_department_id(&self) -> Option<teaql_core::Value> {
+        self.root.get(&self.entity_key(), "department_id")
+    }
+
+    pub fn eval_department_id(&self) -> teaql_core::eval::EvalResult<u64> {
+        if !self.is_loaded("department_id") {
+                    teaql_core::eval::EvalResult::NotLoaded { failed_node: "department_id".to_string(), attempted_path: "department_id".to_string() }
+                } else {
+                    teaql_core::eval::EvalResult::Value(self.department_id())
+                }}
+
+    pub fn merchant_id(&self) -> u64 {
+        self.changed_merchant_id().and_then(|value| value.try_u64()).unwrap_or(self.merchant_id)
+    }
+
+    pub fn update_merchant_id(&mut self, value: impl Into<teaql_core::Value>) -> &mut Self {
+        let value = value.into();
+        self.merchant_id = value.try_u64().unwrap_or(self.merchant_id.clone());
+        self.root.set(self.entity_key(), "merchant_id", value);
+        self
+    }
+
+    pub fn changed_merchant_id(&self) -> Option<teaql_core::Value> {
+        self.root.get(&self.entity_key(), "merchant_id")
+    }
+
+    pub fn eval_merchant_id(&self) -> teaql_core::eval::EvalResult<u64> {
+        if !self.is_loaded("merchant_id") {
+                    teaql_core::eval::EvalResult::NotLoaded { failed_node: "merchant_id".to_string(), attempted_path: "merchant_id".to_string() }
+                } else {
+                    teaql_core::eval::EvalResult::Value(self.merchant_id())
+                }}
+    pub fn department(&self) -> Option<&crate::Department> {
+        self.department.as_ref()
+    }
+
+    pub fn eval_department(&self) -> teaql_core::eval::EvalResult<&crate::Department> {
+        if !self.is_loaded("department") {
+            teaql_core::eval::EvalResult::NotLoaded { failed_node: "department".to_string(), attempted_path: "department".to_string() }
+        } else {
+            match &self.department {
+                Some(v) => teaql_core::eval::EvalResult::Value(v),
+                None => teaql_core::eval::EvalResult::Null,
+            }
+        }
+    }
+
+    pub fn merchant(&self) -> Option<&crate::Merchant> {
+        self.merchant.as_ref()
+    }
+
+    pub fn eval_merchant(&self) -> teaql_core::eval::EvalResult<&crate::Merchant> {
+        if !self.is_loaded("merchant") {
+            teaql_core::eval::EvalResult::NotLoaded { failed_node: "merchant".to_string(), attempted_path: "merchant".to_string() }
+        } else {
+            match &self.merchant {
+                Some(v) => teaql_core::eval::EvalResult::Value(v),
+                None => teaql_core::eval::EvalResult::Null,
+            }
+        }
+    }
+    pub fn employee_list(&self) -> &SmartList<crate::Employee> {
+        &self.employee_list
+    }
+
+    pub fn employee_list_mut(&mut self) -> &mut SmartList<crate::Employee> {
+        &mut self.employee_list
+    }
+
+    pub fn eval_employee_list(&self) -> teaql_core::eval::EvalResult<&SmartList<crate::Employee>> {
+        if !self.is_loaded("employee_list") {
+            teaql_core::eval::EvalResult::NotLoaded { failed_node: "employee_list".to_string(), attempted_path: "employee_list".to_string() }
+        } else {
+            teaql_core::eval::EvalResult::Value(&self.employee_list)
+        }
+    }
+
+    pub fn recruitment_post_list(&self) -> &SmartList<crate::RecruitmentPost> {
+        &self.recruitment_post_list
+    }
+
+    pub fn recruitment_post_list_mut(&mut self) -> &mut SmartList<crate::RecruitmentPost> {
+        &mut self.recruitment_post_list
+    }
+
+    pub fn eval_recruitment_post_list(&self) -> teaql_core::eval::EvalResult<&SmartList<crate::RecruitmentPost>> {
+        if !self.is_loaded("recruitment_post_list") {
+            teaql_core::eval::EvalResult::NotLoaded { failed_node: "recruitment_post_list".to_string(), attempted_path: "recruitment_post_list".to_string() }
+        } else {
+            teaql_core::eval::EvalResult::Value(&self.recruitment_post_list)
+        }
+    }
+
+    pub fn mark_as_delete(&mut self) -> &mut Self {
+        self.root.mark_as_delete(self.entity_key());
+        self
+    }
+
+    pub fn set_comment(&mut self, comment: impl Into<String>) -> &mut Self {
+        self.root.set_comment(comment);
+        self
+    }
+
+    pub(crate) async fn save<'a, C>(
+        &self,
+        ctx: &'a C,
+    ) -> Result<teaql_runtime::GraphNode, crate::TeaqlDataServiceError<C::PositionRepository<'a>>>
+    where
+        C: crate::TeaqlRepositoryProvider + ?Sized,
+    {
+        let root = ctx.user_context().entity_root();
+        let key = self.entity_key();
+        let has_ledger_change = (self.id != 0)
+            && (root.current_change_set().changes().contains_key(&key)
+                || root.is_marked_as_delete(&key)
+                || root.is_new(&key));
+        let repository = ctx
+            .position_repository()
+            .map_err(|err| teaql_runtime::DataServiceError::Runtime(teaql_runtime::RuntimeError::Graph(err.to_string())))?;
+        if has_ledger_change {
+            crate::TeaqlEntityRepository::save_entity_ledger(&repository, root.clone()).await?;
+            return Ok(teaql_runtime::GraphNode::new("Position"));
+        }
+        crate::TeaqlEntityRepository::save_entity_graph(&repository, self.clone()).await
+    }
+}
+

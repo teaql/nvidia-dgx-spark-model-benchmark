@@ -1,0 +1,17 @@
+<payment id="0" name="Unknown" _module_key="finance-accounting" merchant_id="0"/>
+<invoice id="0" name="Unknown" _module_key="finance-accounting" merchant_id="0"/>
+<invoice_line id="0" name="Unknown" _module_key="finance-accounting" merchant_id="0"/>
+<refund id="0" name="Unknown" _module_key="finance-accounting" merchant_id="0"/>
+<expense id="0" name="Unknown" _module_key="finance-accounting" merchant_id="0"/>
+<vat_rate id="0" name="Unknown" _module_key="finance-accounting" merchant_id="0"/>
+<journal_entry id="0" name="Unknown" _module_key="finance-accounting" merchant_id="0"/>
+<account id="0" name="Unknown" _module_key="finance-accounting" merchant_id="0"/>
+<financial_summary id="0" name="Unknown" _module_key="finance-accounting" merchant_id="0"/>
+<tax_document id="0" name="Unknown" _module_key="finance-accounting" merchant_id="0"/>
+<bank_transaction id="0" name="Unknown" _module_key="finance-accounting" merchant_id="0"/>
+<merchant_fee id="0" name="Unknown" _module_key="finance-accounting" merchant_id="0"/>
+<chargeback_record id="0" name="Unknown" _module_key="finance-accounting" merchant_id="0"/>
+<credit_note id="0" name="Unknown" _module_key="finance-accounting" merchant_id="0"/>
+<debit_note id="0" name="Unknown" _module_key="finance-accounting" merchant_id="0"/>
+<audit_adjustment id="0" name="Unknown" _module_key="finance-accounting" merchant_id="0"/>
+<fiscal_year id="0" name="Unknown" _module_key="finance-accounting" merchant_id="0"/>

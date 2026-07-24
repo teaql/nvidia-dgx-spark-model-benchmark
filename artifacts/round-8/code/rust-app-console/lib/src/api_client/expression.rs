@@ -1,0 +1,133 @@
+#[derive(Clone)]
+pub struct ApiClientExpression<'a> {
+    result: teaql_core::eval::EvalResult<&'a crate::ApiClient>,
+    root_desc: std::sync::Arc<String>,
+}
+
+impl<'a> ApiClientExpression<'a> {
+    pub fn new(result: teaql_core::eval::EvalResult<&'a crate::ApiClient>, root_desc: std::sync::Arc<String>) -> Self {
+        Self { result, root_desc }
+    }
+
+    fn resolve(&self) -> Option<&'a crate::ApiClient> {
+        match &self.result {
+            teaql_core::eval::EvalResult::Value(v) => Some(*v),
+            teaql_core::eval::EvalResult::Null => None,
+            teaql_core::eval::EvalResult::NotLoaded { failed_node, attempted_path } => {
+                crate::trigger_logic_bug_panic(&self.root_desc, &failed_node, &attempted_path)
+            }
+        }
+    }
+
+    pub fn eval(&self) -> Option<&'a crate::ApiClient> {
+        self.resolve()
+    }
+
+    pub fn unwrap(&self) -> &'a crate::ApiClient {
+        self.resolve().expect("Relation was legitimately null in database!")
+    }
+
+    pub fn get_id(self) -> crate::ValueExpression<'a, u64> {
+        let next = self.result.and_then("id", |entity| entity.eval_id());
+        crate::ValueExpression::new(next, self.root_desc.clone())
+    }
+
+    pub fn get_client_id(self) -> crate::ValueExpression<'a, String> {
+        let next = self.result.and_then("client_id", |entity| entity.eval_client_id());
+        crate::ValueExpression::new(next, self.root_desc.clone())
+    }
+
+    pub fn get_name(self) -> crate::ValueExpression<'a, String> {
+        let next = self.result.and_then("name", |entity| entity.eval_name());
+        crate::ValueExpression::new(next, self.root_desc.clone())
+    }
+
+    pub fn get_version(self) -> crate::ValueExpression<'a, i64> {
+        let next = self.result.and_then("version", |entity| entity.eval_version());
+        crate::ValueExpression::new(next, self.root_desc.clone())
+    }
+    pub fn get_merchant_ref_id(self) -> crate::ValueExpression<'a, u64> {
+        let next = self.result.and_then("merchant_ref_id", |entity| entity.eval_merchant_ref_id());
+        crate::ValueExpression::new(next, self.root_desc.clone())
+    }
+    pub fn get_merchant_ref(self) -> crate::MerchantExpression<'a> {
+        let next = self.result.and_then("merchant_ref", |entity| entity.eval_merchant_ref());
+        crate::MerchantExpression::new(next, self.root_desc.clone())
+    }
+    pub fn get_api_endpoint_list(self) -> crate::ApiEndpointListExpression<'a> {
+        let next = self.result.and_then("api_endpoint_list", |entity| entity.eval_api_endpoint_list());
+        crate::ApiEndpointListExpression::new(next, self.root_desc.clone())
+    }
+
+    pub fn get_webhook_list(self) -> crate::WebhookListExpression<'a> {
+        let next = self.result.and_then("webhook_list", |entity| entity.eval_webhook_list());
+        crate::WebhookListExpression::new(next, self.root_desc.clone())
+    }
+
+    pub fn get_integration_mapping_list(self) -> crate::IntegrationMappingListExpression<'a> {
+        let next = self.result.and_then("integration_mapping_list", |entity| entity.eval_integration_mapping_list());
+        crate::IntegrationMappingListExpression::new(next, self.root_desc.clone())
+    }
+
+    pub fn get_api_key_list(self) -> crate::ApiKeyListExpression<'a> {
+        let next = self.result.and_then("api_key_list", |entity| entity.eval_api_key_list());
+        crate::ApiKeyListExpression::new(next, self.root_desc.clone())
+    }
+}
+
+#[derive(Clone)]
+pub struct ApiClientListExpression<'a> {
+    result: teaql_core::eval::EvalResult<&'a teaql_core::SmartList<crate::ApiClient>>,
+    root_desc: std::sync::Arc<String>,
+}
+
+impl<'a> ApiClientListExpression<'a> {
+    pub fn new(result: teaql_core::eval::EvalResult<&'a teaql_core::SmartList<crate::ApiClient>>, root_desc: std::sync::Arc<String>) -> Self {
+        Self { result, root_desc }
+    }
+
+    fn resolve(&self) -> Option<&'a teaql_core::SmartList<crate::ApiClient>> {
+        match &self.result {
+            teaql_core::eval::EvalResult::Value(v) => Some(*v),
+            teaql_core::eval::EvalResult::Null => None,
+            teaql_core::eval::EvalResult::NotLoaded { failed_node, attempted_path } => {
+                crate::trigger_logic_bug_panic(&self.root_desc, &failed_node, &attempted_path)
+            }
+        }
+    }
+
+    pub fn eval(&self) -> Option<&'a teaql_core::SmartList<crate::ApiClient>> {
+        self.resolve()
+    }
+
+    pub fn unwrap(&self) -> &'a teaql_core::SmartList<crate::ApiClient> {
+        self.resolve().expect("List relation was legitimately null in database!")
+    }
+
+    pub fn size(&self) -> crate::ValueExpression<'a, usize> {
+        let next = self.result.clone().and_then("size", |list| teaql_core::eval::EvalResult::Value(list.len()));
+        crate::ValueExpression::new(next, self.root_desc.clone())
+    }
+
+    pub fn first(&self) -> crate::ApiClientExpression<'a> {
+        let next = self.result.clone().and_then("first", |list| {
+            if let Some(item) = list.first() {
+                teaql_core::eval::EvalResult::Value(item)
+            } else {
+                teaql_core::eval::EvalResult::Null
+            }
+        });
+        crate::ApiClientExpression::new(next, self.root_desc.clone())
+    }
+
+    pub fn get(&self, index: usize) -> crate::ApiClientExpression<'a> {
+        let next = self.result.clone().and_then("get", |list| {
+            if let Some(item) = list.get(index) {
+                teaql_core::eval::EvalResult::Value(item)
+            } else {
+                teaql_core::eval::EvalResult::Null
+            }
+        });
+        crate::ApiClientExpression::new(next, self.root_desc.clone())
+    }
+}

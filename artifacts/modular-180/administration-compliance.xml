@@ -1,0 +1,14 @@
+<contract id="0" name="Unknown" _module_key="administration-compliance" merchant_id="0"/>
+<insurance_policy id="0" name="Unknown" _module_key="administration-compliance" merchant_id="0"/>
+<insurance_claim id="0" name="Unknown" _module_key="administration-compliance" merchant_id="0"/>
+<document id="0" name="Unknown" _module_key="administration-compliance" merchant_id="0"/>
+<document_version id="0" name="Unknown" _module_key="administration-compliance" merchant_id="0"/>
+<compliance_check id="0" name="Unknown" _module_key="administration-compliance" merchant_id="0"/>
+<data_retention_policy id="0" name="Unknown" _module_key="administration-compliance" merchant_id="0"/>
+<recovery_request id="0" name="Unknown" _module_key="administration-compliance" merchant_id="0"/>
+<nda_agreement id="0" name="Unknown" _module_key="administration-compliance" merchant_id="0"/>
+<terms_of_service id="0" name="Unknown" _module_key="administration-compliance" merchant_id="0"/>
+<privacy_policy id="0" name="Unknown" _module_key="administration-compliance" merchant_id="0"/>
+<cookie_consent id="0" name="Unknown" _module_key="administration-compliance" merchant_id="0"/>
+<gdpr_request id="0" name="Unknown" _module_key="administration-compliance" merchant_id="0"/>
+<osha_incident id="0" name="Unknown" _module_key="administration-compliance" merchant_id="0"/>

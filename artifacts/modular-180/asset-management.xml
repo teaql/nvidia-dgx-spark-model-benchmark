@@ -1,0 +1,17 @@
+<vehicle id="0" name="Unknown" _module_key="asset-management" merchant_id="0"/>
+<equipment id="0" name="Unknown" _module_key="asset-management" merchant_id="0"/>
+<consumable id="0" name="Unknown" _module_key="asset-management" merchant_id="0"/>
+<asset_assignment id="0" name="Unknown" _module_key="asset-management" merchant_id="0"/>
+<asset_inspection id="0" name="Unknown" _module_key="asset-management" merchant_id="0"/>
+<maintenance_schedule id="0" name="Unknown" _module_key="asset-management" merchant_id="0"/>
+<maintenance_event id="0" name="Unknown" _module_key="asset-management" merchant_id="0"/>
+<fuel_record id="0" name="Unknown" _module_key="asset-management" merchant_id="0"/>
+<supplier id="0" name="Unknown" _module_key="asset-management" merchant_id="0"/>
+<gps_tracker id="0" name="Unknown" _module_key="asset-management" merchant_id="0"/>
+<dashcam_footage id="0" name="Unknown" _module_key="asset-management" merchant_id="0"/>
+<tire_replacement id="0" name="Unknown" _module_key="asset-management" merchant_id="0"/>
+<oil_change_log id="0" name="Unknown" _module_key="asset-management" merchant_id="0"/>
+<registration_renewal id="0" name="Unknown" _module_key="asset-management" merchant_id="0"/>
+<insurance_card id="0" name="Unknown" _module_key="asset-management" merchant_id="0"/>
+<depreciation_schedule id="0" name="Unknown" _module_key="asset-management" merchant_id="0"/>
+<scrap_record id="0" name="Unknown" _module_key="asset-management" merchant_id="0"/>

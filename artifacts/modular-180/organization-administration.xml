@@ -1,0 +1,3 @@
+<merchant id="0" name="Unknown" _module_key="organization-administration"/>
+<branch id="0" name="Unknown" _module_key="organization-administration" merchant_id="0"/>
+<franchise id="0" name="Unknown" _module_key="organization-administration" merchant_id="0"/>

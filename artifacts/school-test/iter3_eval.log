@@ -1,0 +1,43 @@
+model input: artifacts/school-test/model.xml
+using https://api.teaql.io/latest/evaluate
+# KSML Evaluation Report
+
+## 📊 Summary
+- **Errors**: 1
+- **Warnings**: 4
+- **Suggestions**: 0
+- **Solids**: 3
+
+## Error Pattern Summary
+
+1 errors total. Fix the largest repeated pattern first, then rerun evaluation.
+
+| Count | Pattern | Explanation | Action |
+|-------|---------|-------------|--------|
+| 1 | `Domain parse error` (`KSML-XML-005`) | Failed to parse domain model: Attribute 'name' of object 'platform' is empty at line 2 in model.xml. Empty values are not allowed. | Check agents/ERROR-FIX.md, apply the smallest fix, then rerun evaluation. |
+
+
+## ❌ Errors (Must Fix)
+
+| Rule ID | Target | Error Message | Action |
+|---------|--------|---------------|--------|
+| `KSML-XML-005` | `platform.name` | Failed to parse domain model: Attribute 'name' of object 'platform' is empty at line 2 in model.xml. Empty values are not allowed. | Check `agents/ERROR-FIX.md` |
+
+
+## ⚠️ Warnings
+
+| Rule ID | Target | Warning Message |
+|---------|--------|-----------------|
+| `KSML-OBJECT-001` | `platform` | Object 'platform' is missing display metadata: _name, _module, _module_key |
+| `KSML-OBJECT-001` | `school` | Object 'school' is missing display metadata: _name, _module, _module_key |
+| `KSML-OBJECT-001` | `school_type` | Object 'school_type' is missing display metadata: _name, _module, _module_key |
+| `KSML-DOMAIN-ROOT-002` | `` | Multiple independent business objects found: platform, school, school_type. The model may have disconnected graphs. |
+
+
+## ✅ Solids
+
+| Rule ID | Target | Message |
+|---------|--------|---------|
+| `KSML-UPLOAD-001` | `` | The upload contains 1 files. |
+| `KSML-UPLOAD-005` | `` | Resolved entrypoint: model.xml |
+| `KSML-ROOT-003` | `` | Root name 'school-management-service' is well-formed. |

@@ -1,0 +1,1139 @@
+# Root Configuration
+SET_APP_NAME moving-company-service
+SET_DATA_SERVICE sqlite
+
+##############################################
+# MODULE: platform-administration
+##############################################
+
+DEF_ENTITY platform
+SET_ATTR platform _module_key "platform-administration"
+SET_ATTR platform id 0
+SET_ATTR platform name "Unknown"
+
+DEF_ENTITY platform_config
+SET_ATTR platform_config _module_key "platform-administration"
+SET_ATTR platform_config id 0
+SET_ATTR platform_config name "Unknown"
+DEF_RELATION platform_config merchant_id merchant
+
+DEF_ENTITY tenant_registry
+SET_ATTR tenant_registry _module_key "platform-administration"
+SET_ATTR tenant_registry id 0
+SET_ATTR tenant_registry name "Unknown"
+DEF_RELATION tenant_registry merchant_id merchant
+
+##############################################
+# MODULE: organization-administration
+##############################################
+
+DEF_ENTITY merchant
+SET_ATTR merchant _module_key "organization-administration"
+SET_ATTR merchant id 0
+SET_ATTR merchant name "Unknown"
+
+DEF_ENTITY branch
+SET_ATTR branch _module_key "organization-administration"
+SET_ATTR branch id 0
+SET_ATTR branch name "Unknown"
+DEF_RELATION branch merchant_id merchant
+
+DEF_ENTITY franchise
+SET_ATTR franchise _module_key "organization-administration"
+SET_ATTR franchise id 0
+SET_ATTR franchise name "Unknown"
+DEF_RELATION franchise merchant_id merchant
+
+##############################################
+# MODULE: operations-logistics
+##############################################
+
+DEF_ENTITY move_order
+SET_ATTR move_order _module_key "operations-logistics"
+SET_ATTR move_order id 0
+SET_ATTR move_order name "Unknown"
+DEF_RELATION move_order merchant_id merchant
+
+DEF_ENTITY move_quote
+SET_ATTR move_quote _module_key "operations-logistics"
+SET_ATTR move_quote id 0
+SET_ATTR move_quote name "Unknown"
+DEF_RELATION move_quote merchant_id merchant
+
+DEF_ENTITY route
+SET_ATTR route _module_key "operations-logistics"
+SET_ATTR route id 0
+SET_ATTR route name "Unknown"
+DEF_RELATION route merchant_id merchant
+
+DEF_ENTITY route_stop
+SET_ATTR route_stop _module_key "operations-logistics"
+SET_ATTR route_stop id 0
+SET_ATTR route_stop name "Unknown"
+DEF_RELATION route_stop merchant_id merchant
+
+DEF_ENTITY time_slot
+SET_ATTR time_slot _module_key "operations-logistics"
+SET_ATTR time_slot id 0
+SET_ATTR time_slot name "Unknown"
+DEF_RELATION time_slot merchant_id merchant
+
+DEF_ENTITY fulfillment_event
+SET_ATTR fulfillment_event _module_key "operations-logistics"
+SET_ATTR fulfillment_event id 0
+SET_ATTR fulfillment_event name "Unknown"
+DEF_RELATION fulfillment_event merchant_id merchant
+
+DEF_ENTITY address
+SET_ATTR address _module_key "operations-logistics"
+SET_ATTR address id 0
+SET_ATTR address name "Unknown"
+DEF_RELATION address merchant_id merchant
+
+DEF_ENTITY crew
+SET_ATTR crew _module_key "operations-logistics"
+SET_ATTR crew id 0
+SET_ATTR crew name "Unknown"
+DEF_RELATION crew merchant_id merchant
+
+DEF_ENTITY dispatch_assignment
+SET_ATTR dispatch_assignment _module_key "operations-logistics"
+SET_ATTR dispatch_assignment id 0
+SET_ATTR dispatch_assignment name "Unknown"
+DEF_RELATION dispatch_assignment merchant_id merchant
+
+DEF_ENTITY damage_report
+SET_ATTR damage_report _module_key "operations-logistics"
+SET_ATTR damage_report id 0
+SET_ATTR damage_report name "Unknown"
+DEF_RELATION damage_report merchant_id merchant
+
+DEF_ENTITY proof_of_delivery
+SET_ATTR proof_of_delivery _module_key "operations-logistics"
+SET_ATTR proof_of_delivery id 0
+SET_ATTR proof_of_delivery name "Unknown"
+DEF_RELATION proof_of_delivery merchant_id merchant
+
+DEF_ENTITY packing_list
+SET_ATTR packing_list _module_key "operations-logistics"
+SET_ATTR packing_list id 0
+SET_ATTR packing_list name "Unknown"
+DEF_RELATION packing_list merchant_id merchant
+
+DEF_ENTITY inventory_item
+SET_ATTR inventory_item _module_key "operations-logistics"
+SET_ATTR inventory_item id 0
+SET_ATTR inventory_item name "Unknown"
+DEF_RELATION inventory_item merchant_id merchant
+
+DEF_ENTITY vehicle_load_plan
+SET_ATTR vehicle_load_plan _module_key "operations-logistics"
+SET_ATTR vehicle_load_plan id 0
+SET_ATTR vehicle_load_plan name "Unknown"
+DEF_RELATION vehicle_load_plan merchant_id merchant
+
+DEF_ENTITY weigh_station_ticket
+SET_ATTR weigh_station_ticket _module_key "operations-logistics"
+SET_ATTR weigh_station_ticket id 0
+SET_ATTR weigh_station_ticket name "Unknown"
+DEF_RELATION weigh_station_ticket merchant_id merchant
+
+DEF_ENTITY toll_receipt
+SET_ATTR toll_receipt _module_key "operations-logistics"
+SET_ATTR toll_receipt id 0
+SET_ATTR toll_receipt name "Unknown"
+DEF_RELATION toll_receipt merchant_id merchant
+
+DEF_ENTITY parking_permit
+SET_ATTR parking_permit _module_key "operations-logistics"
+SET_ATTR parking_permit id 0
+SET_ATTR parking_permit name "Unknown"
+DEF_RELATION parking_permit merchant_id merchant
+
+DEF_ENTITY traffic_violation
+SET_ATTR traffic_violation _module_key "operations-logistics"
+SET_ATTR traffic_violation id 0
+SET_ATTR traffic_violation name "Unknown"
+DEF_RELATION traffic_violation merchant_id merchant
+
+DEF_ENTITY detour_log
+SET_ATTR detour_log _module_key "operations-logistics"
+SET_ATTR detour_log id 0
+SET_ATTR detour_log name "Unknown"
+DEF_RELATION detour_log merchant_id merchant
+
+DEF_ENTITY fuel_stop
+SET_ATTR fuel_stop _module_key "operations-logistics"
+SET_ATTR fuel_stop id 0
+SET_ATTR fuel_stop name "Unknown"
+DEF_RELATION fuel_stop merchant_id merchant
+
+DEF_ENTITY weather_delay
+SET_ATTR weather_delay _module_key "operations-logistics"
+SET_ATTR weather_delay id 0
+SET_ATTR weather_delay name "Unknown"
+DEF_RELATION weather_delay merchant_id merchant
+
+DEF_ENTITY customer_signature
+SET_ATTR customer_signature _module_key "operations-logistics"
+SET_ATTR customer_signature id 0
+SET_ATTR customer_signature name "Unknown"
+DEF_RELATION customer_signature merchant_id merchant
+
+DEF_ENTITY walkthrough_checklist
+SET_ATTR walkthrough_checklist _module_key "operations-logistics"
+SET_ATTR walkthrough_checklist id 0
+SET_ATTR walkthrough_checklist name "Unknown"
+DEF_RELATION walkthrough_checklist merchant_id merchant
+
+DEF_ENTITY post_move_survey
+SET_ATTR post_move_survey _module_key "operations-logistics"
+SET_ATTR post_move_survey id 0
+SET_ATTR post_move_survey name "Unknown"
+DEF_RELATION post_move_survey merchant_id merchant
+
+DEF_ENTITY operations_manager_override
+SET_ATTR operations_manager_override _module_key "operations-logistics"
+SET_ATTR operations_manager_override id 0
+SET_ATTR operations_manager_override name "Unknown"
+DEF_RELATION operations_manager_override merchant_id merchant
+
+##############################################
+# MODULE: employees-payroll
+##############################################
+
+DEF_ENTITY employee
+SET_ATTR employee _module_key "employees-payroll"
+SET_ATTR employee id 0
+SET_ATTR employee name "Unknown"
+DEF_RELATION employee merchant_id merchant
+
+DEF_ENTITY department
+SET_ATTR department _module_key "employees-payroll"
+SET_ATTR department id 0
+SET_ATTR department name "Unknown"
+DEF_RELATION department merchant_id merchant
+
+DEF_ENTITY job_assignment
+SET_ATTR job_assignment _module_key "employees-payroll"
+SET_ATTR job_assignment id 0
+SET_ATTR job_assignment name "Unknown"
+DEF_RELATION job_assignment merchant_id merchant
+
+DEF_ENTITY work_shift
+SET_ATTR work_shift _module_key "employees-payroll"
+SET_ATTR work_shift id 0
+SET_ATTR work_shift name "Unknown"
+DEF_RELATION work_shift merchant_id merchant
+
+DEF_ENTITY worked_hours
+SET_ATTR worked_hours _module_key "employees-payroll"
+SET_ATTR worked_hours id 0
+SET_ATTR worked_hours name "Unknown"
+DEF_RELATION worked_hours merchant_id merchant
+
+DEF_ENTITY payroll_period
+SET_ATTR payroll_period _module_key "employees-payroll"
+SET_ATTR payroll_period id 0
+SET_ATTR payroll_period name "Unknown"
+DEF_RELATION payroll_period merchant_id merchant
+
+DEF_ENTITY payroll_calculation
+SET_ATTR payroll_calculation _module_key "employees-payroll"
+SET_ATTR payroll_calculation id 0
+SET_ATTR payroll_calculation name "Unknown"
+DEF_RELATION payroll_calculation merchant_id merchant
+
+DEF_ENTITY payslip
+SET_ATTR payslip _module_key "employees-payroll"
+SET_ATTR payslip id 0
+SET_ATTR payslip name "Unknown"
+DEF_RELATION payslip merchant_id merchant
+
+DEF_ENTITY bonus
+SET_ATTR bonus _module_key "employees-payroll"
+SET_ATTR bonus id 0
+SET_ATTR bonus name "Unknown"
+DEF_RELATION bonus merchant_id merchant
+
+DEF_ENTITY leave_request
+SET_ATTR leave_request _module_key "employees-payroll"
+SET_ATTR leave_request id 0
+SET_ATTR leave_request name "Unknown"
+DEF_RELATION leave_request merchant_id merchant
+
+DEF_ENTITY employee_certification
+SET_ATTR employee_certification _module_key "employees-payroll"
+SET_ATTR employee_certification id 0
+SET_ATTR employee_certification name "Unknown"
+DEF_RELATION employee_certification merchant_id merchant
+
+DEF_ENTITY tax_withholding
+SET_ATTR tax_withholding _module_key "employees-payroll"
+SET_ATTR tax_withholding id 0
+SET_ATTR tax_withholding name "Unknown"
+DEF_RELATION tax_withholding merchant_id merchant
+
+DEF_ENTITY direct_deposit_info
+SET_ATTR direct_deposit_info _module_key "employees-payroll"
+SET_ATTR direct_deposit_info id 0
+SET_ATTR direct_deposit_info name "Unknown"
+DEF_RELATION direct_deposit_info merchant_id merchant
+
+DEF_ENTITY union_dues
+SET_ATTR union_dues _module_key "employees-payroll"
+SET_ATTR union_dues id 0
+SET_ATTR union_dues name "Unknown"
+DEF_RELATION union_dues merchant_id merchant
+
+DEF_ENTITY overtime_approval
+SET_ATTR overtime_approval _module_key "employees-payroll"
+SET_ATTR overtime_approval id 0
+SET_ATTR overtime_approval name "Unknown"
+DEF_RELATION overtime_approval merchant_id merchant
+
+DEF_ENTITY expense_reimbursement
+SET_ATTR expense_reimbursement _module_key "employees-payroll"
+SET_ATTR expense_reimbursement id 0
+SET_ATTR expense_reimbursement name "Unknown"
+DEF_RELATION expense_reimbursement merchant_id merchant
+
+DEF_ENTITY performance_review
+SET_ATTR performance_review _module_key "employees-payroll"
+SET_ATTR performance_review id 0
+SET_ATTR performance_review name "Unknown"
+DEF_RELATION performance_review merchant_id merchant
+
+DEF_ENTITY warning_letter
+SET_ATTR warning_letter _module_key "employees-payroll"
+SET_ATTR warning_letter id 0
+SET_ATTR warning_letter name "Unknown"
+DEF_RELATION warning_letter merchant_id merchant
+
+DEF_ENTITY termination_record
+SET_ATTR termination_record _module_key "employees-payroll"
+SET_ATTR termination_record id 0
+SET_ATTR termination_record name "Unknown"
+DEF_RELATION termination_record merchant_id merchant
+
+DEF_ENTITY emergency_contact
+SET_ATTR emergency_contact _module_key "employees-payroll"
+SET_ATTR emergency_contact id 0
+SET_ATTR emergency_contact name "Unknown"
+DEF_RELATION emergency_contact merchant_id merchant
+
+DEF_ENTITY uniform_assignment
+SET_ATTR uniform_assignment _module_key "employees-payroll"
+SET_ATTR uniform_assignment id 0
+SET_ATTR uniform_assignment name "Unknown"
+DEF_RELATION uniform_assignment merchant_id merchant
+
+DEF_ENTITY background_check
+SET_ATTR background_check _module_key "employees-payroll"
+SET_ATTR background_check id 0
+SET_ATTR background_check name "Unknown"
+DEF_RELATION background_check merchant_id merchant
+
+##############################################
+# MODULE: customer-management
+##############################################
+
+DEF_ENTITY customer
+SET_ATTR customer _module_key "customer-management"
+SET_ATTR customer id 0
+SET_ATTR customer name "Unknown"
+DEF_RELATION customer merchant_id merchant
+
+DEF_ENTITY private_customer_profile
+SET_ATTR private_customer_profile _module_key "customer-management"
+SET_ATTR private_customer_profile id 0
+SET_ATTR private_customer_profile name "Unknown"
+DEF_RELATION private_customer_profile merchant_id merchant
+
+DEF_ENTITY corporate_customer_profile
+SET_ATTR corporate_customer_profile _module_key "customer-management"
+SET_ATTR corporate_customer_profile id 0
+SET_ATTR corporate_customer_profile name "Unknown"
+DEF_RELATION corporate_customer_profile merchant_id merchant
+
+DEF_ENTITY customer_contact
+SET_ATTR customer_contact _module_key "customer-management"
+SET_ATTR customer_contact id 0
+SET_ATTR customer_contact name "Unknown"
+DEF_RELATION customer_contact merchant_id merchant
+
+DEF_ENTITY billing_profile
+SET_ATTR billing_profile _module_key "customer-management"
+SET_ATTR billing_profile id 0
+SET_ATTR billing_profile name "Unknown"
+DEF_RELATION billing_profile merchant_id merchant
+
+DEF_ENTITY customer_history
+SET_ATTR customer_history _module_key "customer-management"
+SET_ATTR customer_history id 0
+SET_ATTR customer_history name "Unknown"
+DEF_RELATION customer_history merchant_id merchant
+
+DEF_ENTITY customer_preference
+SET_ATTR customer_preference _module_key "customer-management"
+SET_ATTR customer_preference id 0
+SET_ATTR customer_preference name "Unknown"
+DEF_RELATION customer_preference merchant_id merchant
+
+DEF_ENTITY customer_consent
+SET_ATTR customer_consent _module_key "customer-management"
+SET_ATTR customer_consent id 0
+SET_ATTR customer_consent name "Unknown"
+DEF_RELATION customer_consent merchant_id merchant
+
+DEF_ENTITY referral_code
+SET_ATTR referral_code _module_key "customer-management"
+SET_ATTR referral_code id 0
+SET_ATTR referral_code name "Unknown"
+DEF_RELATION referral_code merchant_id merchant
+
+DEF_ENTITY loyalty_tier
+SET_ATTR loyalty_tier _module_key "customer-management"
+SET_ATTR loyalty_tier id 0
+SET_ATTR loyalty_tier name "Unknown"
+DEF_RELATION loyalty_tier merchant_id merchant
+
+DEF_ENTITY complaint_ticket
+SET_ATTR complaint_ticket _module_key "customer-management"
+SET_ATTR complaint_ticket id 0
+SET_ATTR complaint_ticket name "Unknown"
+DEF_RELATION complaint_ticket merchant_id merchant
+
+DEF_ENTITY resolution_offer
+SET_ATTR resolution_offer _module_key "customer-management"
+SET_ATTR resolution_offer id 0
+SET_ATTR resolution_offer name "Unknown"
+DEF_RELATION resolution_offer merchant_id merchant
+
+DEF_ENTITY vip_status
+SET_ATTR vip_status _module_key "customer-management"
+SET_ATTR vip_status id 0
+SET_ATTR vip_status name "Unknown"
+DEF_RELATION vip_status merchant_id merchant
+
+DEF_ENTITY do_not_contact_list
+SET_ATTR do_not_contact_list _module_key "customer-management"
+SET_ATTR do_not_contact_list id 0
+SET_ATTR do_not_contact_list name "Unknown"
+DEF_RELATION do_not_contact_list merchant_id merchant
+
+DEF_ENTITY customer_note
+SET_ATTR customer_note _module_key "customer-management"
+SET_ATTR customer_note id 0
+SET_ATTR customer_note name "Unknown"
+DEF_RELATION customer_note merchant_id merchant
+
+DEF_ENTITY communication_log
+SET_ATTR communication_log _module_key "customer-management"
+SET_ATTR communication_log id 0
+SET_ATTR communication_log name "Unknown"
+DEF_RELATION communication_log merchant_id merchant
+
+##############################################
+# MODULE: products-services
+##############################################
+
+DEF_ENTITY product
+SET_ATTR product _module_key "products-services"
+SET_ATTR product id 0
+SET_ATTR product name "Unknown"
+DEF_RELATION product merchant_id merchant
+
+DEF_ENTITY service
+SET_ATTR service _module_key "products-services"
+SET_ATTR service id 0
+SET_ATTR service name "Unknown"
+DEF_RELATION service merchant_id merchant
+
+DEF_ENTITY moving_service
+SET_ATTR moving_service _module_key "products-services"
+SET_ATTR moving_service id 0
+SET_ATTR moving_service name "Unknown"
+DEF_RELATION moving_service merchant_id merchant
+
+DEF_ENTITY cleaning_service
+SET_ATTR cleaning_service _module_key "products-services"
+SET_ATTR cleaning_service id 0
+SET_ATTR cleaning_service name "Unknown"
+DEF_RELATION cleaning_service merchant_id merchant
+
+DEF_ENTITY box_rental
+SET_ATTR box_rental _module_key "products-services"
+SET_ATTR box_rental id 0
+SET_ATTR box_rental name "Unknown"
+DEF_RELATION box_rental merchant_id merchant
+
+DEF_ENTITY service_configuration
+SET_ATTR service_configuration _module_key "products-services"
+SET_ATTR service_configuration id 0
+SET_ATTR service_configuration name "Unknown"
+DEF_RELATION service_configuration merchant_id merchant
+
+DEF_ENTITY price_list
+SET_ATTR price_list _module_key "products-services"
+SET_ATTR price_list id 0
+SET_ATTR price_list name "Unknown"
+DEF_RELATION price_list merchant_id merchant
+
+DEF_ENTITY service_price
+SET_ATTR service_price _module_key "products-services"
+SET_ATTR service_price id 0
+SET_ATTR service_price name "Unknown"
+DEF_RELATION service_price merchant_id merchant
+
+DEF_ENTITY service_bundle
+SET_ATTR service_bundle _module_key "products-services"
+SET_ATTR service_bundle id 0
+SET_ATTR service_bundle name "Unknown"
+DEF_RELATION service_bundle merchant_id merchant
+
+DEF_ENTITY storage_unit
+SET_ATTR storage_unit _module_key "products-services"
+SET_ATTR storage_unit id 0
+SET_ATTR storage_unit name "Unknown"
+DEF_RELATION storage_unit merchant_id merchant
+
+DEF_ENTITY packing_material
+SET_ATTR packing_material _module_key "products-services"
+SET_ATTR packing_material id 0
+SET_ATTR packing_material name "Unknown"
+DEF_RELATION packing_material merchant_id merchant
+
+DEF_ENTITY insurance_addon
+SET_ATTR insurance_addon _module_key "products-services"
+SET_ATTR insurance_addon id 0
+SET_ATTR insurance_addon name "Unknown"
+DEF_RELATION insurance_addon merchant_id merchant
+
+DEF_ENTITY piano_handling
+SET_ATTR piano_handling _module_key "products-services"
+SET_ATTR piano_handling id 0
+SET_ATTR piano_handling name "Unknown"
+DEF_RELATION piano_handling merchant_id merchant
+
+DEF_ENTITY stair_fee
+SET_ATTR stair_fee _module_key "products-services"
+SET_ATTR stair_fee id 0
+SET_ATTR stair_fee name "Unknown"
+DEF_RELATION stair_fee merchant_id merchant
+
+DEF_ENTITY long_carry_fee
+SET_ATTR long_carry_fee _module_key "products-services"
+SET_ATTR long_carry_fee id 0
+SET_ATTR long_carry_fee name "Unknown"
+DEF_RELATION long_carry_fee merchant_id merchant
+
+DEF_ENTITY hoisting_service
+SET_ATTR hoisting_service _module_key "products-services"
+SET_ATTR hoisting_service id 0
+SET_ATTR hoisting_service name "Unknown"
+DEF_RELATION hoisting_service merchant_id merchant
+
+DEF_ENTITY vehicle_transport
+SET_ATTR vehicle_transport _module_key "products-services"
+SET_ATTR vehicle_transport id 0
+SET_ATTR vehicle_transport name "Unknown"
+DEF_RELATION vehicle_transport merchant_id merchant
+
+DEF_ENTITY pet_relocation_service
+SET_ATTR pet_relocation_service _module_key "products-services"
+SET_ATTR pet_relocation_service id 0
+SET_ATTR pet_relocation_service name "Unknown"
+DEF_RELATION pet_relocation_service merchant_id merchant
+
+##############################################
+# MODULE: marketing-sales
+##############################################
+
+DEF_ENTITY campaign
+SET_ATTR campaign _module_key "marketing-sales"
+SET_ATTR campaign id 0
+SET_ATTR campaign name "Unknown"
+DEF_RELATION campaign merchant_id merchant
+
+DEF_ENTITY discount_code
+SET_ATTR discount_code _module_key "marketing-sales"
+SET_ATTR discount_code id 0
+SET_ATTR discount_code name "Unknown"
+DEF_RELATION discount_code merchant_id merchant
+
+DEF_ENTITY lead
+SET_ATTR lead _module_key "marketing-sales"
+SET_ATTR lead id 0
+SET_ATTR lead name "Unknown"
+DEF_RELATION lead merchant_id merchant
+
+DEF_ENTITY sales_opportunity
+SET_ATTR sales_opportunity _module_key "marketing-sales"
+SET_ATTR sales_opportunity id 0
+SET_ATTR sales_opportunity name "Unknown"
+DEF_RELATION sales_opportunity merchant_id merchant
+
+DEF_ENTITY lead_activity
+SET_ATTR lead_activity _module_key "marketing-sales"
+SET_ATTR lead_activity id 0
+SET_ATTR lead_activity name "Unknown"
+DEF_RELATION lead_activity merchant_id merchant
+
+DEF_ENTITY conversion_event
+SET_ATTR conversion_event _module_key "marketing-sales"
+SET_ATTR conversion_event id 0
+SET_ATTR conversion_event name "Unknown"
+DEF_RELATION conversion_event merchant_id merchant
+
+DEF_ENTITY conversion_metric
+SET_ATTR conversion_metric _module_key "marketing-sales"
+SET_ATTR conversion_metric id 0
+SET_ATTR conversion_metric name "Unknown"
+DEF_RELATION conversion_metric merchant_id merchant
+
+DEF_ENTITY ad_spend
+SET_ATTR ad_spend _module_key "marketing-sales"
+SET_ATTR ad_spend id 0
+SET_ATTR ad_spend name "Unknown"
+DEF_RELATION ad_spend merchant_id merchant
+
+DEF_ENTITY social_media_post
+SET_ATTR social_media_post _module_key "marketing-sales"
+SET_ATTR social_media_post id 0
+SET_ATTR social_media_post name "Unknown"
+DEF_RELATION social_media_post merchant_id merchant
+
+DEF_ENTITY email_blast
+SET_ATTR email_blast _module_key "marketing-sales"
+SET_ATTR email_blast id 0
+SET_ATTR email_blast name "Unknown"
+DEF_RELATION email_blast merchant_id merchant
+
+DEF_ENTITY sms_campaign
+SET_ATTR sms_campaign _module_key "marketing-sales"
+SET_ATTR sms_campaign id 0
+SET_ATTR sms_campaign name "Unknown"
+DEF_RELATION sms_campaign merchant_id merchant
+
+DEF_ENTITY sales_script
+SET_ATTR sales_script _module_key "marketing-sales"
+SET_ATTR sales_script id 0
+SET_ATTR sales_script name "Unknown"
+DEF_RELATION sales_script merchant_id merchant
+
+DEF_ENTITY objection_handling_guide
+SET_ATTR objection_handling_guide _module_key "marketing-sales"
+SET_ATTR objection_handling_guide id 0
+SET_ATTR objection_handling_guide name "Unknown"
+DEF_RELATION objection_handling_guide merchant_id merchant
+
+DEF_ENTITY competitor_analysis
+SET_ATTR competitor_analysis _module_key "marketing-sales"
+SET_ATTR competitor_analysis id 0
+SET_ATTR competitor_analysis name "Unknown"
+DEF_RELATION competitor_analysis merchant_id merchant
+
+DEF_ENTITY sales_territory
+SET_ATTR sales_territory _module_key "marketing-sales"
+SET_ATTR sales_territory id 0
+SET_ATTR sales_territory name "Unknown"
+DEF_RELATION sales_territory merchant_id merchant
+
+##############################################
+# MODULE: finance-accounting
+##############################################
+
+DEF_ENTITY payment
+SET_ATTR payment _module_key "finance-accounting"
+SET_ATTR payment id 0
+SET_ATTR payment name "Unknown"
+DEF_RELATION payment merchant_id merchant
+
+DEF_ENTITY invoice
+SET_ATTR invoice _module_key "finance-accounting"
+SET_ATTR invoice id 0
+SET_ATTR invoice name "Unknown"
+DEF_RELATION invoice merchant_id merchant
+
+DEF_ENTITY invoice_line
+SET_ATTR invoice_line _module_key "finance-accounting"
+SET_ATTR invoice_line id 0
+SET_ATTR invoice_line name "Unknown"
+DEF_RELATION invoice_line merchant_id merchant
+
+DEF_ENTITY refund
+SET_ATTR refund _module_key "finance-accounting"
+SET_ATTR refund id 0
+SET_ATTR refund name "Unknown"
+DEF_RELATION refund merchant_id merchant
+
+DEF_ENTITY expense
+SET_ATTR expense _module_key "finance-accounting"
+SET_ATTR expense id 0
+SET_ATTR expense name "Unknown"
+DEF_RELATION expense merchant_id merchant
+
+DEF_ENTITY vat_rate
+SET_ATTR vat_rate _module_key "finance-accounting"
+SET_ATTR vat_rate id 0
+SET_ATTR vat_rate name "Unknown"
+DEF_RELATION vat_rate merchant_id merchant
+
+DEF_ENTITY journal_entry
+SET_ATTR journal_entry _module_key "finance-accounting"
+SET_ATTR journal_entry id 0
+SET_ATTR journal_entry name "Unknown"
+DEF_RELATION journal_entry merchant_id merchant
+
+DEF_ENTITY account
+SET_ATTR account _module_key "finance-accounting"
+SET_ATTR account id 0
+SET_ATTR account name "Unknown"
+DEF_RELATION account merchant_id merchant
+
+DEF_ENTITY financial_summary
+SET_ATTR financial_summary _module_key "finance-accounting"
+SET_ATTR financial_summary id 0
+SET_ATTR financial_summary name "Unknown"
+DEF_RELATION financial_summary merchant_id merchant
+
+DEF_ENTITY tax_document
+SET_ATTR tax_document _module_key "finance-accounting"
+SET_ATTR tax_document id 0
+SET_ATTR tax_document name "Unknown"
+DEF_RELATION tax_document merchant_id merchant
+
+DEF_ENTITY bank_transaction
+SET_ATTR bank_transaction _module_key "finance-accounting"
+SET_ATTR bank_transaction id 0
+SET_ATTR bank_transaction name "Unknown"
+DEF_RELATION bank_transaction merchant_id merchant
+
+DEF_ENTITY merchant_fee
+SET_ATTR merchant_fee _module_key "finance-accounting"
+SET_ATTR merchant_fee id 0
+SET_ATTR merchant_fee name "Unknown"
+DEF_RELATION merchant_fee merchant_id merchant
+
+DEF_ENTITY chargeback_record
+SET_ATTR chargeback_record _module_key "finance-accounting"
+SET_ATTR chargeback_record id 0
+SET_ATTR chargeback_record name "Unknown"
+DEF_RELATION chargeback_record merchant_id merchant
+
+DEF_ENTITY credit_note
+SET_ATTR credit_note _module_key "finance-accounting"
+SET_ATTR credit_note id 0
+SET_ATTR credit_note name "Unknown"
+DEF_RELATION credit_note merchant_id merchant
+
+DEF_ENTITY debit_note
+SET_ATTR debit_note _module_key "finance-accounting"
+SET_ATTR debit_note id 0
+SET_ATTR debit_note name "Unknown"
+DEF_RELATION debit_note merchant_id merchant
+
+DEF_ENTITY audit_adjustment
+SET_ATTR audit_adjustment _module_key "finance-accounting"
+SET_ATTR audit_adjustment id 0
+SET_ATTR audit_adjustment name "Unknown"
+DEF_RELATION audit_adjustment merchant_id merchant
+
+DEF_ENTITY fiscal_year
+SET_ATTR fiscal_year _module_key "finance-accounting"
+SET_ATTR fiscal_year id 0
+SET_ATTR fiscal_year name "Unknown"
+DEF_RELATION fiscal_year merchant_id merchant
+
+##############################################
+# MODULE: asset-management
+##############################################
+
+DEF_ENTITY vehicle
+SET_ATTR vehicle _module_key "asset-management"
+SET_ATTR vehicle id 0
+SET_ATTR vehicle name "Unknown"
+DEF_RELATION vehicle merchant_id merchant
+
+DEF_ENTITY equipment
+SET_ATTR equipment _module_key "asset-management"
+SET_ATTR equipment id 0
+SET_ATTR equipment name "Unknown"
+DEF_RELATION equipment merchant_id merchant
+
+DEF_ENTITY consumable
+SET_ATTR consumable _module_key "asset-management"
+SET_ATTR consumable id 0
+SET_ATTR consumable name "Unknown"
+DEF_RELATION consumable merchant_id merchant
+
+DEF_ENTITY asset_assignment
+SET_ATTR asset_assignment _module_key "asset-management"
+SET_ATTR asset_assignment id 0
+SET_ATTR asset_assignment name "Unknown"
+DEF_RELATION asset_assignment merchant_id merchant
+
+DEF_ENTITY asset_inspection
+SET_ATTR asset_inspection _module_key "asset-management"
+SET_ATTR asset_inspection id 0
+SET_ATTR asset_inspection name "Unknown"
+DEF_RELATION asset_inspection merchant_id merchant
+
+DEF_ENTITY maintenance_schedule
+SET_ATTR maintenance_schedule _module_key "asset-management"
+SET_ATTR maintenance_schedule id 0
+SET_ATTR maintenance_schedule name "Unknown"
+DEF_RELATION maintenance_schedule merchant_id merchant
+
+DEF_ENTITY maintenance_event
+SET_ATTR maintenance_event _module_key "asset-management"
+SET_ATTR maintenance_event id 0
+SET_ATTR maintenance_event name "Unknown"
+DEF_RELATION maintenance_event merchant_id merchant
+
+DEF_ENTITY fuel_record
+SET_ATTR fuel_record _module_key "asset-management"
+SET_ATTR fuel_record id 0
+SET_ATTR fuel_record name "Unknown"
+DEF_RELATION fuel_record merchant_id merchant
+
+DEF_ENTITY supplier
+SET_ATTR supplier _module_key "asset-management"
+SET_ATTR supplier id 0
+SET_ATTR supplier name "Unknown"
+DEF_RELATION supplier merchant_id merchant
+
+DEF_ENTITY gps_tracker
+SET_ATTR gps_tracker _module_key "asset-management"
+SET_ATTR gps_tracker id 0
+SET_ATTR gps_tracker name "Unknown"
+DEF_RELATION gps_tracker merchant_id merchant
+
+DEF_ENTITY dashcam_footage
+SET_ATTR dashcam_footage _module_key "asset-management"
+SET_ATTR dashcam_footage id 0
+SET_ATTR dashcam_footage name "Unknown"
+DEF_RELATION dashcam_footage merchant_id merchant
+
+DEF_ENTITY tire_replacement
+SET_ATTR tire_replacement _module_key "asset-management"
+SET_ATTR tire_replacement id 0
+SET_ATTR tire_replacement name "Unknown"
+DEF_RELATION tire_replacement merchant_id merchant
+
+DEF_ENTITY oil_change_log
+SET_ATTR oil_change_log _module_key "asset-management"
+SET_ATTR oil_change_log id 0
+SET_ATTR oil_change_log name "Unknown"
+DEF_RELATION oil_change_log merchant_id merchant
+
+DEF_ENTITY registration_renewal
+SET_ATTR registration_renewal _module_key "asset-management"
+SET_ATTR registration_renewal id 0
+SET_ATTR registration_renewal name "Unknown"
+DEF_RELATION registration_renewal merchant_id merchant
+
+DEF_ENTITY insurance_card
+SET_ATTR insurance_card _module_key "asset-management"
+SET_ATTR insurance_card id 0
+SET_ATTR insurance_card name "Unknown"
+DEF_RELATION insurance_card merchant_id merchant
+
+DEF_ENTITY depreciation_schedule
+SET_ATTR depreciation_schedule _module_key "asset-management"
+SET_ATTR depreciation_schedule id 0
+SET_ATTR depreciation_schedule name "Unknown"
+DEF_RELATION depreciation_schedule merchant_id merchant
+
+DEF_ENTITY scrap_record
+SET_ATTR scrap_record _module_key "asset-management"
+SET_ATTR scrap_record id 0
+SET_ATTR scrap_record name "Unknown"
+DEF_RELATION scrap_record merchant_id merchant
+
+##############################################
+# MODULE: administration-compliance
+##############################################
+
+DEF_ENTITY contract
+SET_ATTR contract _module_key "administration-compliance"
+SET_ATTR contract id 0
+SET_ATTR contract name "Unknown"
+DEF_RELATION contract merchant_id merchant
+
+DEF_ENTITY insurance_policy
+SET_ATTR insurance_policy _module_key "administration-compliance"
+SET_ATTR insurance_policy id 0
+SET_ATTR insurance_policy name "Unknown"
+DEF_RELATION insurance_policy merchant_id merchant
+
+DEF_ENTITY insurance_claim
+SET_ATTR insurance_claim _module_key "administration-compliance"
+SET_ATTR insurance_claim id 0
+SET_ATTR insurance_claim name "Unknown"
+DEF_RELATION insurance_claim merchant_id merchant
+
+DEF_ENTITY document
+SET_ATTR document _module_key "administration-compliance"
+SET_ATTR document id 0
+SET_ATTR document name "Unknown"
+DEF_RELATION document merchant_id merchant
+
+DEF_ENTITY document_version
+SET_ATTR document_version _module_key "administration-compliance"
+SET_ATTR document_version id 0
+SET_ATTR document_version name "Unknown"
+DEF_RELATION document_version merchant_id merchant
+
+DEF_ENTITY compliance_check
+SET_ATTR compliance_check _module_key "administration-compliance"
+SET_ATTR compliance_check id 0
+SET_ATTR compliance_check name "Unknown"
+DEF_RELATION compliance_check merchant_id merchant
+
+DEF_ENTITY data_retention_policy
+SET_ATTR data_retention_policy _module_key "administration-compliance"
+SET_ATTR data_retention_policy id 0
+SET_ATTR data_retention_policy name "Unknown"
+DEF_RELATION data_retention_policy merchant_id merchant
+
+DEF_ENTITY recovery_request
+SET_ATTR recovery_request _module_key "administration-compliance"
+SET_ATTR recovery_request id 0
+SET_ATTR recovery_request name "Unknown"
+DEF_RELATION recovery_request merchant_id merchant
+
+DEF_ENTITY nda_agreement
+SET_ATTR nda_agreement _module_key "administration-compliance"
+SET_ATTR nda_agreement id 0
+SET_ATTR nda_agreement name "Unknown"
+DEF_RELATION nda_agreement merchant_id merchant
+
+DEF_ENTITY terms_of_service
+SET_ATTR terms_of_service _module_key "administration-compliance"
+SET_ATTR terms_of_service id 0
+SET_ATTR terms_of_service name "Unknown"
+DEF_RELATION terms_of_service merchant_id merchant
+
+DEF_ENTITY privacy_policy
+SET_ATTR privacy_policy _module_key "administration-compliance"
+SET_ATTR privacy_policy id 0
+SET_ATTR privacy_policy name "Unknown"
+DEF_RELATION privacy_policy merchant_id merchant
+
+DEF_ENTITY cookie_consent
+SET_ATTR cookie_consent _module_key "administration-compliance"
+SET_ATTR cookie_consent id 0
+SET_ATTR cookie_consent name "Unknown"
+DEF_RELATION cookie_consent merchant_id merchant
+
+DEF_ENTITY gdpr_request
+SET_ATTR gdpr_request _module_key "administration-compliance"
+SET_ATTR gdpr_request id 0
+SET_ATTR gdpr_request name "Unknown"
+DEF_RELATION gdpr_request merchant_id merchant
+
+DEF_ENTITY osha_incident
+SET_ATTR osha_incident _module_key "administration-compliance"
+SET_ATTR osha_incident id 0
+SET_ATTR osha_incident name "Unknown"
+DEF_RELATION osha_incident merchant_id merchant
+
+##############################################
+# MODULE: identity-access
+##############################################
+
+DEF_ENTITY user_account
+SET_ATTR user_account _module_key "identity-access"
+SET_ATTR user_account id 0
+SET_ATTR user_account name "Unknown"
+DEF_RELATION user_account merchant_id merchant
+
+DEF_ENTITY role
+SET_ATTR role _module_key "identity-access"
+SET_ATTR role id 0
+SET_ATTR role name "Unknown"
+DEF_RELATION role merchant_id merchant
+
+DEF_ENTITY permission
+SET_ATTR permission _module_key "identity-access"
+SET_ATTR permission id 0
+SET_ATTR permission name "Unknown"
+DEF_RELATION permission merchant_id merchant
+
+DEF_ENTITY user_role_assignment
+SET_ATTR user_role_assignment _module_key "identity-access"
+SET_ATTR user_role_assignment id 0
+SET_ATTR user_role_assignment name "Unknown"
+DEF_RELATION user_role_assignment merchant_id merchant
+
+DEF_ENTITY role_permission
+SET_ATTR role_permission _module_key "identity-access"
+SET_ATTR role_permission id 0
+SET_ATTR role_permission name "Unknown"
+DEF_RELATION role_permission merchant_id merchant
+
+DEF_ENTITY magic_link
+SET_ATTR magic_link _module_key "identity-access"
+SET_ATTR magic_link id 0
+SET_ATTR magic_link name "Unknown"
+DEF_RELATION magic_link merchant_id merchant
+
+DEF_ENTITY user_session
+SET_ATTR user_session _module_key "identity-access"
+SET_ATTR user_session id 0
+SET_ATTR user_session name "Unknown"
+DEF_RELATION user_session merchant_id merchant
+
+DEF_ENTITY password_reset
+SET_ATTR password_reset _module_key "identity-access"
+SET_ATTR password_reset id 0
+SET_ATTR password_reset name "Unknown"
+DEF_RELATION password_reset merchant_id merchant
+
+DEF_ENTITY two_factor_auth
+SET_ATTR two_factor_auth _module_key "identity-access"
+SET_ATTR two_factor_auth id 0
+SET_ATTR two_factor_auth name "Unknown"
+DEF_RELATION two_factor_auth merchant_id merchant
+
+DEF_ENTITY access_token
+SET_ATTR access_token _module_key "identity-access"
+SET_ATTR access_token id 0
+SET_ATTR access_token name "Unknown"
+DEF_RELATION access_token merchant_id merchant
+
+##############################################
+# MODULE: activity-audit
+##############################################
+
+DEF_ENTITY activity_log
+SET_ATTR activity_log _module_key "activity-audit"
+SET_ATTR activity_log id 0
+SET_ATTR activity_log name "Unknown"
+DEF_RELATION activity_log merchant_id merchant
+
+DEF_ENTITY audit_log
+SET_ATTR audit_log _module_key "activity-audit"
+SET_ATTR audit_log id 0
+SET_ATTR audit_log name "Unknown"
+DEF_RELATION audit_log merchant_id merchant
+
+DEF_ENTITY entity_change
+SET_ATTR entity_change _module_key "activity-audit"
+SET_ATTR entity_change id 0
+SET_ATTR entity_change name "Unknown"
+DEF_RELATION entity_change merchant_id merchant
+
+DEF_ENTITY change_set
+SET_ATTR change_set _module_key "activity-audit"
+SET_ATTR change_set id 0
+SET_ATTR change_set name "Unknown"
+DEF_RELATION change_set merchant_id merchant
+
+DEF_ENTITY login_attempt
+SET_ATTR login_attempt _module_key "activity-audit"
+SET_ATTR login_attempt id 0
+SET_ATTR login_attempt name "Unknown"
+DEF_RELATION login_attempt merchant_id merchant
+
+DEF_ENTITY failed_auth_log
+SET_ATTR failed_auth_log _module_key "activity-audit"
+SET_ATTR failed_auth_log id 0
+SET_ATTR failed_auth_log name "Unknown"
+DEF_RELATION failed_auth_log merchant_id merchant
+
+##############################################
+# MODULE: notifications-automation
+##############################################
+
+DEF_ENTITY notification
+SET_ATTR notification _module_key "notifications-automation"
+SET_ATTR notification id 0
+SET_ATTR notification name "Unknown"
+DEF_RELATION notification merchant_id merchant
+
+DEF_ENTITY notification_template
+SET_ATTR notification_template _module_key "notifications-automation"
+SET_ATTR notification_template id 0
+SET_ATTR notification_template name "Unknown"
+DEF_RELATION notification_template merchant_id merchant
+
+DEF_ENTITY automation_rule
+SET_ATTR automation_rule _module_key "notifications-automation"
+SET_ATTR automation_rule id 0
+SET_ATTR automation_rule name "Unknown"
+DEF_RELATION automation_rule merchant_id merchant
+
+DEF_ENTITY automation_trigger
+SET_ATTR automation_trigger _module_key "notifications-automation"
+SET_ATTR automation_trigger id 0
+SET_ATTR automation_trigger name "Unknown"
+DEF_RELATION automation_trigger merchant_id merchant
+
+DEF_ENTITY automation_action
+SET_ATTR automation_action _module_key "notifications-automation"
+SET_ATTR automation_action id 0
+SET_ATTR automation_action name "Unknown"
+DEF_RELATION automation_action merchant_id merchant
+
+DEF_ENTITY sms_delivery_receipt
+SET_ATTR sms_delivery_receipt _module_key "notifications-automation"
+SET_ATTR sms_delivery_receipt id 0
+SET_ATTR sms_delivery_receipt name "Unknown"
+DEF_RELATION sms_delivery_receipt merchant_id merchant
+
+DEF_ENTITY email_bounce_log
+SET_ATTR email_bounce_log _module_key "notifications-automation"
+SET_ATTR email_bounce_log id 0
+SET_ATTR email_bounce_log name "Unknown"
+DEF_RELATION email_bounce_log merchant_id merchant
+
+##############################################
+# MODULE: api-integrations
+##############################################
+
+DEF_ENTITY api_client
+SET_ATTR api_client _module_key "api-integrations"
+SET_ATTR api_client id 0
+SET_ATTR api_client name "Unknown"
+DEF_RELATION api_client merchant_id merchant
+
+DEF_ENTITY api_endpoint
+SET_ATTR api_endpoint _module_key "api-integrations"
+SET_ATTR api_endpoint id 0
+SET_ATTR api_endpoint name "Unknown"
+DEF_RELATION api_endpoint merchant_id merchant
+
+DEF_ENTITY webhook
+SET_ATTR webhook _module_key "api-integrations"
+SET_ATTR webhook id 0
+SET_ATTR webhook name "Unknown"
+DEF_RELATION webhook merchant_id merchant
+
+DEF_ENTITY webhook_delivery
+SET_ATTR webhook_delivery _module_key "api-integrations"
+SET_ATTR webhook_delivery id 0
+SET_ATTR webhook_delivery name "Unknown"
+DEF_RELATION webhook_delivery merchant_id merchant
+
+DEF_ENTITY integration_mapping
+SET_ATTR integration_mapping _module_key "api-integrations"
+SET_ATTR integration_mapping id 0
+SET_ATTR integration_mapping name "Unknown"
+DEF_RELATION integration_mapping merchant_id merchant
+
+DEF_ENTITY sync_job
+SET_ATTR sync_job _module_key "api-integrations"
+SET_ATTR sync_job id 0
+SET_ATTR sync_job name "Unknown"
+DEF_RELATION sync_job merchant_id merchant
+
+DEF_ENTITY api_rate_limit
+SET_ATTR api_rate_limit _module_key "api-integrations"
+SET_ATTR api_rate_limit id 0
+SET_ATTR api_rate_limit name "Unknown"
+DEF_RELATION api_rate_limit merchant_id merchant
+
+# Total Objects Generated: 180

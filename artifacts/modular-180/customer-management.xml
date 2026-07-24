@@ -1,0 +1,16 @@
+<customer id="0" name="Unknown" _module_key="customer-management" merchant_id="0"/>
+<private_customer_profile id="0" name="Unknown" _module_key="customer-management" merchant_id="0"/>
+<corporate_customer_profile id="0" name="Unknown" _module_key="customer-management" merchant_id="0"/>
+<customer_contact id="0" name="Unknown" _module_key="customer-management" merchant_id="0"/>
+<billing_profile id="0" name="Unknown" _module_key="customer-management" merchant_id="0"/>
+<customer_history id="0" name="Unknown" _module_key="customer-management" merchant_id="0"/>
+<customer_preference id="0" name="Unknown" _module_key="customer-management" merchant_id="0"/>
+<customer_consent id="0" name="Unknown" _module_key="customer-management" merchant_id="0"/>
+<referral_code id="0" name="Unknown" _module_key="customer-management" merchant_id="0"/>
+<loyalty_tier id="0" name="Unknown" _module_key="customer-management" merchant_id="0"/>
+<complaint_ticket id="0" name="Unknown" _module_key="customer-management" merchant_id="0"/>
+<resolution_offer id="0" name="Unknown" _module_key="customer-management" merchant_id="0"/>
+<vip_status id="0" name="Unknown" _module_key="customer-management" merchant_id="0"/>
+<do_not_contact_list id="0" name="Unknown" _module_key="customer-management" merchant_id="0"/>
+<customer_note id="0" name="Unknown" _module_key="customer-management" merchant_id="0"/>
+<communication_log id="0" name="Unknown" _module_key="customer-management" merchant_id="0"/>

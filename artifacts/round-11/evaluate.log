@@ -1,0 +1,32 @@
+model input: artifacts/round-11/model.xml
+using https://api.teaql.io/latest/evaluate
+# KSML Evaluation Report
+
+## 📊 Summary
+- **Errors**: 1
+- **Warnings**: 0
+- **Suggestions**: 0
+- **Solids**: 2
+
+## Error Pattern Summary
+
+1 errors total. Fix the largest repeated pattern first, then rerun evaluation.
+
+| Count | Pattern | Explanation | Action |
+|-------|---------|-------------|--------|
+| 1 | `XML parse error` (`KSML-XML-001`) | The XML in model.xml is malformed: Parse XML from stream error! | Check agents/ERROR-FIX.md, apply the smallest fix, then rerun evaluation. |
+
+
+## ❌ Errors (Must Fix)
+
+| Rule ID | Target | Error Message | Action |
+|---------|--------|---------------|--------|
+| `KSML-XML-001` | `` | The XML in model.xml is malformed: Parse XML from stream error! | Check `agents/ERROR-FIX.md` |
+
+
+## ✅ Solids
+
+| Rule ID | Target | Message |
+|---------|--------|---------|
+| `KSML-UPLOAD-001` | `` | The upload contains 1 files. |
+| `KSML-UPLOAD-005` | `` | Resolved entrypoint: model.xml |

@@ -1,0 +1,801 @@
+model input: artifacts/round-8/model.xml
+using https://api.teaql.io/latest/evaluate
+# KSML Evaluation Report
+
+## 📊 Summary
+- **Errors**: 0
+- **Warnings**: 388
+- **Suggestions**: 6
+- **Solids**: 371
+
+## ⚠️ Warnings
+
+| Rule ID | Target | Warning Message |
+|---------|--------|-----------------|
+| `KSML-BUSINESS-002` | `platform.name` | Field 'name' in business object 'platform' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `platform.status` | Field 'status' in business object 'platform' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `platform.version` | Field 'version' in business object 'platform' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `merchant.name` | Field 'name' in business object 'merchant' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `merchant.tax_id` | Field 'tax_id' in business object 'merchant' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `employee.name` | Field 'name' in business object 'employee' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `employee.role` | Field 'role' in business object 'employee' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `platform_setting.key` | Field 'key' in business object 'platform_setting' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `platform_setting.value` | Field 'value' in business object 'platform_setting' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `tenant_configuration.region` | Field 'region' in business object 'tenant_configuration' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `tenant_configuration.tier` | Field 'tier' in business object 'tenant_configuration' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `organization_unit.code` | Field 'code' in business object 'organization_unit' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `organization_unit.name` | Field 'name' in business object 'organization_unit' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `department_hierarchy.level` | Field 'level' in business object 'department_hierarchy' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `department_hierarchy.parent` | Field 'parent' in business object 'department_hierarchy' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `branch_office.address` | Field 'address' in business object 'branch_office' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `branch_office.capacity` | Field 'capacity' in business object 'branch_office' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `move_order.order_id` | Field 'order_id' in business object 'move_order' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `move_order.status` | Field 'status' in business object 'move_order' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `move_quote.quote_id` | Field 'quote_id' in business object 'move_quote' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `move_quote.total` | Field 'total' in business object 'move_quote' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `route.distance_km` | Field 'distance_km' in business object 'route' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `route.route_id` | Field 'route_id' in business object 'route' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `route_stop.sequence` | Field 'sequence' in business object 'route_stop' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `route_stop.stop_id` | Field 'stop_id' in business object 'route_stop' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `time_slot.end` | Field 'end' in business object 'time_slot' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `time_slot.start` | Field 'start' in business object 'time_slot' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `fulfillment_event.event_type` | Field 'event_type' in business object 'fulfillment_event' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `fulfillment_event.timestamp` | Field 'timestamp' in business object 'fulfillment_event' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `address.city` | Field 'city' in business object 'address' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `address.street` | Field 'street' in business object 'address' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `crew.crew_id` | Field 'crew_id' in business object 'crew' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `crew.size` | Field 'size' in business object 'crew' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `dispatch_assignment.assignment_id` | Field 'assignment_id' in business object 'dispatch_assignment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `dispatch_assignment.priority` | Field 'priority' in business object 'dispatch_assignment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `damage_report.report_id` | Field 'report_id' in business object 'damage_report' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `damage_report.severity` | Field 'severity' in business object 'damage_report' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `proof_of_delivery.pod_id` | Field 'pod_id' in business object 'proof_of_delivery' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `proof_of_delivery.signed_by` | Field 'signed_by' in business object 'proof_of_delivery' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `move_item.item_name` | Field 'item_name' in business object 'move_item' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `move_item.weight_kg` | Field 'weight_kg' in business object 'move_item' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `inventory_list.list_id` | Field 'list_id' in business object 'inventory_list' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `inventory_list.total_items` | Field 'total_items' in business object 'inventory_list' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `packing_material.material_type` | Field 'material_type' in business object 'packing_material' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `packing_material.quantity` | Field 'quantity' in business object 'packing_material' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `loading_zone.capacity` | Field 'capacity' in business object 'loading_zone' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `loading_zone.zone_id` | Field 'zone_id' in business object 'loading_zone' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `unloading_zone.capacity` | Field 'capacity' in business object 'unloading_zone' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `unloading_zone.zone_id` | Field 'zone_id' in business object 'unloading_zone' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `transit_log.log_id` | Field 'log_id' in business object 'transit_log' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `transit_log.mileage` | Field 'mileage' in business object 'transit_log' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `delay_record.delay_id` | Field 'delay_id' in business object 'delay_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `delay_record.duration_min` | Field 'duration_min' in business object 'delay_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `route_optimization_rule.enabled` | Field 'enabled' in business object 'route_optimization_rule' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `route_optimization_rule.rule_name` | Field 'rule_name' in business object 'route_optimization_rule' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `vehicle_assignment.assignment_id` | Field 'assignment_id' in business object 'vehicle_assignment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `vehicle_assignment.vehicle_type` | Field 'vehicle_type' in business object 'vehicle_assignment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `cargo_weight_record.record_id` | Field 'record_id' in business object 'cargo_weight_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `cargo_weight_record.total_weight` | Field 'total_weight' in business object 'cargo_weight_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `special_handling_instruction.applies_to` | Field 'applies_to' in business object 'special_handling_instruction' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `special_handling_instruction.instruction` | Field 'instruction' in business object 'special_handling_instruction' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `move_status.description` | Field 'description' in business object 'move_status' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `move_status.status_code` | Field 'status_code' in business object 'move_status' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `delivery_window.start` | Field 'start' in business object 'delivery_window' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `delivery_window.window_id` | Field 'window_id' in business object 'delivery_window' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `department.code` | Field 'code' in business object 'department' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `department.name` | Field 'name' in business object 'department' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `job_assignment.level` | Field 'level' in business object 'job_assignment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `job_assignment.title` | Field 'title' in business object 'job_assignment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `work_shift.shift_id` | Field 'shift_id' in business object 'work_shift' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `work_shift.start` | Field 'start' in business object 'work_shift' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `worked_hours.date` | Field 'date' in business object 'worked_hours' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `worked_hours.hours` | Field 'hours' in business object 'worked_hours' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `payroll_period.period_id` | Field 'period_id' in business object 'payroll_period' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `payroll_period.start` | Field 'start' in business object 'payroll_period' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `payroll_calculation.calc_id` | Field 'calc_id' in business object 'payroll_calculation' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `payroll_calculation.gross_pay` | Field 'gross_pay' in business object 'payroll_calculation' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `payslip.net_pay` | Field 'net_pay' in business object 'payslip' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `payslip.payslip_id` | Field 'payslip_id' in business object 'payslip' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `bonus.amount` | Field 'amount' in business object 'bonus' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `bonus.bonus_id` | Field 'bonus_id' in business object 'bonus' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `deduction.amount` | Field 'amount' in business object 'deduction' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `deduction.deduction_id` | Field 'deduction_id' in business object 'deduction' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `leave_request.record_type` | Field 'record_type' in business object 'leave_request' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `leave_request.request_id` | Field 'request_id' in business object 'leave_request' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `employee_certification.cert_id` | Field 'cert_id' in business object 'employee_certification' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `employee_certification.name` | Field 'name' in business object 'employee_certification' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `training_module.duration_hrs` | Field 'duration_hrs' in business object 'training_module' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `training_module.module_id` | Field 'module_id' in business object 'training_module' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `availability_schedule.schedule_id` | Field 'schedule_id' in business object 'availability_schedule' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `availability_schedule.status` | Field 'status' in business object 'availability_schedule' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `skill_profile.proficiency` | Field 'proficiency' in business object 'skill_profile' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `skill_profile.skill` | Field 'skill' in business object 'skill_profile' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `performance_review.review_id` | Field 'review_id' in business object 'performance_review' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `performance_review.score` | Field 'score' in business object 'performance_review' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `overtime_record.hours` | Field 'hours' in business object 'overtime_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `overtime_record.record_id` | Field 'record_id' in business object 'overtime_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `tax_withholding.rate` | Field 'rate' in business object 'tax_withholding' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `tax_withholding.withholding_id` | Field 'withholding_id' in business object 'tax_withholding' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `benefit_enrollment.enrollment_id` | Field 'enrollment_id' in business object 'benefit_enrollment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `benefit_enrollment.plan` | Field 'plan' in business object 'benefit_enrollment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `shift_swap_request.status` | Field 'status' in business object 'shift_swap_request' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `shift_swap_request.swap_id` | Field 'swap_id' in business object 'shift_swap_request' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `attendance_record.record_id` | Field 'record_id' in business object 'attendance_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `attendance_record.status` | Field 'status' in business object 'attendance_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `payroll_adjustment.adjustment_id` | Field 'adjustment_id' in business object 'payroll_adjustment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `payroll_adjustment.amount` | Field 'amount' in business object 'payroll_adjustment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `commission_record.commission_id` | Field 'commission_id' in business object 'commission_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `commission_record.percentage` | Field 'percentage' in business object 'commission_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `customer.customer_id` | Field 'customer_id' in business object 'customer' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `customer.status` | Field 'status' in business object 'customer' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `private_customer_profile.profile_id` | Field 'profile_id' in business object 'private_customer_profile' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `private_customer_profile.record_type` | Field 'record_type' in business object 'private_customer_profile' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `corporate_customer_profile.company_name` | Field 'company_name' in business object 'corporate_customer_profile' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `corporate_customer_profile.profile_id` | Field 'profile_id' in business object 'corporate_customer_profile' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `customer_contact.contact_id` | Field 'contact_id' in business object 'customer_contact' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `customer_contact.email` | Field 'email' in business object 'customer_contact' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `billing_profile.method` | Field 'method' in business object 'billing_profile' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `billing_profile.profile_id` | Field 'profile_id' in business object 'billing_profile' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `customer_history.history_id` | Field 'history_id' in business object 'customer_history' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `customer_history.total_moves` | Field 'total_moves' in business object 'customer_history' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `customer_preference.key` | Field 'key' in business object 'customer_preference' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `customer_preference.preference_id` | Field 'preference_id' in business object 'customer_preference' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `customer_consent.consent_id` | Field 'consent_id' in business object 'customer_consent' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `customer_consent.scope` | Field 'scope' in business object 'customer_consent' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `customer_feedback.feedback_id` | Field 'feedback_id' in business object 'customer_feedback' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `customer_feedback.rating` | Field 'rating' in business object 'customer_feedback' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `loyalty_tier.level` | Field 'level' in business object 'loyalty_tier' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `loyalty_tier.tier_id` | Field 'tier_id' in business object 'loyalty_tier' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `referral_code.code` | Field 'code' in business object 'referral_code' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `referral_code.uses` | Field 'uses' in business object 'referral_code' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `communication_log.channel` | Field 'channel' in business object 'communication_log' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `communication_log.log_id` | Field 'log_id' in business object 'communication_log' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `service_rating.rating_id` | Field 'rating_id' in business object 'service_rating' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `service_rating.score` | Field 'score' in business object 'service_rating' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `account_status.state` | Field 'state' in business object 'account_status' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `account_status.status_id` | Field 'status_id' in business object 'account_status' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `contact_method.method_id` | Field 'method_id' in business object 'contact_method' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `contact_method.record_type` | Field 'record_type' in business object 'contact_method' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `customer_segment.name` | Field 'name' in business object 'customer_segment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `customer_segment.segment_id` | Field 'segment_id' in business object 'customer_segment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `product.name` | Field 'name' in business object 'product' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `product.product_id` | Field 'product_id' in business object 'product' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `service.name` | Field 'name' in business object 'service' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `service.service_id` | Field 'service_id' in business object 'service' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `moving_service.record_type` | Field 'record_type' in business object 'moving_service' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `moving_service.service_id` | Field 'service_id' in business object 'moving_service' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `cleaning_service.record_type` | Field 'record_type' in business object 'cleaning_service' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `cleaning_service.service_id` | Field 'service_id' in business object 'cleaning_service' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `box_rental.duration_days` | Field 'duration_days' in business object 'box_rental' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `box_rental.rental_id` | Field 'rental_id' in business object 'box_rental' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `service_configuration.config_id` | Field 'config_id' in business object 'service_configuration' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `service_configuration.key` | Field 'key' in business object 'service_configuration' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `price_list.list_id` | Field 'list_id' in business object 'price_list' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `price_list.name` | Field 'name' in business object 'price_list' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `service_price.amount` | Field 'amount' in business object 'service_price' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `service_price.price_id` | Field 'price_id' in business object 'service_price' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `service_bundle.bundle_id` | Field 'bundle_id' in business object 'service_bundle' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `service_bundle.name` | Field 'name' in business object 'service_bundle' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `storage_unit.size_sqft` | Field 'size_sqft' in business object 'storage_unit' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `storage_unit.unit_id` | Field 'unit_id' in business object 'storage_unit' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `packing_kit.contents` | Field 'contents' in business object 'packing_kit' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `packing_kit.kit_id` | Field 'kit_id' in business object 'packing_kit' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `disposal_service.record_type` | Field 'record_type' in business object 'disposal_service' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `disposal_service.service_id` | Field 'service_id' in business object 'disposal_service' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `service_area.area_id` | Field 'area_id' in business object 'service_area' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `service_area.region` | Field 'region' in business object 'service_area' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `availability_calendar.calendar_id` | Field 'calendar_id' in business object 'availability_calendar' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `availability_calendar.month` | Field 'month' in business object 'availability_calendar' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `service_level_agreement.sla_id` | Field 'sla_id' in business object 'service_level_agreement' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `service_level_agreement.target_hours` | Field 'target_hours' in business object 'service_level_agreement' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `add_on_service.addon_id` | Field 'addon_id' in business object 'add_on_service' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `add_on_service.name` | Field 'name' in business object 'add_on_service' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `inventory_item.item_id` | Field 'item_id' in business object 'inventory_item' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `inventory_item.sku` | Field 'sku' in business object 'inventory_item' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `service_category.category_id` | Field 'category_id' in business object 'service_category' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `service_category.name` | Field 'name' in business object 'service_category' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `campaign.campaign_id` | Field 'campaign_id' in business object 'campaign' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `campaign.name` | Field 'name' in business object 'campaign' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `discount_code.code` | Field 'code' in business object 'discount_code' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `discount_code.value` | Field 'value' in business object 'discount_code' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `lead.lead_id` | Field 'lead_id' in business object 'lead' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `lead.source` | Field 'source' in business object 'lead' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `sales_opportunity.opp_id` | Field 'opp_id' in business object 'sales_opportunity' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `sales_opportunity.value` | Field 'value' in business object 'sales_opportunity' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `lead_activity.activity_id` | Field 'activity_id' in business object 'lead_activity' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `lead_activity.record_type` | Field 'record_type' in business object 'lead_activity' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `conversion_event.event_id` | Field 'event_id' in business object 'conversion_event' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `conversion_event.timestamp` | Field 'timestamp' in business object 'conversion_event' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `conversion_metric.metric_id` | Field 'metric_id' in business object 'conversion_metric' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `conversion_metric.name` | Field 'name' in business object 'conversion_metric' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `marketing_channel.channel_id` | Field 'channel_id' in business object 'marketing_channel' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `marketing_channel.name` | Field 'name' in business object 'marketing_channel' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `audience_segment.criteria` | Field 'criteria' in business object 'audience_segment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `audience_segment.segment_id` | Field 'segment_id' in business object 'audience_segment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `promotional_offer.description` | Field 'description' in business object 'promotional_offer' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `promotional_offer.offer_id` | Field 'offer_id' in business object 'promotional_offer' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `sales_funnel.funnel_id` | Field 'funnel_id' in business object 'sales_funnel' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `sales_funnel.stage` | Field 'stage' in business object 'sales_funnel' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `attribution_model.model_id` | Field 'model_id' in business object 'attribution_model' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `attribution_model.record_type` | Field 'record_type' in business object 'attribution_model' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `lead_score.score_id` | Field 'score_id' in business object 'lead_score' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `lead_score.value` | Field 'value' in business object 'lead_score' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `campaign_budget.amount` | Field 'amount' in business object 'campaign_budget' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `campaign_budget.budget_id` | Field 'budget_id' in business object 'campaign_budget' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `conversion_report.period` | Field 'period' in business object 'conversion_report' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `conversion_report.report_id` | Field 'report_id' in business object 'conversion_report' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `payment.amount` | Field 'amount' in business object 'payment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `payment.payment_id` | Field 'payment_id' in business object 'payment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `invoice.invoice_id` | Field 'invoice_id' in business object 'invoice' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `invoice.status` | Field 'status' in business object 'invoice' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `invoice_line.description` | Field 'description' in business object 'invoice_line' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `invoice_line.line_id` | Field 'line_id' in business object 'invoice_line' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `refund.amount` | Field 'amount' in business object 'refund' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `refund.refund_id` | Field 'refund_id' in business object 'refund' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `expense.category` | Field 'category' in business object 'expense' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `expense.expense_id` | Field 'expense_id' in business object 'expense' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `vat_rate.percentage` | Field 'percentage' in business object 'vat_rate' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `vat_rate.rate_id` | Field 'rate_id' in business object 'vat_rate' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `journal_entry.date` | Field 'date' in business object 'journal_entry' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `journal_entry.entry_id` | Field 'entry_id' in business object 'journal_entry' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `account.account_id` | Field 'account_id' in business object 'account' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `account.name` | Field 'name' in business object 'account' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `financial_summary.period` | Field 'period' in business object 'financial_summary' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `financial_summary.summary_id` | Field 'summary_id' in business object 'financial_summary' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `budget.budget_id` | Field 'budget_id' in business object 'budget' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `budget.limit` | Field 'limit' in business object 'budget' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `settlement.settlement_id` | Field 'settlement_id' in business object 'settlement' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `settlement.status` | Field 'status' in business object 'settlement' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `receivable.amount` | Field 'amount' in business object 'receivable' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `receivable.receivable_id` | Field 'receivable_id' in business object 'receivable' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `payable.amount` | Field 'amount' in business object 'payable' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `payable.payable_id` | Field 'payable_id' in business object 'payable' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `tax_record.record_id` | Field 'record_id' in business object 'tax_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `tax_record.record_type` | Field 'record_type' in business object 'tax_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `currency_rate.pair` | Field 'pair' in business object 'currency_rate' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `currency_rate.rate_id` | Field 'rate_id' in business object 'currency_rate' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `payment_method.method_id` | Field 'method_id' in business object 'payment_method' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `payment_method.record_type` | Field 'record_type' in business object 'payment_method' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `financial_period.period_id` | Field 'period_id' in business object 'financial_period' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `financial_period.start` | Field 'start' in business object 'financial_period' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `vehicle.make` | Field 'make' in business object 'vehicle' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `vehicle.vehicle_id` | Field 'vehicle_id' in business object 'vehicle' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `equipment.equipment_id` | Field 'equipment_id' in business object 'equipment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `equipment.name` | Field 'name' in business object 'equipment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `consumable.consumable_id` | Field 'consumable_id' in business object 'consumable' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `consumable.name` | Field 'name' in business object 'consumable' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `asset_assignment.assignment_id` | Field 'assignment_id' in business object 'asset_assignment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `asset_assignment.status` | Field 'status' in business object 'asset_assignment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `asset_inspection.inspection_id` | Field 'inspection_id' in business object 'asset_inspection' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `asset_inspection.result` | Field 'result' in business object 'asset_inspection' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `maintenance_schedule.interval_days` | Field 'interval_days' in business object 'maintenance_schedule' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `maintenance_schedule.schedule_id` | Field 'schedule_id' in business object 'maintenance_schedule' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `maintenance_event.event_id` | Field 'event_id' in business object 'maintenance_event' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `maintenance_event.record_type` | Field 'record_type' in business object 'maintenance_event' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `fuel_record.gallons` | Field 'gallons' in business object 'fuel_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `fuel_record.record_id` | Field 'record_id' in business object 'fuel_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `supplier.name` | Field 'name' in business object 'supplier' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `supplier.supplier_id` | Field 'supplier_id' in business object 'supplier' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `inventory_stock.quantity` | Field 'quantity' in business object 'inventory_stock' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `inventory_stock.stock_id` | Field 'stock_id' in business object 'inventory_stock' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `maintenance_cost.amount` | Field 'amount' in business object 'maintenance_cost' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `maintenance_cost.cost_id` | Field 'cost_id' in business object 'maintenance_cost' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `vehicle_registration.plate` | Field 'plate' in business object 'vehicle_registration' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `vehicle_registration.reg_id` | Field 'reg_id' in business object 'vehicle_registration' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `equipment_serial.code` | Field 'code' in business object 'equipment_serial' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `equipment_serial.serial_id` | Field 'serial_id' in business object 'equipment_serial' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `supplier_contract.contract_id` | Field 'contract_id' in business object 'supplier_contract' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `supplier_contract.term` | Field 'term' in business object 'supplier_contract' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `asset_condition.condition_id` | Field 'condition_id' in business object 'asset_condition' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `asset_condition.rating` | Field 'rating' in business object 'asset_condition' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `depreciation_record.amount` | Field 'amount' in business object 'depreciation_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `depreciation_record.record_id` | Field 'record_id' in business object 'depreciation_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `warranty_claim.claim_id` | Field 'claim_id' in business object 'warranty_claim' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `warranty_claim.status` | Field 'status' in business object 'warranty_claim' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `storage_location.location_id` | Field 'location_id' in business object 'storage_location' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `storage_location.name` | Field 'name' in business object 'storage_location' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `contract.contract_id` | Field 'contract_id' in business object 'contract' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `contract.status` | Field 'status' in business object 'contract' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `insurance_policy.policy_id` | Field 'policy_id' in business object 'insurance_policy' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `insurance_policy.provider` | Field 'provider' in business object 'insurance_policy' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `insurance_claim.amount` | Field 'amount' in business object 'insurance_claim' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `insurance_claim.claim_id` | Field 'claim_id' in business object 'insurance_claim' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `document.document_id` | Field 'document_id' in business object 'document' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `document.name` | Field 'name' in business object 'document' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `document_version.version` | Field 'version' in business object 'document_version' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `document_version.version_id` | Field 'version_id' in business object 'document_version' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `compliance_check.check_id` | Field 'check_id' in business object 'compliance_check' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `compliance_check.result` | Field 'result' in business object 'compliance_check' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `data_retention_policy.duration_years` | Field 'duration_years' in business object 'data_retention_policy' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `data_retention_policy.policy_id` | Field 'policy_id' in business object 'data_retention_policy' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `recovery_request.request_id` | Field 'request_id' in business object 'recovery_request' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `recovery_request.status` | Field 'status' in business object 'recovery_request' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `policy_document.doc_id` | Field 'doc_id' in business object 'policy_document' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `policy_document.title` | Field 'title' in business object 'policy_document' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `incident_report.report_id` | Field 'report_id' in business object 'incident_report' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `incident_report.severity` | Field 'severity' in business object 'incident_report' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `audit_trail.action` | Field 'action' in business object 'audit_trail' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `audit_trail.trail_id` | Field 'trail_id' in business object 'audit_trail' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `legal_entity.entity_id` | Field 'entity_id' in business object 'legal_entity' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `legal_entity.name` | Field 'name' in business object 'legal_entity' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `regulatory_requirement.name` | Field 'name' in business object 'regulatory_requirement' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `regulatory_requirement.req_id` | Field 'req_id' in business object 'regulatory_requirement' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `compliance_certificate.cert_id` | Field 'cert_id' in business object 'compliance_certificate' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `compliance_certificate.issued_date` | Field 'issued_date' in business object 'compliance_certificate' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `user_account.account_id` | Field 'account_id' in business object 'user_account' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `user_account.status` | Field 'status' in business object 'user_account' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `role.name` | Field 'name' in business object 'role' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `role.role_id` | Field 'role_id' in business object 'role' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `permission.name` | Field 'name' in business object 'permission' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `permission.permission_id` | Field 'permission_id' in business object 'permission' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `user_role_assignment.assignment_id` | Field 'assignment_id' in business object 'user_role_assignment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `user_role_assignment.status` | Field 'status' in business object 'user_role_assignment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `role_permission.link_id` | Field 'link_id' in business object 'role_permission' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `role_permission.scope` | Field 'scope' in business object 'role_permission' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `magic_link.expires` | Field 'expires' in business object 'magic_link' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `magic_link.link_id` | Field 'link_id' in business object 'magic_link' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `user_session.session_id` | Field 'session_id' in business object 'user_session' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `user_session.status` | Field 'status' in business object 'user_session' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `access_token.scope` | Field 'scope' in business object 'access_token' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `access_token.token_id` | Field 'token_id' in business object 'access_token' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `two_factor_auth.auth_id` | Field 'auth_id' in business object 'two_factor_auth' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `two_factor_auth.method` | Field 'method' in business object 'two_factor_auth' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `login_attempt.attempt_id` | Field 'attempt_id' in business object 'login_attempt' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `login_attempt.status` | Field 'status' in business object 'login_attempt' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `activity_log.action` | Field 'action' in business object 'activity_log' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `activity_log.log_id` | Field 'log_id' in business object 'activity_log' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `audit_log.level` | Field 'level' in business object 'audit_log' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `audit_log.log_id` | Field 'log_id' in business object 'audit_log' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `entity_change.change_id` | Field 'change_id' in business object 'entity_change' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `entity_change.field` | Field 'field' in business object 'entity_change' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `change_set.set_id` | Field 'set_id' in business object 'change_set' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `change_set.version` | Field 'version' in business object 'change_set' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `system_event.event_id` | Field 'event_id' in business object 'system_event' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `system_event.record_type` | Field 'record_type' in business object 'system_event' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `data_export.export_id` | Field 'export_id' in business object 'data_export' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `data_export.format` | Field 'format' in business object 'data_export' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `notification.notification_id` | Field 'notification_id' in business object 'notification' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `notification.status` | Field 'status' in business object 'notification' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `notification_template.subject` | Field 'subject' in business object 'notification_template' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `notification_template.template_id` | Field 'template_id' in business object 'notification_template' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `automation_rule.name` | Field 'name' in business object 'automation_rule' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `automation_rule.rule_id` | Field 'rule_id' in business object 'automation_rule' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `automation_trigger.event` | Field 'event' in business object 'automation_trigger' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `automation_trigger.trigger_id` | Field 'trigger_id' in business object 'automation_trigger' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `automation_action.action_id` | Field 'action_id' in business object 'automation_action' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `automation_action.record_type` | Field 'record_type' in business object 'automation_action' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `operational_hook.endpoint` | Field 'endpoint' in business object 'operational_hook' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `operational_hook.hook_id` | Field 'hook_id' in business object 'operational_hook' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `financial_hook.endpoint` | Field 'endpoint' in business object 'financial_hook' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `financial_hook.hook_id` | Field 'hook_id' in business object 'financial_hook' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `api_client.client_id` | Field 'client_id' in business object 'api_client' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `api_client.name` | Field 'name' in business object 'api_client' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `api_endpoint.endpoint_id` | Field 'endpoint_id' in business object 'api_endpoint' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `api_endpoint.path` | Field 'path' in business object 'api_endpoint' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `webhook.url` | Field 'url' in business object 'webhook' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `webhook.webhook_id` | Field 'webhook_id' in business object 'webhook' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `webhook_delivery.delivery_id` | Field 'delivery_id' in business object 'webhook_delivery' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `webhook_delivery.status` | Field 'status' in business object 'webhook_delivery' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `integration_mapping.mapping_id` | Field 'mapping_id' in business object 'integration_mapping' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `integration_mapping.source` | Field 'source' in business object 'integration_mapping' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `synchronization_run.run_id` | Field 'run_id' in business object 'synchronization_run' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `synchronization_run.status` | Field 'status' in business object 'synchronization_run' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `api_key.key_id` | Field 'key_id' in business object 'api_key' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `api_key.prefix` | Field 'prefix' in business object 'api_key' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-REFERENCE-005` | `platform.status` | Field 'status' in 'platform' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `move_order.status` | Field 'status' in 'move_order' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `dispatch_assignment.priority` | Field 'priority' in 'dispatch_assignment' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `availability_schedule.status` | Field 'status' in 'availability_schedule' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `shift_swap_request.status` | Field 'status' in 'shift_swap_request' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `attendance_record.status` | Field 'status' in 'attendance_record' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `customer.status` | Field 'status' in 'customer' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `invoice.status` | Field 'status' in 'invoice' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `expense.category` | Field 'category' in 'expense' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `settlement.status` | Field 'status' in 'settlement' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `asset_assignment.status` | Field 'status' in 'asset_assignment' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `warranty_claim.status` | Field 'status' in 'warranty_claim' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `contract.status` | Field 'status' in 'contract' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `recovery_request.status` | Field 'status' in 'recovery_request' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `user_account.status` | Field 'status' in 'user_account' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `user_role_assignment.status` | Field 'status' in 'user_role_assignment' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `user_session.status` | Field 'status' in 'user_session' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `login_attempt.status` | Field 'status' in 'login_attempt' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `notification.status` | Field 'status' in 'notification' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `webhook_delivery.status` | Field 'status' in 'webhook_delivery' represents a finite set and should preferably reference a constant object. |
+| `KSML-REFERENCE-005` | `synchronization_run.status` | Field 'status' in 'synchronization_run' represents a finite set and should preferably reference a constant object. |
+| `KSML-PRIVACY-001-WARN` | `merchant.tax_id` | Government identifier field. Add `tax_id` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-WARN` | `customer_contact.email` | Contact identifier on person-like subject. Add `email` to `_audit_mask_fields`. |
+
+
+## 💡 Suggestions
+
+| Rule ID | Target | Suggestion |
+|---------|--------|------------|
+| `KSML-LOG-007` | `transit_log` | Object 'transit_log' has a name ending with '_log' but is not marked as a logging object. Consider adding _log="true" if this object represents append-only log entries. |
+| `KSML-LOG-007` | `communication_log` | Object 'communication_log' has a name ending with '_log' but is not marked as a logging object. Consider adding _log="true" if this object represents append-only log entries. |
+| `KSML-LOG-007` | `activity_log` | Object 'activity_log' has a name ending with '_log' but is not marked as a logging object. Consider adding _log="true" if this object represents append-only log entries. |
+| `KSML-LOG-007` | `audit_log` | Object 'audit_log' has a name ending with '_log' but is not marked as a logging object. Consider adding _log="true" if this object represents append-only log entries. |
+| `KSML-PRIVACY-001-SUG` | `employee.name` | Personal attribute on person-like subject. Add `name` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-SUG` | `account.name` | Personal attribute field. Add `name` to `_audit_mask_fields`. |
+
+
+## Privacy Findings
+
+| Severity | Target | Reason | Recommended Action | Regulatory Basis |
+|----------|--------|--------|--------------------|------------------|
+| Warning | `merchant.tax_id` | Government identifier field. | Add to `_audit_mask_fields="tax_id"`. | CCPA/CPRA 1798.140: government identifiers; PIPL Art. 28: specific identity |
+| Suggestion | `employee.name` | Personal attribute on person-like subject. | Add to `_audit_mask_fields="name"`. | GDPR Art. 4: identifier |
+| Warning | `customer_contact.email` | Contact identifier on person-like subject. | Add to `_audit_mask_fields="email"`. | CCPA/CPRA 1798.140: identifiers |
+| Suggestion | `account.name` | Personal attribute field. | Add to `_audit_mask_fields="name"`. | GDPR Art. 4: identifier |
+
+
+## ✅ Solids
+
+| Rule ID | Target | Message |
+|---------|--------|---------|
+| `KSML-UPLOAD-001` | `` | The upload contains 1 files. |
+| `KSML-UPLOAD-005` | `` | Resolved entrypoint: model.xml |
+| `KSML-XML-002` | `` | The XML document model.xml was parsed successfully. |
+| `KSML-ROOT-003` | `` | Root name 'moving-company-service' is well-formed. |
+| `KSML-OBJECT-001` | `platform` | Object 'platform' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `merchant` | Object 'merchant' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `employee` | Object 'employee' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `platform_setting` | Object 'platform_setting' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `tenant_configuration` | Object 'tenant_configuration' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `organization_unit` | Object 'organization_unit' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `department_hierarchy` | Object 'department_hierarchy' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `branch_office` | Object 'branch_office' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `move_order` | Object 'move_order' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `move_quote` | Object 'move_quote' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `route` | Object 'route' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `route_stop` | Object 'route_stop' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `time_slot` | Object 'time_slot' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `fulfillment_event` | Object 'fulfillment_event' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `address` | Object 'address' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `crew` | Object 'crew' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `dispatch_assignment` | Object 'dispatch_assignment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `damage_report` | Object 'damage_report' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `proof_of_delivery` | Object 'proof_of_delivery' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `move_item` | Object 'move_item' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `inventory_list` | Object 'inventory_list' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `packing_material` | Object 'packing_material' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `loading_zone` | Object 'loading_zone' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `unloading_zone` | Object 'unloading_zone' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `transit_log` | Object 'transit_log' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `delay_record` | Object 'delay_record' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `route_optimization_rule` | Object 'route_optimization_rule' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `vehicle_assignment` | Object 'vehicle_assignment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `cargo_weight_record` | Object 'cargo_weight_record' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `special_handling_instruction` | Object 'special_handling_instruction' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `move_status` | Object 'move_status' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `delivery_window` | Object 'delivery_window' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `department` | Object 'department' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `job_assignment` | Object 'job_assignment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `work_shift` | Object 'work_shift' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `worked_hours` | Object 'worked_hours' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `payroll_period` | Object 'payroll_period' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `payroll_calculation` | Object 'payroll_calculation' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `payslip` | Object 'payslip' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `bonus` | Object 'bonus' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `deduction` | Object 'deduction' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `leave_request` | Object 'leave_request' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `employee_certification` | Object 'employee_certification' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `training_module` | Object 'training_module' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `availability_schedule` | Object 'availability_schedule' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `skill_profile` | Object 'skill_profile' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `performance_review` | Object 'performance_review' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `overtime_record` | Object 'overtime_record' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `tax_withholding` | Object 'tax_withholding' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `benefit_enrollment` | Object 'benefit_enrollment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `shift_swap_request` | Object 'shift_swap_request' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `attendance_record` | Object 'attendance_record' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `payroll_adjustment` | Object 'payroll_adjustment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `commission_record` | Object 'commission_record' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `customer` | Object 'customer' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `private_customer_profile` | Object 'private_customer_profile' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `corporate_customer_profile` | Object 'corporate_customer_profile' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `customer_contact` | Object 'customer_contact' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `billing_profile` | Object 'billing_profile' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `customer_history` | Object 'customer_history' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `customer_preference` | Object 'customer_preference' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `customer_consent` | Object 'customer_consent' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `customer_feedback` | Object 'customer_feedback' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `loyalty_tier` | Object 'loyalty_tier' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `referral_code` | Object 'referral_code' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `communication_log` | Object 'communication_log' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `service_rating` | Object 'service_rating' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `account_status` | Object 'account_status' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `contact_method` | Object 'contact_method' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `customer_segment` | Object 'customer_segment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `product` | Object 'product' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `service` | Object 'service' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `moving_service` | Object 'moving_service' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `cleaning_service` | Object 'cleaning_service' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `box_rental` | Object 'box_rental' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `service_configuration` | Object 'service_configuration' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `price_list` | Object 'price_list' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `service_price` | Object 'service_price' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `service_bundle` | Object 'service_bundle' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `storage_unit` | Object 'storage_unit' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `packing_kit` | Object 'packing_kit' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `disposal_service` | Object 'disposal_service' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `service_area` | Object 'service_area' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `availability_calendar` | Object 'availability_calendar' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `service_level_agreement` | Object 'service_level_agreement' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `add_on_service` | Object 'add_on_service' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `inventory_item` | Object 'inventory_item' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `service_category` | Object 'service_category' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `campaign` | Object 'campaign' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `discount_code` | Object 'discount_code' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `lead` | Object 'lead' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `sales_opportunity` | Object 'sales_opportunity' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `lead_activity` | Object 'lead_activity' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `conversion_event` | Object 'conversion_event' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `conversion_metric` | Object 'conversion_metric' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `marketing_channel` | Object 'marketing_channel' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `audience_segment` | Object 'audience_segment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `promotional_offer` | Object 'promotional_offer' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `sales_funnel` | Object 'sales_funnel' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `attribution_model` | Object 'attribution_model' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `lead_score` | Object 'lead_score' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `campaign_budget` | Object 'campaign_budget' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `conversion_report` | Object 'conversion_report' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `payment` | Object 'payment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `invoice` | Object 'invoice' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `invoice_line` | Object 'invoice_line' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `refund` | Object 'refund' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `expense` | Object 'expense' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `vat_rate` | Object 'vat_rate' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `journal_entry` | Object 'journal_entry' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `account` | Object 'account' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `financial_summary` | Object 'financial_summary' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `budget` | Object 'budget' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `settlement` | Object 'settlement' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `receivable` | Object 'receivable' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `payable` | Object 'payable' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `tax_record` | Object 'tax_record' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `currency_rate` | Object 'currency_rate' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `payment_method` | Object 'payment_method' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `financial_period` | Object 'financial_period' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `vehicle` | Object 'vehicle' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `equipment` | Object 'equipment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `consumable` | Object 'consumable' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `asset_assignment` | Object 'asset_assignment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `asset_inspection` | Object 'asset_inspection' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `maintenance_schedule` | Object 'maintenance_schedule' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `maintenance_event` | Object 'maintenance_event' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `fuel_record` | Object 'fuel_record' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `supplier` | Object 'supplier' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `inventory_stock` | Object 'inventory_stock' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `maintenance_cost` | Object 'maintenance_cost' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `vehicle_registration` | Object 'vehicle_registration' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `equipment_serial` | Object 'equipment_serial' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `supplier_contract` | Object 'supplier_contract' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `asset_condition` | Object 'asset_condition' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `depreciation_record` | Object 'depreciation_record' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `warranty_claim` | Object 'warranty_claim' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `storage_location` | Object 'storage_location' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `contract` | Object 'contract' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `insurance_policy` | Object 'insurance_policy' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `insurance_claim` | Object 'insurance_claim' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `document` | Object 'document' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `document_version` | Object 'document_version' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `compliance_check` | Object 'compliance_check' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `data_retention_policy` | Object 'data_retention_policy' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `recovery_request` | Object 'recovery_request' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `policy_document` | Object 'policy_document' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `incident_report` | Object 'incident_report' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `audit_trail` | Object 'audit_trail' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `legal_entity` | Object 'legal_entity' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `regulatory_requirement` | Object 'regulatory_requirement' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `compliance_certificate` | Object 'compliance_certificate' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `user_account` | Object 'user_account' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `role` | Object 'role' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `permission` | Object 'permission' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `user_role_assignment` | Object 'user_role_assignment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `role_permission` | Object 'role_permission' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `magic_link` | Object 'magic_link' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `user_session` | Object 'user_session' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `access_token` | Object 'access_token' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `two_factor_auth` | Object 'two_factor_auth' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `login_attempt` | Object 'login_attempt' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `activity_log` | Object 'activity_log' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `audit_log` | Object 'audit_log' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `entity_change` | Object 'entity_change' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `change_set` | Object 'change_set' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `system_event` | Object 'system_event' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `data_export` | Object 'data_export' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `notification` | Object 'notification' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `notification_template` | Object 'notification_template' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `automation_rule` | Object 'automation_rule' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `automation_trigger` | Object 'automation_trigger' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `automation_action` | Object 'automation_action' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `operational_hook` | Object 'operational_hook' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `financial_hook` | Object 'financial_hook' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `api_client` | Object 'api_client' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `api_endpoint` | Object 'api_endpoint' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `webhook` | Object 'webhook' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `webhook_delivery` | Object 'webhook_delivery' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `integration_mapping` | Object 'integration_mapping' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `synchronization_run` | Object 'synchronization_run' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `api_key` | Object 'api_key' defines display name, module, and module key metadata. |
+| `KSML-REFERENCE-003` | `merchant.platform_ref` | Reference 'platform_ref' in 'merchant' successfully resolves to target object 'platform'. |
+| `KSML-REFERENCE-003` | `employee.merchant_ref` | Reference 'merchant_ref' in 'employee' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `platform_setting.platform_ref` | Reference 'platform_ref' in 'platform_setting' successfully resolves to target object 'platform'. |
+| `KSML-REFERENCE-003` | `tenant_configuration.merchant_ref` | Reference 'merchant_ref' in 'tenant_configuration' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `organization_unit.merchant_ref` | Reference 'merchant_ref' in 'organization_unit' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `department_hierarchy.merchant_ref` | Reference 'merchant_ref' in 'department_hierarchy' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `branch_office.merchant_ref` | Reference 'merchant_ref' in 'branch_office' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `move_order.customer_ref` | Reference 'customer_ref' in 'move_order' successfully resolves to target object 'customer'. |
+| `KSML-REFERENCE-003` | `move_order.merchant_ref` | Reference 'merchant_ref' in 'move_order' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `move_quote.move_order_ref` | Reference 'move_order_ref' in 'move_quote' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `route.move_order_ref` | Reference 'move_order_ref' in 'route' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `route_stop.route_ref` | Reference 'route_ref' in 'route_stop' successfully resolves to target object 'route'. |
+| `KSML-REFERENCE-003` | `time_slot.move_order_ref` | Reference 'move_order_ref' in 'time_slot' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `fulfillment_event.move_order_ref` | Reference 'move_order_ref' in 'fulfillment_event' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `address.merchant_ref` | Reference 'merchant_ref' in 'address' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `crew.merchant_ref` | Reference 'merchant_ref' in 'crew' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `dispatch_assignment.crew_ref` | Reference 'crew_ref' in 'dispatch_assignment' successfully resolves to target object 'crew'. |
+| `KSML-REFERENCE-003` | `dispatch_assignment.move_order_ref` | Reference 'move_order_ref' in 'dispatch_assignment' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `damage_report.move_order_ref` | Reference 'move_order_ref' in 'damage_report' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `proof_of_delivery.move_order_ref` | Reference 'move_order_ref' in 'proof_of_delivery' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `move_item.move_order_ref` | Reference 'move_order_ref' in 'move_item' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `inventory_list.move_order_ref` | Reference 'move_order_ref' in 'inventory_list' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `packing_material.merchant_ref` | Reference 'merchant_ref' in 'packing_material' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `loading_zone.merchant_ref` | Reference 'merchant_ref' in 'loading_zone' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `unloading_zone.merchant_ref` | Reference 'merchant_ref' in 'unloading_zone' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `transit_log.move_order_ref` | Reference 'move_order_ref' in 'transit_log' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `delay_record.move_order_ref` | Reference 'move_order_ref' in 'delay_record' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `route_optimization_rule.merchant_ref` | Reference 'merchant_ref' in 'route_optimization_rule' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `vehicle_assignment.crew_ref` | Reference 'crew_ref' in 'vehicle_assignment' successfully resolves to target object 'crew'. |
+| `KSML-REFERENCE-003` | `vehicle_assignment.move_order_ref` | Reference 'move_order_ref' in 'vehicle_assignment' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `cargo_weight_record.move_order_ref` | Reference 'move_order_ref' in 'cargo_weight_record' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `special_handling_instruction.move_order_ref` | Reference 'move_order_ref' in 'special_handling_instruction' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `move_status.merchant_ref` | Reference 'merchant_ref' in 'move_status' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `delivery_window.move_order_ref` | Reference 'move_order_ref' in 'delivery_window' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `department.merchant_ref` | Reference 'merchant_ref' in 'department' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `job_assignment.employee_ref` | Reference 'employee_ref' in 'job_assignment' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `work_shift.employee_ref` | Reference 'employee_ref' in 'work_shift' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `worked_hours.work_shift_ref` | Reference 'work_shift_ref' in 'worked_hours' successfully resolves to target object 'work_shift'. |
+| `KSML-REFERENCE-003` | `payroll_period.merchant_ref` | Reference 'merchant_ref' in 'payroll_period' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `payroll_calculation.payroll_period_ref` | Reference 'payroll_period_ref' in 'payroll_calculation' successfully resolves to target object 'payroll_period'. |
+| `KSML-REFERENCE-003` | `payslip.payroll_calculation_ref` | Reference 'payroll_calculation_ref' in 'payslip' successfully resolves to target object 'payroll_calculation'. |
+| `KSML-REFERENCE-003` | `bonus.employee_ref` | Reference 'employee_ref' in 'bonus' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `deduction.payroll_calculation_ref` | Reference 'payroll_calculation_ref' in 'deduction' successfully resolves to target object 'payroll_calculation'. |
+| `KSML-REFERENCE-003` | `leave_request.employee_ref` | Reference 'employee_ref' in 'leave_request' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `employee_certification.employee_ref` | Reference 'employee_ref' in 'employee_certification' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `training_module.employee_ref` | Reference 'employee_ref' in 'training_module' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `availability_schedule.employee_ref` | Reference 'employee_ref' in 'availability_schedule' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `skill_profile.employee_ref` | Reference 'employee_ref' in 'skill_profile' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `performance_review.employee_ref` | Reference 'employee_ref' in 'performance_review' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `overtime_record.employee_ref` | Reference 'employee_ref' in 'overtime_record' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `tax_withholding.payroll_calculation_ref` | Reference 'payroll_calculation_ref' in 'tax_withholding' successfully resolves to target object 'payroll_calculation'. |
+| `KSML-REFERENCE-003` | `benefit_enrollment.employee_ref` | Reference 'employee_ref' in 'benefit_enrollment' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `shift_swap_request.employee_ref` | Reference 'employee_ref' in 'shift_swap_request' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `attendance_record.employee_ref` | Reference 'employee_ref' in 'attendance_record' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `payroll_adjustment.payroll_calculation_ref` | Reference 'payroll_calculation_ref' in 'payroll_adjustment' successfully resolves to target object 'payroll_calculation'. |
+| `KSML-REFERENCE-003` | `commission_record.employee_ref` | Reference 'employee_ref' in 'commission_record' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `customer.merchant_ref` | Reference 'merchant_ref' in 'customer' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `private_customer_profile.customer_ref` | Reference 'customer_ref' in 'private_customer_profile' successfully resolves to target object 'customer'. |
+| `KSML-REFERENCE-003` | `corporate_customer_profile.customer_ref` | Reference 'customer_ref' in 'corporate_customer_profile' successfully resolves to target object 'customer'. |
+| `KSML-REFERENCE-003` | `customer_contact.customer_ref` | Reference 'customer_ref' in 'customer_contact' successfully resolves to target object 'customer'. |
+| `KSML-REFERENCE-003` | `billing_profile.customer_ref` | Reference 'customer_ref' in 'billing_profile' successfully resolves to target object 'customer'. |
+| `KSML-REFERENCE-003` | `customer_history.customer_ref` | Reference 'customer_ref' in 'customer_history' successfully resolves to target object 'customer'. |
+| `KSML-REFERENCE-003` | `customer_preference.customer_ref` | Reference 'customer_ref' in 'customer_preference' successfully resolves to target object 'customer'. |
+| `KSML-REFERENCE-003` | `customer_consent.customer_ref` | Reference 'customer_ref' in 'customer_consent' successfully resolves to target object 'customer'. |
+| `KSML-REFERENCE-003` | `customer_feedback.customer_ref` | Reference 'customer_ref' in 'customer_feedback' successfully resolves to target object 'customer'. |
+| `KSML-REFERENCE-003` | `loyalty_tier.customer_ref` | Reference 'customer_ref' in 'loyalty_tier' successfully resolves to target object 'customer'. |
+| `KSML-REFERENCE-003` | `referral_code.customer_ref` | Reference 'customer_ref' in 'referral_code' successfully resolves to target object 'customer'. |
+| `KSML-REFERENCE-003` | `communication_log.customer_ref` | Reference 'customer_ref' in 'communication_log' successfully resolves to target object 'customer'. |
+| `KSML-REFERENCE-003` | `service_rating.customer_ref` | Reference 'customer_ref' in 'service_rating' successfully resolves to target object 'customer'. |
+| `KSML-REFERENCE-003` | `account_status.customer_ref` | Reference 'customer_ref' in 'account_status' successfully resolves to target object 'customer'. |
+| `KSML-REFERENCE-003` | `contact_method.customer_ref` | Reference 'customer_ref' in 'contact_method' successfully resolves to target object 'customer'. |
+| `KSML-REFERENCE-003` | `customer_segment.merchant_ref` | Reference 'merchant_ref' in 'customer_segment' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `product.merchant_ref` | Reference 'merchant_ref' in 'product' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `service.merchant_ref` | Reference 'merchant_ref' in 'service' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `moving_service.service_ref` | Reference 'service_ref' in 'moving_service' successfully resolves to target object 'service'. |
+| `KSML-REFERENCE-003` | `cleaning_service.service_ref` | Reference 'service_ref' in 'cleaning_service' successfully resolves to target object 'service'. |
+| `KSML-REFERENCE-003` | `box_rental.product_ref` | Reference 'product_ref' in 'box_rental' successfully resolves to target object 'product'. |
+| `KSML-REFERENCE-003` | `service_configuration.service_ref` | Reference 'service_ref' in 'service_configuration' successfully resolves to target object 'service'. |
+| `KSML-REFERENCE-003` | `price_list.merchant_ref` | Reference 'merchant_ref' in 'price_list' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `service_price.price_list_ref` | Reference 'price_list_ref' in 'service_price' successfully resolves to target object 'price_list'. |
+| `KSML-REFERENCE-003` | `service_bundle.merchant_ref` | Reference 'merchant_ref' in 'service_bundle' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `storage_unit.merchant_ref` | Reference 'merchant_ref' in 'storage_unit' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `packing_kit.product_ref` | Reference 'product_ref' in 'packing_kit' successfully resolves to target object 'product'. |
+| `KSML-REFERENCE-003` | `disposal_service.service_ref` | Reference 'service_ref' in 'disposal_service' successfully resolves to target object 'service'. |
+| `KSML-REFERENCE-003` | `service_area.merchant_ref` | Reference 'merchant_ref' in 'service_area' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `availability_calendar.service_ref` | Reference 'service_ref' in 'availability_calendar' successfully resolves to target object 'service'. |
+| `KSML-REFERENCE-003` | `service_level_agreement.service_ref` | Reference 'service_ref' in 'service_level_agreement' successfully resolves to target object 'service'. |
+| `KSML-REFERENCE-003` | `add_on_service.service_ref` | Reference 'service_ref' in 'add_on_service' successfully resolves to target object 'service'. |
+| `KSML-REFERENCE-003` | `inventory_item.merchant_ref` | Reference 'merchant_ref' in 'inventory_item' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `service_category.merchant_ref` | Reference 'merchant_ref' in 'service_category' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `campaign.merchant_ref` | Reference 'merchant_ref' in 'campaign' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `discount_code.campaign_ref` | Reference 'campaign_ref' in 'discount_code' successfully resolves to target object 'campaign'. |
+| `KSML-REFERENCE-003` | `lead.campaign_ref` | Reference 'campaign_ref' in 'lead' successfully resolves to target object 'campaign'. |
+| `KSML-REFERENCE-003` | `sales_opportunity.lead_ref` | Reference 'lead_ref' in 'sales_opportunity' successfully resolves to target object 'lead'. |
+| `KSML-REFERENCE-003` | `lead_activity.lead_ref` | Reference 'lead_ref' in 'lead_activity' successfully resolves to target object 'lead'. |
+| `KSML-REFERENCE-003` | `conversion_event.sales_opportunity_ref` | Reference 'sales_opportunity_ref' in 'conversion_event' successfully resolves to target object 'sales_opportunity'. |
+| `KSML-REFERENCE-003` | `conversion_metric.campaign_ref` | Reference 'campaign_ref' in 'conversion_metric' successfully resolves to target object 'campaign'. |
+| `KSML-REFERENCE-003` | `marketing_channel.merchant_ref` | Reference 'merchant_ref' in 'marketing_channel' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `audience_segment.campaign_ref` | Reference 'campaign_ref' in 'audience_segment' successfully resolves to target object 'campaign'. |
+| `KSML-REFERENCE-003` | `promotional_offer.campaign_ref` | Reference 'campaign_ref' in 'promotional_offer' successfully resolves to target object 'campaign'. |
+| `KSML-REFERENCE-003` | `sales_funnel.lead_ref` | Reference 'lead_ref' in 'sales_funnel' successfully resolves to target object 'lead'. |
+| `KSML-REFERENCE-003` | `attribution_model.campaign_ref` | Reference 'campaign_ref' in 'attribution_model' successfully resolves to target object 'campaign'. |
+| `KSML-REFERENCE-003` | `lead_score.lead_ref` | Reference 'lead_ref' in 'lead_score' successfully resolves to target object 'lead'. |
+| `KSML-REFERENCE-003` | `campaign_budget.campaign_ref` | Reference 'campaign_ref' in 'campaign_budget' successfully resolves to target object 'campaign'. |
+| `KSML-REFERENCE-003` | `conversion_report.campaign_ref` | Reference 'campaign_ref' in 'conversion_report' successfully resolves to target object 'campaign'. |
+| `KSML-REFERENCE-003` | `payment.merchant_ref` | Reference 'merchant_ref' in 'payment' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `invoice.payment_ref` | Reference 'payment_ref' in 'invoice' successfully resolves to target object 'payment'. |
+| `KSML-REFERENCE-003` | `invoice_line.invoice_ref` | Reference 'invoice_ref' in 'invoice_line' successfully resolves to target object 'invoice'. |
+| `KSML-REFERENCE-003` | `refund.payment_ref` | Reference 'payment_ref' in 'refund' successfully resolves to target object 'payment'. |
+| `KSML-REFERENCE-003` | `expense.merchant_ref` | Reference 'merchant_ref' in 'expense' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `vat_rate.merchant_ref` | Reference 'merchant_ref' in 'vat_rate' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `journal_entry.invoice_ref` | Reference 'invoice_ref' in 'journal_entry' successfully resolves to target object 'invoice'. |
+| `KSML-REFERENCE-003` | `account.merchant_ref` | Reference 'merchant_ref' in 'account' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `financial_summary.merchant_ref` | Reference 'merchant_ref' in 'financial_summary' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `budget.merchant_ref` | Reference 'merchant_ref' in 'budget' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `settlement.payment_ref` | Reference 'payment_ref' in 'settlement' successfully resolves to target object 'payment'. |
+| `KSML-REFERENCE-003` | `receivable.invoice_ref` | Reference 'invoice_ref' in 'receivable' successfully resolves to target object 'invoice'. |
+| `KSML-REFERENCE-003` | `payable.merchant_ref` | Reference 'merchant_ref' in 'payable' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `tax_record.invoice_ref` | Reference 'invoice_ref' in 'tax_record' successfully resolves to target object 'invoice'. |
+| `KSML-REFERENCE-003` | `currency_rate.merchant_ref` | Reference 'merchant_ref' in 'currency_rate' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `payment_method.merchant_ref` | Reference 'merchant_ref' in 'payment_method' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `financial_period.merchant_ref` | Reference 'merchant_ref' in 'financial_period' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `vehicle.merchant_ref` | Reference 'merchant_ref' in 'vehicle' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `equipment.merchant_ref` | Reference 'merchant_ref' in 'equipment' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `consumable.merchant_ref` | Reference 'merchant_ref' in 'consumable' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `asset_assignment.vehicle_ref` | Reference 'vehicle_ref' in 'asset_assignment' successfully resolves to target object 'vehicle'. |
+| `KSML-REFERENCE-003` | `asset_inspection.vehicle_ref` | Reference 'vehicle_ref' in 'asset_inspection' successfully resolves to target object 'vehicle'. |
+| `KSML-REFERENCE-003` | `maintenance_schedule.vehicle_ref` | Reference 'vehicle_ref' in 'maintenance_schedule' successfully resolves to target object 'vehicle'. |
+| `KSML-REFERENCE-003` | `maintenance_event.vehicle_ref` | Reference 'vehicle_ref' in 'maintenance_event' successfully resolves to target object 'vehicle'. |
+| `KSML-REFERENCE-003` | `fuel_record.vehicle_ref` | Reference 'vehicle_ref' in 'fuel_record' successfully resolves to target object 'vehicle'. |
+| `KSML-REFERENCE-003` | `supplier.merchant_ref` | Reference 'merchant_ref' in 'supplier' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `inventory_stock.consumable_ref` | Reference 'consumable_ref' in 'inventory_stock' successfully resolves to target object 'consumable'. |
+| `KSML-REFERENCE-003` | `maintenance_cost.maintenance_event_ref` | Reference 'maintenance_event_ref' in 'maintenance_cost' successfully resolves to target object 'maintenance_event'. |
+| `KSML-REFERENCE-003` | `vehicle_registration.vehicle_ref` | Reference 'vehicle_ref' in 'vehicle_registration' successfully resolves to target object 'vehicle'. |
+| `KSML-REFERENCE-003` | `equipment_serial.equipment_ref` | Reference 'equipment_ref' in 'equipment_serial' successfully resolves to target object 'equipment'. |
+| `KSML-REFERENCE-003` | `supplier_contract.supplier_ref` | Reference 'supplier_ref' in 'supplier_contract' successfully resolves to target object 'supplier'. |
+| `KSML-REFERENCE-003` | `asset_condition.vehicle_ref` | Reference 'vehicle_ref' in 'asset_condition' successfully resolves to target object 'vehicle'. |
+| `KSML-REFERENCE-003` | `depreciation_record.vehicle_ref` | Reference 'vehicle_ref' in 'depreciation_record' successfully resolves to target object 'vehicle'. |
+| `KSML-REFERENCE-003` | `warranty_claim.equipment_ref` | Reference 'equipment_ref' in 'warranty_claim' successfully resolves to target object 'equipment'. |
+| `KSML-REFERENCE-003` | `storage_location.merchant_ref` | Reference 'merchant_ref' in 'storage_location' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `contract.merchant_ref` | Reference 'merchant_ref' in 'contract' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `insurance_policy.merchant_ref` | Reference 'merchant_ref' in 'insurance_policy' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `insurance_claim.insurance_policy_ref` | Reference 'insurance_policy_ref' in 'insurance_claim' successfully resolves to target object 'insurance_policy'. |
+| `KSML-REFERENCE-003` | `document.contract_ref` | Reference 'contract_ref' in 'document' successfully resolves to target object 'contract'. |
+| `KSML-REFERENCE-003` | `document_version.document_ref` | Reference 'document_ref' in 'document_version' successfully resolves to target object 'document'. |
+| `KSML-REFERENCE-003` | `compliance_check.merchant_ref` | Reference 'merchant_ref' in 'compliance_check' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `data_retention_policy.merchant_ref` | Reference 'merchant_ref' in 'data_retention_policy' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `recovery_request.document_ref` | Reference 'document_ref' in 'recovery_request' successfully resolves to target object 'document'. |
+| `KSML-REFERENCE-003` | `policy_document.merchant_ref` | Reference 'merchant_ref' in 'policy_document' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `incident_report.merchant_ref` | Reference 'merchant_ref' in 'incident_report' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `audit_trail.contract_ref` | Reference 'contract_ref' in 'audit_trail' successfully resolves to target object 'contract'. |
+| `KSML-REFERENCE-003` | `legal_entity.merchant_ref` | Reference 'merchant_ref' in 'legal_entity' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `regulatory_requirement.merchant_ref` | Reference 'merchant_ref' in 'regulatory_requirement' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `compliance_certificate.merchant_ref` | Reference 'merchant_ref' in 'compliance_certificate' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `user_account.employee_ref` | Reference 'employee_ref' in 'user_account' successfully resolves to target object 'employee'. |
+| `KSML-REFERENCE-003` | `role.merchant_ref` | Reference 'merchant_ref' in 'role' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `permission.merchant_ref` | Reference 'merchant_ref' in 'permission' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `user_role_assignment.user_account_ref` | Reference 'user_account_ref' in 'user_role_assignment' successfully resolves to target object 'user_account'. |
+| `KSML-REFERENCE-003` | `role_permission.role_ref` | Reference 'role_ref' in 'role_permission' successfully resolves to target object 'role'. |
+| `KSML-REFERENCE-003` | `magic_link.user_account_ref` | Reference 'user_account_ref' in 'magic_link' successfully resolves to target object 'user_account'. |
+| `KSML-REFERENCE-003` | `user_session.user_account_ref` | Reference 'user_account_ref' in 'user_session' successfully resolves to target object 'user_account'. |
+| `KSML-REFERENCE-003` | `access_token.user_account_ref` | Reference 'user_account_ref' in 'access_token' successfully resolves to target object 'user_account'. |
+| `KSML-REFERENCE-003` | `two_factor_auth.user_account_ref` | Reference 'user_account_ref' in 'two_factor_auth' successfully resolves to target object 'user_account'. |
+| `KSML-REFERENCE-003` | `login_attempt.user_account_ref` | Reference 'user_account_ref' in 'login_attempt' successfully resolves to target object 'user_account'. |
+| `KSML-REFERENCE-003` | `activity_log.user_account_ref` | Reference 'user_account_ref' in 'activity_log' successfully resolves to target object 'user_account'. |
+| `KSML-REFERENCE-003` | `audit_log.merchant_ref` | Reference 'merchant_ref' in 'audit_log' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `entity_change.activity_log_ref` | Reference 'activity_log_ref' in 'entity_change' successfully resolves to target object 'activity_log'. |
+| `KSML-REFERENCE-003` | `change_set.entity_change_ref` | Reference 'entity_change_ref' in 'change_set' successfully resolves to target object 'entity_change'. |
+| `KSML-REFERENCE-003` | `system_event.merchant_ref` | Reference 'merchant_ref' in 'system_event' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `data_export.user_account_ref` | Reference 'user_account_ref' in 'data_export' successfully resolves to target object 'user_account'. |
+| `KSML-REFERENCE-003` | `notification.user_account_ref` | Reference 'user_account_ref' in 'notification' successfully resolves to target object 'user_account'. |
+| `KSML-REFERENCE-003` | `notification_template.merchant_ref` | Reference 'merchant_ref' in 'notification_template' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `automation_rule.merchant_ref` | Reference 'merchant_ref' in 'automation_rule' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `automation_trigger.automation_rule_ref` | Reference 'automation_rule_ref' in 'automation_trigger' successfully resolves to target object 'automation_rule'. |
+| `KSML-REFERENCE-003` | `automation_action.automation_rule_ref` | Reference 'automation_rule_ref' in 'automation_action' successfully resolves to target object 'automation_rule'. |
+| `KSML-REFERENCE-003` | `operational_hook.automation_rule_ref` | Reference 'automation_rule_ref' in 'operational_hook' successfully resolves to target object 'automation_rule'. |
+| `KSML-REFERENCE-003` | `financial_hook.automation_rule_ref` | Reference 'automation_rule_ref' in 'financial_hook' successfully resolves to target object 'automation_rule'. |
+| `KSML-REFERENCE-003` | `api_client.merchant_ref` | Reference 'merchant_ref' in 'api_client' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `api_endpoint.api_client_ref` | Reference 'api_client_ref' in 'api_endpoint' successfully resolves to target object 'api_client'. |
+| `KSML-REFERENCE-003` | `webhook.api_client_ref` | Reference 'api_client_ref' in 'webhook' successfully resolves to target object 'api_client'. |
+| `KSML-REFERENCE-003` | `webhook_delivery.webhook_ref` | Reference 'webhook_ref' in 'webhook_delivery' successfully resolves to target object 'webhook'. |
+| `KSML-REFERENCE-003` | `integration_mapping.api_client_ref` | Reference 'api_client_ref' in 'integration_mapping' successfully resolves to target object 'api_client'. |
+| `KSML-REFERENCE-003` | `synchronization_run.integration_mapping_ref` | Reference 'integration_mapping_ref' in 'synchronization_run' successfully resolves to target object 'integration_mapping'. |
+| `KSML-REFERENCE-003` | `api_key.api_client_ref` | Reference 'api_client_ref' in 'api_key' successfully resolves to target object 'api_client'. |
+| `KSML-DOMAIN-ROOT-003` | `` | Exactly one domain root candidate 'platform' was found. |

@@ -1,0 +1,28 @@
+model input: artifacts/school-test/model.xml
+using https://api.teaql.io/latest/evaluate
+# KSML Evaluation Report
+
+## 📊 Summary
+- **Errors**: 0
+- **Warnings**: 4
+- **Suggestions**: 0
+- **Solids**: 4
+
+## ⚠️ Warnings
+
+| Rule ID | Target | Warning Message |
+|---------|--------|-----------------|
+| `KSML-OBJECT-001` | `platform` | Object 'platform' is missing display metadata: _name, _module, _module_key |
+| `KSML-OBJECT-001` | `school` | Object 'school' is missing display metadata: _name, _module, _module_key |
+| `KSML-OBJECT-001` | `school_type` | Object 'school_type' is missing display metadata: _name, _module, _module_key |
+| `KSML-DOMAIN-ROOT-002` | `` | Multiple independent business objects found: platform, school, school_type. The model may have disconnected graphs. |
+
+
+## ✅ Solids
+
+| Rule ID | Target | Message |
+|---------|--------|---------|
+| `KSML-UPLOAD-001` | `` | The upload contains 1 files. |
+| `KSML-UPLOAD-005` | `` | Resolved entrypoint: model.xml |
+| `KSML-XML-002` | `` | The XML document model.xml was parsed successfully. |
+| `KSML-ROOT-003` | `` | Root name 'school-management-service' is well-formed. |

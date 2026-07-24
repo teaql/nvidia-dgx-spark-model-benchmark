@@ -1,0 +1,192 @@
+model input: artifacts/round-6/model.xml
+using https://api.teaql.io/latest/evaluate
+# KSML Evaluation Report
+
+## 📊 Summary
+- **Errors**: 0
+- **Warnings**: 45
+- **Suggestions**: 11
+- **Solids**: 110
+
+## ⚠️ Warnings
+
+| Rule ID | Target | Warning Message |
+|---------|--------|-----------------|
+| `KSML-ROOT-002` | `` | Root name should preferably be lowercase kebab-case and end with -service (e.g. crm-service), but found 'Moving Company Microservice'. |
+| `KSML-ROOT-005` | `` | Please explicitly define data_service attribute on the <root> element. Candidates supported by current tech stack (java): [postgres, mysql, oracle, hana, db2, mssql, sqlserver, snowflake, mem, duck, duckdb, sqlite] |
+| `KSML-BUSINESS-002` | `move_quote.estimated_price` | Field 'estimated_price' in business object 'move_quote' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `move_quote.quote_number` | Field 'quote_number' in business object 'move_quote' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `move_order.order_number` | Field 'order_number' in business object 'move_order' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `route_stop.address` | Field 'address' in business object 'route_stop' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `route_stop.arrival_time` | Field 'arrival_time' in business object 'route_stop' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `route_stop.stop_sequence` | Field 'stop_sequence' in business object 'route_stop' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `crew.crew_name` | Field 'crew_name' in business object 'crew' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `crew.max_capacity` | Field 'max_capacity' in business object 'crew' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `crew_member_assignment.employee_name` | Field 'employee_name' in business object 'crew_member_assignment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `vehicle.capacity_kg` | Field 'capacity_kg' in business object 'vehicle' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `vehicle.license_plate` | Field 'license_plate' in business object 'vehicle' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `vehicle.model` | Field 'model' in business object 'vehicle' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `vehicle_assignment.assignment_date` | Field 'assignment_date' in business object 'vehicle_assignment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `dispatch_assignment.dispatch_time` | Field 'dispatch_time' in business object 'dispatch_assignment' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `damage_report.report_details` | Field 'report_details' in business object 'damage_report' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `damage_report.reported_at` | Field 'reported_at' in business object 'damage_report' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `proof_of_delivery.signature_url` | Field 'signature_url' in business object 'proof_of_delivery' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `proof_of_delivery.signed_at` | Field 'signed_at' in business object 'proof_of_delivery' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `operational_exception.description` | Field 'description' in business object 'operational_exception' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `pickup_instruction.gate_code` | Field 'gate_code' in business object 'pickup_instruction' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `pickup_instruction.instruction_text` | Field 'instruction_text' in business object 'pickup_instruction' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `delivery_instruction.floor_number` | Field 'floor_number' in business object 'delivery_instruction' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `delivery_instruction.instruction_text` | Field 'instruction_text' in business object 'delivery_instruction' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `move_inventory.item_name` | Field 'item_name' in business object 'move_inventory' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `packaging_item.material_name` | Field 'material_name' in business object 'packaging_item' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `packaging_item.quantity_used` | Field 'quantity_used' in business object 'packaging_item' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `logistics_provider.contact_number` | Field 'contact_number' in business object 'logistics_provider' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `logistics_provider.provider_name` | Field 'provider_name' in business object 'logistics_provider' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `third_party_dispatch.tracking_id` | Field 'tracking_id' in business object 'third_party_dispatch' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `fuel_log.cost` | Field 'cost' in business object 'fuel_log' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `fuel_log.gallons_filled` | Field 'gallons_filled' in business object 'fuel_log' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `maintenance_record.service_date` | Field 'service_date' in business object 'maintenance_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `maintenance_record.service_type` | Field 'service_type' in business object 'maintenance_record' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `toll_receipt.toll_amount` | Field 'toll_amount' in business object 'toll_receipt' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `toll_receipt.toll_location` | Field 'toll_location' in business object 'toll_receipt' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `shift_log.clock_in` | Field 'clock_in' in business object 'shift_log' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `shift_log.clock_out` | Field 'clock_out' in business object 'shift_log' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `customer_feedback.comments` | Field 'comments' in business object 'customer_feedback' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `customer_feedback.rating` | Field 'rating' in business object 'customer_feedback' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `incident_report.incident_date` | Field 'incident_date' in business object 'incident_report' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-BUSINESS-002` | `incident_report.police_report_number` | Field 'police_report_number' in business object 'incident_report' should preferably use a rich concrete typical value instead of generic string(). |
+| `KSML-MODULE-003` | `merchant` | Module 'Organization Administration' contains only one object (merchant). Standard modules should group multiple related objects. |
+| `KSML-TENANCY-001` | `incident_report` | Almost all business objects (24/25) contain tenant/merchant fields. Ensure that tenancy is explicitly required, rather than just copied from examples. |
+
+
+## 💡 Suggestions
+
+| Rule ID | Target | Suggestion |
+|---------|--------|------------|
+| `KSML-LOG-007` | `fuel_log` | Object 'fuel_log' has a name ending with '_log' but is not marked as a logging object. Consider adding _log="true" if this object represents append-only log entries. |
+| `KSML-LOG-007` | `shift_log` | Object 'shift_log' has a name ending with '_log' but is not marked as a logging object. Consider adding _log="true" if this object represents append-only log entries. |
+| `KSML-UI-001` | `route_status_type` | Status-like constant 'route_status_type' can add color="string()" to declare visual badge colors for values. |
+| `KSML-UI-002` | `route_status_type` | Constant object 'route_status_type' can add display_order="number()" for stable UI sorting. |
+| `KSML-UI-003` | `route_status_type` | Status-like constant 'route_status_type' can add progress="number()" to visualize completion progress percentage (0-100). |
+| `KSML-UI-002` | `inventory_condition_type` | Constant object 'inventory_condition_type' can add display_order="number()" for stable UI sorting. |
+| `KSML-UI-002` | `exception_severity` | Constant object 'exception_severity' can add display_order="number()" for stable UI sorting. |
+| `KSML-UI-001` | `order_status` | Status-like constant 'order_status' can add color="string()" to declare visual badge colors for values. |
+| `KSML-UI-002` | `order_status` | Constant object 'order_status' can add display_order="number()" for stable UI sorting. |
+| `KSML-UI-003` | `order_status` | Status-like constant 'order_status' can add progress="number()" to visualize completion progress percentage (0-100). |
+| `KSML-UI-002` | `crew_role` | Constant object 'crew_role' can add display_order="number()" for stable UI sorting. |
+
+
+## ✅ Solids
+
+| Rule ID | Target | Message |
+|---------|--------|---------|
+| `KSML-UPLOAD-001` | `` | The upload contains 1 files. |
+| `KSML-UPLOAD-005` | `` | Resolved entrypoint: model.xml |
+| `KSML-XML-002` | `` | The XML document model.xml was parsed successfully. |
+| `KSML-OBJECT-001` | `route_status_type` | Object 'route_status_type' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `inventory_condition_type` | Object 'inventory_condition_type' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `exception_severity` | Object 'exception_severity' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `order_status` | Object 'order_status' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `crew_role` | Object 'crew_role' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `platform` | Object 'platform' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `merchant` | Object 'merchant' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `move_quote` | Object 'move_quote' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `move_order` | Object 'move_order' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `route_stop` | Object 'route_stop' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `crew` | Object 'crew' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `crew_member_assignment` | Object 'crew_member_assignment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `vehicle` | Object 'vehicle' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `vehicle_assignment` | Object 'vehicle_assignment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `dispatch_assignment` | Object 'dispatch_assignment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `damage_report` | Object 'damage_report' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `proof_of_delivery` | Object 'proof_of_delivery' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `operational_exception` | Object 'operational_exception' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `pickup_instruction` | Object 'pickup_instruction' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `delivery_instruction` | Object 'delivery_instruction' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `move_inventory` | Object 'move_inventory' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `packaging_item` | Object 'packaging_item' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `logistics_provider` | Object 'logistics_provider' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `third_party_dispatch` | Object 'third_party_dispatch' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `fuel_log` | Object 'fuel_log' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `maintenance_record` | Object 'maintenance_record' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `toll_receipt` | Object 'toll_receipt' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `shift_log` | Object 'shift_log' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `customer_feedback` | Object 'customer_feedback' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `incident_report` | Object 'incident_report' defines display name, module, and module key metadata. |
+| `KSML-CONSTANT-001` | `route_status_type` | Constant object 'route_status_type' has correctly defined constant properties. |
+| `KSML-CONSTANT-002` | `route_status_type.platform` | Constant object 'route_status_type' is correctly associated with the root object. |
+| `KSML-CONSTANT-004` | `route_status_type` | Constant object 'route_status_type' has 3 constant value records. |
+| `KSML-CONSTANT-001` | `inventory_condition_type` | Constant object 'inventory_condition_type' has correctly defined constant properties. |
+| `KSML-CONSTANT-002` | `inventory_condition_type.platform` | Constant object 'inventory_condition_type' is correctly associated with the root object. |
+| `KSML-CONSTANT-004` | `inventory_condition_type` | Constant object 'inventory_condition_type' has 3 constant value records. |
+| `KSML-CONSTANT-001` | `exception_severity` | Constant object 'exception_severity' has correctly defined constant properties. |
+| `KSML-CONSTANT-002` | `exception_severity.platform` | Constant object 'exception_severity' is correctly associated with the root object. |
+| `KSML-CONSTANT-004` | `exception_severity` | Constant object 'exception_severity' has 3 constant value records. |
+| `KSML-CONSTANT-001` | `order_status` | Constant object 'order_status' has correctly defined constant properties. |
+| `KSML-CONSTANT-002` | `order_status.platform` | Constant object 'order_status' is correctly associated with the root object. |
+| `KSML-CONSTANT-004` | `order_status` | Constant object 'order_status' has 3 constant value records. |
+| `KSML-CONSTANT-001` | `crew_role` | Constant object 'crew_role' has correctly defined constant properties. |
+| `KSML-CONSTANT-002` | `crew_role.platform` | Constant object 'crew_role' is correctly associated with the root object. |
+| `KSML-CONSTANT-004` | `crew_role` | Constant object 'crew_role' has 3 constant value records. |
+| `KSML-REFERENCE-003` | `route_status_type.platform` | Reference 'platform' in 'route_status_type' successfully resolves to target object 'platform'. |
+| `KSML-REFERENCE-003` | `inventory_condition_type.platform` | Reference 'platform' in 'inventory_condition_type' successfully resolves to target object 'platform'. |
+| `KSML-REFERENCE-003` | `exception_severity.platform` | Reference 'platform' in 'exception_severity' successfully resolves to target object 'platform'. |
+| `KSML-REFERENCE-003` | `order_status.platform` | Reference 'platform' in 'order_status' successfully resolves to target object 'platform'. |
+| `KSML-REFERENCE-003` | `crew_role.platform` | Reference 'platform' in 'crew_role' successfully resolves to target object 'platform'. |
+| `KSML-REFERENCE-003` | `merchant.platform` | Reference 'platform' in 'merchant' successfully resolves to target object 'platform'. |
+| `KSML-REFERENCE-003` | `move_quote.merchant` | Reference 'merchant' in 'move_quote' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `move_order.merchant` | Reference 'merchant' in 'move_order' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `move_order.quote` | Reference 'quote' in 'move_order' successfully resolves to target object 'move_quote'. |
+| `KSML-REFERENCE-003` | `move_order.status` | Reference 'status' in 'move_order' successfully resolves to target object 'order_status'. |
+| `KSML-REFERENCE-003` | `route_stop.merchant` | Reference 'merchant' in 'route_stop' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `route_stop.move_order` | Reference 'move_order' in 'route_stop' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `route_stop.status` | Reference 'status' in 'route_stop' successfully resolves to target object 'route_status_type'. |
+| `KSML-REFERENCE-003` | `crew.merchant` | Reference 'merchant' in 'crew' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `crew_member_assignment.crew` | Reference 'crew' in 'crew_member_assignment' successfully resolves to target object 'crew'. |
+| `KSML-REFERENCE-003` | `crew_member_assignment.merchant` | Reference 'merchant' in 'crew_member_assignment' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `crew_member_assignment.role` | Reference 'role' in 'crew_member_assignment' successfully resolves to target object 'crew_role'. |
+| `KSML-REFERENCE-003` | `vehicle.merchant` | Reference 'merchant' in 'vehicle' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `vehicle_assignment.crew` | Reference 'crew' in 'vehicle_assignment' successfully resolves to target object 'crew'. |
+| `KSML-REFERENCE-003` | `vehicle_assignment.merchant` | Reference 'merchant' in 'vehicle_assignment' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `vehicle_assignment.vehicle` | Reference 'vehicle' in 'vehicle_assignment' successfully resolves to target object 'vehicle'. |
+| `KSML-REFERENCE-003` | `dispatch_assignment.crew` | Reference 'crew' in 'dispatch_assignment' successfully resolves to target object 'crew'. |
+| `KSML-REFERENCE-003` | `dispatch_assignment.merchant` | Reference 'merchant' in 'dispatch_assignment' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `dispatch_assignment.move_order` | Reference 'move_order' in 'dispatch_assignment' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `damage_report.merchant` | Reference 'merchant' in 'damage_report' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `damage_report.move_order` | Reference 'move_order' in 'damage_report' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `proof_of_delivery.merchant` | Reference 'merchant' in 'proof_of_delivery' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `proof_of_delivery.move_order` | Reference 'move_order' in 'proof_of_delivery' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `operational_exception.merchant` | Reference 'merchant' in 'operational_exception' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `operational_exception.move_order` | Reference 'move_order' in 'operational_exception' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `operational_exception.severity` | Reference 'severity' in 'operational_exception' successfully resolves to target object 'exception_severity'. |
+| `KSML-REFERENCE-003` | `pickup_instruction.merchant` | Reference 'merchant' in 'pickup_instruction' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `pickup_instruction.route_stop` | Reference 'route_stop' in 'pickup_instruction' successfully resolves to target object 'route_stop'. |
+| `KSML-REFERENCE-003` | `delivery_instruction.merchant` | Reference 'merchant' in 'delivery_instruction' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `delivery_instruction.route_stop` | Reference 'route_stop' in 'delivery_instruction' successfully resolves to target object 'route_stop'. |
+| `KSML-REFERENCE-003` | `move_inventory.condition` | Reference 'condition' in 'move_inventory' successfully resolves to target object 'inventory_condition_type'. |
+| `KSML-REFERENCE-003` | `move_inventory.merchant` | Reference 'merchant' in 'move_inventory' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `move_inventory.move_order` | Reference 'move_order' in 'move_inventory' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `packaging_item.merchant` | Reference 'merchant' in 'packaging_item' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `packaging_item.move_order` | Reference 'move_order' in 'packaging_item' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `logistics_provider.merchant` | Reference 'merchant' in 'logistics_provider' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `third_party_dispatch.logistics_provider` | Reference 'logistics_provider' in 'third_party_dispatch' successfully resolves to target object 'logistics_provider'. |
+| `KSML-REFERENCE-003` | `third_party_dispatch.merchant` | Reference 'merchant' in 'third_party_dispatch' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `third_party_dispatch.move_order` | Reference 'move_order' in 'third_party_dispatch' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `fuel_log.merchant` | Reference 'merchant' in 'fuel_log' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `fuel_log.vehicle` | Reference 'vehicle' in 'fuel_log' successfully resolves to target object 'vehicle'. |
+| `KSML-REFERENCE-003` | `maintenance_record.merchant` | Reference 'merchant' in 'maintenance_record' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `maintenance_record.vehicle` | Reference 'vehicle' in 'maintenance_record' successfully resolves to target object 'vehicle'. |
+| `KSML-REFERENCE-003` | `toll_receipt.merchant` | Reference 'merchant' in 'toll_receipt' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `toll_receipt.vehicle` | Reference 'vehicle' in 'toll_receipt' successfully resolves to target object 'vehicle'. |
+| `KSML-REFERENCE-003` | `shift_log.crew` | Reference 'crew' in 'shift_log' successfully resolves to target object 'crew'. |
+| `KSML-REFERENCE-003` | `shift_log.merchant` | Reference 'merchant' in 'shift_log' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `customer_feedback.merchant` | Reference 'merchant' in 'customer_feedback' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `customer_feedback.move_order` | Reference 'move_order' in 'customer_feedback' successfully resolves to target object 'move_order'. |
+| `KSML-REFERENCE-003` | `incident_report.merchant` | Reference 'merchant' in 'incident_report' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `incident_report.vehicle` | Reference 'vehicle' in 'incident_report' successfully resolves to target object 'vehicle'. |
+| `KSML-MODULE-004` | `route_status_type` | Constant object 'route_status_type' is local to business area 'route_stop' and correctly shares its _module_key 'operations-logistics'. |
+| `KSML-MODULE-004` | `inventory_condition_type` | Constant object 'inventory_condition_type' is local to business area 'move_inventory' and correctly shares its _module_key 'operations-logistics'. |
+| `KSML-MODULE-004` | `exception_severity` | Constant object 'exception_severity' is local to business area 'operational_exception' and correctly shares its _module_key 'operations-logistics'. |
+| `KSML-MODULE-004` | `order_status` | Constant object 'order_status' is local to business area 'move_order' and correctly shares its _module_key 'operations-logistics'. |
+| `KSML-MODULE-004` | `crew_role` | Constant object 'crew_role' is local to business area 'crew_member_assignment' and correctly shares its _module_key 'operations-logistics'. |
+| `KSML-DOMAIN-ROOT-003` | `` | Exactly one domain root candidate 'platform' was found. |

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root name="operations-microservice" data_service="sqlite">
+  <!-- Constants -->
+  <route_status_type _name="Route Status Type" _module="Operations &amp; Logistics" _module_key="operations-logistics" _constant="true" platform="platform()" id="id()" name="string()" code="string()" _identifier="code">
+    <_value id="1001" name="Pending" code="PENDING" />
+    <_value id="1002" name="In Progress" code="IN_PROGRESS" />
+    <_value id="1003" name="Completed" code="COMPLETED" />
+  </route_status_type>
+  
+  <inventory_condition_type _name="Inventory Condition Type" _module="Operations &amp; Logistics" _module_key="operations-logistics" _constant="true" platform="platform()" id="id()" name="string()" code="string()" _identifier="code">
+    <_value id="1001" name="New" code="NEW" />
+    <_value id="1002" name="Used" code="USED" />
+    <_value id="1003" name="Damaged" code="DAMAGED" />
+  </inventory_condition_type>
+
+  <exception_severity _name="Exception Severity" _module="Operations &amp; Logistics" _module_key="operations-logistics" _constant="true" platform="platform()" id="id()" name="string()" code="string()" _identifier="code">
+    <_value id="1001" name="Low" code="LOW" />
+    <_value id="1002" name="Medium" code="MEDIUM" />
+    <_value id="1003" name="High" code="HIGH" />
+  </exception_severity>
+
+  <order_status _name="Order Status" _module="Operations &amp; Logistics" _module_key="operations-logistics" _constant="true" platform="platform()" id="id()" name="string()" code="string()" _identifier="code">
+    <_value id="1001" name="Draft" code="DRAFT" />
+    <_value id="1002" name="Confirmed" code="CONFIRMED" />
+    <_value id="1003" name="Completed" code="COMPLETED" />
+  </order_status>
+
+  <crew_role _name="Crew Role" _module="Operations &amp; Logistics" _module_key="operations-logistics" _constant="true" platform="platform()" id="id()" name="string()" code="string()" _identifier="code">
+    <_value id="1001" name="Driver" code="DRIVER" />
+    <_value id="1002" name="Mover" code="MOVER" />
+    <_value id="1003" name="Supervisor" code="SUPERVISOR" />
+  </crew_role>
+
+  <!-- Core Baseline -->
+  <platform
+      _name="System Platform"
+      _module="Platform Administration"
+      _module_key="platform-administration"
+      name="Moving Company Platform"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <merchant
+      _name="Merchant"
+      _module="Organization Administration"
+      _module_key="organization-administration"
+      name="Nordic Moving Services"
+      tax_number="FI12345678"
+      address="Mannerheimintie 10, Helsinki"
+      external_id="MERCHANT_NORDIC_001"
+      platform="platform()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <!-- Operations & Logistics -->
+  <move_quote _name="Move Quote" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      quote_number="string()"
+      estimated_price="string()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <move_order _name="Move Order" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      order_number="string()"
+      status="order_status()"
+      quote="move_quote()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <route_stop _name="Route Stop" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      stop_sequence="string()"
+      address="string()"
+      arrival_time="string()"
+      status="route_status_type()"
+      move_order="move_order()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <crew _name="Crew" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      crew_name="string()"
+      max_capacity="string()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <crew_member_assignment _name="Crew Member Assignment" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      employee_name="string()"
+      role="crew_role()"
+      crew="crew()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <vehicle _name="Vehicle" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      license_plate="string()"
+      model="string()"
+      capacity_kg="string()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <vehicle_assignment _name="Vehicle Assignment" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      assignment_date="string()"
+      crew="crew()"
+      vehicle="vehicle()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <dispatch_assignment _name="Dispatch Assignment" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      dispatch_time="string()"
+      crew="crew()"
+      move_order="move_order()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <damage_report _name="Damage Report" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      report_details="string()"
+      reported_at="string()"
+      move_order="move_order()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <proof_of_delivery _name="Proof Of Delivery" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      signature_url="string()"
+      signed_at="string()"
+      move_order="move_order()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <operational_exception _name="Operational Exception" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      description="string()"
+      severity="exception_severity()"
+      move_order="move_order()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <pickup_instruction _name="Pickup Instruction" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      instruction_text="string()"
+      gate_code="string()"
+      route_stop="route_stop()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <delivery_instruction _name="Delivery Instruction" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      instruction_text="string()"
+      floor_number="string()"
+      route_stop="route_stop()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <move_inventory _name="Move Inventory" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      item_name="string()"
+      condition="inventory_condition_type()"
+      move_order="move_order()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <packaging_item _name="Packaging Item" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      material_name="string()"
+      quantity_used="string()"
+      move_order="move_order()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <logistics_provider _name="Logistics Provider" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      provider_name="string()"
+      contact_number="string()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <third_party_dispatch _name="Third Party Dispatch" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      tracking_id="string()"
+      logistics_provider="logistics_provider()"
+      move_order="move_order()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <fuel_log _name="Fuel Log" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      gallons_filled="string()"
+      cost="string()"
+      vehicle="vehicle()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <maintenance_record _name="Maintenance Record" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      service_type="string()"
+      service_date="string()"
+      vehicle="vehicle()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <toll_receipt _name="Toll Receipt" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      toll_amount="string()"
+      toll_location="string()"
+      vehicle="vehicle()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <shift_log _name="Shift Log" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      clock_in="string()"
+      clock_out="string()"
+      crew="crew()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <customer_feedback _name="Customer Feedback" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      rating="string()"
+      comments="string()"
+      move_order="move_order()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <incident_report _name="Incident Report" _module="Operations &amp; Logistics" _module_key="operations-logistics"
+      incident_date="string()"
+      police_report_number="string()"
+      vehicle="vehicle()"
+      merchant="merchant()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+</root>

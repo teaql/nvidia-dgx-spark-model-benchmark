@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root name="moving-company-service" alias_model_name="moving_company_management">
+  <!-- Preserved Core Objects (do not modify) -->
+  <object name="platform" _name="Platform" _module="Platform Administration" _module_key="platform-administration">
+    <attr name="id" type="String" />
+    <attr name="name" type="String" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+  </object>
+
+  <object name="merchant" _name="Merchant" _module="Platform Administration" _module_key="platform-administration">
+    <attr name="id" type="String" />
+    <attr name="name" type="String" />
+    <attr name="platform_id" type="String" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="platform" target="platform()" />
+  </object>
+
+  <object name="employee" _name="Employee" _module="Employees & Payroll" _module_key="employees-payroll">
+    <attr name="id" type="String" />
+    <attr name="first_name" type="String" />
+    <attr name="last_name" type="String" />
+    <attr name="email" type="String" />
+    <attr name="phone" type="String" />
+    <attr name="hire_date" type="Date" />
+    <attr name="is_active" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="merchant" target="merchant(context)" />
+  </object>
+
+  <!-- Platform Administration (3) -->
+  <object name="platform_setting" _name="Platform Setting" _module="Platform Administration" _module_key="platform-administration">
+    <attr name="id" type="String" />
+    <attr name="key" type="String" />
+    <attr name="value" type="String" />
+    <attr name="is_public" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="platform" target="platform()" />
+  </object>
+
+  <object name="platform_user" _name="Platform User" _module="Platform Administration" _module_key="platform-administration">
+    <attr name="id" type="String" />
+    <attr name="email" type="String" />
+    <attr name="password_hash" type="String" audit-mask="true" />
+    <attr name="full_name" type="String" />
+    <attr name="is_super_admin" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="platform" target="platform()" />
+  </object>
+
+  <object name="platform_audit_log" _name="Platform Audit Log" _module="Platform Administration" _module_key="platform-administration">
+    <attr name="id" type="String" />
+    <attr name="action" type="String" />
+    <attr name="entity_type" type="String" />
+    <attr name="entity_id" type="String" />
+    <attr name="changes" type="String" />
+    <attr name="performed_by" type="String" />
+    <attr name="created_at" type="DateTime" />
+    <ref name="platform" target="platform()" />
+  </object>
+
+  <!-- Organization Administration (3) -->
+  <object name="organization" _name="Organization" _module="Organization Administration" _module_key="organization-administration">
+    <attr name="id" type="String" />
+    <attr name="name" type="String" />
+    <attr name="legal_name" type="String" />
+    <attr name="tax_id" type="String" />
+    <attr name="registration_number" type="String" />
+    <attr name="address" type="String" />
+    <attr name="phone" type="String" />
+    <attr name="email" type="String" />
+    <attr name="website" type="String" />
+    <attr name="is_active" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="merchant" target="merchant(context)" />
+  </object>
+
+  <object name="organization_setting" _name="Organization Setting" _module="Organization Administration" _module_key="organization-administration">
+    <attr name="id" type="String" />
+    <attr name="key" type="String" />
+    <attr name="value" type="String" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="organization" target="organization(context)" />
+  </object>
+
+  <object name="organization_member" _name="Organization Member" _module="Organization Administration" _module_key="organization-administration">
+    <attr name="id" type="String" />
+    <attr name="role" type="String" />
+    <attr name="joined_at" type="Date" />
+    <attr name="is_active" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="organization" target="organization(context)" />
+    <ref name="user_account" target="user_account(context)" />
+  </object>
+
+  <!-- Operations & Logistics (25) -->
+  <object name="move_order" _name="Move Order" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="order_number" type="String" />
+    <attr name="status" type="String" />
+    <attr name="move_date" type="Date" />
+    <attr name="estimated_weight" type="Decimal" />
+    <attr name="special_instructions" type="String" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="merchant" target="merchant(context)" />
+    <ref name="customer" target="customer(context)" />
+  </object>
+
+  <object name="move_quote" _name="Move Quote" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="quote_number" type="String" />
+    <attr name="total_amount" type="Decimal" />
+    <attr name="status" type="String" />
+    <attr name="valid_until" type="Date" />
+    <attr name="notes" type="String" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="merchant" target="merchant(context)" />
+    <ref name="customer" target="customer(context)" />
+  </object>
+
+  <object name="route" _name="Route" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="route_number" type="String" />
+    <attr name="origin" type="String" />
+    <attr name="destination" type="String" />
+    <attr name="distance_km" type="Decimal" />
+    <attr name="estimated_duration" type="Integer" />
+    <attr name="is_active" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="merchant" target="merchant(context)" />
+  </object>
+
+  <object name="route_stop" _name="Route Stop" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="sequence" type="Integer" />
+    <attr name="address" type="String" />
+    <attr name="stop_type" type="String" />
+    <attr name="estimated_arrival" type="DateTime" />
+    <attr name="estimated_departure" type="DateTime" />
+    <attr name="actual_arrival" type="DateTime" />
+    <attr name="actual_departure" type="DateTime" />
+    <attr name="notes" type="String" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="route" target="route(context)" />
+  </object>
+
+  <object name="time_slot" _name="Time Slot" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="start_time" type="DateTime" />
+    <attr name="end_time" type="DateTime" />
+    <attr name="is_available" type="Boolean" />
+    <attr name="max_capacity" type="Integer" />
+    <attr name="current_bookings" type="Integer" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="merchant" target="merchant(context)" />
+  </object>
+
+  <object name="fulfillment_event" _name="Fulfillment Event" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="event_type" type="String" />
+    <attr name="description" type="String" />
+    <attr name="occurred_at" type="DateTime" />
+    <attr name="location" type="String" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="move_order" target="move_order(context)" />
+  </object>
+
+  <object name="address" _name="Address" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="street" type="String" />
+    <attr name="city" type="String" />
+    <attr name="state" type="String" />
+    <attr name="postal_code" type="String" />
+    <attr name="country" type="String" />
+    <attr name="latitude" type="Decimal" />
+    <attr name="longitude" type="Decimal" />
+    <attr name="address_type" type="String" />
+    <attr name="is_primary" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="merchant" target="merchant(context)" />
+  </object>
+
+  <object name="crew" _name="Crew" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="crew_name" type="String" />
+    <attr name="crew_lead" type="String" />
+    <attr name="size" type="Integer" />
+    <attr name="specialty" type="String" />
+    <attr name="is_available" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="merchant" target="merchant(context)" />
+  </object>
+
+  <object name="dispatch_assignment" _name="Dispatch Assignment" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="assigned_at" type="DateTime" />
+    <attr name="started_at" type="DateTime" />
+    <attr name="completed_at" type="DateTime" />
+    <attr name="status" type="String" />
+    <attr name="notes" type="String" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="move_order" target="move_order(context)" />
+    <ref name="crew" target="crew(context)" />
+    <ref name="vehicle" target="vehicle(context)" />
+  </object>
+
+  <object name="damage_report" _name="Damage Report" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="description" type="String" />
+    <attr name="severity" type="String" />
+    <attr name="estimated_cost" type="Decimal" />
+    <attr name="reported_at" type="DateTime" />
+    <attr name="resolved" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="move_order" target="move_order(context)" />
+  </object>
+
+  <object name="proof_of_delivery" _name="Proof of Delivery" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="delivered_at" type="DateTime" />
+    <attr name="signature" type="String" />
+    <attr name="photos" type="String" />
+    <attr name="notes" type="String" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="move_order" target="move_order(context)" />
+  </object>
+
+  <object name="inventory_item" _name="Inventory Item" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="item_name" type="String" />
+    <attr name="description" type="String" />
+    <attr name="quantity" type="Integer" />
+    <attr name="unit" type="String" />
+    <attr name="location" type="String" />
+    <attr name="category" type="String" />
+    <attr name="is_perishable" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="merchant" target="merchant(context)" />
+  </object>
+
+  <object name="packing_list" _name="Packing List" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="list_name" type="String" />
+    <attr name="total_items" type="Integer" />
+    <attr name="status" type="String" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="move_order" target="move_order(context)" />
+  </object>
+
+  <object name="packing_item" _name="Packing Item" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="item_description" type="String" />
+    <attr name="quantity" type="Integer" />
+    <attr name="packing_material" type="String" />
+    <attr name="fragile" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="packing_list" target="packing_list(context)" />
+  </object>
+
+  <object name="loading_plan" _name="Loading Plan" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="plan_name" type="String" />
+    <attr name="vehicle_utilization" type="Decimal" />
+    <attr name="weight_distribution" type="String" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="move_order" target="move_order(context)" />
+  </object>
+
+  <object name="unloading_plan" _name="Unloading Plan" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="plan_name" type="String" />
+    <attr name="room_assignments" type="String" />
+    <attr name="priority" type="String" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="move_order" target="move_order(context)" />
+  </object>
+
+  <object name="storage_facility" _name="Storage Facility" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="facility_name" type="String" />
+    <attr name="location" type="String" />
+    <attr name="capacity" type="Integer" />
+    <attr name="current_occupancy" type="Integer" />
+    <attr name="security_level" type="String" />
+    <attr name="climate_controlled" type="Boolean" />
+    <attr name="is_active" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="merchant" target="merchant(context)" />
+  </object>
+
+  <object name="storage_unit" _name="Storage Unit" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="unit_number" type="String" />
+    <attr name="size" type="String" />
+    <attr name="monthly_rate" type="Decimal" />
+    <attr name="is_available" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="storage_facility" target="storage_facility(context)" />
+  </object>
+
+  <object name="storage_inventory" _name="Storage Inventory" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="item_description" type="String" />
+    <attr name="quantity" type="Integer" />
+    <attr name="stored_at" type="DateTime" />
+    <attr name="retrieval_date" type="Date" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="storage_unit" target="storage_unit(context)" />
+  </object>
+
+  <object name="transport_manifest" _name="Transport Manifest" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="manifest_number" type="String" />
+    <attr name="total_weight" type="Decimal" />
+    <attr name="total_volume" type="Decimal" />
+    <attr name="generated_at" type="DateTime" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="move_order" target="move_order(context)" />
+  </object>
+
+  <object name="customs_declaration" _name="Customs Declaration" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="declaration_type" type="String" />
+    <attr name="goods_description" type="String" />
+    <attr name="value" type="Decimal" />
+    <attr name="country_origin" type="String" />
+    <attr name="country_destination" type="String" />
+    <attr name="filed_at" type="DateTime" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="move_order" target="move_order(context)" />
+  </object>
+
+  <object name="equipment_checklist" _name="Equipment Checklist" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="checklist_name" type="String" />
+    <attr name="items_checked" type="Integer" />
+    <attr name="total_items" type="Integer" />
+    <attr name="passed" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="vehicle" target="vehicle(context)" />
+  </object>
+
+  <object name="fuel_log" _name="Fuel Log" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="date" type="Date" />
+    <attr name="odometer" type="Integer" />
+    <attr name="fuel_amount" type="Decimal" />
+    <attr name="fuel_type" type="String" />
+    <attr name="cost" type="Decimal" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="vehicle" target="vehicle(context)" />
+  </object>
+
+  <object name="maintenance_request" _name="Maintenance Request" _module="Operations & Logistics" _module_key="operations-logistics">
+    <attr name="id" type="String" />
+    <attr name="request_type" type="String" />
+    <attr name="description" type="String" />
+    <attr name="priority" type="String" />
+    <attr name="requested_at" type="DateTime" />
+    <attr name="status" type="String" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="vehicle" target="vehicle(context)" />
+    <ref name="equipment" target="equipment(context)" />
+  </object>
+
+  <!-- Employees & Payroll (22) -->
+  <object name="department" _name="Department" _module="Employees & Payroll" _module_key="employees-payroll">
+    <attr name="id" type="String" />
+    <attr name="name" type="String" />
+    <attr name="description" type="String" />
+    <attr name="manager_id" type="String" />
+    <attr name="budget" type="Decimal" />
+    <attr name="employee_count" type="Integer" />
+    <attr name="is_active" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="merchant" target="merchant(context)" />
+  </object>
+
+  <object name="job_assignment" _name="Job Assignment" _module="Employees & Payroll" _module_key="employees-payroll">
+    <attr name="id" type="String" />
+    <attr name="title" type="String" />
+    <attr name="description" type="String" />
+    <attr name="department_id" type="String" />
+    <attr name="level" type="String" />
+    <attr name="is_active" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="employee" target="employee(context)" />
+    <ref name="department" target="department(context)" />
+  </object>
+
+  <object name="work_shift" _name="Work Shift" _module="Employees & Payroll" _module_key="employees-payroll">
+    <attr name="id" type="String" />
+    <attr name="shift_type" type="String" />
+    <attr name="start_time" type="DateTime" />
+    <attr name="end_time" type="DateTime" />
+    <attr name="break_duration" type="Integer" />
+    <attr name="is_active" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="employee" target="employee(context)" />
+  </object>
+
+  <object name="worked_hours" _name="Worked Hours" _module="Employees & Payroll" _module_key="employees-payroll">
+    <attr name="id" type="String" />
+    <attr name="date" type="Date" />
+    <attr name="hours_worked" type="Decimal" />
+    <attr name="overtime_hours" type="Decimal" />
+    <attr name="rate" type="Decimal" />
+    <attr name="earnings" type="Decimal" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="employee" target="employee(context)" />
+    <ref name="work_shift" target="work_shift(context)" />
+  </object>
+
+  <object name="payroll_period" _name="Payroll Period" _module="Employees & Payroll" _module_key="employees-payroll">
+    <attr name="id" type="String" />
+    <attr name="period_start" type="Date" />
+    <attr name="period_end" type="Date" />
+    <attr name="pay_date" type="Date" />
+    <attr name="period_type" type="String" />
+    <attr name="is_processed" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="merchant" target="merchant(context)" />
+  </object
+
+  <object name="payroll_calculation" _name="Payroll Calculation" _module="Employees & Payroll" _module_key="employees-payroll">
+    <attr name="id" type="String" />
+    <attr name="gross_pay" type="Decimal" />
+    <attr name="net_pay" type="Decimal" />
+    <attr name="taxes_withheld" type="Decimal" />
+    <attr name="deductions" type="Decimal" />
+    <attr name="bonuses" type="Decimal" />
+    <attr name="calculated_at" type="DateTime" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="employee" target="employee(context)" />
+    <ref name="payroll_period" target="payroll_period(context)" />
+  </object>
+
+  <object name="payslip" _name="Payslip" _module="Employees & Payroll" _module_key="employees-payroll">
+    <attr name="id" type="String" />
+    <attr name="pay_period" type="String" />
+    <attr name="gross_amount" type="Decimal" />
+    <attr name="net_amount" type="Decimal" />
+    <attr name="taxes" type="Decimal" />
+    <attr name="deductions" type="Decimal" />
+    <attr name="generated_at" type="DateTime" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="employee" target="employee(context)" />
+    <ref name="payroll_calculation" target="payroll_calculation(context)" />
+  </object>
+
+  <object name="bonus" _name="Bonus" _module="Employees & Payroll" _module_key="employees-payroll">
+    <attr name="id" type="String" />
+    <attr name="bonus_type" type="String" />
+    <attr name="amount" type="Decimal" />
+    <attr name="reason" type="String" />
+    <attr name="awarded_at" type="Date" />
+    <attr name="is_taxable" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="employee" target="employee(context)" />
+  </object>
+
+  <object name="deduction" _name="Deduction" _module="Employees & Payroll" _module_key="employees-payroll">
+    <attr name="id" type="String" />
+    <attr name="deduction_type" type="String" />
+    <attr name="amount" type="Decimal" />
+    <attr name="reason" type="String" />
+    <attr name="effective_date" type="Date" />
+    <attr name="is_pre_tax" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="employee" target="employee(context)" />
+  </object
+
+  <object name="leave_request" _name="Leave Request" _module="Employees & Payroll" _module_key="employees-payroll">
+    <attr name="id" type="String" />
+    <attr name="leave_type" type="String" />
+    <attr name="start_date" type="Date" />
+    <attr name="end_date" type="Date" />
+    <attr name="days_requested" type="Integer" />
+    <attr name="status" type="String" />
+    <attr name="requested_at" type="DateTime" />
+    <attr name="approved_at" type="DateTime" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="employee" target="employee(context)" />
+  </object
+
+  <object name="employee_certification" _name="Employee Certification" _module="Employees & Payroll" _module_key="employees-payroll">
+    <attr name="id" type="String" />
+    <attr name="certification_name" type="String" />
+    <attr name="certification_number" type="String" />
+    <attr name="issuing_authority" type="String" />
+    <attr name="issue_date" type="Date" />
+    <attr name="expiry_date" type="Date" />
+    <attr name="is_verified" type="Boolean" />
+    <attr name="created_at" type="DateTime" />
+    <attr name="updated_at" type="DateTime" />
+    <ref name="employee" target="employee(context)" />
+  </object
+
+  <object name="employee_training" _name="Employee Training" _module="Employees & Payroll" _module_key="employees-payroll">
+    <attr name="id" type="String" />
+    <attr name="training_name" type="String" />
+    <attr name="training_type" type="

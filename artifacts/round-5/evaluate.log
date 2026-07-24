@@ -1,0 +1,453 @@
+model input: artifacts/round-5/prepared.xml
+using https://api.teaql.io/latest/evaluate
+# KSML Evaluation Report
+
+## 📊 Summary
+- **Errors**: 0
+- **Warnings**: 3
+- **Suggestions**: 12
+- **Solids**: 397
+
+## ⚠️ Warnings
+
+| Rule ID | Target | Warning Message |
+|---------|--------|-----------------|
+| `KSML-TENANCY-001` | `extra_api_integrations_1` | Almost all business objects (192/193) contain tenant/merchant fields. Ensure that tenancy is explicitly required, rather than just copied from examples. |
+| `KSML-PRIVACY-001-WARN` | `employee.mobile_phone` | Contact identifier on person-like subject. Add `mobile_phone` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-WARN` | `employee.email` | Contact identifier on person-like subject. Add `email` to `_audit_mask_fields`. |
+
+
+## 💡 Suggestions
+
+| Rule ID | Target | Suggestion |
+|---------|--------|------------|
+| `KSML-LOG-007` | `platform_audit_log` | Object 'platform_audit_log' has a name ending with '_log' but is not marked as a logging object. Consider adding _log="true" if this object represents append-only log entries. |
+| `KSML-LOG-007` | `fuel_log` | Object 'fuel_log' has a name ending with '_log' but is not marked as a logging object. Consider adding _log="true" if this object represents append-only log entries. |
+| `KSML-LOG-007` | `activity_log` | Object 'activity_log' has a name ending with '_log' but is not marked as a logging object. Consider adding _log="true" if this object represents append-only log entries. |
+| `KSML-LOG-007` | `audit_log` | Object 'audit_log' has a name ending with '_log' but is not marked as a logging object. Consider adding _log="true" if this object represents append-only log entries. |
+| `KSML-UI-002` | `gender_type` | Constant object 'gender_type' can add display_order="number()" for stable UI sorting. |
+| `KSML-PRIVACY-001-SUG` | `employee.name` | Personal attribute on person-like subject. Add `name` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-SUG` | `employee.gender` | Personal attribute on person-like subject. Add `gender` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-SUG` | `employee.birth_date` | Personal attribute on person-like subject. Add `birth_date` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-SUG` | `customer.record_name` | Personal attribute on person-like subject. Add `record_name` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-SUG` | `customer_contact.record_name` | Personal attribute on person-like subject. Add `record_name` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-SUG` | `account.record_name` | Personal attribute field. Add `record_name` to `_audit_mask_fields`. |
+| `KSML-PRIVACY-001-SUG` | `user_account.record_name` | Personal attribute field. Add `record_name` to `_audit_mask_fields`. |
+
+
+## Privacy Findings
+
+| Severity | Target | Reason | Recommended Action | Regulatory Basis |
+|----------|--------|--------|--------------------|------------------|
+| Suggestion | `employee.name` | Personal attribute on person-like subject. | Add to `_audit_mask_fields="name"`. | GDPR Art. 4: identifier |
+| Suggestion | `employee.gender` | Personal attribute on person-like subject. | Add to `_audit_mask_fields="gender"`. | GDPR Art. 4: identifier |
+| Suggestion | `employee.birth_date` | Personal attribute on person-like subject. | Add to `_audit_mask_fields="birth_date"`. | GDPR Art. 4: identifier |
+| Warning | `employee.mobile_phone` | Contact identifier on person-like subject. | Add to `_audit_mask_fields="mobile_phone"`. | CCPA/CPRA 1798.140: identifiers |
+| Warning | `employee.email` | Contact identifier on person-like subject. | Add to `_audit_mask_fields="email"`. | CCPA/CPRA 1798.140: identifiers |
+| Suggestion | `customer.record_name` | Personal attribute on person-like subject. | Add to `_audit_mask_fields="record_name"`. | GDPR Art. 4: identifier |
+| Suggestion | `customer_contact.record_name` | Personal attribute on person-like subject. | Add to `_audit_mask_fields="record_name"`. | GDPR Art. 4: identifier |
+| Suggestion | `account.record_name` | Personal attribute field. | Add to `_audit_mask_fields="record_name"`. | GDPR Art. 4: identifier |
+| Suggestion | `user_account.record_name` | Personal attribute field. | Add to `_audit_mask_fields="record_name"`. | GDPR Art. 4: identifier |
+
+
+## ✅ Solids
+
+| Rule ID | Target | Message |
+|---------|--------|---------|
+| `KSML-UPLOAD-001` | `` | The upload contains 1 files. |
+| `KSML-UPLOAD-005` | `` | Resolved entrypoint: prepared.xml |
+| `KSML-XML-002` | `` | The XML document prepared.xml was parsed successfully. |
+| `KSML-ROOT-003` | `` | Root name 'moving-company-service' is well-formed. |
+| `KSML-OBJECT-001` | `platform` | Object 'platform' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `merchant` | Object 'merchant' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `employee` | Object 'employee' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `platform_setting` | Object 'platform_setting' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `platform_user` | Object 'platform_user' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `platform_audit_log` | Object 'platform_audit_log' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `organization` | Object 'organization' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `organization_setting` | Object 'organization_setting' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `organization_member` | Object 'organization_member' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `move_order` | Object 'move_order' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `move_quote` | Object 'move_quote' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `route` | Object 'route' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `route_stop` | Object 'route_stop' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `time_slot` | Object 'time_slot' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `fulfillment_event` | Object 'fulfillment_event' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `address` | Object 'address' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `crew` | Object 'crew' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `dispatch_assignment` | Object 'dispatch_assignment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `damage_report` | Object 'damage_report' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `proof_of_delivery` | Object 'proof_of_delivery' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `inventory_item` | Object 'inventory_item' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `packing_list` | Object 'packing_list' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `packing_item` | Object 'packing_item' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `loading_plan` | Object 'loading_plan' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `unloading_plan` | Object 'unloading_plan' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `storage_facility` | Object 'storage_facility' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `storage_unit` | Object 'storage_unit' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `storage_inventory` | Object 'storage_inventory' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `transport_manifest` | Object 'transport_manifest' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `customs_declaration` | Object 'customs_declaration' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `equipment_checklist` | Object 'equipment_checklist' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `fuel_log` | Object 'fuel_log' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `maintenance_request` | Object 'maintenance_request' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `department` | Object 'department' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `job_assignment` | Object 'job_assignment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `work_shift` | Object 'work_shift' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `worked_hours` | Object 'worked_hours' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `payroll_period` | Object 'payroll_period' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `payroll_calculation` | Object 'payroll_calculation' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `payslip` | Object 'payslip' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `bonus` | Object 'bonus' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `employee_certification` | Object 'employee_certification' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `leave_request` | Object 'leave_request' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `billing_profile` | Object 'billing_profile' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `corporate_customer_profile` | Object 'corporate_customer_profile' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `customer` | Object 'customer' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `customer_consent` | Object 'customer_consent' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `customer_contact` | Object 'customer_contact' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `customer_history` | Object 'customer_history' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `customer_preference` | Object 'customer_preference' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `private_customer_profile` | Object 'private_customer_profile' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `box_rental` | Object 'box_rental' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `cleaning_service` | Object 'cleaning_service' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `moving_service` | Object 'moving_service' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `price_list` | Object 'price_list' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `product` | Object 'product' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `service` | Object 'service' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `service_bundle` | Object 'service_bundle' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `service_configuration` | Object 'service_configuration' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `service_price` | Object 'service_price' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `campaign` | Object 'campaign' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `conversion_event` | Object 'conversion_event' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `conversion_metric` | Object 'conversion_metric' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `discount_code` | Object 'discount_code' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `lead` | Object 'lead' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `lead_activity` | Object 'lead_activity' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `sales_opportunity` | Object 'sales_opportunity' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `account` | Object 'account' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `expense` | Object 'expense' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `financial_summary` | Object 'financial_summary' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `invoice` | Object 'invoice' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `invoice_line` | Object 'invoice_line' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `journal_entry` | Object 'journal_entry' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `payment` | Object 'payment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `refund` | Object 'refund' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `vat_rate` | Object 'vat_rate' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `asset_assignment` | Object 'asset_assignment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `asset_inspection` | Object 'asset_inspection' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `consumable` | Object 'consumable' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `equipment` | Object 'equipment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `fuel_record` | Object 'fuel_record' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `maintenance_event` | Object 'maintenance_event' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `maintenance_schedule` | Object 'maintenance_schedule' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `supplier` | Object 'supplier' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `vehicle` | Object 'vehicle' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `compliance_check` | Object 'compliance_check' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `contract` | Object 'contract' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `data_retention_policy` | Object 'data_retention_policy' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `document` | Object 'document' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `document_version` | Object 'document_version' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `insurance_claim` | Object 'insurance_claim' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `insurance_policy` | Object 'insurance_policy' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `recovery_request` | Object 'recovery_request' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `magic_link` | Object 'magic_link' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `permission` | Object 'permission' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `role` | Object 'role' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `role_permission` | Object 'role_permission' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `user_account` | Object 'user_account' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `user_role_assignment` | Object 'user_role_assignment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `user_session` | Object 'user_session' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `activity_log` | Object 'activity_log' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `audit_log` | Object 'audit_log' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `change_set` | Object 'change_set' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `entity_change` | Object 'entity_change' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `automation_action` | Object 'automation_action' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `automation_rule` | Object 'automation_rule' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `automation_trigger` | Object 'automation_trigger' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `notification` | Object 'notification' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `notification_template` | Object 'notification_template' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `api_client` | Object 'api_client' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `api_endpoint` | Object 'api_endpoint' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `integration_mapping` | Object 'integration_mapping' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `webhook` | Object 'webhook' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `webhook_delivery` | Object 'webhook_delivery' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `platform_configuration` | Object 'platform_configuration' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `platform_locale` | Object 'platform_locale' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `merchant_branch` | Object 'merchant_branch' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `merchant_setting` | Object 'merchant_setting' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `operational_exception` | Object 'operational_exception' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `crew_member_assignment` | Object 'crew_member_assignment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `pickup_instruction` | Object 'pickup_instruction' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `delivery_instruction` | Object 'delivery_instruction' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `move_inventory` | Object 'move_inventory' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_operations_logistics_1` | Object 'extra_operations_logistics_1' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_operations_logistics_2` | Object 'extra_operations_logistics_2' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_operations_logistics_3` | Object 'extra_operations_logistics_3' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_operations_logistics_4` | Object 'extra_operations_logistics_4' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_operations_logistics_5` | Object 'extra_operations_logistics_5' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_operations_logistics_6` | Object 'extra_operations_logistics_6' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_operations_logistics_7` | Object 'extra_operations_logistics_7' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_operations_logistics_8` | Object 'extra_operations_logistics_8' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_operations_logistics_9` | Object 'extra_operations_logistics_9' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `employee_availability` | Object 'employee_availability' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `payroll_deduction` | Object 'payroll_deduction' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `training_session` | Object 'training_session' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `shift_assignment` | Object 'shift_assignment' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_employees_payroll_1` | Object 'extra_employees_payroll_1' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_employees_payroll_2` | Object 'extra_employees_payroll_2' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_employees_payroll_3` | Object 'extra_employees_payroll_3' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_employees_payroll_4` | Object 'extra_employees_payroll_4' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_employees_payroll_5` | Object 'extra_employees_payroll_5' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_employees_payroll_6` | Object 'extra_employees_payroll_6' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_employees_payroll_7` | Object 'extra_employees_payroll_7' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `customer_complaint` | Object 'customer_complaint' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `customer_note` | Object 'customer_note' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_customer_management_1` | Object 'extra_customer_management_1' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_customer_management_2` | Object 'extra_customer_management_2' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_customer_management_3` | Object 'extra_customer_management_3' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_customer_management_4` | Object 'extra_customer_management_4' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_customer_management_5` | Object 'extra_customer_management_5' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_customer_management_6` | Object 'extra_customer_management_6' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `storage_service` | Object 'storage_service' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `packing_service` | Object 'packing_service' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `disposal_service` | Object 'disposal_service' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `rental_period` | Object 'rental_period' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `service_area` | Object 'service_area' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_products_services_1` | Object 'extra_products_services_1' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_products_services_2` | Object 'extra_products_services_2' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_products_services_3` | Object 'extra_products_services_3' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_products_services_4` | Object 'extra_products_services_4' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `campaign_audience` | Object 'campaign_audience' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `campaign_channel` | Object 'campaign_channel' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `lead_attribution` | Object 'lead_attribution' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `sales_funnel` | Object 'sales_funnel' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_marketing_sales_1` | Object 'extra_marketing_sales_1' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_marketing_sales_2` | Object 'extra_marketing_sales_2' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_marketing_sales_3` | Object 'extra_marketing_sales_3' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_marketing_sales_4` | Object 'extra_marketing_sales_4' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `expense_claim` | Object 'expense_claim' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `settlement` | Object 'settlement' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `receivable` | Object 'receivable' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `payable` | Object 'payable' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_finance_accounting_1` | Object 'extra_finance_accounting_1' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_finance_accounting_2` | Object 'extra_finance_accounting_2' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_finance_accounting_3` | Object 'extra_finance_accounting_3' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_finance_accounting_4` | Object 'extra_finance_accounting_4' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `vehicle_inspection` | Object 'vehicle_inspection' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `equipment_checkout` | Object 'equipment_checkout' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `consumable_reorder` | Object 'consumable_reorder' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_asset_management_1` | Object 'extra_asset_management_1' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_asset_management_2` | Object 'extra_asset_management_2' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_asset_management_3` | Object 'extra_asset_management_3' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_asset_management_4` | Object 'extra_asset_management_4' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_asset_management_5` | Object 'extra_asset_management_5' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `authentication_attempt` | Object 'authentication_attempt' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `access_policy` | Object 'access_policy' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_identity_access_1` | Object 'extra_identity_access_1' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `audit_export` | Object 'audit_export' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_activity_audit_1` | Object 'extra_activity_audit_1' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `notification_preference` | Object 'notification_preference' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `notification_delivery` | Object 'notification_delivery' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `synchronization_run` | Object 'synchronization_run' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `extra_api_integrations_1` | Object 'extra_api_integrations_1' defines display name, module, and module key metadata. |
+| `KSML-OBJECT-001` | `gender_type` | Object 'gender_type' defines display name, module, and module key metadata. |
+| `KSML-CONSTANT-001` | `gender_type` | Constant object 'gender_type' has correctly defined constant properties. |
+| `KSML-CONSTANT-002` | `gender_type.platform` | Constant object 'gender_type' is correctly associated with the root object. |
+| `KSML-CONSTANT-004` | `gender_type` | Constant object 'gender_type' has 2 constant value records. |
+| `KSML-REFERENCE-003` | `merchant.platform` | Reference 'platform' in 'merchant' successfully resolves to target object 'platform'. |
+| `KSML-REFERENCE-003` | `employee.gender` | Reference 'gender' in 'employee' successfully resolves to target object 'gender_type'. |
+| `KSML-REFERENCE-003` | `employee.merchant` | Reference 'merchant' in 'employee' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `platform_setting.merchant` | Reference 'merchant' in 'platform_setting' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `platform_user.merchant` | Reference 'merchant' in 'platform_user' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `platform_audit_log.merchant` | Reference 'merchant' in 'platform_audit_log' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `organization.merchant` | Reference 'merchant' in 'organization' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `organization_setting.merchant` | Reference 'merchant' in 'organization_setting' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `organization_member.merchant` | Reference 'merchant' in 'organization_member' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `move_order.merchant` | Reference 'merchant' in 'move_order' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `move_quote.merchant` | Reference 'merchant' in 'move_quote' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `route.merchant` | Reference 'merchant' in 'route' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `route_stop.merchant` | Reference 'merchant' in 'route_stop' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `time_slot.merchant` | Reference 'merchant' in 'time_slot' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `fulfillment_event.merchant` | Reference 'merchant' in 'fulfillment_event' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `address.merchant` | Reference 'merchant' in 'address' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `crew.merchant` | Reference 'merchant' in 'crew' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `dispatch_assignment.merchant` | Reference 'merchant' in 'dispatch_assignment' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `damage_report.merchant` | Reference 'merchant' in 'damage_report' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `proof_of_delivery.merchant` | Reference 'merchant' in 'proof_of_delivery' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `inventory_item.merchant` | Reference 'merchant' in 'inventory_item' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `packing_list.merchant` | Reference 'merchant' in 'packing_list' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `packing_item.merchant` | Reference 'merchant' in 'packing_item' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `loading_plan.merchant` | Reference 'merchant' in 'loading_plan' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `unloading_plan.merchant` | Reference 'merchant' in 'unloading_plan' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `storage_facility.merchant` | Reference 'merchant' in 'storage_facility' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `storage_unit.merchant` | Reference 'merchant' in 'storage_unit' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `storage_inventory.merchant` | Reference 'merchant' in 'storage_inventory' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `transport_manifest.merchant` | Reference 'merchant' in 'transport_manifest' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `customs_declaration.merchant` | Reference 'merchant' in 'customs_declaration' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `equipment_checklist.merchant` | Reference 'merchant' in 'equipment_checklist' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `fuel_log.merchant` | Reference 'merchant' in 'fuel_log' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `maintenance_request.merchant` | Reference 'merchant' in 'maintenance_request' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `department.merchant` | Reference 'merchant' in 'department' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `job_assignment.merchant` | Reference 'merchant' in 'job_assignment' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `work_shift.merchant` | Reference 'merchant' in 'work_shift' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `worked_hours.merchant` | Reference 'merchant' in 'worked_hours' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `payroll_period.merchant` | Reference 'merchant' in 'payroll_period' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `payroll_calculation.merchant` | Reference 'merchant' in 'payroll_calculation' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `payslip.merchant` | Reference 'merchant' in 'payslip' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `bonus.merchant` | Reference 'merchant' in 'bonus' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `employee_certification.merchant` | Reference 'merchant' in 'employee_certification' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `leave_request.merchant` | Reference 'merchant' in 'leave_request' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `billing_profile.merchant` | Reference 'merchant' in 'billing_profile' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `corporate_customer_profile.merchant` | Reference 'merchant' in 'corporate_customer_profile' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `customer.merchant` | Reference 'merchant' in 'customer' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `customer_consent.merchant` | Reference 'merchant' in 'customer_consent' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `customer_contact.merchant` | Reference 'merchant' in 'customer_contact' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `customer_history.merchant` | Reference 'merchant' in 'customer_history' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `customer_preference.merchant` | Reference 'merchant' in 'customer_preference' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `private_customer_profile.merchant` | Reference 'merchant' in 'private_customer_profile' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `box_rental.merchant` | Reference 'merchant' in 'box_rental' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `cleaning_service.merchant` | Reference 'merchant' in 'cleaning_service' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `moving_service.merchant` | Reference 'merchant' in 'moving_service' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `price_list.merchant` | Reference 'merchant' in 'price_list' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `product.merchant` | Reference 'merchant' in 'product' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `service.merchant` | Reference 'merchant' in 'service' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `service_bundle.merchant` | Reference 'merchant' in 'service_bundle' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `service_configuration.merchant` | Reference 'merchant' in 'service_configuration' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `service_price.merchant` | Reference 'merchant' in 'service_price' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `campaign.merchant` | Reference 'merchant' in 'campaign' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `conversion_event.merchant` | Reference 'merchant' in 'conversion_event' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `conversion_metric.merchant` | Reference 'merchant' in 'conversion_metric' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `discount_code.merchant` | Reference 'merchant' in 'discount_code' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `lead.merchant` | Reference 'merchant' in 'lead' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `lead_activity.merchant` | Reference 'merchant' in 'lead_activity' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `sales_opportunity.merchant` | Reference 'merchant' in 'sales_opportunity' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `account.merchant` | Reference 'merchant' in 'account' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `expense.merchant` | Reference 'merchant' in 'expense' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `financial_summary.merchant` | Reference 'merchant' in 'financial_summary' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `invoice.merchant` | Reference 'merchant' in 'invoice' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `invoice_line.merchant` | Reference 'merchant' in 'invoice_line' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `journal_entry.merchant` | Reference 'merchant' in 'journal_entry' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `payment.merchant` | Reference 'merchant' in 'payment' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `refund.merchant` | Reference 'merchant' in 'refund' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `vat_rate.merchant` | Reference 'merchant' in 'vat_rate' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `asset_assignment.merchant` | Reference 'merchant' in 'asset_assignment' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `asset_inspection.merchant` | Reference 'merchant' in 'asset_inspection' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `consumable.merchant` | Reference 'merchant' in 'consumable' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `equipment.merchant` | Reference 'merchant' in 'equipment' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `fuel_record.merchant` | Reference 'merchant' in 'fuel_record' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `maintenance_event.merchant` | Reference 'merchant' in 'maintenance_event' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `maintenance_schedule.merchant` | Reference 'merchant' in 'maintenance_schedule' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `supplier.merchant` | Reference 'merchant' in 'supplier' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `vehicle.merchant` | Reference 'merchant' in 'vehicle' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `compliance_check.merchant` | Reference 'merchant' in 'compliance_check' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `contract.merchant` | Reference 'merchant' in 'contract' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `data_retention_policy.merchant` | Reference 'merchant' in 'data_retention_policy' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `document.merchant` | Reference 'merchant' in 'document' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `document_version.merchant` | Reference 'merchant' in 'document_version' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `insurance_claim.merchant` | Reference 'merchant' in 'insurance_claim' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `insurance_policy.merchant` | Reference 'merchant' in 'insurance_policy' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `recovery_request.merchant` | Reference 'merchant' in 'recovery_request' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `magic_link.merchant` | Reference 'merchant' in 'magic_link' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `permission.merchant` | Reference 'merchant' in 'permission' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `role.merchant` | Reference 'merchant' in 'role' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `role_permission.merchant` | Reference 'merchant' in 'role_permission' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `user_account.merchant` | Reference 'merchant' in 'user_account' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `user_role_assignment.merchant` | Reference 'merchant' in 'user_role_assignment' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `user_session.merchant` | Reference 'merchant' in 'user_session' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `activity_log.merchant` | Reference 'merchant' in 'activity_log' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `audit_log.merchant` | Reference 'merchant' in 'audit_log' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `change_set.merchant` | Reference 'merchant' in 'change_set' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `entity_change.merchant` | Reference 'merchant' in 'entity_change' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `automation_action.merchant` | Reference 'merchant' in 'automation_action' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `automation_rule.merchant` | Reference 'merchant' in 'automation_rule' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `automation_trigger.merchant` | Reference 'merchant' in 'automation_trigger' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `notification.merchant` | Reference 'merchant' in 'notification' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `notification_template.merchant` | Reference 'merchant' in 'notification_template' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `api_client.merchant` | Reference 'merchant' in 'api_client' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `api_endpoint.merchant` | Reference 'merchant' in 'api_endpoint' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `integration_mapping.merchant` | Reference 'merchant' in 'integration_mapping' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `webhook.merchant` | Reference 'merchant' in 'webhook' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `webhook_delivery.merchant` | Reference 'merchant' in 'webhook_delivery' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `platform_configuration.merchant` | Reference 'merchant' in 'platform_configuration' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `platform_locale.merchant` | Reference 'merchant' in 'platform_locale' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `merchant_branch.merchant` | Reference 'merchant' in 'merchant_branch' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `merchant_setting.merchant` | Reference 'merchant' in 'merchant_setting' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `operational_exception.merchant` | Reference 'merchant' in 'operational_exception' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `crew_member_assignment.merchant` | Reference 'merchant' in 'crew_member_assignment' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `pickup_instruction.merchant` | Reference 'merchant' in 'pickup_instruction' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `delivery_instruction.merchant` | Reference 'merchant' in 'delivery_instruction' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `move_inventory.merchant` | Reference 'merchant' in 'move_inventory' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_operations_logistics_1.merchant` | Reference 'merchant' in 'extra_operations_logistics_1' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_operations_logistics_2.merchant` | Reference 'merchant' in 'extra_operations_logistics_2' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_operations_logistics_3.merchant` | Reference 'merchant' in 'extra_operations_logistics_3' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_operations_logistics_4.merchant` | Reference 'merchant' in 'extra_operations_logistics_4' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_operations_logistics_5.merchant` | Reference 'merchant' in 'extra_operations_logistics_5' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_operations_logistics_6.merchant` | Reference 'merchant' in 'extra_operations_logistics_6' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_operations_logistics_7.merchant` | Reference 'merchant' in 'extra_operations_logistics_7' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_operations_logistics_8.merchant` | Reference 'merchant' in 'extra_operations_logistics_8' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_operations_logistics_9.merchant` | Reference 'merchant' in 'extra_operations_logistics_9' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `employee_availability.merchant` | Reference 'merchant' in 'employee_availability' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `payroll_deduction.merchant` | Reference 'merchant' in 'payroll_deduction' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `training_session.merchant` | Reference 'merchant' in 'training_session' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `shift_assignment.merchant` | Reference 'merchant' in 'shift_assignment' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_employees_payroll_1.merchant` | Reference 'merchant' in 'extra_employees_payroll_1' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_employees_payroll_2.merchant` | Reference 'merchant' in 'extra_employees_payroll_2' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_employees_payroll_3.merchant` | Reference 'merchant' in 'extra_employees_payroll_3' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_employees_payroll_4.merchant` | Reference 'merchant' in 'extra_employees_payroll_4' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_employees_payroll_5.merchant` | Reference 'merchant' in 'extra_employees_payroll_5' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_employees_payroll_6.merchant` | Reference 'merchant' in 'extra_employees_payroll_6' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_employees_payroll_7.merchant` | Reference 'merchant' in 'extra_employees_payroll_7' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `customer_complaint.merchant` | Reference 'merchant' in 'customer_complaint' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `customer_note.merchant` | Reference 'merchant' in 'customer_note' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_customer_management_1.merchant` | Reference 'merchant' in 'extra_customer_management_1' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_customer_management_2.merchant` | Reference 'merchant' in 'extra_customer_management_2' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_customer_management_3.merchant` | Reference 'merchant' in 'extra_customer_management_3' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_customer_management_4.merchant` | Reference 'merchant' in 'extra_customer_management_4' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_customer_management_5.merchant` | Reference 'merchant' in 'extra_customer_management_5' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_customer_management_6.merchant` | Reference 'merchant' in 'extra_customer_management_6' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `storage_service.merchant` | Reference 'merchant' in 'storage_service' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `packing_service.merchant` | Reference 'merchant' in 'packing_service' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `disposal_service.merchant` | Reference 'merchant' in 'disposal_service' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `rental_period.merchant` | Reference 'merchant' in 'rental_period' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `service_area.merchant` | Reference 'merchant' in 'service_area' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_products_services_1.merchant` | Reference 'merchant' in 'extra_products_services_1' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_products_services_2.merchant` | Reference 'merchant' in 'extra_products_services_2' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_products_services_3.merchant` | Reference 'merchant' in 'extra_products_services_3' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_products_services_4.merchant` | Reference 'merchant' in 'extra_products_services_4' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `campaign_audience.merchant` | Reference 'merchant' in 'campaign_audience' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `campaign_channel.merchant` | Reference 'merchant' in 'campaign_channel' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `lead_attribution.merchant` | Reference 'merchant' in 'lead_attribution' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `sales_funnel.merchant` | Reference 'merchant' in 'sales_funnel' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_marketing_sales_1.merchant` | Reference 'merchant' in 'extra_marketing_sales_1' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_marketing_sales_2.merchant` | Reference 'merchant' in 'extra_marketing_sales_2' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_marketing_sales_3.merchant` | Reference 'merchant' in 'extra_marketing_sales_3' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_marketing_sales_4.merchant` | Reference 'merchant' in 'extra_marketing_sales_4' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `expense_claim.merchant` | Reference 'merchant' in 'expense_claim' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `settlement.merchant` | Reference 'merchant' in 'settlement' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `receivable.merchant` | Reference 'merchant' in 'receivable' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `payable.merchant` | Reference 'merchant' in 'payable' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_finance_accounting_1.merchant` | Reference 'merchant' in 'extra_finance_accounting_1' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_finance_accounting_2.merchant` | Reference 'merchant' in 'extra_finance_accounting_2' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_finance_accounting_3.merchant` | Reference 'merchant' in 'extra_finance_accounting_3' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_finance_accounting_4.merchant` | Reference 'merchant' in 'extra_finance_accounting_4' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `vehicle_inspection.merchant` | Reference 'merchant' in 'vehicle_inspection' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `equipment_checkout.merchant` | Reference 'merchant' in 'equipment_checkout' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `consumable_reorder.merchant` | Reference 'merchant' in 'consumable_reorder' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_asset_management_1.merchant` | Reference 'merchant' in 'extra_asset_management_1' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_asset_management_2.merchant` | Reference 'merchant' in 'extra_asset_management_2' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_asset_management_3.merchant` | Reference 'merchant' in 'extra_asset_management_3' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_asset_management_4.merchant` | Reference 'merchant' in 'extra_asset_management_4' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_asset_management_5.merchant` | Reference 'merchant' in 'extra_asset_management_5' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `authentication_attempt.merchant` | Reference 'merchant' in 'authentication_attempt' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `access_policy.merchant` | Reference 'merchant' in 'access_policy' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_identity_access_1.merchant` | Reference 'merchant' in 'extra_identity_access_1' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `audit_export.merchant` | Reference 'merchant' in 'audit_export' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_activity_audit_1.merchant` | Reference 'merchant' in 'extra_activity_audit_1' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `notification_preference.merchant` | Reference 'merchant' in 'notification_preference' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `notification_delivery.merchant` | Reference 'merchant' in 'notification_delivery' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `synchronization_run.merchant` | Reference 'merchant' in 'synchronization_run' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `extra_api_integrations_1.merchant` | Reference 'merchant' in 'extra_api_integrations_1' successfully resolves to target object 'merchant'. |
+| `KSML-REFERENCE-003` | `gender_type.platform` | Reference 'platform' in 'gender_type' successfully resolves to target object 'platform'. |
+| `KSML-MODULE-004` | `gender_type` | Constant object 'gender_type' is local to business area 'employee' and correctly shares its _module_key 'employees-payroll'. |
+| `KSML-DOMAIN-ROOT-003` | `` | Exactly one domain root candidate 'platform' was found. |
