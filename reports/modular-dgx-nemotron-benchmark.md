@@ -77,3 +77,9 @@ Moving forward, all test rounds and benchmark reports MUST record the exact vers
 - **teaql-code-gen API**: `development`
 - **teaql-java Runtime**: `1.525-RELEASE`
 - **teaql-rs Runtime**: `4.1.1`
+- **Hardware / Acceleration Context**: Required (e.g., NVIDIA-SMI, Driver Version, CUDA Version)
+
+### Hardware Context (As of Round 14):
+- **NVIDIA-SMI**: 580.159.03
+- **Driver Version**: 580.159.03
+- **CUDA Version**: 13.0
