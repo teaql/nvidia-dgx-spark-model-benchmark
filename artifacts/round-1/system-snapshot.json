@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "round": 1,
+  "snapshot_time_utc": "2026-07-24T05:47:48+00:00",
+  "timezone": "Asia/Shanghai",
+  "host": {
+    "name": "spark-007",
+    "hardware": "NVIDIA DGX Spark",
+    "os": "Ubuntu 24.04.4 LTS",
+    "kernel": "6.17.0-1026-nvidia",
+    "architecture": "aarch64",
+    "uptime_days": 7.644,
+    "load_average": {
+      "one_minute": 0.67,
+      "five_minutes": 0.51,
+      "fifteen_minutes": 0.38
+    }
+  },
+  "cpu": {
+    "logical_cpus": 20,
+    "numa_nodes": 1,
+    "clusters": [
+      {
+        "model": "Cortex-X925",
+        "cores": 10,
+        "max_mhz": 3900.0,
+        "min_mhz": 1378.0
+      },
+      {
+        "model": "Cortex-A725",
+        "cores": 10,
+        "max_mhz": 2808.0,
+        "min_mhz": 338.0
+      }
+    ]
+  },
+  "memory": {
+    "total_bytes": 130663165952,
+    "used_bytes": 58726973440,
+    "free_bytes": 26076655616,
+    "available_bytes": 71936192512,
+    "swap_total_bytes": 17179865088,
+    "swap_used_bytes": 369778688
+  },
+  "disk": {
+    "root": {
+      "filesystem": "/dev/nvme0n1p2",
+      "type": "ext4",
+      "total_bytes": 4031871553536,
+      "used_bytes": 138500141056,
+      "available_bytes": 3688530563072,
+      "used_percent": 4
+    }
+  },
+  "gpu": {
+    "name": "NVIDIA GB10",
+    "driver_version": "580.159.03",
+    "cuda_version": "13.0",
+    "cuda_build": "13.0.88",
+    "temperature_c": 44,
+    "utilization_percent": 0,
+    "performance_state": "P0",
+    "power_draw_w": 11.58,
+    "engine_core_memory_mib": 44732,
+    "memory_accounting_note": "DGX Spark unified memory; nvidia-smi does not expose a conventional total GPU memory field."
+  },
+  "software": {
+    "docker": "29.2.1",
+    "docker_compose": "5.0.2",
+    "python": "3.12.3",
+    "rustc": "1.97.1",
+    "cargo": "1.97.1",
+    "git": "2.43.0",
+    "codex_cli": "0.144.6"
+  },
+  "model_service": {
+    "container": "omni-server",
+    "container_image": "vllm/vllm-openai:nightly",
+    "vllm_version": "0.23.1rc1.dev1181+g6a9f24aa8",
+    "status": "running",
+    "served_model_name": "omni",
+    "architecture": "NemotronH_Nano_Omni_Reasoning_V3",
+    "model_type": "NemotronH_Nano_Omni_Reasoning_V3",
+    "model_disk_size_gib_approx": 21,
+    "torch_dtype": "bfloat16",
+    "quantization": "modelopt_mixed_nvfp4",
+    "context_length_tokens": 8192,
+    "max_sequences": 4,
+    "gpu_memory_utilization": 0.4,
+    "container_started_at_utc": "2026-07-24T05:37:18.408869194Z",
+    "api_ready_at_utc_approx": "2026-07-24T05:39:33Z",
+    "cold_start_seconds_approx": 135,
+    "weight_load_seconds": 98.700413,
+    "weight_load_memory_gib": 21.59,
+    "kv_cache_available_gib": 20.99,
+    "kv_cache_capacity_tokens": 3529728,
+    "docker_stats": {
+      "cpu_percent": 1.28,
+      "memory_usage_gib": 4.502,
+      "memory_percent": 3.7,
+      "pids": 214
+    }
+  },
+  "benchmark_runs": [
+    {
+      "id": "modeling-omni-thinking",
+      "category": "teaql_modeling",
+      "model": "omni",
+      "thinking": true,
+      "duration_seconds": 22.824449,
+      "prompt_tokens": 195,
+      "completion_tokens": 1400,
+      "total_tokens": 1595,
+      "finish_reason": "length",
+      "passed": false,
+      "failure": "Reasoning filled content and output was truncated before XML."
+    },
+    {
+      "id": "modeling-nemotron-thinking",
+      "category": "teaql_modeling",
+      "model": "nemotron",
+      "thinking": true,
+      "duration_seconds": 98.822544,
+      "prompt_tokens": 179,
+      "completion_tokens": 1400,
+      "total_tokens": 1579,
+      "finish_reason": "length",
+      "passed": false,
+      "failure": "Reasoning filled content and output was truncated before XML."
+    },
+    {
+      "id": "modeling-omni-no-think",
+      "category": "teaql_modeling",
+      "model": "omni",
+      "thinking": false,
+      "duration_seconds": 4.526459,
+      "prompt_tokens": 212,
+      "completion_tokens": 235,
+      "total_tokens": 447,
+      "finish_reason": "stop",
+      "passed": false,
+      "failure": "Invalid XML and TeaQL constant/business object rule violations."
+    },
+    {
+      "id": "modeling-nemotron-no-think",
+      "category": "teaql_modeling",
+      "model": "nemotron",
+      "thinking": false,
+      "duration_seconds": 12.111677,
+      "prompt_tokens": 198,
+      "completion_tokens": 168,
+      "total_tokens": 366,
+      "finish_reason": "stop",
+      "passed": false,
+      "failure": "Invalid XML, mismatched tags, nested definitions and TeaQL rule violations."
+    },
+    {
+      "id": "cargo-diagnosis-omni",
+      "category": "post_modeling_dependency_diagnosis",
+      "model": "omni",
+      "thinking": false,
+      "duration_seconds": 5.838596,
+      "prompt_tokens": 214,
+      "completion_tokens": 313,
+      "total_tokens": 527,
+      "finish_reason": "stop",
+      "passed": false,
+      "failure": "Incorrect Cargo caret semantics and ineffective lockfile regeneration commands."
+    },
+    {
+      "id": "cargo-diagnosis-repair-omni",
+      "category": "verification_feedback_repair",
+      "model": "omni",
+      "thinking": false,
+      "duration_seconds": 2.858808,
+      "prompt_tokens": 293,
+      "completion_tokens": 89,
+      "total_tokens": 382,
+      "finish_reason": "stop",
+      "passed": false,
+      "failure": "Did not provide requested exact commands and hallucinated a workspace manifest."
+    },
+    {
+      "id": "streaming-health-omni",
+      "category": "service_health",
+      "model": "omni",
+      "thinking": false,
+      "duration_seconds": 1.022931,
+      "time_to_first_byte_seconds": 0.186552,
+      "prompt_tokens": 39,
+      "completion_tokens": 3,
+      "total_tokens": 42,
+      "http_status": 200,
+      "passed": true,
+      "output": "OK"
+    }
+  ],
+  "integration_checks": {
+    "chat_completions_api": true,
+    "responses_api": true,
+    "standard_codex_cli": false,
+    "standard_codex_cli_blocker": "Codex prompt and tool schemas exceed the configured 8192-token model context.",
+    "baseline_cargo_check": false,
+    "baseline_cargo_check_error_count": 69,
+    "baseline_cargo_check_root_cause": "TeaQL 4.0.3 generated source resolved against incompatible 4.1.1 crates due caret version ranges and no controlled lockfile."
+  },
+  "operational_events": [
+    {
+      "event": "both_model_containers_stopped",
+      "exit_code": 0,
+      "oom_killed": false,
+      "note": "Docker recorded explicit kill/stop events; only omni-server was restarted for the final snapshot."
+    },
+    {
+      "event": "proxy_configuration_overwritten",
+      "time_utc_approx": "2026-07-24T05:43:48Z",
+      "note": "HTTPS_PROXY lines disappeared after both shell configuration files were externally rewritten; configuration was restored and HTTP 200 revalidated."
+    }
+  ],
+  "security": {
+    "credentials_included": false,
+    "public_host_address_included": false,
+    "remote_endpoint_placeholder": "<DGX_HOST>"
+  }
+}

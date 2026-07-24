@@ -1,0 +1,52 @@
+{
+  "captured_at_utc": "2026-07-24T07:17:14+00:00",
+  "client": {
+    "name": "MiMoCode",
+    "version": "0.1.7",
+    "install_method": "Homebrew",
+    "provider": "OpenAI-compatible",
+    "model": "dgx/nemotron-3-super",
+    "builtin_skills_disabled_by_wrapper": true
+  },
+  "server": {
+    "container": "nemotron-super-agent-server",
+    "port": 30703,
+    "model": "nemotron-3-super",
+    "max_model_len": 65536,
+    "max_num_seqs": 1,
+    "kv_cache_memory_gib": 8,
+    "kv_cache_tokens": 338602,
+    "prefix_caching": true,
+    "default_enable_thinking": false,
+    "health": "ready",
+    "restart_policy": "unless-stopped"
+  },
+  "local_tool_tests": {
+    "read_file": {
+      "path": "/Users/Philip/githome/teaql-agent-kit/AGENTS.md",
+      "expected_heading": "# Agent Instructions",
+      "actual_heading": "# Agent Instructions",
+      "passed": true
+    },
+    "shell": {
+      "working_directory": "/Users/Philip/githome/teaql-agent-kit",
+      "architecture": "arm64",
+      "cargo": "cargo 1.99.0-nightly (2f0e7011e 2026-07-05)",
+      "passed": true
+    }
+  },
+  "steady_state": {
+    "system_memory_total_gib": 121,
+    "system_memory_available_gib": 32,
+    "swap_used_gib": 4.4,
+    "prefix_cache_hit_rate_percent_last_observed": 80.6
+  },
+  "known_client_issues": [
+    "MiMoCode may invoke skill_search even when the user explicitly requests only another tool.",
+    "MiMoCode 0.1.7 headless process may remain alive after a reason=stop event and require interruption."
+  ],
+  "security": {
+    "api_authentication_enabled": false,
+    "warning": "The Docker port is bound on all interfaces; restrict network access or add an API key before broader use."
+  }
+}

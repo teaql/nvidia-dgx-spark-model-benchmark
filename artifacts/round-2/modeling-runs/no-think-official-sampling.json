@@ -1,0 +1,33 @@
+{
+  "config": {
+    "id": "no-think-official-sampling",
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "max_tokens": 7000,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "duration_seconds": 68.47730083399999,
+  "output_tokens_per_second": 15.917683476490051,
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 4312,
+    "total_tokens": 5402,
+    "completion_tokens": 1090,
+    "prompt_tokens_details": null
+  },
+  "error": null,
+  "validation": {
+    "valid": false,
+    "errors": [
+      "teacher.employee_id: relationship uses _id suffix."
+    ],
+    "warnings": [],
+    "object_count": 13,
+    "business_object_count": 9,
+    "constant_object_count": 4
+  },
+  "content": "<root alias_model_name=\"school_admissions_enrollment\" cfg_mask_china_mobile=\"false\" chinese_name=\"学校招生入学管理\" data_service=\"sqlite\" english_name=\"School Admissions Enrollment\" name=\"school-admissions-service\" org=\"example\" _module_key=\"root\">\n  <platform _name=\"Platform\" _module=\"Platform Management\" _module_key=\"platform-management\" create_time=\"createTime()\" update_time=\"updateTime()\"/>\n  <school _name=\"School\" _module=\"School Management\" _module_key=\"school-management\" school_name=\"Springfield Elementary\" platform=\"platform()\" school_type=\"school_type()\" create_time=\"createTime()\" update_time=\"updateTime()\"/>\n  <campus _name=\"Campus\" _module=\"School Management\" _module_key=\"school-management\" campus_name=\"Main Campus\" school=\"school()\" create_time=\"createTime()\" update_time=\"updateTime()\"/>\n  <prospective_student _name=\"Prospective Student\" _module=\"Admissions\" _module_key=\"admissions\" student_name=\"Jane Doe\" date_of_birth=\"2010-05-20\" address=\"123 Main St, Springfield\" school=\"school()\" create_time=\"createTime()\" update_time=\"updateTime()\"/>\n  <admission_application _name=\"Admission Application\" _module=\"Admissions\" _module_key=\"admissions\" application_date=\"2024-01-15\" prospective_student=\"prospective_student()\" school=\"school()\" application_status=\"application_status()\" create_time=\"createTime()\" update_time=\"updateTime()\"/>\n  <guardian _name=\"Guardian\" _module=\"Admissions\" _module_key=\"admissions\" guardian_name=\"John Smith\" relationship=\"Father\" phone=\"13800138000\" prospective_student=\"prospective_student()\" create_time=\"createTime()\" update_time=\"updateTime()\"/>\n  <teacher _name=\"Teacher\" _module=\"Academics\" _module_key=\"academics\" teacher_name=\"Ms. Johnson\" subject=\"Mathematics\" employee_id=\"T001\" school=\"school()\" create_time=\"createTime()\" update_time=\"updateTime()\"/>\n  <course _name=\"Course\" _module=\"Academics\" _module_key=\"academics\" course_name=\"Algebra 1\" course_code=\"ALG101\" school=\"school()\" teacher=\"teacher()\" course_category=\"course_category()\" create_time=\"createTime()\" update_time=\"updateTime()\"/>\n  <enrollment _name=\"Enrollment\" _module=\"Academics\" _module_key=\"academics\" enrollment_date=\"2024-02-01\" prospective_student=\"prospective_student()\" course=\"course()\" enrollment_status=\"enrollment_status()\" create_time=\"createTime()\" update_time=\"updateTime()\"/>\n  <school_type _name=\"School Type\" _module=\"Basic Data\" _module_key=\"basic-data\" id=\"id()\" name=\"string()\" code=\"string()\" _constant=\"true\" _identifier=\"code\" platform=\"platform()\">\n    <_value id=\"1001\" name=\"Primary\" code=\"PRIMARY\"/>\n    <_value id=\"1002\" name=\"Secondary\" code=\"SECONDARY\"/>\n  </school_type>\n  <application_status _name=\"Application Status\" _module=\"Admissions\" _module_key=\"admissions\" id=\"id()\" name=\"string()\" code=\"string()\" _constant=\"true\" _identifier=\"code\" platform=\"platform()\">\n    <_value id=\"1001\" name=\"Submitted\" code=\"SUBMITTED\"/>\n    <_value id=\"1002\" name=\"Under Review\" code=\"UNDER_REVIEW\"/>\n    <_value id=\"1003\" name=\"Accepted\" code=\"ACCEPTED\"/>\n    <_value id=\"1004\" name=\"Rejected\" code=\"REJECTED\"/>\n  </application_status>\n  <course_category _name=\"Course Category\" _module=\"Academics\" _module_key=\"academics\" id=\"id()\" name=\"string()\" code=\"string()\" _constant=\"true\" _identifier=\"code\" platform=\"platform()\">\n    <_value id=\"1001\" name=\"Required\" code=\"REQUIRED\"/>\n    <_value id=\"1002\" name=\"Elective\" code=\"ELECTIVE\"/>\n  </course_category>\n  <enrollment_status _name=\"Enrollment Status\" _module=\"Academics\" _module_key=\"academics\" id=\"id()\" name=\"string()\" code=\"string()\" _constant=\"true\" _identifier=\"code\" platform=\"platform()\">\n    <_value id=\"1001\" name=\"Enrolled\" code=\"ENROLLED\"/>\n    <_value id=\"1002\" name=\"Completed\" code=\"COMPLETED\"/>\n    <_value id=\"1003\" name=\"Withdrawn\" code=\"WITHDRAWN\"/>\n  </enrollment_status>\n</root>",
+  "reasoning_content": ""
+}

@@ -1,0 +1,69 @@
+{
+  "round": 3,
+  "date": "2026-07-24",
+  "task": "Rust TeaQL school management Q/E playground",
+  "model_server": {
+    "model": "NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4",
+    "client": "MiMoCode 0.1.7",
+    "served_port": 30703,
+    "container_status": "up",
+    "authentication": false
+  },
+  "teaql": {
+    "cargo_teaql_version": "2.0.8",
+    "evaluation": {
+      "errors": 0,
+      "warnings": 0,
+      "suggestions": 1,
+      "solids": 15
+    },
+    "review_status": "confirmed_with_assumptions",
+    "runtime": "Rust TeaQL 4.1.1 + SQLite"
+  },
+  "result": {
+    "pass_at_1": false,
+    "repaired_pass": true,
+    "initial_compile_errors": 8,
+    "integration_tests_passed": 1,
+    "primary_school_rows": 1,
+    "e_expression_value": "Sunshine Primary School",
+    "e_expression_values": {
+      "school_name": "Sunshine Primary School",
+      "platform_name": "Standard Education Platform",
+      "school_type_code": "PRIMARY",
+      "school_type_code_via_school_relation": "PRIMARY",
+      "platform_id": 1,
+      "student_count": 320
+    },
+    "explicit_q_requests": 3,
+    "sql_log_entries": 9,
+    "select_log_entries": 8,
+    "mutation_log_entries": 1,
+    "inserted_student_count": 320
+  },
+  "agent_findings": [
+    "entity getter method hallucination despite assist usage",
+    "missing Entity trait import for audit_as",
+    "SqlLogEntry Display assumption",
+    "string numeric input compiled but persisted as zero",
+    "repeated retries against a known broken local Cargo proxy",
+    "headless MiMo did not exit after completion"
+  ],
+  "dgx_end_snapshot": {
+    "gpu": "NVIDIA GB10",
+    "gpu_utilization_percent": 0,
+    "temperature_c": 45,
+    "power_w": 11.93,
+    "memory_total_gib": 121,
+    "memory_used_gib": 91,
+    "memory_available_gib": 30,
+    "swap_used_gib": 4.2,
+    "container_reported_memory_gib": 7.603,
+    "load_average": [0.10, 0.32, 0.46]
+  },
+  "security": {
+    "public_bind": true,
+    "api_key_configured": false,
+    "recommendation": "restrict source addresses or add an authenticated reverse proxy"
+  }
+}

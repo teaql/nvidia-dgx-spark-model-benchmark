@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <platform
+      _name="System Platform"
+      _module="Platform Administration"
+      _module_key="platform-administration"
+      name="Moving Company Platform"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <merchant
+      _name="Merchant"
+      _module="Organization Administration"
+      _module_key="organization-administration"
+      name="Nordic Moving Services"
+      tax_number="FI12345678"
+      address="Mannerheimintie 10, Helsinki"
+      external_id="MERCHANT_NORDIC_001"
+      platform="platform()"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+
+  <employee
+      _name="Employee"
+      _module="Employees &amp; Payroll"
+      _module_key="employees-payroll"
+      employee_number="EMP00001"
+      name="Liisa Koivisto"
+      gender="gender_type()"
+      birth_date="1985-01-01"
+      mobile_phone="+358401234567"
+      email="liisa.koivisto@example.com"
+      job_title="Operations Manager"
+      hiring_date="2020-01-01"
+      merchant="merchant(context)"
+      create_time="createTime()"
+      update_time="updateTime()"/>
+</root>

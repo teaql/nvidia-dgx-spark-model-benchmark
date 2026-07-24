@@ -1,0 +1,84 @@
+{
+  "round": 4,
+  "date": "2026-07-24",
+  "task": "223-object moving-company Rust TeaQL model and Q/E runtime",
+  "model_server": {
+    "model": "NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4",
+    "served_model_id": "nemotron-3-super",
+    "served_port": 30703,
+    "max_model_len": 65536,
+    "container_status": "up",
+    "authentication": false
+  },
+  "teaql": {
+    "cargo_teaql_version": "2.0.8",
+    "object_count": 223,
+    "workbench_count": 14,
+    "evaluation": {
+      "errors": 0,
+      "warnings": 16,
+      "suggestions": 119,
+      "solids": 881
+    },
+    "fixed_validator_passed": true,
+    "preserved_objects": [
+      "platform",
+      "merchant",
+      "employee"
+    ],
+    "review_status": "confirmed_with_assumptions",
+    "runtime": "Rust TeaQL 4.1.1 + SQLite"
+  },
+  "agent_result": {
+    "modeling_pass_at_1": false,
+    "context_overflow": true,
+    "recovery_session_completed_model": false,
+    "deterministic_repair_required": true
+  },
+  "rust_result": {
+    "compile_pass_at_1": false,
+    "repaired_pass": true,
+    "tests_passed": 10,
+    "tests_failed": 0,
+    "sample_entity_types": 162,
+    "sample_skipped": 0,
+    "q_api_workbenches": 5,
+    "q_rows_per_workbench": 20,
+    "e_expression_chains": 2,
+    "customer_e_values": 20,
+    "invoice_e_values": 20,
+    "final_run_select_statements": 74,
+    "final_run_insert_statements": 36900,
+    "final_run_update_statements": 0,
+    "final_run_delete_statements": 0
+  },
+  "runtime_contract_findings": [
+    "Generated guide documents TEAQL_AUDIT=production but runtime accepts _silent, _summary, _full.",
+    "Generated guide documents TEAQL_SCHEMA=execute but runtime accepts _verify, _dryrun, _execute.",
+    "Generated debug guide documents TEAQL_SQL_LOG, while startup rejects it and suggests TEAQL_SQL.",
+    "UserContext.sql_logs() returned zero entries although the default TeaQL file sink recorded SQL."
+  ],
+  "dgx_end_snapshot": {
+    "gpu": "NVIDIA GB10",
+    "driver": "580.159.03",
+    "gpu_utilization_percent": 0,
+    "temperature_c": 46,
+    "power_w": 11.89,
+    "memory_total_bytes": 130663165952,
+    "memory_used_bytes": 99110858752,
+    "memory_available_bytes": 31552307200,
+    "swap_used_bytes": 4278099968,
+    "load_average": [
+      0.14,
+      0.20,
+      0.24
+    ],
+    "model_container_memory": "8.2 GiB",
+    "model_container_cpu_percent": 1.42
+  },
+  "security": {
+    "public_bind": true,
+    "api_key_configured": false,
+    "recommendation": "restrict source addresses or add an authenticated reverse proxy"
+  }
+}

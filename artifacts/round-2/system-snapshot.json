@@ -1,0 +1,55 @@
+{
+  "captured_at_utc": "2026-07-24T06:26:26+00:00",
+  "host": "spark-007",
+  "uptime_days": 7.6715,
+  "load_average": {
+    "1m": 0.29,
+    "5m": 0.43,
+    "15m": 0.67
+  },
+  "memory_bytes": {
+    "total": 130663165952,
+    "used": 128723927040,
+    "free": 2038292480,
+    "available": 1939238912
+  },
+  "swap_bytes": {
+    "total": 17179865088,
+    "used": 7323992064,
+    "free": 9855873024
+  },
+  "gpu": {
+    "name": "NVIDIA GB10",
+    "driver_version": "580.159.03",
+    "temperature_c": 53,
+    "utilization_percent": 0,
+    "memory_utilization_percent": 0,
+    "idle_power_w": 12.92,
+    "memory_query": "not available for unified memory"
+  },
+  "server": {
+    "container": "nemotron-super-server",
+    "status": "running",
+    "started_at_utc": "2026-07-24T06:02:46.50167477Z",
+    "restart_count": 0,
+    "image": "vllm/vllm-openai:nightly",
+    "vllm_version": "0.23.1rc1.dev1181+g6a9f24aa8",
+    "health": "ready",
+    "served_model": "nemotron-3-super",
+    "max_model_len": 32768,
+    "max_num_seqs": 1,
+    "docker_stats_memory": "3.137 GiB / 121.7 GiB",
+    "docker_stats_cpu": "1.56%"
+  },
+  "startup": {
+    "checkpoint_size_gib": 74.80,
+    "weight_load_seconds": 388.69,
+    "model_load_memory_gib": 69.62,
+    "engine_init_seconds": 243.71,
+    "cold_start_to_health_seconds_approx": 686,
+    "cuda_graph_memory_gib": 1.54,
+    "kv_cache_memory_gib": 39.02,
+    "kv_cache_tokens_reported": 6102409,
+    "flashinfer_autotune_configs": 170
+  }
+}

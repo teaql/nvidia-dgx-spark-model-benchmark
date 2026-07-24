@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+
+export MIMOCODE_DISABLE_BUILTIN_SKILLS=true
+exec mimo --model dgx/nemotron-3-super "$@"

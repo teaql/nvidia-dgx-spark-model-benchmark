@@ -1,0 +1,122 @@
+<root alias_model_name="school_admissions_enrollment"
+      cfg_mask_china_mobile="false"
+      chinese_name="学校招生入学管理"
+      english_name="School Admissions and Enrollment"
+      data_service="sqlite"
+      name="school-admissions-service"
+      org="example"
+      _module_key="root">
+  <platform _name="Platform"
+            _module="Platform Management"
+            _module_key="platform-management"
+            platform_name="EduPlatform Inc."
+            create_time="createTime()"
+            update_time="updateTime()"/>
+  <school _name="School"
+          _module="School Management"
+          _module_key="school-management"
+          platform="platform()"
+          school_name="Springfield School"
+          school_type="school_type()"
+          create_time="createTime()"
+          update_time="updateTime()"/>
+  <campus _name="Campus"
+          _module="School Management"
+          _module_key="school-management"
+          school="school()"
+          campus_name="Main Campus"
+          address="123 Education Avenue, Springfield"
+          create_time="createTime()"
+          update_time="updateTime()"/>
+  <prospective_student _name="Prospective Student"
+                       _module="Admissions"
+                       _module_key="admissions"
+                       school="school()"
+                       student_name="Emily Johnson"
+                       date_of_birth="2010-05-20"
+                       gender="female"
+                       create_time="createTime()"
+                       update_time="updateTime()"/>
+  <admission_application _name="Admission Application"
+                         _module="Admissions"
+                       _module_key="admissions"
+                       prospective_student="prospective_student()"
+                       school="school()"
+                       application_status="application_status()"
+                       application_date="2024-01-15"
+                       create_time="createTime()"
+                       update_time="updateTime()"/>
+  <guardian _name="Guardian"
+            _module="Admissions"
+            _module_key="admissions"
+            prospective_student="prospective_student()"
+            guardian_name="Michael Johnson"
+            relationship="father"
+            phone="13800138000"
+            create_time="createTime()"
+            update_time="updateTime()"/>
+  <teacher _name="Teacher"
+           _module="Academic Management"
+           _module_key="academic-management"
+           school="school()"
+           teacher_name="Sarah Williams"
+           subject="Mathematics"
+           hire_date="2020-08-15"
+           create_time="createTime()"
+           update_time="updateTime()"/>
+  <course _name="Course"
+          _module="Academic Management"
+          _module_key="academic-management"
+          school="school()"
+          teacher="teacher()"
+          course_category="course_category()"
+          course_name="Algebra I"
+          course_code="MATH101"
+          credits=3
+          create_time="createTime()"
+          update_time="updateTime()"/>
+  <enrollment _name="Enrollment"
+              _module="Academic Management"
+              _module_key="academic-management"
+              prospective_student="prospective_student()"
+              course="course()"
+              enrollment_status="enrollment_status()"
+              enrollment_date="2024-09-01"
+              create_time="createTime()"
+              update_time="updateTime()"/>
+  <school_type _name="School Type"
+               _module="Basic Data"
+               _module_key="basic-data"
+               id="id()" name="string()" code="string()"
+               _constant="true" _identifier="code">
+    <_value id="1001" name="Primary" code="PRIMARY"/>
+    <_value id="1002" name="Secondary" code="SECONDARY"/>
+  </school_type>
+  <application_status _name="Application Status"
+                      _module="Basic Data"
+                      _module_key="basic-data"
+                      id="id()" name="string()" code="string()"
+                      _constant="true" _identifier="code">
+    <_value id="1001" name="Submitted" code="SUBMITTED"/>
+    <_value id="1002" name="Under Review" code="UNDER_REVIEW"/>
+    <_value id="1003" name="Accepted" code="ACCEPTED"/>
+    <_value id="1004" name="Rejected" code="REJECTED"/>
+  </application_status>
+  <course_category _name="Course Category"
+                   _module="Basic Data"
+                   _module_key="basic-data"
+                   id="id()" name="string()" code="string()"
+                   _constant="true" _identifier="code">
+    <_value id="1001" name="Required" code="REQUIRED"/>
+    <_value id="1002" name="Elective" code="ELECTIVE"/>
+  </course_category>
+  <enrollment_status _name="Enrollment Status"
+                     _module="Basic Data"
+                     _module_key="basic-data"
+                     id="id()" name="string()" code="string()"
+                     _constant="true" _identifier="code">
+    <_value id="1001" name="Enrolled" code="ENROLLED"/>
+    <_value id="1002" name="Completed" code="COMPLETED"/>
+    <_value id="1003" name="Withdrawn" code="WITHDRAWN"/>
+  </enrollment_status>
+</root>
