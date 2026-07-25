@@ -1,0 +1,17 @@
+<root>
+    <failed_auth_log attempt_time="datetime()" ip_address="string()" reason="string()" email="string()" _audit_mask_fields="email" />
+    <notification title="string()" content="string()" channel="string()" status="string()" sent_at="datetime()" email="string()" _audit_mask_fields="email" />
+    <notification_template template_code="string()" subject="string()" body_content="string()" category="string()" is_active="boolean()" />
+    <automation_rule rule_code="string()" description="string()" category="string()" is_enabled="boolean()" created_at="datetime()" />
+    <automation_trigger trigger_event="string()" condition_expression="string()" is_active="boolean()" execution_order="integer()" />
+    <automation_action action_kind="string()" target_system="string()" payload="string()" retry_count="integer()" />
+    <sms_delivery_receipt message_sid="string()" status="string()" error_code="string()" delivered_at="datetime()" phone="string()" _audit_mask_fields="phone" />
+    <email_bounce_log bounce_kind="string()" diagnostic_code="string()" bounced_at="datetime()" email="string()" _audit_mask_fields="email" />
+    <api_client client_code="string()" status="string()" allowed_ips="string()" secret_key="string()" _audit_mask_fields="secret_key" />
+    <api_endpoint path_pattern="string()" http_method="string()" version_tag="string()" is_deprecated="boolean()" />
+    <webhook target_url="string()" event_subscription="string()" is_active="boolean()" secret_key="string()" _audit_mask_fields="secret_key" />
+    <webhook_delivery delivery_status="string()" response_code="integer()" attempted_at="datetime()" response_body="string()" />
+    <integration_mapping source_field="string()" target_field="string()" mapping_rule="string()" is_bidirectional="boolean()" />
+    <sync_job job_code="string()" job_kind="string()" status="string()" start_time="datetime()" end_time="datetime()" />
+    <api_rate_limit limit_key="string()" max_requests="integer()" window_seconds="integer()" current_count="integer()" />
+</root>

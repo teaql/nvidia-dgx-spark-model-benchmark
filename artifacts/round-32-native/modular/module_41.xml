@@ -1,0 +1,17 @@
+<root>
+  <custom_entity_615 description="string()" status="string()" created_at="datetime()" />
+  <custom_entity_616 code="string()" category="string()" is_active="boolean()" />
+  <custom_entity_617 title="string()" priority="integer()" due_date="datetime()" />
+  <custom_entity_618 value="double()" unit="string()" notes="string()" />
+  <custom_entity_619 label="string()" tag="string()" enabled="boolean()" />
+  <custom_entity_620 score="integer()" max_score="integer()" evaluated_at="datetime()" />
+  <custom_entity_621 summary="string()" details="string()" published_at="datetime()" />
+  <custom_entity_622 capacity="integer()" threshold="double()" is_valid="boolean()" />
+  <custom_entity_623 comment="string()" author="string()" posted_at="datetime()" />
+  <custom_entity_624 reference_code="string()" amount="double()" processed="boolean()" />
+  <custom_entity_625 group_code="string()" item_count="integer()" is_default="boolean()" />
+  <custom_entity_626 level="string()" weight="double()" updated_at="datetime()" />
+  <custom_entity_627 version_number="string()" release_date="datetime()" is_stable="boolean()" />
+  <custom_entity_628 region="string()" zip_code="string()" is_active="boolean()" />
+  <custom_entity_629 metric="string()" reading="double()" recorded_at="datetime()" />
+</root>

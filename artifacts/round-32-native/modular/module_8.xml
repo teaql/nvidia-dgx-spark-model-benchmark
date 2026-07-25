@@ -1,0 +1,17 @@
+<root>
+    <equipment serial_number="string()" model_number="string()" make="string()" purchase_date="date()" status="string()" />
+    <consumable category="string()" quantity="integer()" unit_cost="double()" reorder_level="integer()" />
+    <asset_assignment assigned_to="string()" assignment_date="date()" return_date="date()" notes="string()" />
+    <asset_inspection inspection_date="date()" inspector_name="string()" result="string()" comments="string()" />
+    <maintenance_schedule frequency_days="integer()" last_service_date="date()" next_due_date="date()" service_details="string()" />
+    <maintenance_event service_date="date()" cost="double()" service_provider="string()" description="text()" />
+    <fuel_record recorded_at="datetime()" gallons="double()" unit_price="double()" total_cost="double()" odometer="integer()" />
+    <supplier company_name="string()" contact_person="string()" email="string()" phone="string()" _audit_mask_fields="email,phone" />
+    <gps_tracker device_imei="string()" serial_number="string()" installed_at="datetime()" status="string()" />
+    <dashcam_footage recorded_at="datetime()" duration_seconds="integer()" file_path="string()" resolution="string()" />
+    <tire_replacement replacement_date="date()" mileage="integer()" tire_brand="string()" cost="double()" />
+    <oil_change_log service_date="date()" mileage="integer()" oil_brand="string()" cost="double()" />
+    <registration_renewal renewal_date="date()" expiration_date="date()" fee="double()" state_code="string()" />
+    <insurance_card provider="string()" policy_number="string()" start_date="date()" expiration_date="date()" coverage_details="string()" />
+    <depreciation_schedule fiscal_year="integer()" depreciation_amount="double()" book_value="double()" method="string()" />
+</root>

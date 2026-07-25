@@ -1,0 +1,17 @@
+<root>
+  <custom_entity_210 status="string()" code="string()" description="string()" value="decimal()" />
+  <custom_entity_211 title="string()" category="string()" priority="integer()" active="boolean()" />
+  <custom_entity_212 reference="string()" amount="decimal()" created_at="datetime()" status="string()" />
+  <custom_entity_213 details="string()" level="integer()" enabled="boolean()" date_recorded="date()" />
+  <custom_entity_214 item_code="string()" quantity="integer()" weight="float()" status="string()" />
+  <custom_entity_215 title="string()" summary="string()" date_created="datetime()" active="boolean()" />
+  <custom_entity_216 category="string()" rank="integer()" score="float()" note="string()" />
+  <custom_entity_217 serial_number="string()" status="string()" cost="decimal()" registered_at="datetime()" />
+  <custom_entity_218 label="string()" priority="integer()" remark="string()" status="string()" />
+  <custom_entity_219 title="string()" count="integer()" amount="decimal()" active="boolean()" />
+  <custom_entity_220 identifier="string()" category="string()" weight="float()" status="string()" />
+  <custom_entity_221 code="string()" details="string()" priority="integer()" date_updated="datetime()" />
+  <custom_entity_222 title="string()" score="float()" valid_from="date()" valid_to="date()" />
+  <custom_entity_223 reference_number="string()" total_amount="decimal()" status="string()" is_processed="boolean()" />
+  <custom_entity_224 summary="string()" category="string()" priority_level="integer()" created_at="datetime()" />
+</root>

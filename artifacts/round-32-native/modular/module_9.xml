@@ -1,0 +1,17 @@
+<root>
+    <scrap_record item_code="string()" scrap_date="date()" reason="string()" quantity="integer()" />
+    <contract start_date="date()" end_date="date()" value="double()" status="string()" />
+    <insurance_policy provider="string()" coverage_amount="double()" start_date="date()" end_date="date()" />
+    <insurance_claim claim_date="date()" amount_claimed="double()" status="string()" description="string()" />
+    <document file_path="string()" author="string()" creation_date="date()" />
+    <document_version version_number="string()" release_date="date()" changes="string()" />
+    <compliance_check check_date="date()" standard="string()" result="string()" inspector="string()" />
+    <data_retention_policy retention_period_days="integer()" data_category="string()" />
+    <recovery_request request_date="date()" item_description="string()" status="string()" />
+    <nda_agreement email="string()" signed_date="date()" valid_until="date()" _audit_mask_fields="email" />
+    <terms_of_service version_string="string()" effective_date="date()" content_url="string()" />
+    <privacy_policy last_updated="date()" email="string()" _audit_mask_fields="email" />
+    <cookie_consent user_ip="string()" consent_date="date()" preferences="string()" />
+    <gdpr_request email="string()" request_date="date()" action_requested="string()" status="string()" _audit_mask_fields="email" />
+    <osha_incident incident_date="date()" location="string()" description="string()" severity="string()" />
+</root>
