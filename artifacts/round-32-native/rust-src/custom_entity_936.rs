@@ -1,0 +1,24 @@
+// Auto-generated TeaQL Entity: CustomEntity936
+// Entity Index: 892
+// Source Module: module_62.xml
+
+use serde::{Serialize, Deserialize};
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct CustomEntity936 {
+    pub id: u64,
+    pub name: String,
+    pub summary: String,
+    pub details: String,
+    pub published_at: String,
+}
+
+impl CustomEntity936 {
+    pub fn new(id: u64, name: String) -> Self {
+        Self {
+            id,
+            name,
+            ..Default::default()
+        }
+    }
+}
