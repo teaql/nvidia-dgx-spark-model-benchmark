@@ -1,0 +1,17 @@
+<root>
+  <sales_opportunity amount="decimal()" status="string()" close_date="datetime()" />
+  <lead_activity activity_kind="string()" activity_date="datetime()" notes="string()" />
+  <conversion_event event_kind="string()" event_date="datetime()" />
+  <conversion_metric metric_kind="string()" value="decimal()" />
+  <ad_spend platform="string()" spend_amount="decimal()" start_date="datetime()" end_date="datetime()" />
+  <social_media_post platform="string()" content="string()" post_date="datetime()" />
+  <email_blast subject="string()" content="string()" sender_email="string()" send_date="datetime()" _audit_mask_fields="sender_email" />
+  <sms_campaign campaign_topic="string()" message_content="string()" target_phone="string()" _audit_mask_fields="target_phone" />
+  <sales_script product="string()" script_text="string()" />
+  <objection_handling_guide objection="string()" response="string()" />
+  <competitor_analysis competitor="string()" strengths="string()" weaknesses="string()" />
+  <sales_territory region="string()" manager="string()" />
+  <payment amount="decimal()" payment_date="datetime()" payment_token="string()" _audit_mask_fields="payment_token" />
+  <invoice total_amount="decimal()" due_date="datetime()" issue_date="datetime()" />
+  <invoice_line description="string()" quantity="integer()" unit_price="decimal()" />
+</root>

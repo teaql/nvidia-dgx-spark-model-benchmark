@@ -1,0 +1,176 @@
+<root>
+  <equipment
+    serial_number="string()"
+    model_number="string()"
+    category="string()"
+    brand="string()"
+    purchase_date="date()"
+    purchase_price="money()"
+    status="string()"
+    location="string()"
+    notes="string()"
+    supplier="supplier"
+  />
+
+  <consumable
+    part_number="string()"
+    category="string()"
+    quantity_in_stock="integer()"
+    minimum_stock_level="integer()"
+    unit_of_measure="string()"
+    unit_cost="money()"
+    supplier="supplier"
+    reorder_status="string()"
+  />
+
+  <asset_assignment
+    equipment="equipment"
+    assigned_user="string()"
+    assigned_date="date()"
+    return_date="date()"
+    status="string()"
+    condition_on_assign="string()"
+    condition_on_return="string()"
+    notes="string()"
+  />
+
+  <asset_inspection
+    equipment="equipment"
+    inspection_date="date()"
+    inspector="string()"
+    category="string()"
+    is_passed="boolean()"
+    defects_found="string()"
+    action_taken="string()"
+    next_inspection_date="date()"
+  />
+
+  <maintenance_schedule
+    equipment="equipment"
+    title="string()"
+    interval_days="integer()"
+    interval_mileage="integer()"
+    last_performed_date="date()"
+    next_due_date="date()"
+    category="string()"
+    is_active="boolean()"
+  />
+
+  <maintenance_event
+    equipment="equipment"
+    maintenance_schedule="maintenance_schedule"
+    event_date="date()"
+    performed_by="string()"
+    cost="money()"
+    odometer_reading="integer()"
+    work_description="string()"
+    status="string()"
+    supplier="supplier"
+  />
+
+  <fuel_record
+    equipment="equipment"
+    fill_date="date_time()"
+    fuel_quantity="double()"
+    unit_price="money()"
+    total_cost="money()"
+    odometer_reading="integer()"
+    fuel_category="string()"
+    station_location="string()"
+  />
+
+  <supplier
+    company_title="string()"
+    contact_person="string()"
+    email="string()"
+    phone="string()"
+    address="string()"
+    tax_id="string()"
+    status="string()"
+    _audit_mask_fields="email,phone"
+  />
+
+  <gps_tracker
+    equipment="equipment"
+    device_serial="string()"
+    imei_number="string()"
+    sim_card_number="string()"
+    last_latitude="double()"
+    last_longitude="double()"
+    last_ping_time="date_time()"
+    battery_level="integer()"
+    status="string()"
+  />
+
+  <dashcam_footage
+    equipment="equipment"
+    gps_tracker="gps_tracker"
+    recording_start_time="date_time()"
+    recording_end_time="date_time()"
+    file_path="string()"
+    file_size_mb="double()"
+    has_event_flag="boolean()"
+    event_category="string()"
+    notes="string()"
+  />
+
+  <tire_replacement
+    equipment="equipment"
+    replacement_date="date()"
+    tire_position="string()"
+    brand="string()"
+    model_title="string()"
+    tread_depth_mm="double()"
+    cost="money()"
+    odometer_reading="integer()"
+    supplier="supplier"
+  />
+
+  <oil_change_log
+    equipment="equipment"
+    change_date="date()"
+    oil_brand="string()"
+    oil_grade="string()"
+    filter_replaced="boolean()"
+    volume_liters="double()"
+    cost="money()"
+    odometer_reading="integer()"
+    next_change_mileage="integer()"
+  />
+
+  <registration_renewal
+    equipment="equipment"
+    registration_number="string()"
+    issue_date="date()"
+    expiration_date="date()"
+    renewal_cost="money()"
+    issuing_authority="string()"
+    status="string()"
+    notes="string()"
+  />
+
+  <insurance_card
+    equipment="equipment"
+    policy_number="string()"
+    provider_title="string()"
+    start_date="date()"
+    end_date="date()"
+    premium_amount="money()"
+    coverage_details="string()"
+    phone="string()"
+    status="string()"
+    _audit_mask_fields="phone"
+  />
+
+  <depreciation_schedule
+    equipment="equipment"
+    asset_initial_value="money()"
+    salvage_value="money()"
+    useful_life_years="integer()"
+    depreciation_method="string()"
+    annual_depreciation="money()"
+    accumulated_depreciation="money()"
+    book_value="money()"
+    fiscal_year="integer()"
+  />
+</root>

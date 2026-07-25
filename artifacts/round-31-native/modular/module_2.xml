@@ -1,0 +1,17 @@
+<root>
+    <operations_manager_override override_reason="string()" approval_date="datetime()" status="string()" />
+    <employee hire_date="date()" status="string()" position_title="string()" email="string()" phone="string()" _audit_mask_fields="email,phone" />
+    <department dept_code="string()" description="string()" budget="decimal()" />
+    <job_assignment start_date="date()" end_date="date()" role_title="string()" pay_rate="decimal()" />
+    <work_shift start_time="datetime()" end_time="datetime()" shift_kind="string()" location_code="string()" />
+    <worked_hours work_date="date()" regular_hours="decimal()" overtime_hours="decimal()" total_hours="decimal()" />
+    <payroll_period start_date="date()" end_date="date()" pay_date="date()" period_status="string()" />
+    <payroll_calculation gross_pay="decimal()" net_pay="decimal()" total_deductions="decimal()" calculation_date="datetime()" />
+    <payslip issue_date="date()" gross_amount="decimal()" net_amount="decimal()" payment_method="string()" />
+    <bonus bonus_amount="decimal()" award_date="date()" reason="string()" status="string()" />
+    <leave_request leave_kind="string()" start_date="date()" end_date="date()" status="string()" total_days="decimal()" />
+    <employee_certification certification_title="string()" issuing_authority="string()" issue_date="date()" expiry_date="date()" />
+    <tax_withholding tax_category="string()" federal_withholding="decimal()" state_withholding="decimal()" filing_status="string()" />
+    <direct_deposit_info bank_institution="string()" account_number="string()" routing_number="string()" account_kind="string()" _audit_mask_fields="account_number,routing_number" />
+    <union_dues dues_amount="decimal()" deduction_date="date()" union_title="string()" status="string()" />
+</root>

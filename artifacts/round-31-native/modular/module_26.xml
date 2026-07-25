@@ -1,0 +1,12 @@
+<root>
+    <custom_entity_390 description="string()" status="string()" created_at="datetime()" />
+    <custom_entity_391 code="string()" category="string()" is_active="boolean()" />
+    <custom_entity_392 title="string()" priority="integer()" due_date="datetime()" />
+    <custom_entity_393 value="double()" unit="string()" notes="string()" />
+    <custom_entity_394 label="string()" tag="string()" enabled="boolean()" />
+    <custom_entity_395 score="integer()" max_score="integer()" evaluated_at="datetime()" />
+    <custom_entity_396 summary="string()" details="string()" published_at="datetime()" />
+    <custom_entity_397 capacity="integer()" threshold="double()" is_valid="boolean()" />
+    <custom_entity_398 comment="string()" author="string()" posted_at="datetime()" />
+    <custom_entity_399 reference_code="string()" amount="double()" processed="boolean()" />
+</root>

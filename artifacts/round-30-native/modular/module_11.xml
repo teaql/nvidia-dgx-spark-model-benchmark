@@ -1,0 +1,31 @@
+<root>
+  <failed_auth_log email="string()" ip_address="string()" user_agent="string()" attempted_username="string()" failure_reason="string()" attempt_time="date_time()" location_info="string()" is_blocked="boolean()" auth_method="string()" _audit_mask_fields="email" />
+
+  <notification title="string()" content="text()" recipient_user="string()" email="string()" phone="string()" channel="string()" status="string()" read_status="boolean()" sent_time="date_time()" template="@notification_template" _audit_mask_fields="email,phone" />
+
+  <notification_template template_code="string()" title_template="string()" body_template="text()" category="string()" language="string()" is_active="boolean()" />
+
+  <automation_rule rule_code="string()" title="string()" description="text()" is_enabled="boolean()" priority="integer()" execution_count="integer()" last_triggered_at="date_time()" />
+
+  <automation_trigger rule="@automation_rule" trigger_kind="string()" event_source="string()" condition_expression="text()" cron_expression="string()" is_active="boolean()" />
+
+  <automation_action rule="@automation_rule" action_kind="string()" target_resource="string()" payload_template="text()" sequence_order="integer()" timeout_seconds="integer()" />
+
+  <sms_delivery_receipt notification="@notification" phone="string()" provider_message_id="string()" delivery_status="string()" error_code="string()" received_at="date_time()" cost="money()" _audit_mask_fields="phone" />
+
+  <email_bounce_log notification="@notification" email="string()" bounce_kind="string()" bounce_code="string()" diagnostic_code="text()" bounced_at="date_time()" _audit_mask_fields="email" />
+
+  <api_client client_identifier="string()" client_title="string()" secret_key="string()" token="string()" status="string()" rate_limit_quota="integer()" is_active="boolean()" created_at="date_time()" _audit_mask_fields="secret_key,token" />
+
+  <api_endpoint path_pattern="string()" http_method="string()" category="string()" description="text()" requires_auth="boolean()" version="string()" />
+
+  <webhook client="@api_client" target_url="url()" secret_key="string()" event_subscriptions="string()" status="string()" is_active="boolean()" _audit_mask_fields="secret_key" />
+
+  <webhook_delivery webhook="@webhook" event_identifier="string()" request_headers="text()" request_body="text()" response_code="integer()" response_body="text()" delivery_status="string()" delivered_at="date_time()" retry_count="integer()" />
+
+  <integration_mapping mapping_code="string()" source_system="string()" target_system="string()" source_field="string()" target_field="string()" transform_rule="text()" is_active="boolean()" />
+
+  <sync_job job_code="string()" job_kind="string()" status="string()" total_records="integer()" processed_records="integer()" failed_records="integer()" start_time="date_time()" end_time="date_time()" is_asynchronous="boolean()" />
+
+  <api_rate_limit client="@api_client" endpoint="@api_endpoint" max_requests="integer()" time_window_seconds="integer()" current_usage="integer()" reset_at="date_time()" is_exceeded="boolean()" />
+</root>

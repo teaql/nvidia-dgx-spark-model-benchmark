@@ -1,0 +1,17 @@
+<root>
+    <customer_consent consent_type="string()" granted_date="datetime()" />
+    <referral_code code="string()" discount_amount="decimal()" />
+    <loyalty_tier tier_level="string()" points_required="integer()" />
+    <complaint_ticket issue_description="string()" status="string()" customer_email="string()" _audit_mask_fields="customer_email" />
+    <resolution_offer offer_details="string()" accepted="boolean()" />
+    <vip_status is_vip="boolean()" reason="string()" />
+    <do_not_contact_list email="string()" phone="string()" _audit_mask_fields="email,phone" />
+    <customer_note note_text="string()" created_at="datetime()" />
+    <communication_log channel="string()" message_content="string()" sent_at="datetime()" />
+    <product product_name="string()" price="decimal()" />
+    <service service_name="string()" description="string()" />
+    <moving_service distance_km="decimal()" vehicle_size="string()" />
+    <cleaning_service hours="integer()" number_of_cleaners="integer()" />
+    <box_rental quantity="integer()" rental_days="integer()" />
+    <service_configuration setting_key="string()" setting_value="string()" />
+</root>

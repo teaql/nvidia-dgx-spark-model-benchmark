@@ -1,0 +1,17 @@
+<root>
+    <damage_report item_description="string()" severity="string()" date_reported="datetime()" />
+    <proof_of_delivery shipment_reference="string()" timestamp="datetime()" />
+    <packing_list box_count="integer()" weight="float()" />
+    <inventory_item description="string()" quantity="integer()" />
+    <vehicle_load_plan vehicle_reference="string()" total_weight="float()" />
+    <weigh_station_ticket station_location="string()" weight="float()" />
+    <toll_receipt plaza_name="string()" cost="float()" />
+    <parking_permit location="string()" valid_from="datetime()" valid_to="datetime()" />
+    <traffic_violation description="string()" fine="float()" />
+    <detour_log reason="string()" time_lost="integer()" />
+    <fuel_stop location="string()" cost="float()" />
+    <weather_delay description="string()" duration_hours="float()" />
+    <customer_signature signature_image_url="string()" timestamp="datetime()" />
+    <walkthrough_checklist passed="boolean()" comments="string()" />
+    <post_move_survey rating="integer()" email="string()" _audit_mask_fields="email" />
+</root>

@@ -1,0 +1,17 @@
+<root>
+    <overtime_approval approval_date="date()" hours_requested="decimal()" reason="string()" status="string()" />
+    <expense_reimbursement submit_date="date()" amount="decimal()" description="string()" bank_account="string()" _audit_mask_fields="bank_account" />
+    <performance_review review_date="date()" score="integer()" comments="string()" />
+    <warning_letter date_issued="date()" reason="string()" severity_level="string()" />
+    <termination_record effective_date="date()" reason="string()" remarks="string()" />
+    <emergency_contact full_name="string()" relationship="string()" phone="string()" email="string()" _audit_mask_fields="phone,email" />
+    <uniform_assignment item_description="string()" uniform_size="string()" date_issued="date()" />
+    <background_check check_date="date()" status="string()" ssn="string()" _audit_mask_fields="ssn" />
+    <customer customer_tier="string()" registration_date="date()" />
+    <private_customer_profile first_name="string()" last_name="string()" date_of_birth="date()" />
+    <corporate_customer_profile company_title="string()" tax_id="string()" _audit_mask_fields="tax_id" />
+    <customer_contact phone="string()" email="string()" _audit_mask_fields="phone,email" />
+    <billing_profile credit_card="string()" billing_address="string()" _audit_mask_fields="credit_card,billing_address" />
+    <customer_history purchase_volume="integer()" lifetime_value="decimal()" />
+    <customer_preference preferred_contact_method="string()" language="string()" />
+</root>
