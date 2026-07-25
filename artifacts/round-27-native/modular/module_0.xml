@@ -1,0 +1,17 @@
+<root>
+    <platform version="string()" status="string()" />
+    <platform_config theme="string()" max_tenants="int()" />
+    <tenant_registry registry_code="string()" />
+    <merchant business_name="string()" contact_email="string()" contact_phone="string()" _audit_mask_fields="contact_email,contact_phone" />
+    <branch branch_code="string()" capacity="int()" />
+    <franchise franchise_code="string()" owner_name="string()" />
+    <move_order order_status="string()" total_cost="float()" />
+    <move_quote estimated_cost="float()" valid_until="datetime()" />
+    <route distance="float()" estimated_duration="int()" />
+    <route_stop stop_sequence="int()" arrival_time="datetime()" />
+    <time_slot start_time="datetime()" end_time="datetime()" />
+    <fulfillment_event event_status="string()" timestamp="datetime()" />
+    <address street="string()" city="string()" zip_code="string()" />
+    <crew crew_size="int()" contact_phone="string()" _audit_mask_fields="contact_phone" />
+    <dispatch_assignment assignment_status="string()" dispatch_time="datetime()" />
+</root>

@@ -1,0 +1,17 @@
+<root>
+  <refund amount="double()" currency="string()" reason="string()" />
+  <expense amount="double()" category="string()" date="datetime()" />
+  <vat_rate rate_percentage="double()" country_code="string()" />
+  <journal_entry posting_date="datetime()" total_debit="double()" total_credit="double()" />
+  <account account_type="string()" balance="double()" currency="string()" />
+  <financial_summary period_start="datetime()" period_end="datetime()" total_revenue="double()" total_expenses="double()" />
+  <tax_document document_type="string()" issue_date="datetime()" total_tax="double()" />
+  <bank_transaction transaction_date="datetime()" amount="double()" reference="string()" />
+  <merchant_fee fee_amount="double()" transaction_reference="string()" />
+  <chargeback_record dispute_date="datetime()" amount="double()" reason_code="string()" />
+  <credit_note issue_date="datetime()" amount="double()" reason="string()" />
+  <debit_note issue_date="datetime()" amount="double()" reason="string()" />
+  <audit_adjustment adjustment_date="datetime()" amount="double()" explanation="string()" />
+  <fiscal_year start_date="datetime()" end_date="datetime()" is_closed="boolean()" />
+  <vehicle make="string()" model="string()" year="int()" license_plate="string()" />
+</root>

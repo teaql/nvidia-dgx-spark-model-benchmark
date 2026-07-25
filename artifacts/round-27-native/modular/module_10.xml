@@ -1,0 +1,12 @@
+<root>
+    <user_account email="string()" password_hash="string()" status="string()" _audit_mask_fields="email,password_hash" />
+    <role description="string()" is_system_role="boolean()" />
+    <permission resource="string()" operation="string()" />
+    <user_role_assignment user_account_ref="string()" role_ref="string()" />
+    <role_permission role_ref="string()" permission_ref="string()" />
+    <magic_link user_account_ref="string()" token="string()" expires_at="datetime()" _audit_mask_fields="token" />
+    <user_session user_account_ref="string()" session_token="string()" expires_at="datetime()" _audit_mask_fields="session_token" />
+    <password_reset user_account_ref="string()" token="string()" expires_at="datetime()" _audit_mask_fields="token" />
+    <two_factor_auth user_account_ref="string()" secret_key="string()" is_enabled="boolean()" _audit_mask_fields="secret_key" />
+    <access_token user_account_ref="string()" token="string()" expires_at="datetime()" _audit_mask_fields="token" />
+</root>

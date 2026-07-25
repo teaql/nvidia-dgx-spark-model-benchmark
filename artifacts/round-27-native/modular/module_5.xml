@@ -1,0 +1,17 @@
+<root>
+    <price_list valid_from="date()" valid_to="date()" />
+    <service_price price_list_id="id()" service_id="id()" amount="decimal()" />
+    <service_bundle description="string()" base_price="decimal()" />
+    <storage_unit size_sqft="integer()" monthly_rate="decimal()" location_id="id()" />
+    <packing_material item_name="string()" price_per_unit="decimal()" stock_quantity="integer()" />
+    <insurance_addon coverage_limit="decimal()" premium_amount="decimal()" />
+    <piano_handling piano_kind="string()" base_fee="decimal()" />
+    <stair_fee flight_count="integer()" fee_per_flight="decimal()" />
+    <long_carry_fee distance_feet="integer()" fee_amount="decimal()" />
+    <hoisting_service item_description="string()" hoisting_fee="decimal()" />
+    <vehicle_transport vehicle_make="string()" vehicle_model="string()" transport_fee="decimal()" />
+    <pet_relocation_service pet_kind="string()" relocation_fee="decimal()" />
+    <campaign start_date="date()" end_date="date()" budget="decimal()" />
+    <discount_code code="string()" discount_percentage="decimal()" valid_until="date()" />
+    <lead contact_email="string()" contact_phone="string()" status="string()" _audit_mask_fields="contact_email,contact_phone" />
+</root>
