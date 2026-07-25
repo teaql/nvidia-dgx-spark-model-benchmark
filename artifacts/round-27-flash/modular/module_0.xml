@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <platform domain="string()" status="string()" environment="string()" version="string()" contact_email="string()" _audit_mask_fields="contact_email" />
+  <platform_config config_key="string()" config_value="string()" category="string()" enabled="boolean()" secret_key="string()" _audit_mask_fields="secret_key" />
+  <tenant_registry tenant_code="string()" domain_prefix="string()" status="string()" max_branches="integer()" contact_email="string()" contact_phone="string()" _audit_mask_fields="contact_email,contact_phone" />
+  <merchant tax_identifier="string()" status="string()" category="string()" contact_email="string()" contact_phone="string()" _audit_mask_fields="contact_email,contact_phone" />
+  <branch branch_code="string()" operating_status="string()" time_zone="string()" contact_phone="string()" _audit_mask_fields="contact_phone" />
+  <franchise franchise_code="string()" territory_code="string()" royalty_rate="decimal()" status="string()" contact_email="string()" _audit_mask_fields="contact_email" />
+  <move_order order_number="string()" status="string()" category="string()" priority="integer()" scheduled_date="date()" total_amount="decimal()" />
+  <move_quote quote_number="string()" estimated_amount="decimal()" discount_amount="decimal()" expiration_date="date()" status="string()" />
+  <route route_code="string()" total_distance_km="decimal()" estimated_duration_minutes="integer()" status="string()" />
+  <route_stop stop_sequence="integer()" arrival_window_start="datetime()" arrival_window_end="datetime()" status="string()" />
+  <time_slot slot_code="string()" start_time="datetime()" end_time="datetime()" capacity="integer()" is_available="boolean()" />
+  <fulfillment_event event_code="string()" event_timestamp="datetime()" category="string()" description="string()" status="string()" />
+  <address street_address="string()" unit="string()" city="string()" state_province="string()" postal_code="string()" country="string()" latitude="decimal()" longitude="decimal()" />
+  <crew crew_code="string()" leader_phone="string()" member_count="integer()" active="boolean()" _audit_mask_fields="leader_phone" />
+  <dispatch_assignment assignment_code="string()" assigned_at="datetime()" status="string()" priority="integer()" />
+</root>

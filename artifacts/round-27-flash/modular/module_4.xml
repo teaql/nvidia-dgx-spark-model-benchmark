@@ -1,0 +1,17 @@
+<root>
+  <customer_consent consent_category="string()" granted="boolean()" granted_at="datetime()" />
+  <referral_code code="string()" discount_percentage="decimal()" expiry_date="date()" />
+  <loyalty_tier tier_level="string()" minimum_points="integer()" benefits_description="string()" />
+  <complaint_ticket issue_description="string()" status="string()" contact_email="string()" _audit_mask_fields="contact_email" />
+  <resolution_offer offer_details="string()" compensation_amount="decimal()" accepted="boolean()" />
+  <vip_status is_vip="boolean()" reason="string()" valid_until="date()" />
+  <do_not_contact_list email="string()" phone="string()" _audit_mask_fields="email,phone" />
+  <customer_note note_text="string()" created_at="datetime()" />
+  <communication_log channel="string()" message_content="string()" sent_at="datetime()" />
+  <product sku="string()" unit_price="decimal()" description="string()" />
+  <service category="string()" base_price="decimal()" description="string()" />
+  <moving_service distance_km="decimal()" vehicle_size="string()" packing_included="boolean()" />
+  <cleaning_service hours_required="integer()" cleaner_count="integer()" eco_friendly="boolean()" />
+  <box_rental quantity="integer()" rental_duration_days="integer()" daily_rate="decimal()" />
+  <service_configuration config_key="string()" config_value="string()" enabled="boolean()" />
+</root>

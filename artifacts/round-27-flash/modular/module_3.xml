@@ -1,0 +1,17 @@
+<root>
+    <overtime_approval employee_id="string()" overtime_hours="float()" approval_status="string()" approved_by="string()" approval_date="datetime()" />
+    <expense_reimbursement employee_id="string()" amount="float()" category="string()" receipt_url="string()" status="string()" submitted_date="datetime()" />
+    <performance_review employee_id="string()" reviewer_id="string()" review_period="string()" rating="integer()" feedback="string()" review_date="datetime()" />
+    <warning_letter employee_id="string()" reason="string()" action_required="string()" issued_date="datetime()" issued_by="string()" />
+    <termination_record employee_id="string()" termination_date="datetime()" reason="string()" severance_amount="float()" eligible_for_rehire="boolean()" />
+    <emergency_contact employee_id="string()" contact_person="string()" relationship="string()" phone="string()" email="string()" address="string()" _audit_mask_fields="phone,email" />
+    <uniform_assignment employee_id="string()" uniform_size="string()" quantity="integer()" issued_date="datetime()" returned_date="datetime()" />
+    <background_check employee_id="string()" check_date="datetime()" status="string()" passed="boolean()" remarks="string()" />
+    <customer customer_code="string()" phone="string()" email="string()" is_active="boolean()" _audit_mask_fields="phone,email" />
+    <private_customer_profile customer_id="string()" first_name="string()" last_name="string()" birth_date="datetime()" gender="string()" />
+    <corporate_customer_profile customer_id="string()" company_name="string()" tax_id="string()" industry="string()" website="string()" />
+    <customer_contact customer_id="string()" contact_person="string()" role_description="string()" phone="string()" email="string()" _audit_mask_fields="phone,email" />
+    <billing_profile customer_id="string()" billing_address="string()" payment_term="string()" credit_limit="float()" />
+    <customer_history customer_id="string()" action_details="string()" performed_by="string()" recorded_at="datetime()" />
+    <customer_preference customer_id="string()" preferred_language="string()" preferred_contact_method="string()" opt_in_marketing="boolean()" />
+</root>
