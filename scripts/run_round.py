@@ -36,6 +36,7 @@ def extract_xml(content):
 
 def run_round(round_num, scale):
     out_dir = f"artifacts/round-{round_num}"
+    previous_eval_errors = ""
     
     for attempt in range(1, 4):
         print(f"--- Round {round_num} (Scale: {scale}) - Attempt {attempt} ---")
@@ -80,9 +81,9 @@ def run_round(round_num, scale):
             "scrap_record", "contract", "insurance_policy", "insurance_claim", "document",
             "document_version", "compliance_check", "data_retention_policy", "recovery_request",
             "nda_agreement", "terms_of_service", "privacy_policy", "cookie_consent", "gdpr_request",
-            "osha_incident", "system_user", "role", "permission", "user_role_assignment",
-            "role_permission", "login_history", "user_session", "security_config", "audit_report",
-            "system_log", "activity_log", "audit_log", "entity_change", "change_set", "login_attempt",
+            "osha_incident", "user_account", "role", "permission", "user_role_assignment",
+            "role_permission", "magic_link", "user_session", "password_reset", "two_factor_auth",
+            "access_token", "activity_log", "audit_log", "entity_change", "change_set", "login_attempt",
             "failed_auth_log", "notification", "notification_template", "automation_rule",
             "automation_trigger", "automation_action", "sms_delivery_receipt", "email_bounce_log",
             "api_client", "api_endpoint", "webhook", "webhook_delivery", "integration_mapping",
@@ -107,9 +108,13 @@ def run_round(round_num, scale):
         print(f"Plan generated: {sum(len(v) for v in modules.values())} objects across {len(modules)} modules.")
         
         system_rules = open("/home/philip/githome/teaql-agent-kit/prompts/modeling/ksml-rules.md").read()
-        system_prompt = f"""You are a KSML code generator. Strictly follow the KSML rules below.
-IMPORTANT: Business objects MUST NEVER have 'id' or 'name' attributes defined explicitly! Do not output empty name="" or id="". Just omit them completely.
-Every XML file must be wrapped in a <root> container.
+        system_prompt = f"""You are an expert KSML (Knowledge-Semantic Modeling Language) architect.
+Generate modular KSML XML based on the requested business entities.
+CRITICAL RULES:
+1. ONLY output valid XML inside ```xml ``` blocks.
+2. The root must be <root> or an entity tag, but for this benchmark, output exactly what is requested.
+3. Do NOT define 'id' or 'name' properties on business objects (they are implicit).
+4. If you generate ANY security/privacy fields (e.g. 'password', 'password_hash', 'token', 'session_token', 'secret_key', 'email', 'phone'), you MUST add the attribute `_audit_mask_fields="field_name"` to the XML element containing that field to comply with GDPR/CCPA. Example: `<user_account email="string()" password_hash="string()" _audit_mask_fields="email,password_hash" />`
 CRITICAL: Do NOT use reserved keywords like 'move', 'type', 'match', 'async' as object names or attribute names.
 
 KSML RULES:
@@ -118,6 +123,8 @@ KSML RULES:
         
         def generate_module(mod_name, entities):
             user_prompt = f"Generate the KSML XML for the module '{mod_name}' containing exactly these entities: {', '.join(entities)}. Ensure it is wrapped in a <root> tag. Output ONLY valid XML inside ```xml ```."
+            if previous_eval_errors:
+                user_prompt += f"\n\nCRITICAL: In the previous attempt, the evaluation failed with these errors. If any of these errors apply to the entities in THIS module, YOU MUST FIX THEM by applying the required `_audit_mask_fields` attributes:\n{previous_eval_errors}"
             for module_attempt in range(1, 4):
                 try:
                     content = call_dgx([
@@ -181,6 +188,7 @@ KSML RULES:
         if "Errors" in res.stdout and " 0\n" not in res.stdout.split("Errors")[1][:10]:
             print(f"Evaluation Failed on attempt {attempt}!")
             print(res.stdout)
+            previous_eval_errors = res.stdout
             continue
             
         print("Generating code...")
