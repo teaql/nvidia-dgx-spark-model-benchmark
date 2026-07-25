@@ -1,0 +1,56 @@
+[
+  {
+    "Model": "flash",
+    "Role": "KSML Module 0 R32 Generator",
+    "TypeName": "ksml_generator",
+    "Prompt": "Generate KSML XML for the following entities: platform, platform_config, tenant_registry, merchant, branch, franchise, move_order, move_quote, route, route_stop, time_slot, fulfillment_event, address, crew, dispatch_assignment. Write the output to /home/philip/githome/nvidia-dgx-spark-model-benchmark/artifacts/round-32-native/modular/module_0.xml"
+  },
+  {
+    "Model": "flash",
+    "Role": "KSML Module 12 R32 Generator",
+    "TypeName": "ksml_generator",
+    "Prompt": "Generate KSML XML for the following entities: custom_entity_180, custom_entity_181, custom_entity_182, custom_entity_183, custom_entity_184, custom_entity_185, custom_entity_186, custom_entity_187, custom_entity_188, custom_entity_189, custom_entity_190, custom_entity_191, custom_entity_192, custom_entity_193, custom_entity_194. Write the output to /home/philip/githome/nvidia-dgx-spark-model-benchmark/artifacts/round-32-native/modular/module_12.xml"
+  },
+  {
+    "Model": "flash",
+    "Role": "KSML Module 14 R32 Generator",
+    "TypeName": "ksml_generator",
+    "Prompt": "Generate KSML XML for the following entities: custom_entity_210, custom_entity_211, custom_entity_212, custom_entity_213, custom_entity_214, custom_entity_215, custom_entity_216, custom_entity_217, custom_entity_218, custom_entity_219, custom_entity_220, custom_entity_221, custom_entity_222, custom_entity_223, custom_entity_224. Write the output to /home/philip/githome/nvidia-dgx-spark-model-benchmark/artifacts/round-32-native/modular/module_14.xml"
+  },
+  {
+    "Model": "flash",
+    "Role": "KSML Module 32 R32 Generator",
+    "TypeName": "ksml_generator",
+    "Prompt": "Generate KSML XML for the following entities: custom_entity_480, custom_entity_481, custom_entity_482, custom_entity_483, custom_entity_484, custom_entity_485, custom_entity_486, custom_entity_487, custom_entity_488, custom_entity_489, custom_entity_490, custom_entity_491, custom_entity_492, custom_entity_493, custom_entity_494. Write the output to /home/philip/githome/nvidia-dgx-spark-model-benchmark/artifacts/round-32-native/modular/module_32.xml"
+  },
+  {
+    "Model": "flash",
+    "Role": "KSML Module 45 R32 Generator",
+    "TypeName": "ksml_generator",
+    "Prompt": "Generate KSML XML for the following entities: custom_entity_675, custom_entity_676, custom_entity_677, custom_entity_678, custom_entity_679, custom_entity_680, custom_entity_681, custom_entity_682, custom_entity_683, custom_entity_684, custom_entity_685, custom_entity_686, custom_entity_687, custom_entity_688, custom_entity_689. Write the output to /home/philip/githome/nvidia-dgx-spark-model-benchmark/artifacts/round-32-native/modular/module_45.xml"
+  },
+  {
+    "Model": "flash",
+    "Role": "KSML Module 62 R32 Generator",
+    "TypeName": "ksml_generator",
+    "Prompt": "Generate KSML XML for the following entities: custom_entity_930, custom_entity_931, custom_entity_932, custom_entity_933, custom_entity_934, custom_entity_935, custom_entity_936, custom_entity_937, custom_entity_938, custom_entity_939, custom_entity_940, custom_entity_941, custom_entity_942, custom_entity_943, custom_entity_944. Write the output to /home/philip/githome/nvidia-dgx-spark-model-benchmark/artifacts/round-32-native/modular/module_62.xml"
+  },
+  {
+    "Model": "flash",
+    "Role": "KSML Module 63 R32 Generator",
+    "TypeName": "ksml_generator",
+    "Prompt": "Generate KSML XML for the following entities: custom_entity_945, custom_entity_946, custom_entity_947, custom_entity_948, custom_entity_949, custom_entity_950, custom_entity_951, custom_entity_952, custom_entity_953, custom_entity_954, custom_entity_955, custom_entity_956, custom_entity_957, custom_entity_958, custom_entity_959. Write the output to /home/philip/githome/nvidia-dgx-spark-model-benchmark/artifacts/round-32-native/modular/module_63.xml"
+  },
+  {
+    "Model": "flash",
+    "Role": "KSML Module 64 R32 Generator",
+    "TypeName": "ksml_generator",
+    "Prompt": "Generate KSML XML for the following entities: custom_entity_960, custom_entity_961, custom_entity_962, custom_entity_963, custom_entity_964, custom_entity_965, custom_entity_966, custom_entity_967, custom_entity_968, custom_entity_969, custom_entity_970, custom_entity_971, custom_entity_972, custom_entity_973, custom_entity_974. Write the output to /home/philip/githome/nvidia-dgx-spark-model-benchmark/artifacts/round-32-native/modular/module_64.xml"
+  },
+  {
+    "Model": "flash",
+    "Role": "KSML Module 65 R32 Generator",
+    "TypeName": "ksml_generator",
+    "Prompt": "Generate KSML XML for the following entities: custom_entity_975, custom_entity_976, custom_entity_977, custom_entity_978, custom_entity_979, custom_entity_980, custom_entity_981, custom_entity_982, custom_entity_983, custom_entity_984, custom_entity_985, custom_entity_986, custom_entity_987, custom_entity_988, custom_entity_989. Write the output to /home/philip/githome/nvidia-dgx-spark-model-benchmark/artifacts/round-32-native/modular/module_65.xml"
+  }
+]
