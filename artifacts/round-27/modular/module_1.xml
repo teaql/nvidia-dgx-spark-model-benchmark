@@ -1,0 +1,24 @@
+<root alias_model_name="freight_logistics_management"
+      cfg_mask_china_mobile="false"
+      chinese_name="货运物流管理"
+      english_name="Freight Logistics Management"
+      data_service="sqlite"
+      name="freight-logistics-service"
+      org="doublechaintech"
+      _module_key="root">
+  <damage_report _name="Damage Report" _module="Module 1" _module_key="module-1"/>
+  <proof_of_delivery _name="Proof Of Delivery" _module="Module 1" _module_key="module-1"/>
+  <packing_list _name="Packing List" _module="Module 1" _module_key="module-1"/>
+  <inventory_item _name="Inventory Item" _module="Module 1" _module_key="module-1"/>
+  <vehicle_load_plan _name="Vehicle Load Plan" _module="Module 1" _module_key="module-1"/>
+  <weigh_station_ticket _name="Weigh Station Ticket" _module="Module 1" _module_key="module-1"/>
+  <toll_receipt _name="Toll Receipt" _module="Module 1" _module_key="module-1"/>
+  <parking_permit _name="Parking Permit" _module="Module 1" _module_key="module-1"/>
+  <traffic_violation _name="Traffic Violation" _module="Module 1" _module_key="module-1"/>
+  <detour_log _name="Detour Log" _module="Module 1" _module_key="module-1"/>
+  <fuel_stop _name="Fuel Stop" _module="Module 1" _module_key="module-1"/>
+  <weather_delay _name="Weather Delay" _module="Module 1" _module_key="module-1"/>
+  <customer_signature _name="Customer Signature" _module="Module 1" _module_key="module-1"/>
+  <walkthrough_checklist _name="Walkthrough Checklist" _module="Module 1" _module_key="module-1"/>
+  <post_move_survey _name="Post Move Survey" _module="Module 1" _module_key="module-1"/>
+</root>

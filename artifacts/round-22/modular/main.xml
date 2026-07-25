@@ -1,0 +1,13 @@
+<root alias_model_name="main_module"
+      english_name="Main Module"
+      chinese_name="主要模块"
+      name="main-service"
+      org="doublechaintech"
+      data_service="sqlite"
+      cfg_mask_china_mobile="false"
+      _module_key="root">
+  <_include file="finance.xml" />
+  <_include file="logistics.xml" />
+  <_include file="customer_relations.xml" />
+  <_include file="operations.xml" />
+</root>

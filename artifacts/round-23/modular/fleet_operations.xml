@@ -1,0 +1,27 @@
+<root alias_model_name="fleet_operations"
+      cfg_mask_china_mobile="false"
+      chinese_name="车队运营"
+      english_name="Fleet Operations"
+      data_service="sqlite"
+      name="fleet-operations-service"
+      org="doublechaintech"
+      _module_key="root">
+  <vehicle_registry _name="Vehicle Registry" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <vehicle_spec _name="Vehicle Spec" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <maintenance_log _name="Maintenance Log" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <fuel_record _name="Fuel Record" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <tire_inventory _name="Tire Inventory" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <driver_assignment _name="Driver Assignment" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <driver_license _name="Driver License" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <driver_training _name="Driver Training" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <route_plan _name="Route Plan" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <load_capacity _name="Load Capacity" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <cargo_securement _name="Cargo Securement" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <gps_tracking _name="GPS Tracking" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <telematics_data _name="Telematics Data" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <incident_report _name="Incident Report" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <inspection_checklist _name="Inspection Checklist" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <service_schedule _name="Service Schedule" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <warranty_info _name="Warranty Info" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <decommission_record _name="Decommission Record" _module="Fleet Operations" _module_key="fleet-operations"/>
+</root>

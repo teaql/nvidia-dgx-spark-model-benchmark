@@ -1,0 +1,24 @@
+<root alias_model_name="module_3"
+      cfg_mask_china_mobile="false"
+      chinese_name="模块 3"
+      english_name="Module 3"
+      data_service="sqlite"
+      name="module-3-service"
+      org="doublechaintech"
+      _module_key="root">
+  <overtime_approval _name="Overtime Approval" _module="Module 3" _module_key="module-3"/>
+  <expense_reimbursement _name="Expense Reimbursement" _module="Module 3" _module_key="module-3"/>
+  <performance_review _name="Performance Review" _module="Module 3" _module_key="module-3"/>
+  <warning_letter _name="Warning Letter" _module="Module 3" _module_key="module-3"/>
+  <termination_record _name="Termination Record" _module="Module 3" _module_key="module-3"/>
+  <emergency_contact _name="Emergency Contact" _module="Module 3" _module_key="module-3"/>
+  <uniform_assignment _name="Uniform Assignment" _module="Module 3" _module_key="module-3"/>
+  <background_check _name="Background Check" _module="Module 3" _module_key="module-3"/>
+  <customer _name="Customer" _module="Module 3" _module_key="module-3"/>
+  <private_customer_profile _name="Private Customer Profile" _module="Module 3" _module_key="module-3"/>
+  <corporate_customer_profile _name="Corporate Customer Profile" _module="Module 3" _module_key="module-3"/>
+  <customer_contact _name="Customer Contact" _module="Module 3" _module_key="module-3"/>
+  <billing_profile _name="Billing Profile" _module="Module 3" _module_key="module-3"/>
+  <customer_history _name="Customer History" _module="Module 3" _module_key="module-3"/>
+  <customer_preference _name="Customer Preference" _module="Module 3" _module_key="module-3"/>
+</root>

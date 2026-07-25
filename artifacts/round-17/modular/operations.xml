@@ -1,0 +1,19 @@
+<root alias_model_name="operations_module"
+      cfg_mask_china_mobile="false"
+      chinese_name="运营模块"
+      english_name="Operations Module"
+      data_service="sqlite"
+      name="operations-service"
+      org="doublechaintech"
+      _module_key="root">
+  <contact _name="Contact" _module="Operations" _module_key="operations"/>
+  <phone _name="Phone" _module="Operations" _module_key="operations"/>
+  <email _name="Email" _module="Operations" _module_key="operations"/>
+  <document _name="Document" _module="Operations" _module_key="operations"/>
+  <license _name="License" _module="Operations" _module_key="operations"/>
+  <insurance _name="Insurance" _module="Operations" _module_key="operations"/>
+  <maintenance _name="Maintenance" _module="Operations" _module_key="operations"/>
+  <fuel_log _name="Fuel Log" _module="Operations" _module_key="operations"/>
+  <timesheet _name="Timesheet" _module="Operations" _module_key="operations"/>
+  <expense _name="Expense" _module="Operations" _module_key="operations"/>
+</root>

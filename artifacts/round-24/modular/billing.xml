@@ -1,0 +1,29 @@
+<root alias_model_name="billing_management"
+      cfg_mask_china_mobile="false"
+      chinese_name="计费管理"
+      english_name="Billing Management"
+      data_service="sqlite"
+      name="billing-management-service"
+      org="doublechaintech"
+      _module_key="root">
+  <invoice_header _name="Invoice Header" _module="Billing" _module_key="billing"/>
+  <invoice_line_item _name="Invoice Line Item" _module="Billing" _module_key="billing"/>
+  <payment_method _name="Payment Method" _module="Billing" _module_key="billing"/>
+  <payment_transaction _name="Payment Transaction" _module="Billing" _module_key="billing"/>
+  <billing_cycle _name="Billing Cycle" _module="Billing" _module_key="billing"/>
+  <tax_code _name="Tax Code" _module="Billing" _module_key="billing"/>
+  <discount_rule _name="Discount Rule" _module="Billing" _module_key="billing"/>
+  <credit_note _name="Credit Note" _module="Billing" _module_key="billing"/>
+  <debit_note _name="Debit Note" _module="Billing" _module_key="billing"/>
+  <billing_address _name="Billing Address" _module="Billing" _module_key="billing"/>
+  <outstanding_balance _name="Outstanding Balance" _module="Billing" _module_key="billing"/>
+  <aging_report _name="Aging Report" _module="Billing" _module_key="billing"/>
+  <payment_reminder _name="Payment Reminder" _module="Billing" _module_key="billing"/>
+  <refund_request _name="Refund Request" _module="Billing" _module_key="billing"/>
+  <billing_adjustment _name="Billing Adjustment" _module="Billing" _module_key="billing"/>
+  <revenue_recognition _name="Revenue Recognition" _module="Billing" _module_key="billing"/>
+  <financial_period _name="Financial Period" _module="Billing" _module_key="billing"/>
+  <audit_trail _name="Audit Trail" _module="Billing" _module_key="billing"/>
+  <currency_rate _name="Currency Rate" _module="Billing" _module_key="billing"/>
+  <billing_approval _name="Billing Approval" _module="Billing" _module_key="billing"/>
+</root>

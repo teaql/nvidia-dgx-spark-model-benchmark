@@ -1,0 +1,24 @@
+<root alias_model_name="finance"
+      cfg_mask_china_mobile="false"
+      chinese_name="财务"
+      english_name="Finance"
+      data_service="sqlite"
+      name="finance-service"
+      org="doublechaintech"
+      _module_key="root">
+  <invoices _name="Invoices" _module="Finance" _module_key="finance"/>
+  <payments _name="Payments" _module="Finance" _module_key="finance"/>
+  <expenses _name="Expenses" _module="Finance" _module_key="finance"/>
+  <accounts _name="Accounts" _module="Finance" _module_key="finance"/>
+  <ledgers _name="Ledgers" _module="Finance" _module_key="finance"/>
+  <taxes _name="Taxes" _module="Finance" _module_key="finance"/>
+  <quotes _name="Quotes" _module="Finance" _module_key="finance"/>
+  <estimates _name="Estimates" _module="Finance" _module_key="finance"/>
+  <audit _name="Audit" _module="Finance" _module_key="finance"/>
+  <security _name="Security" _module="Finance" _module_key="finance"/>
+  <budget _name="Budget" _module="Finance" _module_key="finance"/>
+  <payroll _name="Payroll" _module="Finance" _module_key="finance"/>
+  <reimbursements _name="Reimbursements" _module="Finance" _module_key="finance"/>
+  <financial_reports _name="Financial Reports" _module="Finance" _module_key="finance"/>
+  <cash_flow _name="Cash Flow" _module="Finance" _module_key="finance"/>
+</root>

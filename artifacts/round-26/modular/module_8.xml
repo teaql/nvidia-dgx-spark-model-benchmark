@@ -1,0 +1,24 @@
+<root alias_model_name="module_8"
+      cfg_mask_china_mobile="false"
+      chinese_name="模块 8"
+      english_name="Module 8"
+      data_service="sqlite"
+      name="module-8-service"
+      org="doublechaintech"
+      _module_key="root">
+  <equipment _name="Equipment" _module="Module 8" _module_key="module-8" name="Equipment Name" description="Description of equipment" create_time="createTime()" update_time="updateTime()"/>
+  <consumable _name="Consumable" _module="Module 8" _module_key="module-8" name="Consumable Name" description="Description of consumable" create_time="createTime()" update_time="updateTime()"/>
+  <asset_assignment _name="Asset Assignment" _module="Module 8" _module_key="module-8" name="Assignment Name" description="Description of asset assignment" create_time="createTime()" update_time="updateTime()"/>
+  <asset_inspection _name="Asset Inspection" _module="Module 8" _module_key="module-8" name="Inspection Name" description="Description of asset inspection" create_time="createTime()" update_time="updateTime()"/>
+  <maintenance_schedule _name="Maintenance Schedule" _module="Module 8" _module_key="module-8" name="Schedule Name" description="Description of maintenance schedule" create_time="createTime()" update_time="updateTime()"/>
+  <maintenance_event _name="Maintenance Event" _module="Module 8" _module_key="module-8" name="Event Name" description="Description of maintenance event" create_time="createTime()" update_time="updateTime()"/>
+  <fuel_record _name="Fuel Record" _module="Module 8" _module_key="module-8" name="Fuel Record Name" description="Description of fuel record" create_time="createTime()" update_time="updateTime()"/>
+  <supplier _name="Supplier" _module="Module 8" _module_key="module-8" name="Supplier Name" description="Description of supplier" create_time="createTime()" update_time="updateTime()"/>
+  <gps_tracker _name="GPS Tracker" _module="Module 8" _module_key="module-8" name="Tracker Name" description="Description of GPS tracker" create_time="createTime()" update_time="updateTime()"/>
+  <dashcam_footage _name="Dashcam Footage" _module="Module 8" _module_key="module-8" name="Footage Name" description="Description of dashcam footage" create_time="createTime()" update_time="updateTime()"/>
+  <tire_replacement _name="Tire Replacement" _module="Module 8" _module_key="module-8" name="Replacement Name" description="Description of tire replacement" create_time="createTime()" update_time="updateTime()"/>
+  <oil_change_log _name="Oil Change Log" _module="Module 8" _module_key="module-8" name="Log Name" description="Description of oil change log" create_time="createTime()" update_time="updateTime()"/>
+  <registration_renewal _name="Registration Renewal" _module="Module 8" _module_key="module-8" name="Renewal Name" description="Description of registration renewal" create_time="createTime()" update_time="updateTime()"/>
+  <insurance_card _name="Insurance Card" _module="Module 8" _module_key="module-8" name="Card Name" description="Description of insurance card" create_time="createTime()" update_time="updateTime()"/>
+  <depreciation_schedule _name="Depreciation Schedule" _module="Module 8" _module_key="module-8" name="Schedule Name" description="Description of depreciation schedule" create_time="createTime()" update_time="updateTime()"/>
+</root>

@@ -1,0 +1,29 @@
+<root alias_model_name="reporting"
+      cfg_mask_china_mobile="false"
+      chinese_name="报告"
+      english_name="Reporting"
+      data_service="sqlite"
+      name="reporting-service"
+      org="doublechaintech"
+      _module_key="root">
+  <daily_summary _name="Daily Summary" _module="Reporting" _module_key="reporting"/>
+  <weekly_report _name="Weekly Report" _module="Reporting" _module_key="reporting"/>
+  <monthly_kpi _name="Monthly KPI" _module="Reporting" _module_key="reporting"/>
+  <annual_performance _name="Annual Performance" _module="Reporting" _module_key="reporting"/>
+  <utilization_report _name="Utilization Report" _module="Reporting" _module_key="reporting"/>
+  <cost_analysis _name="Cost Analysis" _module="Reporting" _module_key="reporting"/>
+  <profit_margin _name="Profit Margin" _module="Reporting" _module_key="reporting"/>
+  <customer_satisfaction _name="Customer Satisfaction" _module="Reporting" _module_key="reporting"/>
+  <on_time_delivery _name="On Time Delivery" _module="Reporting" _module_key="reporting"/>
+  <claim_rate _name="Claim Rate" _module="Reporting" _module_key="reporting"/>
+  <fleet_efficiency _name="Fleet Efficiency" _module="Reporting" _module_key="reporting"/>
+  <driver_productivity _name="Driver Productivity" _module="Reporting" _module_key="reporting"/>
+  <billing_accuracy _name="Billing Accuracy" _module="Reporting" _module_key="reporting"/>
+  <invoice_aging _name="Invoice Aging" _module="Reporting" _module_key="reporting"/>
+  <move_volume_trend _name="Move Volume Trend" _module="Reporting" _module_key="reporting"/>
+  <geographic_distribution _name="Geographic Distribution" _module="Reporting" _module_key="reporting"/>
+  <service_line_performance _name="Service Line Performance" _module="Reporting" _module_key="reporting"/>
+  <expense_variance _name="Expense Variance" _module="Reporting" _module_key="reporting"/>
+  <forecast_vs_actual _name="Forecast vs Actual" _module="Reporting" _module_key="reporting"/>
+  <executive_dashboard _name="Executive Dashboard" _module="Reporting" _module_key="reporting"/>
+</root>

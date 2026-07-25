@@ -1,0 +1,29 @@
+<root alias_model_name="fleet_management"
+      cfg_mask_china_mobile="false"
+      chinese_name="车队管理"
+      english_name="Fleet Management"
+      data_service="sqlite"
+      name="fleet-service"
+      org="doublechaintech"
+      _module_key="root">
+  <fleet_vehicle _name="Fleet Vehicle" _module="Fleet" _module_key="fleet"/>
+  <vehicle_spec _name="Vehicle Spec" _module="Fleet" _module_key="fleet"/>
+  <vehicle_maintenance _name="Vehicle Maintenance" _module="Fleet" _module_key="fleet"/>
+  <vehicle_inspection _name="Vehicle Inspection" _module="Fleet" _module_key="fleet"/>
+  <vehicle_assignment _name="Vehicle Assignment" _module="Fleet" _module_key="fleet"/>
+  <vehicle_utilization _name="Vehicle Utilization" _module="Fleet" _module_key="fleet"/>
+  <vehicle_fuel_log _name="Vehicle Fuel Log" _module="Fleet" _module_key="fleet"/>
+  <vehicle_odometer _name="Vehicle Odometer" _module="Fleet" _module_key="fleet"/>
+  <vehicle_insurance _name="Vehicle Insurance" _module="Fleet" _module_key="fleet"/>
+  <vehicle_registration _name="Vehicle Registration" _module="Fleet" _module_key="fleet"/>
+  <vehicle_damage_report _name="Vehicle Damage Report" _module="Fleet" _module_key="fleet"/>
+  <vehicle_cleaning_schedule _name="Vehicle Cleaning Schedule" _module="Fleet" _module_key="fleet"/>
+  <fleet_operator _name="Fleet Operator" _module="Fleet" _module_key="fleet"/>
+  <driver_profile _name="Driver Profile" _module="Fleet" _module_key="fleet"/>
+  <driver_license _name="Driver License" _module="Fleet" _module_key="fleet"/>
+  <driver_certification _name="Driver Certification" _module="Fleet" _module_key="fleet"/>
+  <driver_availability _name="Driver Availability" _module="Fleet" _module_key="fleet"/>
+  <driver_performance _name="Driver Performance" _module="Fleet" _module_key="fleet"/>
+  <driver_training _name="Driver Training" _module="Fleet" _module_key="fleet"/>
+  <fleet_dispatch _name="Fleet Dispatch" _module="Fleet" _module_key="fleet"/>
+</root>

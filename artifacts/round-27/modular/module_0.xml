@@ -1,0 +1,24 @@
+<root alias_model_name="module_0"
+      cfg_mask_china_mobile="false"
+      chinese_name="模块0"
+      english_name="Module 0"
+      data_service="sqlite"
+      name="module-0-service"
+      org="doublechaintech"
+      _module_key="root">
+  <platform _name="Platform" _module="Module 0" _module_key="module-0" name="Default Platform" code="PLAT001"/>
+  <platform_config _name="Platform Config" _module="Module 0" _module_key="module-0" name="Default Config" platform="platform()"/>
+  <tenant_registry _name="Tenant Registry" _module="Module 0" _module_key="module-0" name="Default Registry" platform="platform()"/>
+  <merchant _name="Merchant" _module="Module 0" _module_key="module-0" name="Default Merchant" platform="platform()"/>
+  <branch _name="Branch" _module="Module 0" _module_key="module-0" name="Default Branch" platform="platform()"/>
+  <franchise _name="Franchise" _module="Module 0" _module_key="module-0" name="Default Franchise" platform="platform()"/>
+  <move_order _name="Move Order" _module="Module 0" _module_key="module-0" name="Default Move Order" platform="platform()"/>
+  <move_quote _name="Move Quote" _module="Module 0" _module_key="module-0" name="Default Move Quote" platform="platform()"/>
+  <route _name="Route" _module="Module 0" _module_key="module-0" name="Default Route" platform="platform()"/>
+  <route_stop _name="Route Stop" _module="Module 0" _module_key="module-0" name="Default Route Stop" platform="platform()"/>
+  <time_slot _name="Time Slot" _module="Module 0" _module_key="module-0" name="Default Time Slot" platform="platform()"/>
+  <fulfillment_event _name="Fulfillment Event" _module="Module 0" _module_key="module-0" name="Default Fulfillment Event" platform="platform()"/>
+  <address _name="Address" _module="Module 0" _module_key="module-0" name="Default Address" platform="platform()"/>
+  <crew _name="Crew" _module="Module 0" _module_key="module-0" name="Default Crew" platform="platform()"/>
+  <dispatch_assignment _name="Dispatch Assignment" _module="Module 0" _module_key="module-0" name="Default Dispatch Assignment" platform="platform()"/>
+</root>

@@ -1,0 +1,21 @@
+<root alias_model_name="finance_billing"
+      cfg_mask_china_mobile="false"
+      chinese_name="财务账单"
+      english_name="Finance Billing"
+      data_service="sqlite"
+      name="finance-billing-service"
+      org="doublechaintech"
+      _module_key="root">
+  <invoice _name="Invoice" _module="Finance Billing" _module_key="finance-billing"/>
+  <payment_transaction _name="Payment Transaction" _module="Finance Billing" _module_key="finance-billing"/>
+  <tax_calculation _name="Tax Calculation" _module="Finance Billing" _module_key="finance-billing"/>
+  <credit_memo _name="Credit Memo" _module="Finance Billing" _module_key="finance-billing"/>
+  <deposit_receipt _name="Deposit Receipt" _module="Finance Billing" _module_key="finance-billing"/>
+  <refund_request _name="Refund Request" _module="Finance Billing" _module_key="finance-billing"/>
+  <expense_report _name="Expense Report" _module="Finance Billing" _module_key="finance-billing"/>
+  <budget_allocation _name="Budget Allocation" _module="Finance Billing" _module_key="finance-billing"/>
+  <financial_statement _name="Financial Statement" _module="Finance Billing" _module_key="finance-billing"/>
+  <audit_trail _name="Audit Trail" _module="Finance Billing" _module_key="finance-billing"/>
+  <currency_exchange _name="Currency Exchange" _module="Finance Billing" _module_key="finance-billing"/>
+  <receivable_aging _name="Receivable Aging" _module="Finance Billing" _module_key="finance-billing"/>
+</root>

@@ -1,0 +1,21 @@
+<root alias_model_name="customer_management"
+      cfg_mask_china_mobile="false"
+      chinese_name="客户管理"
+      english_name="Customer Management"
+      data_service="sqlite"
+      name="customer-management-service"
+      org="doublechaintech"
+      _module_key="root">
+  <customer_profile _name="Customer Profile" _module="Customer Management" _module_key="customer-management"/>
+  <address_book _name="Address Book" _module="Customer Management" _module_key="customer-management"/>
+  <contact_person _name="Contact Person" _module="Customer Management" _module_key="customer-management"/>
+  <account_settings _name="Account Settings" _module="Customer Management" _module_key="customer-management"/>
+  <loyalty_program _name="Loyalty Program" _module="Customer Management" _module_key="customer-management"/>
+  <service_history _name="Service History" _module="Customer Management" _module_key="customer-management"/>
+  <feedback_review _name="Feedback Review" _module="Customer Management" _module_key="customer-management"/>
+  <dispute_case _name="Dispute Case" _module="Customer Management" _module_key="customer-management"/>
+  <document_upload _name="Document Upload" _module="Customer Management" _module_key="customer-management"/>
+  <preference_center _name="Preference Center" _module="Customer Management" _module_key="customer-management"/>
+  <notification_pref _name="Notification Preference" _module="Customer Management" _module_key="customer-management"/>
+  <billing_contact _name="Billing Contact" _module="Customer Management" _module_key="customer-management"/>
+</root>

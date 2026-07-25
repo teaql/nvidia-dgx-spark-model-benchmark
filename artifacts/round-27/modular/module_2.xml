@@ -1,0 +1,24 @@
+<root alias_model_name="module_2"
+      cfg_mask_china_mobile="false"
+      chinese_name="模块2"
+      english_name="Module 2"
+      data_service="sqlite"
+      name="module-2-service"
+      org="doublechaintech"
+      _module_key="root">
+  <operations_manager_override _name="Operations Manager Override" _module="Module 2" _module_key="module-2"/>
+  <employee _name="Employee" _module="Module 2" _module_key="module-2"/>
+  <department _name="Department" _module="Module 2" _module_key="module-2"/>
+  <job_assignment _name="Job Assignment" _module="Module 2" _module_key="module-2"/>
+  <work_shift _name="Work Shift" _module="Module 2" _module_key="module-2"/>
+  <worked_hours _name="Worked Hours" _module="Module 2" _module_key="module-2"/>
+  <payroll_period _name="Payroll Period" _module="Module 2" _module_key="module-2"/>
+  <payroll_calculation _name="Payroll Calculation" _module="Module 2" _module_key="module-2"/>
+  <payslip _name="Payslip" _module="Module 2" _module_key="module-2"/>
+  <bonus _name="Bonus" _module="Module 2" _module_key="module-2"/>
+  <leave_request _name="Leave Request" _module="Module 2" _module_key="module-2"/>
+  <employee_certification _name="Employee Certification" _module="Module 2" _module_key="module-2"/>
+  <tax_withholding _name="Tax Withholding" _module="Module 2" _module_key="module-2"/>
+  <direct_deposit_info _name="Direct Deposit Info" _module="Module 2" _module_key="module-2"/>
+  <union_dues _name="Union Dues" _module="Module 2" _module_key="module-2"/>
+</root>

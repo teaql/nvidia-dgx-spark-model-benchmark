@@ -1,0 +1,29 @@
+<root alias_model_name="finance"
+      cfg_mask_china_mobile="false"
+      chinese_name="财务"
+      english_name="Finance"
+      data_service="sqlite"
+      name="finance-service"
+      org="doublechaintech"
+      _module_key="root">
+  <payment _name="Payment" _module="Finance" _module_key="finance"/>
+  <invoice _name="Invoice" _module="Finance" _module_key="finance"/>
+  <claim _name="Claim" _module="Finance" _module_key="finance"/>
+  <feedback _name="Feedback" _module="Finance" _module_key="finance"/>
+  <employee _name="Employee" _module="Finance" _module_key="finance"/>
+  <branch _name="Branch" _module="Finance" _module_key="finance"/>
+  <vehicle_maintenance _name="Vehicle Maintenance" _module="Finance" _module_key="finance"/>
+  <fuel_log _name="Fuel Log" _module="Finance" _module_key="finance"/>
+  <insurance_policy _name="Insurance Policy" _module="Finance" _module_key="finance"/>
+  <license _name="License" _module="Finance" _module_key="finance"/>
+  <permit _name="Permit" _module="Finance" _module_key="finance"/>
+  <customs_document _name="Customs Document" _module="Finance" _module_key="finance"/>
+  <communication_log _name="Communication Log" _module="Finance" _module_key="finance"/>
+  <audit_trail _name="Audit Trail" _module="Finance" _module_key="finance"/>
+  <report _name="Report" _module="Finance" _module_key="finance"/>
+  <dashboard _name="Dashboard" _module="Finance" _module_key="finance"/>
+  <settings _name="Settings" _module="Finance" _module_key="finance"/>
+  <user_role _name="User Role" _module="Finance" _module_key="finance"/>
+  <permission _name="Permission" _module="Finance" _module_key="finance"/>
+  <api_key _name="API Key" _module="Finance" _module_key="finance"/>
+</root>

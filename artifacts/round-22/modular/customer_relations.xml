@@ -1,0 +1,29 @@
+<root alias_model_name="customer_relations"
+      cfg_mask_china_mobile="false"
+      chinese_name="客户关系管理"
+      english_name="Customer Relations"
+      data_service="sqlite"
+      name="customer-relations-service"
+      org="doublechaintech"
+      _module_key="root">
+  <customer _name="Customer" _module="Customer Relations" _module_key="customer-relations"/>
+  <client _name="Client" _module="Customer Relations" _module_key="customer-relations"/>
+  <contact _name="Contact" _module="Customer Relations" _module_key="customer-relations"/>
+  <lead _name="Lead" _module="Customer Relations" _module_key="customer-relations"/>
+  <prospect _name="Prospect" _module="Customer Relations" _module_key="customer-relations"/>
+  <account _name="Account" _module="Customer Relations" _module_key="customer-relations"/>
+  <service_agreement _name="Service Agreement" _module="Customer Relations" _module_key="customer-relations"/>
+  <contract _name="Contract" _module="Customer Relations" _module_key="customer-relations"/>
+  <warranty _name="Warranty" _module="Customer Relations" _module_key="customer-relations"/>
+  <support_ticket _name="Support Ticket" _module="Customer Relations" _module_key="customer-relations"/>
+  <feedback _name="Feedback" _module="Customer Relations" _module_key="customer-relations"/>
+  <survey _name="Survey" _module="Customer Relations" _module_key="customer-relations"/>
+  <loyalty_program _name="Loyalty Program" _module="Customer Relations" _module_key="customer-relations"/>
+  <referral _name="Referral" _module="Customer Relations" _module_key="customer-relations"/>
+  <discount _name="Discount" _module="Customer Relations" _module_key="customer-relations"/>
+  <promotion _name="Promotion" _module="Customer Relations" _module_key="customer-relations"/>
+  <marketing_campaign _name="Marketing Campaign" _module="Customer Relations" _module_key="customer-relations"/>
+  <newsletter _name="Newsletter" _module="Customer Relations" _module_key="customer-relations"/>
+  <communication_preference _name="Communication Preference" _module="Customer Relations" _module_key="customer-relations"/>
+  <profile _name="Profile" _module="Customer Relations" _module_key="customer-relations"/>
+</root>

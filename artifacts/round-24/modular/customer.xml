@@ -1,0 +1,29 @@
+<root alias_model_name="customer"
+      cfg_mask_china_mobile="false"
+      chinese_name="客户"
+      english_name="Customer"
+      data_service="sqlite"
+      name="customer-service"
+      org="doublechaintech"
+      _module_key="root">
+  <customer_profile _name="Customer Profile" _module="Customer" _module_key="customer"/>
+  <customer_contact _name="Customer Contact" _module="Customer" _module_key="customer"/>
+  <customer_address _name="Customer Address" _module="Customer" _module_key="customer"/>
+  <customer_preference _name="Customer Preference" _module="Customer" _module_key="customer"/>
+  <customer_contract _name="Customer Contract" _module="Customer" _module_key="customer"/>
+  <customer_feedback _name="Customer Feedback" _module="Customer" _module_key="customer"/>
+  <customer_segment _name="Customer Segment" _module="Customer" _module_key="customer"/>
+  <customer_loyalty _name="Customer Loyalty" _module="Customer" _module_key="customer"/>
+  <customer_invoice _name="Customer Invoice" _module="Customer" _module_key="customer"/>
+  <customer_payment _name="Customer Payment" _module="Customer" _module_key="customer"/>
+  <customer_claim _name="Customer Claim" _module="Customer" _module_key="customer"/>
+  <customer_notification _name="Customer Notification" _module="Customer" _module_key="customer"/>
+  <customer_account _name="Customer Account" _module="Customer" _module_key="customer"/>
+  <customer_lead _name="Customer Lead" _module="Customer" _module_key="customer"/>
+  <customer_quote _name="Customer Quote" _module="Customer" _module_key="customer"/>
+  <customer_service _name="Customer Service" _module="Customer" _module_key="customer"/>
+  <customer_support_ticket _name="Customer Support Ticket" _module="Customer" _module_key="customer"/>
+  <customer_vehicle _name="Customer Vehicle" _module="Customer" _module_key="customer"/>
+  <customer_move_history _name="Customer Move History" _module="Customer" _module_key="customer"/>
+  <customer_preferred_time _name="Customer Preferred Time" _module="Customer" _module_key="customer"/>
+</root>

@@ -1,0 +1,29 @@
+<root alias_model_name="main_module"
+      cfg_mask_china_mobile="false"
+      chinese_name="主要模块"
+      english_name="Main Module"
+      data_service="sqlite"
+      name="main-service"
+      org="doublechaintech"
+      _module_key="root">
+  <customer _name="Customer" _module="Main" _module_key="main"/>
+  <employee _name="Employee" _module="Main" _module_key="main"/>
+  <truck _name="Truck" _module="Main" _module_key="main"/>
+  <route _name="Route" _module="Main" _module_key="main"/>
+  <invoice _name="Invoice" _module="Main" _module_key="main"/>
+  <payment _name="Payment" _module="Main" _module_key="main"/>
+  <schedule _name="Schedule" _module="Main" _module_key="main"/>
+  <warehouse _name="Warehouse" _module="Main" _module_key="main"/>
+  <inventory _name="Inventory" _module="Main" _module_key="main"/>
+  <quote _name="Quote" _module="Main" _module_key="main"/>
+  <contract _name="Contract" _module="Main" _module_key="main"/>
+  <feedback _name="Feedback" _module="Main" _module_key="main"/>
+  <insurance _name="Insurance" _module="Main" _module_key="main"/>
+  <maintenance _name="Maintenance" _module="Main" _module_key="main"/>
+  <driver _name="Driver" _module="Main" _module_key="main"/>
+  <address _name="Address" _module="Main" _module_key="main"/>
+  <service _name="Service" _module="Main" _module_key="main"/>
+  <equipment _name="Equipment" _module="Main" _module_key="main"/>
+  <tracking _name="Tracking" _module="Main" _module_key="main"/>
+  <report _name="Report" _module="Main" _module_key="main"/>
+</root>

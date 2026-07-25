@@ -1,0 +1,29 @@
+<root alias_model_name="operations_management"
+      cfg_mask_china_mobile="false"
+      chinese_name="运营管理"
+      english_name="Operations Management"
+      data_service="sqlite"
+      name="operations-service"
+      org="doublechaintech"
+      _module_key="root">
+  <move_order _name="Move Order" _module="Operations" _module_key="operations"/>
+  <move_schedule _name="Move Schedule" _module="Operations" _module_key="operations"/>
+  <route_plan _name="Route Plan" _module="Operations" _module_key="operations"/>
+  <load_plan _name="Load Plan" _module="Operations" _module_key="operations"/>
+  <crew_assignment _name="Crew Assignment" _module="Operations" _module_key="operations"/>
+  <equipment_checklist _name="Equipment Checklist" _module="Operations" _module_key="operations"/>
+  <loading_procedure _name="Loading Procedure" _module="Operations" _module_key="operations"/>
+  <unloading_procedure _name="Unloading Procedure" _module="Operations" _module_key="operations"/>
+  <transit_monitoring _name="Transit Monitoring" _module="Operations" _module_key="operations"/>
+  <delivery_confirmation _name="Delivery Confirmation" _module="Operations" _module_key="operations"/>
+  <exception_handling _name="Exception Handling" _module="Operations" _module_key="operations"/>
+  <customs_documentation _name="Customs Documentation" _module="Operations" _module_key="operations"/>
+  <inventory_snapshot _name="Inventory Snapshot" _module="Operations" _module_key="operations"/>
+  <warehouse_allocation _name="Warehouse Allocation" _module="Operations" _module_key="operations"/>
+  <dock_scheduling _name="Dock Scheduling" _module="Operations" _module_key="operations"/>
+  <yard_management _name="Yard Management" _module="Operations" _module_key="operations"/>
+  <safety_incident _name="Safety Incident" _module="Operations" _module_key="operations"/>
+  <compliance_check _name="Compliance Check" _module="Operations" _module_key="operations"/>
+  <performance_metric _name="Performance Metric" _module="Operations" _module_key="operations"/>
+  <operations_dashboard _name="Operations Dashboard" _module="Operations" _module_key="operations"/>
+</root>

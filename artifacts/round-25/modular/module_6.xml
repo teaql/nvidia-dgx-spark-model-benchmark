@@ -1,0 +1,24 @@
+<root alias_model_name="module_6"
+      cfg_mask_china_mobile="false"
+      chinese_name="模块 6"
+      english_name="Module 6"
+      data_service="sqlite"
+      name="module-6-service"
+      org="doublechaintech"
+      _module_key="root">
+  <sales_opportunity _name="Sales Opportunity" _module="Module 6" _module_key="module-6"/>
+  <lead_activity _name="Lead Activity" _module="Module 6" _module_key="module-6"/>
+  <conversion_event _name="Conversion Event" _module="Module 6" _module_key="module-6"/>
+  <conversion_metric _name="Conversion Metric" _module="Module 6" _module_key="module-6"/>
+  <ad_spend _name="Ad Spend" _module="Module 6" _module_key="module-6"/>
+  <social_media_post _name="Social Media Post" _module="Module 6" _module_key="module-6"/>
+  <email_blast _name="Email Blast" _module="Module 6" _module_key="module-6"/>
+  <sms_campaign _name="SMS Campaign" _module="Module 6" _module_key="module-6"/>
+  <sales_script _name="Sales Script" _module="Module 6" _module_key="module-6"/>
+  <objection_handling_guide _name="Objection Handling Guide" _module="Module 6" _module_key="module-6"/>
+  <competitor_analysis _name="Competitor Analysis" _module="Module 6" _module_key="module-6"/>
+  <sales_territory _name="Sales Territory" _module="Module 6" _module_key="module-6"/>
+  <payment _name="Payment" _module="Module 6" _module_key="module-6"/>
+  <invoice _name="Invoice" _module="Module 6" _module_key="module-6"/>
+  <invoice_line _name="Invoice Line" _module="Module 6" _module_key="module-6"/>
+</root>

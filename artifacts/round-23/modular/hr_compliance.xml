@@ -1,0 +1,27 @@
+<root alias_model_name="hr_compliance"
+      cfg_mask_china_mobile="false"
+      chinese_name="人力资源合规管理"
+      english_name="HR Compliance"
+      data_service="sqlite"
+      name="hr-compliance-service"
+      org="doublechaintech"
+      _module_key="root">
+  <employee_record _name="Employee Record" _module="HR Compliance" _module_key="hr-compliance"/>
+  <payroll_info _name="Payroll Info" _module="HR Compliance" _module_key="hr-compliance"/>
+  <benefits_plan _name="Benefits Plan" _module="HR Compliance" _module_key="hr-compliance"/>
+  <time_off_request _name="Time Off Request" _module="HR Compliance" _module_key="hr-compliance"/>
+  <shift_schedule _name="Shift Schedule" _module="HR Compliance" _module_key="hr-compliance"/>
+  <performance_review _name="Performance Review" _module="HR Compliance" _module_key="hr-compliance"/>
+  <competency_matrix _name="Competency Matrix" _module="HR Compliance" _module_key="hr-compliance"/>
+  <training_course _name="Training Course" _module="HR Compliance" _module_key="hr-compliance"/>
+  <certification_record _name="Certification Record" _module="HR Compliance" _module_key="hr-compliance"/>
+  <safety_incident _name="Safety Incident" _module="HR Compliance" _module_key="hr-compliance"/>
+  <hazard_assessment _name="Hazard Assessment" _module="HR Compliance" _module_key="hr-compliance"/>
+  <policy_acknowledgment _name="Policy Acknowledgment" _module="HR Compliance" _module_key="hr-compliance"/>
+  <grievance_log _name="Grievance Log" _module="HR Compliance" _module_key="hr-compliance"/>
+  <disciplinary_action _name="Disciplinary Action" _module="HR Compliance" _module_key="hr-compliance"/>
+  <exit_interview _name="Exit Interview" _module="HR Compliance" _module_key="hr-compliance"/>
+  <onboarding_checklist _name="Onboarding Checklist" _module="HR Compliance" _module_key="hr-compliance"/>
+  <offboarding_checklist _name="Offboarding Checklist" _module="HR Compliance" _module_key="hr-compliance"/>
+  <compliance_audit _name="Compliance Audit" _module="HR Compliance" _module_key="hr-compliance"/>
+</root>

@@ -1,0 +1,24 @@
+<root alias_model_name="module_9"
+      cfg_mask_china_mobile="false"
+      chinese_name="模块9"
+      english_name="Module 9"
+      data_service="sqlite"
+      name="module-9-service"
+      org="doublechaintech"
+      _module_key="root">
+  <scrap_record _name="Scrap Record" _module="Module 9" _module_key="module-9"/>
+  <contract _name="Contract" _module="Module 9" _module_key="module-9"/>
+  <insurance_policy _name="Insurance Policy" _module="Module 9" _module_key="module-9"/>
+  <insurance_claim _name="Insurance Claim" _module="Module 9" _module_key="module-9"/>
+  <document _name="Document" _module="Module 9" _module_key="module-9"/>
+  <document_version _name="Document Version" _module="Module 9" _module_key="module-9"/>
+  <compliance_check _name="Compliance Check" _module="Module 9" _module_key="module-9"/>
+  <data_retention_policy _name="Data Retention Policy" _module="Module 9" _module_key="module-9"/>
+  <recovery_request _name="Recovery Request" _module="Module 9" _module_key="module-9"/>
+  <nda_agreement _name="NDA Agreement" _module="Module 9" _module_key="module-9"/>
+  <terms_of_service _name="Terms of Service" _module="Module 9" _module_key="module-9"/>
+  <privacy_policy _name="Privacy Policy" _module="Module 9" _module_key="module-9"/>
+  <cookie_consent _name="Cookie Consent" _module="Module 9" _module_key="module-9"/>
+  <gdpr_request _name="GDPR Request" _module="Module 9" _module_key="module-9"/>
+  <osha_incident _name="OSHA Incident" _module="Module 9" _module_key="module-9"/>
+</root>

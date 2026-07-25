@@ -1,0 +1,27 @@
+<root alias_model_name="billing_finance"
+      cfg_mask_china_mobile="false"
+      chinese_name="计费财务"
+      english_name="Billing Finance"
+      data_service="sqlite"
+      name="billing-finance-service"
+      org="doublechaintech"
+      _module_key="root">
+  <invoice_template _name="Invoice Template" _module="Billing Finance" _module_key="billing-finance"/>
+  <billing_cycle _name="Billing Cycle" _module="Billing Finance" _module_key="billing-finance"/>
+  <tax_jurisdiction _name="Tax Jurisdiction" _module="Billing Finance" _module_key="billing-finance"/>
+  <tax_rate _name="Tax Rate" _module="Billing Finance" _module_key="billing-finance"/>
+  <discount_policy _name="Discount Policy" _module="Billing Finance" _module_key="billing-finance"/>
+  <payment_gateway _name="Payment Gateway" _module="Billing Finance" _module_key="billing-finance"/>
+  <transaction_log _name="Transaction Log" _module="Billing Finance" _module_key="billing-finance"/>
+  <refund_process _name="Refund Process" _module="Billing Finance" _module_key="billing-finance"/>
+  <credit_note _name="Credit Note" _module="Billing Finance" _module_key="billing-finance"/>
+  <debit_note _name="Debit Note" _module="Billing Finance" _module_key="billing-finance"/>
+  <expense_category _name="Expense Category" _module="Billing Finance" _module_key="billing-finance"/>
+  <cost_center _name="Cost Center" _module="Billing Finance" _module_key="billing-finance"/>
+  <budget_allocation _name="Budget Allocation" _module="Billing Finance" _module_key="billing-finance"/>
+  <financial_report _name="Financial Report" _module="Billing Finance" _module_key="billing-finance"/>
+  <audit_trail _name="Audit Trail" _module="Billing Finance" _module_key="billing-finance"/>
+  <reconciliation_entry _name="Reconciliation Entry" _module="Billing Finance" _module_key="billing-finance"/>
+  <currency_conversion _name="Currency Conversion" _module="Billing Finance" _module_key="billing-finance"/>
+  <fiscal_period _name="Fiscal Period" _module="Billing Finance" _module_key="billing-finance"/>
+</root>

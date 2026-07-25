@@ -1,0 +1,24 @@
+<root alias_model_name="module_8"
+      cfg_mask_china_mobile="false"
+      chinese_name="模块 8"
+      english_name="Module 8"
+      data_service="sqlite"
+      name="module-8-service"
+      org="doublechaintech"
+      _module_key="root">
+  <equipment _name="Equipment" _module="Module 8" _module_key="module-8"/>
+  <consumable _name="Consumable" _module="Module 8" _module_key="module-8"/>
+  <asset_assignment _name="Asset Assignment" _module="Module 8" _module_key="module-8"/>
+  <asset_inspection _name="Asset Inspection" _module="Module 8" _module_key="module-8"/>
+  <maintenance_schedule _name="Maintenance Schedule" _module="Module 8" _module_key="module-8"/>
+  <maintenance_event _name="Maintenance Event" _module="Module 8" _module_key="module-8"/>
+  <fuel_record _name="Fuel Record" _module="Module 8" _module_key="module-8"/>
+  <supplier _name="Supplier" _module="Module 8" _module_key="module-8"/>
+  <gps_tracker _name="GPS Tracker" _module="Module 8" _module_key="module-8"/>
+  <dashcam_footage _name="Dashcam Footage" _module="Module 8" _module_key="module-8"/>
+  <tire_replacement _name="Tire Replacement" _module="Module 8" _module_key="module-8"/>
+  <oil_change_log _name="Oil Change Log" _module="Module 8" _module_key="module-8"/>
+  <registration_renewal _name="Registration Renewal" _module="Module 8" _module_key="module-8"/>
+  <insurance_card _name="Insurance Card" _module="Module 8" _module_key="module-8"/>
+  <depreciation_schedule _name="Depreciation Schedule" _module="Module 8" _module_key="module-8"/>
+</root>

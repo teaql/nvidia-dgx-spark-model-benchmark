@@ -1,0 +1,21 @@
+<root alias_model_name="fleet_operations"
+      cfg_mask_china_mobile="false"
+      chinese_name="车队运营"
+      english_name="Fleet Operations"
+      data_service="sqlite"
+      name="fleet-operations-service"
+      org="doublechaintech"
+      _module_key="root">
+  <vehicle_registry _name="Vehicle Registry" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <driver_profile _name="Driver Profile" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <maintenance_log _name="Maintenance Log" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <fuel_record _name="Fuel Record" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <inspection_checklist _name="Inspection Checklist" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <route_plan _name="Route Plan" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <load_manifest _name="Load Manifest" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <equipment_inventory _name="Equipment Inventory" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <garage_assignment _name="Garage Assignment" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <incident_report _name="Incident Report" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <compliance_certificate _name="Compliance Certificate" _module="Fleet Operations" _module_key="fleet-operations"/>
+  <telematics_data _name="Telematics Data" _module="Fleet Operations" _module_key="fleet-operations"/>
+</root>

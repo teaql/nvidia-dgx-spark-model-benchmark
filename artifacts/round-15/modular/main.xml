@@ -1,0 +1,19 @@
+<root alias_model_name="main"
+      cfg_mask_china_mobile="false"
+      chinese_name="主要"
+      english_name="Main"
+      data_service="sqlite"
+      name="main-service"
+      org="doublechaintech"
+      _module_key="root">
+    <customer _name="Customer" _module="Main" _module_key="main"/>
+    <employee _name="Employee" _module="Main" _module_key="main" customer="customer()"/>
+    <truck _name="Truck" _module="Main" _module_key="main" customer="customer()"/>
+    <inventory_item _name="Inventory Item" _module="Main" _module_key="main" customer="customer()"/>
+    <move_order _name="Move Order" _module="Main" _module_key="main" customer="customer()"/>
+    <route _name="Route" _module="Main" _module_key="main" customer="customer()"/>
+    <payment _name="Payment" _module="Main" _module_key="main" customer="customer()"/>
+    <invoice _name="Invoice" _module="Main" _module_key="main" customer="customer()"/>
+    <feedback _name="Feedback" _module="Main" _module_key="main" customer="customer()"/>
+    <schedule _name="Schedule" _module="Main" _module_key="main" customer="customer()"/>
+</root>

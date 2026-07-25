@@ -1,0 +1,27 @@
+<root alias_model_name="customer_management"
+      cfg_mask_china_mobile="false"
+      chinese_name="客户管理"
+      english_name="Customer Management"
+      data_service="sqlite"
+      name="customer-management-service"
+      org="doublechaintech"
+      _module_key="root">
+  <customer_profile _name="Customer Profile" _module="Customer Management" _module_key="customer-management"/>
+  <customer_contact _name="Customer Contact" _module="Customer Management" _module_key="customer-management"/>
+  <customer_address _name="Customer Address" _module="Customer Management" _module_key="customer-management"/>
+  <customer_preference _name="Customer Preference" _module="Customer Management" _module_key="customer-management"/>
+  <loyalty_program _name="Loyalty Program" _module="Customer Management" _module_key="customer-management"/>
+  <customer_feedback _name="Customer Feedback" _module="Customer Management" _module_key="customer-management"/>
+  <customer_segment _name="Customer Segment" _module="Customer Management" _module_key="customer-management"/>
+  <customer_account _name="Customer Account" _module="Customer Management" _module_key="customer-management"/>
+  <payment_method _name="Payment Method" _module="Customer Management" _module_key="customer-management"/>
+  <invoice_history _name="Invoice History" _module="Customer Management" _module_key="customer-management"/>
+  <dispute_record _name="Dispute Record" _module="Customer Management" _module_key="customer-management"/>
+  <service_agreement _name="Service Agreement" _module="Customer Management" _module_key="customer-management"/>
+  <contract_terms _name="Contract Terms" _module="Customer Management" _module_key="customer-management"/>
+  <renewal_notice _name="Renewal Notice" _module="Customer Management" _module_key="customer-management"/>
+  <cancellation_request _name="Cancellation Request" _module="Customer Management" _module_key="customer-management"/>
+  <referral_code _name="Referral Code" _module="Customer Management" _module_key="customer-management"/>
+  <marketing_campaign _name="Marketing Campaign" _module="Customer Management" _module_key="customer-management"/>
+  <lead_source _name="Lead Source" _module="Customer Management" _module_key="customer-management"/>
+</root>

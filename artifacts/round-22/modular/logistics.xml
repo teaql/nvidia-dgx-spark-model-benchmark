@@ -1,0 +1,29 @@
+<root alias_model_name="logistics"
+      english_name="Logistics"
+      chinese_name="物流"
+      name="logistics-service"
+      cfg_mask_china_mobile="false"
+      data_service="sqlite"
+      org="doublechaintech"
+      _module_key="root">
+  <shipment _name="Shipment" _module="Logistics" _module_key="logistics"/>
+  <route _name="Route" _module="Logistics" _module_key="logistics"/>
+  <vehicle _name="Vehicle" _module="Logistics" _module_key="logistics"/>
+  <driver _name="Driver" _module="Logistics" _module_key="logistics"/>
+  <load _name="Load" _module="Logistics" _module_key="logistics"/>
+  <unload _name="Unload" _module="Logistics" _module_key="logistics"/>
+  <capacity _name="Capacity" _module="Logistics" _module_key="logistics"/>
+  <manifest _name="Manifest" _module="Logistics" _module_key="logistics"/>
+  <tracking _name="Tracking" _module="Logistics" _module_key="logistics"/>
+  <dispatch _name="Dispatch" _module="Logistics" _module_key="logistics"/>
+  <freight _name="Freight" _module="Logistics" _module_key="logistics"/>
+  <carrier _name="Carrier" _module="Logistics" _module_key="logistics"/>
+  <warehouse _name="Warehouse" _module="Logistics" _module_key="logistics"/>
+  <loading_dock _name="Loading Dock" _module="Logistics" _module_key="logistics"/>
+  <unloading_dock _name="Unloading Dock" _module="Logistics" _module_key="logistics"/>
+  <freight_forwarder _name="Freight Forwarder" _module="Logistics" _module_key="logistics"/>
+  <customs _name="Customs" _module="Logistics" _module_key="logistics"/>
+  <documentation _name="Documentation" _module="Logistics" _module_key="logistics"/>
+  <toll _name="Toll" _module="Logistics" _module_key="logistics"/>
+  <fuel _name="Fuel" _module="Logistics" _module_key="logistics"/>
+</root>

@@ -1,0 +1,29 @@
+<root alias_model_name="finance"
+      cfg_mask_china_mobile="false"
+      chinese_name="财务管理"
+      english_name="Finance"
+      data_service="sqlite"
+      name="finance-service"
+      org="doublechaintech"
+      _module_key="root">
+  <invoice _name="Invoice" _module="Finance" _module_key="finance"/>
+  <bill _name="Bill" _module="Finance" _module_key="finance"/>
+  <payment _name="Payment" _module="Finance" _module_key="finance"/>
+  <expense _name="Expense" _module="Finance" _module_key="finance"/>
+  <revenue _name="Revenue" _module="Finance" _module_key="finance"/>
+  <ledger _name="Ledger" _module="Finance" _module_key="finance"/>
+  <audit _name="Audit" _module="Finance" _module_key="finance"/>
+  <tax _name="Tax" _module="Finance" _module_key="finance"/>
+  <budget _name="Budget" _module="Finance" _module_key="finance"/>
+  <forecast _name="Forecast" _module="Finance" _module_key="finance"/>
+  <payroll _name="Payroll" _module="Finance" _module_key="finance"/>
+  <expense_report _name="Expense Report" _module="Finance" _module_key="finance"/>
+  <credit _name="Credit" _module="Finance" _module_key="finance"/>
+  <debit _name="Debit" _module="Finance" _module_key="finance"/>
+  <balance _name="Balance" _module="Finance" _module_key="finance"/>
+  <asset _name="Asset" _module="Finance" _module_key="finance"/>
+  <liability _name="Liability" _module="Finance" _module_key="finance"/>
+  <equity _name="Equity" _module="Finance" _module_key="finance"/>
+  <cash_flow _name="Cash Flow" _module="Finance" _module_key="finance"/>
+  <financial_statement _name="Financial Statement" _module="Finance" _module_key="finance"/>
+</root>

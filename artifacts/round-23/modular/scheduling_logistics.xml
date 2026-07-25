@@ -1,0 +1,27 @@
+<root alias_model_name="scheduling_logistics"
+      cfg_mask_china_mobile="false"
+      chinese_name="调度物流管理"
+      english_name="Scheduling Logistics"
+      data_service="sqlite"
+      name="scheduling-logistics-service"
+      org="doublechaintech"
+      _module_key="root">
+  <job_order _name="Job Order" _module="Scheduling Logistics" _module_key="scheduling-logistics"/>
+  <move_schedule _name="Move Schedule" _module="Scheduling Logistics" _module_key="scheduling-logistics"/>
+  <crew_assignment _name="Crew Assignment" _module="Scheduling Logistics" _module_key="scheduling-logistics"/>
+  <equipment_allocation _name="Equipment Allocation" _module="Scheduling Logistics" _module_key="scheduling-logistics"/>
+  <pickup_location _name="Pickup Location" _module="Scheduling Logistics" _module_key="scheduling-logistics"/>
+  <delivery_location _name="Delivery Location" _module="Scheduling Logistics" _module_key="scheduling-logistics"/>
+  <transit_time_estimate _name="Transit Time Estimate" _module="Scheduling Logistics" _module_key="scheduling-logistics"/>
+  <loading_dock _name="Loading Dock" _module="Scheduling Logistics" _module_key="scheduling-logistics"/>
+  <unloading_dock _name="Unloading Dock" _module="Scheduling Logistics" _module_key="scheduling-logistics"/>
+  <customs_documentation _name="Customs Documentation" _module="Scheduling Logistics" _module_key="scheduling-logistics"/>
+  <permit_required _name="Permit Required" _module="Scheduling Logistics" _module_key="scheduling-logistics"/>
+  <insurance_coverage _name="Insurance Coverage" _module="Scheduling Logistics" _module_key="scheduling-logistics"/>
+  <liability_waiver _name="Liability Waiver" _module="Scheduling Logistics" _module_key="scheduling-logistics"/>
+  <tracking_number _name="Tracking Number" _module="Scheduling Logistics" _module_key="scheduling-logistics"/>
+  <status_update _name="Status Update" _module="Scheduling Logistics" _module_key="scheduling-logistics"/>
+  <notification_template _name="Notification Template" _module="Scheduling Logistics" _module_key="scheduling-logistics"/>
+  <sla_metric _name="SLA Metric" _module="Scheduling Logistics" _module_key="scheduling-logistics"/>
+  <performance_kpi _name="Performance KPI" _module="Scheduling Logistics" _module_key="scheduling-logistics"/>
+</root>

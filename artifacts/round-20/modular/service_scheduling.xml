@@ -1,0 +1,21 @@
+<root alias_model_name="service_scheduling"
+      cfg_mask_china_mobile="false"
+      chinese_name="服务调度"
+      english_name="Service Scheduling"
+      data_service="sqlite"
+      name="service-scheduling-service"
+      org="doublechaintech"
+      _module_key="root">
+  <move_order _name="Move Order" _module="Service Scheduling" _module_key="service-scheduling"/>
+  <job_schedule _name="Job Schedule" _module="Service Scheduling" _module_key="service-scheduling"/>
+  <crew_assignment _name="Crew Assignment" _module="Service Scheduling" _module_key="service-scheduling"/>
+  <equipment_allocation _name="Equipment Allocation" _module="Service Scheduling" _module_key="service-scheduling"/>
+  <time_slot _name="Time Slot" _module="Service Scheduling" _module_key="service-scheduling"/>
+  <service_location _name="Service Location" _module="Service Scheduling" _module_key="service-scheduling"/>
+  <special_instructions _name="Special Instructions" _module="Service Scheduling" _module_key="service-scheduling"/>
+  <status_update _name="Status Update" _module="Service Scheduling" _module_key="service-scheduling"/>
+  <cancellation_policy _name="Cancellation Policy" _module="Service Scheduling" _module_key="service-scheduling"/>
+  <reschedule_request _name="Reschedule Request" _module="Service Scheduling" _module_key="service-scheduling"/>
+  <satisfaction_survey _name="Satisfaction Survey" _module="Service Scheduling" _module_key="service-scheduling"/>
+  <follow_up_task _name="Follow Up Task" _module="Service Scheduling" _module_key="service-scheduling"/>
+</root>

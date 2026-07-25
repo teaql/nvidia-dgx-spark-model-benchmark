@@ -1,0 +1,17 @@
+<root name="module-5-service">
+  <price_list _name="Price List" _module="Module 5" _module_key="module-5" name="Default Price List"/>
+  <service_price _name="Service Price" _module="Module 5" _module_key="module-5" name="Default Service Price"/>
+  <service_bundle _name="Service Bundle" _module="Module 5" _module_key="module-5" name="Default Service Bundle"/>
+  <storage_unit _name="Storage Unit" _module="Module 5" _module_key="module-5" name="Default Storage Unit"/>
+  <packing_material _name="Packing Material" _module="Module 5" _module_key="module-5" name="Default Packing Material"/>
+  <insurance_addon _name="Insurance Addon" _module="Module 5" _module_key="module-5" name="Default Insurance Addon"/>
+  <piano_handling _name="Piano Handling" _module="Module 5" _module_key="module-5" name="Default Piano Handling"/>
+  <stair_fee _name="Stair Fee" _module="Module 5" _module_key="module-5" name="Default Stair Fee"/>
+  <long_carry_fee _name="Long Carry Fee" _module="Module 5" _module_key="module-5" name="Default Long Carry Fee"/>
+  <hoisting_service _name="Hoisting Service" _module="Module 5" _module_key="module-5" name="Default Hoisting Service"/>
+  <vehicle_transport _name="Vehicle Transport" _module="Module 5" _module_key="module-5" name="Default Vehicle Transport"/>
+  <pet_relocation_service _name="Pet Relocation Service" _module="Module 5" _module_key="module-5" name="Default Pet Relocation Service"/>
+  <campaign _name="Campaign" _module="Module 5" _module_key="module-5" name="Default Campaign"/>
+  <discount_code _name="Discount Code" _module="Module 5" _module_key="module-5" name="Default Discount Code"/>
+  <lead _name="Lead" _module="Module 5" _module_key="module-5" name="Default Lead"/>
+</root>

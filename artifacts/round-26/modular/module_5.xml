@@ -1,0 +1,24 @@
+<root alias_model_name="module_5"
+      cfg_mask_china_mobile="false"
+      chinese_name="模块5"
+      english_name="Module 5"
+      data_service="sqlite"
+      name="module-5-service"
+      org="doublechaintech"
+      _module_key="root">
+  <price_list _name="Price List" _module="Module 5" _module_key="module-5"/>
+  <service_price _name="Service Price" _module="Module 5" _module_key="module-5"/>
+  <service_bundle _name="Service Bundle" _module="Module 5" _module_key="module-5"/>
+  <storage_unit _name="Storage Unit" _module="Module 5" _module_key="module-5"/>
+  <packing_material _name="Packing Material" _module="Module 5" _module_key="module-5"/>
+  <insurance_addon _name="Insurance Addon" _module="Module 5" _module_key="module-5"/>
+  <piano_handling _name="Piano Handling" _module="Module 5" _module_key="module-5"/>
+  <stair_fee _name="Stair Fee" _module="Module 5" _module_key="module-5"/>
+  <long_carry_fee _name="Long Carry Fee" _module="Module 5" _module_key="module-5"/>
+  <hoisting_service _name="Hoisting Service" _module="Module 5" _module_key="module-5"/>
+  <vehicle_transport _name="Vehicle Transport" _module="Module 5" _module_key="module-5"/>
+  <pet_relocation_service _name="Pet Relocation Service" _module="Module 5" _module_key="module-5"/>
+  <campaign _name="Campaign" _module="Module 5" _module_key="module-5"/>
+  <discount_code _name="Discount Code" _module="Module 5" _module_key="module-5"/>
+  <lead _name="Lead" _module="Module 5" _module_key="module-5"/>
+</root>

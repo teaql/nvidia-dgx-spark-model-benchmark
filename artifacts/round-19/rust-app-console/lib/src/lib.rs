@@ -1,0 +1,122 @@
+//! Generated TeaQL domain crate for `operations-service-core`.
+//!
+//! **Before writing queries**, read the `AGENTS.md` at the workspace root.
+//! It contains the entity list and the exact `cargo teaql` commands to fetch API prompts.
+//!
+//! AI coding agents must read this crate's `AGENTS.md` before using generated
+//! APIs. If this crate was downloaded from a Cargo registry, locate the
+//! unpacked crate source or vendor the dependency, then read `AGENTS.md` from
+//! the crate root before writing code against it.
+
+pub mod e;
+pub mod q;
+pub mod request_support;
+pub mod runtime;
+pub mod sample_data;
+pub mod trucks;
+pub mod vehicles;
+pub mod drivers;
+pub mod routes;
+pub mod locations;
+pub mod addresses;
+pub mod dispatches;
+pub mod jobs;
+pub mod schedules;
+pub mod shifts;
+pub mod timesheets;
+pub mod tracking;
+pub mod geofence;
+pub mod fuel;
+pub mod maintenance;
+pub mod repairs;
+pub mod inspections;
+pub mod equipment;
+pub mod warehouse;
+pub mod inventory;
+pub mod invoices;
+pub mod payments;
+pub mod expenses;
+pub mod accounts;
+pub mod ledgers;
+pub mod taxes;
+pub mod quotes;
+pub mod estimates;
+pub mod audit;
+pub mod security;
+pub mod budget;
+pub mod payroll;
+pub mod reimbursements;
+pub mod financial_reports;
+pub mod cash_flow;
+pub mod customers;
+pub mod employees;
+pub mod contacts;
+pub mod documents;
+pub mod contracts;
+pub mod signatures;
+pub mod feedback;
+pub mod reviews;
+pub mod ratings;
+pub mod notifications;
+pub mod alerts;
+pub mod calendars;
+pub mod users;
+pub mod roles;
+pub mod permissions;
+
+pub use teaql_core;
+pub use e::*;
+pub use q::*;
+pub use request_support::*;
+pub use runtime::*;
+pub use sample_data::*;
+pub use trucks::*;
+pub use vehicles::*;
+pub use drivers::*;
+pub use routes::*;
+pub use locations::*;
+pub use addresses::*;
+pub use dispatches::*;
+pub use jobs::*;
+pub use schedules::*;
+pub use shifts::*;
+pub use timesheets::*;
+pub use tracking::*;
+pub use geofence::*;
+pub use fuel::*;
+pub use maintenance::*;
+pub use repairs::*;
+pub use inspections::*;
+pub use equipment::*;
+pub use warehouse::*;
+pub use inventory::*;
+pub use invoices::*;
+pub use payments::*;
+pub use expenses::*;
+pub use accounts::*;
+pub use ledgers::*;
+pub use taxes::*;
+pub use quotes::*;
+pub use estimates::*;
+pub use audit::*;
+pub use security::*;
+pub use budget::*;
+pub use payroll::*;
+pub use reimbursements::*;
+pub use financial_reports::*;
+pub use cash_flow::*;
+pub use customers::*;
+pub use employees::*;
+pub use contacts::*;
+pub use documents::*;
+pub use contracts::*;
+pub use signatures::*;
+pub use feedback::*;
+pub use reviews::*;
+pub use ratings::*;
+pub use notifications::*;
+pub use alerts::*;
+pub use calendars::*;
+pub use users::*;
+pub use roles::*;
+pub use permissions::*;

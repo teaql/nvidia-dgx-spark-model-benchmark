@@ -1,0 +1,29 @@
+<root alias_model_name="operations_management"
+      cfg_mask_china_mobile="false"
+      chinese_name="运营管理"
+      english_name="Operations Management"
+      data_service="sqlite"
+      name="operations-management-service"
+      org="doublechaintech"
+      _module_key="root">
+  <maintenance _name="Maintenance" _module="Operations" _module_key="operations"/>
+  <repair _name="Repair" _module="Operations" _module_key="operations"/>
+  <inspection _name="Inspection" _module="Operations" _module_key="operations"/>
+  <safety_check _name="Safety Check" _module="Operations" _module_key="operations"/>
+  <incident_report _name="Incident Report" _module="Operations" _module_key="operations"/>
+  <claim _name="Claim" _module="Operations" _module_key="operations"/>
+  <parts_inventory _name="Parts Inventory" _module="Operations" _module_key="operations"/>
+  <stock_level _name="Stock Level" _module="Operations" _module_key="operations"/>
+  <reorder_point _name="Reorder Point" _module="Operations" _module_key="operations"/>
+  <supplier _name="Supplier" _module="Operations" _module_key="operations"/>
+  <vendor _name="Vendor" _module="Operations" _module_key="operations"/>
+  <purchase_order _name="Purchase Order" _module="Operations" _module_key="operations"/>
+  <receiving _name="Receiving" _module="Operations" _module_key="operations"/>
+  <putaway _name="Putaway" _module="Operations" _module_key="operations"/>
+  <picking _name="Picking" _module="Operations" _module_key="operations"/>
+  <packing _name="Packing" _module="Operations" _module_key="operations"/>
+  <shipping _name="Shipping" _module="Operations" _module_key="operations"/>
+  <returns_process _name="Returns Process" _module="Operations" _module_key="operations"/>
+  <quality_control _name="Quality Control" _module="Operations" _module_key="operations"/>
+  <performance_metric _name="Performance Metric" _module="Operations" _module_key="operations"/>
+</root>

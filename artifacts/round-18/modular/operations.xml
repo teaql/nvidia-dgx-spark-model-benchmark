@@ -1,0 +1,29 @@
+<root alias_model_name="operations_management"
+      cfg_mask_china_mobile="false"
+      chinese_name="运营管理"
+      english_name="Operations Management"
+      data_service="sqlite"
+      name="operations-service"
+      org="doublechaintech"
+      _module_key="root">
+  <customer _name="Customer" _module="Operations" _module_key="operations"/>
+  <address _name="Address" _module="Operations" _module_key="operations"/>
+  <truck _name="Truck" _module="Operations" _module_key="operations"/>
+  <driver _name="Driver" _module="Operations" _module_key="operations"/>
+  <move_order _name="Move Order" _module="Operations" _module_key="operations"/>
+  <inventory_item _name="Inventory Item" _module="Operations" _module_key="operations"/>
+  <packing_material _name="Packing Material" _module="Operations" _module_key="operations"/>
+  <route _name="Route" _module="Operations" _module_key="operations"/>
+  <schedule _name="Schedule" _module="Operations" _module_key="operations"/>
+  <loading_unloading _name="Loading Unloading" _module="Operations" _module_key="operations"/>
+  <equipment _name="Equipment" _module="Operations" _module_key="operations"/>
+  <tool _name="Tool" _module="Operations" _module_key="operations"/>
+  <storage_facility _name="Storage Facility" _module="Operations" _module_key="operations"/>
+  <warehouse _name="Warehouse" _module="Operations" _module_key="operations"/>
+  <container _name="Container" _module="Operations" _module_key="operations"/>
+  <pallet _name="Pallet" _module="Operations" _module_key="operations"/>
+  <label _name="Label" _module="Operations" _module_key="operations"/>
+  <barcode _name="Barcode" _module="Operations" _module_key="operations"/>
+  <tracking_number _name="Tracking Number" _module="Operations" _module_key="operations"/>
+  <notification _name="Notification" _module="Operations" _module_key="operations"/>
+</root>

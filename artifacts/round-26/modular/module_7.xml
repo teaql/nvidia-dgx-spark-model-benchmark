@@ -1,0 +1,24 @@
+<root alias_model_name="financial_management"
+      cfg_mask_china_mobile="false"
+      chinese_name="财务管理"
+      english_name="Financial Management"
+      data_service="sqlite"
+      name="financial-management-service"
+      org="doublechaintech"
+      _module_key="root">
+  <refund _name="Refund" _module="Module 7" _module_key="module-7"/>
+  <expense _name="Expense" _module="Module 7" _module_key="module-7"/>
+  <vat_rate _name="VAT Rate" _module="Module 7" _module_key="module-7"/>
+  <journal_entry _name="Journal Entry" _module="Module 7" _module_key="module-7"/>
+  <account _name="Account" _module="Module 7" _module_key="module-7"/>
+  <financial_summary _name="Financial Summary" _module="Module 7" _module_key="module-7"/>
+  <tax_document _name="Tax Document" _module="Module 7" _module_key="module-7"/>
+  <bank_transaction _name="Bank Transaction" _module="Module 7" _module_key="module-7"/>
+  <merchant_fee _name="Merchant Fee" _module="Module 7" _module_key="module-7"/>
+  <chargeback_record _name="Chargeback Record" _module="Module 7" _module_key="module-7"/>
+  <credit_note _name="Credit Note" _module="Module 7" _module_key="module-7"/>
+  <debit_note _name="Debit Note" _module="Module 7" _module_key="module-7"/>
+  <audit_adjustment _name="Audit Adjustment" _module="Module 7" _module_key="module-7"/>
+  <fiscal_year _name="Fiscal Year" _module="Module 7" _module_key="module-7"/>
+  <vehicle _name="Vehicle" _module="Module 7" _module_key="module-7"/>
+</root>

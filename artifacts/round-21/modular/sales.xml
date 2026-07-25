@@ -1,0 +1,29 @@
+<root alias_model_name="sales_management"
+      cfg_mask_china_mobile="false"
+      chinese_name="销售管理"
+      english_name="Sales Management"
+      data_service="sqlite"
+      name="sales-service"
+      org="doublechaintech"
+      _module_key="root">
+  <customer _name="Customer" _module="Sales" _module_key="sales"/>
+  <lead _name="Lead" _module="Sales" _module_key="sales"/>
+  <quote _name="Quote" _module="Sales" _module_key="sales"/>
+  <contract _name="Contract" _module="Sales" _module_key="sales"/>
+  <invoice _name="Invoice" _module="Sales" _module_key="sales"/>
+  <payment _name="Payment" _module="Sales" _module_key="sales"/>
+  <sales_order _name="Sales Order" _module="Sales" _module_key="sales"/>
+  <sales_rep _name="Sales Rep" _module="Sales" _module_key="sales"/>
+  <territory _name="Territory" _module="Sales" _module_key="sales"/>
+  <pricing _name="Pricing" _module="Sales" _module_key="sales"/>
+  <discount _name="Discount" _module="Sales" _module_key="sales"/>
+  <promotion _name="Promotion" _module="Sales" _module_key="sales"/>
+  <campaign _name="Campaign" _module="Sales" _module_key="sales"/>
+  <feedback _name="Feedback" _module="Sales" _module_key="sales"/>
+  <complaint _name="Complaint" _module="Sales" _module_key="sales"/>
+  <service_request _name="Service Request" _module="Sales" _module_key="sales"/>
+  <warranty _name="Warranty" _module="Sales" _module_key="sales"/>
+  <renewal _name="Renewal" _module="Sales" _module_key="sales"/>
+  <upsell _name="Upsell" _module="Sales" _module_key="sales"/>
+  <cross_sell _name="Cross Sell" _module="Sales" _module_key="sales"/>
+</root>

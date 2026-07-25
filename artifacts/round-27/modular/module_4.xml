@@ -1,0 +1,99 @@
+<root alias_model_name="module_4"
+      cfg_mask_china_mobile="false"
+      chinese_name="模块 4"
+      english_name="Module 4"
+      data_service="sqlite"
+      name="module-4-service"
+      org="doublechaintech"
+      _module_key="root">
+  <customer_consent _name="Customer Consent"
+                    _module="Module 4"
+                    _module_key="module-4"
+                    name="Email Consent"
+                    description="Customer agreed to receive promotional emails"/>
+  <referral_code _name="Referral Code"
+                 _module="Module 4"
+                 _module_key="module-4"
+                 code="REF12345"
+                 description="Unique referral code for customer"/>
+  <loyalty_tier _name="Loyalty Tier"
+                _module="Module 4"
+                _module_key="module-4"
+                id="id()"
+                name="string()"
+                code="string()"
+                _constant="true"
+                _identifier="code">
+    <_value id="1001" name="Bronze" code="BRONZE"/>
+    <_value id="1002" name="Silver" code="SILVER"/>
+    <_value id="1003" name="Gold" code="GOLD"/>
+    <_value id="1004" name="Platinum" code="PLATINUM"/>
+  </loyalty_tier>
+  <complaint_ticket _name="Complaint Ticket"
+                    _module="Module 4"
+                    _module_key="module-4"
+                    ticket_number="CT-001"
+                    description="Customer complaint about service"/>
+  <resolution_offer _name="Resolution Offer"
+                    _module="Module 4"
+                    _module_key="module-4"
+                    offer_type="Discount"
+                    description="Offer to resolve complaint"/>
+  <vip_status _name="VIP Status"
+              _module="Module 4"
+              _module_key="module-4"
+              id="id()"
+              name="string()"
+              code="string()"
+              _constant="true"
+              _identifier="code">
+    <_value id="2001" name="Regular" code="REGULAR"/>
+    <_value id="2002" name="VIP" code="VIP"/>
+    <_value id="2003" name="Super VIP" code="SUPERVIP"/>
+  </vip_status>
+  <do_not_contact_list _name="Do Not Contact List"
+                       _module="Module 4"
+                       _module_key="module-4"
+                       customer_name="John Doe"
+                       reason="Opted out of marketing"/>
+  <customer_note _name="Customer Note"
+                 _module="Module 4"
+                 _module_key="module-4"
+                 note="Prefers email communication"
+                 created_by="Support Agent"/>
+  <communication_log _name="Communication Log"
+                     _module="Module 4"
+                     _module_key="module-4"
+                     channel="Email"
+                     summary="Sent promotional offer"/>
+  <product _name="Product"
+           _module="Module 4"
+           _module_key="module-4"
+           sku="PROD-001"
+           description="Standard moving box"/>
+  <service _name="Service"
+           _module="Module 4"
+           _module_key="module-4"
+           name="Basic Moving"
+           description="Standard moving service"/>
+  <moving_service _name="Moving Service"
+                  _module="Module 4"
+                  _module_key="module-4"
+                  service_type="Full Service"
+                  description="Packing, loading, transport, unpacking"/>
+  <cleaning_service _name="Cleaning Service"
+                    _module="Module 4"
+                    _module_key="module-4"
+                    service_type="Deep Clean"
+                    description="Thorough cleaning of premises"/>
+  <box_rental _name="Box Rental"
+              _module="Module 4"
+              _module_key="module-4"
+              rental_period="30 days"
+              description="Rental of moving boxes"/>
+  <service_configuration _name="Service Configuration"
+                         _module="Module 4"
+                         _module_key="module-4"
+                         config_key="max_weight"
+                         config_value="500kg"/>
+</root>

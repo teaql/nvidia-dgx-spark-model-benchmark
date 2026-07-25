@@ -1,0 +1,29 @@
+<root alias_model_name="logistics"
+      cfg_mask_china_mobile="false"
+      chinese_name="物流管理"
+      english_name="Logistics"
+      data_service="sqlite"
+      name="logistics-service"
+      org="doublechaintech"
+      _module_key="root">
+  <trucks _name="Truck" _module="Logistics" _module_key="logistics"/>
+  <vehicles _name="Vehicle" _module="Logistics" _module_key="logistics"/>
+  <drivers _name="Driver" _module="Logistics" _module_key="logistics"/>
+  <routes _name="Route" _module="Logistics" _module_key="logistics"/>
+  <locations _name="Location" _module="Logistics" _module_key="logistics"/>
+  <addresses _name="Address" _module="Logistics" _module_key="logistics"/>
+  <dispatches _name="Dispatch" _module="Logistics" _module_key="logistics"/>
+  <jobs _name="Job" _module="Logistics" _module_key="logistics"/>
+  <schedules _name="Schedule" _module="Logistics" _module_key="logistics"/>
+  <shifts _name="Shift" _module="Logistics" _module_key="logistics"/>
+  <timesheets _name="Timesheet" _module="Logistics" _module_key="logistics"/>
+  <tracking _name="Tracking" _module="Logistics" _module_key="logistics"/>
+  <geofence _name="Geofence" _module="Logistics" _module_key="logistics"/>
+  <fuel _name="Fuel" _module="Logistics" _module_key="logistics"/>
+  <maintenance _name="Maintenance" _module="Logistics" _module_key="logistics"/>
+  <repairs _name="Repair" _module="Logistics" _module_key="logistics"/>
+  <inspections _name="Inspection" _module="Logistics" _module_key="logistics"/>
+  <equipment _name="Equipment" _module="Logistics" _module_key="logistics"/>
+  <warehouse _name="Warehouse" _module="Logistics" _module_key="logistics"/>
+  <inventory _name="Inventory" _module="Logistics" _module_key="logistics"/>
+</root>

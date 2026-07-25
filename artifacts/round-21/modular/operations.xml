@@ -1,0 +1,29 @@
+<root alias_model_name="operations"
+      cfg_mask_china_mobile="false"
+      chinese_name="运营"
+      english_name="Operations"
+      data_service="sqlite"
+      name="operations-service"
+      org="doublechaintech"
+      _module_key="root">
+  <truck _name="Truck" _module="Operations" _module_key="operations"/>
+  <trailer _name="Trailer" _module="Operations" _module_key="operations"/>
+  <driver _name="Driver" _module="Operations" _module_key="operations"/>
+  <move_order _name="Move Order" _module="Operations" _module_key="operations"/>
+  <route _name="Route" _module="Operations" _module_key="operations"/>
+  <schedule _name="Schedule" _module="Operations" _module_key="operations"/>
+  <load _name="Load" _module="Operations" _module_key="operations"/>
+  <unload _name="Unload" _module="Operations" _module_key="operations"/>
+  <warehouse _name="Warehouse" _module="Operations" _module_key="operations"/>
+  <inventory _name="Inventory" _module="Operations" _module_key="operations"/>
+  <pallet _name="Pallet" _module="Operations" _module_key="operations"/>
+  <shipment _name="Shipment" _module="Operations" _module_key="operations"/>
+  <tracking _name="Tracking" _module="Operations" _module_key="operations"/>
+  <fuel_log _name="Fuel Log" _module="Operations" _module_key="operations"/>
+  <maintenance _name="Maintenance" _module="Operations" _module_key="operations"/>
+  <inspection _name="Inspection" _module="Operations" _module_key="operations"/>
+  <safety_report _name="Safety Report" _module="Operations" _module_key="operations"/>
+  <crew _name="Crew" _module="Operations" _module_key="operations"/>
+  <equipment _name="Equipment" _module="Operations" _module_key="operations"/>
+  <facility _name="Facility" _module="Operations" _module_key="operations"/>
+</root>

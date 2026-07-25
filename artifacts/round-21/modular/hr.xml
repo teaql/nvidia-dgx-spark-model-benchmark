@@ -1,0 +1,19 @@
+<root alias_model_name="human_resources_management"
+      cfg_mask_china_mobile="false"
+      chinese_name="人力资源管理"
+      english_name="Human Resources Management"
+      data_service="sqlite"
+      name="human-resources-service"
+      org="doublechaintech"
+      _module_key="root">
+  <employee _name="Employee" _module="Human Resources" _module_key="hr"/>
+  <contractor _name="Contractor" _module="Human Resources" _module_key="hr"/>
+  <beneficiary _name="Beneficiary" _module="Human Resources" _module_key="hr"/>
+  <dependent _name="Dependent" _module="Human Resources" _module_key="hr"/>
+  <training _name="Training" _module="Human Resources" _module_key="hr"/>
+  <certification _name="Certification" _module="Human Resources" _module_key="hr"/>
+  <performance_review _name="Performance Review" _module="Human Resources" _module_key="hr"/>
+  <promotion _name="Promotion" _module="Human Resources" _module_key="hr"/>
+  <termination _name="Termination" _module="Human Resources" _module_key="hr"/>
+  <onboarding _name="Onboarding" _module="Human Resources" _module_key="hr"/>
+</root>

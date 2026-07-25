@@ -1,0 +1,29 @@
+<root alias_model_name="core_module"
+      cfg_mask_china_mobile="false"
+      chinese_name="核心模块"
+      english_name="Core Module"
+      data_service="sqlite"
+      name="core-service"
+      org="doublechaintech"
+      _module_key="root">
+  <customer _name="Customer" _module="Core" _module_key="core"/>
+  <employee _name="Employee" _module="Core" _module_key="core"/>
+  <truck _name="Truck" _module="Core" _module_key="core"/>
+  <route _name="Route" _module="Core" _module_key="core"/>
+  <invoice _name="Invoice" _module="Core" _module_key="core"/>
+  <payment _name="Payment" _module="Core" _module_key="core"/>
+  <schedule _name="Schedule" _module="Core" _module_key="core"/>
+  <warehouse _name="Warehouse" _module="Core" _module_key="core"/>
+  <inventory _name="Inventory" _module="Core" _module_key="core"/>
+  <cargo _name="Cargo" _module="Core" _module_key="core"/>
+  <loading _name="Loading" _module="Core" _module_key="core"/>
+  <unloading _name="Unloading" _module="Core" _module_key="core"/>
+  <driver _name="Driver" _module="Core" _module_key="core"/>
+  <move_order _name="Move Order" _module="Core" _module_key="core"/>
+  <quote _name="Quote" _module="Core" _module_key="core"/>
+  <estimate _name="Estimate" _module="Core" _module_key="core"/>
+  <contract _name="Contract" _module="Core" _module_key="core"/>
+  <feedback _name="Feedback" _module="Core" _module_key="core"/>
+  <rating _name="Rating" _module="Core" _module_key="core"/>
+  <address _name="Address" _module="Core" _module_key="core"/>
+</root>
