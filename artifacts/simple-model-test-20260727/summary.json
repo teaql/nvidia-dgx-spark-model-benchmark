@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "test_date": "2026-07-27",
+  "timezone": "Asia/Shanghai",
+  "remote_host": "spark-007",
+  "client": {
+    "name": "MiMoCode",
+    "version": "0.1.9",
+    "mode": "headless build agent",
+    "pure": true,
+    "builtin_skills_disabled_by_environment": true
+  },
+  "model_service": {
+    "provider_model": "dgx/nemotron-3-super",
+    "served_model": "nemotron-3-super",
+    "context_tokens": 65536,
+    "maximum_concurrent_sequences": 1
+  },
+  "task": {
+    "requested_artifact": "model.xml",
+    "requested_objects": [
+      "platform",
+      "merchant",
+      "school"
+    ],
+    "scope_constraints": [
+      "Current temporary directory only",
+      "No repository or parent-directory discovery",
+      "No subagents",
+      "One requested artifact",
+      "No validation or retries by the agent"
+    ],
+    "watchdog_seconds": 600
+  },
+  "launcher_probe": {
+    "configured_model": "local-vllm/nemotron-3-super",
+    "outcome": "ProviderModelNotFoundError",
+    "process_exit_code": 0,
+    "artifact_created": false,
+    "finding": "The DGX-local launcher referenced an unregistered provider/model and MiMoCode returned a success process code for an error event."
+  },
+  "modeling_attempt": {
+    "outcome": "Artifact written but invalid KSML",
+    "unexpected_tool_calls": [
+      "skill_search"
+    ],
+    "first_turn_tokens": {
+      "input": 24039,
+      "output": 139,
+      "total": 24178
+    },
+    "file_write_turn_tokens": {
+      "input": 24375,
+      "output": 1362,
+      "total": 25737
+    },
+    "mimocode_exit_code": 137,
+    "watchdog_triggered": true,
+    "artifact_bytes": 762
+  },
+  "teaql_evaluation": {
+    "exit_code": 1,
+    "errors": 15,
+    "warnings": 2,
+    "suggestions": 0,
+    "solids": 9,
+    "error_patterns": {
+      "invalid_document_root": 1,
+      "missing_root_name": 1,
+      "nested_object_definition": 7,
+      "field_as_child_element": 6
+    },
+    "correct_findings": [
+      "Exactly three requested business objects were generated.",
+      "All three objects included display and module metadata.",
+      "merchant.platform resolved to platform.",
+      "school.merchant resolved to merchant.",
+      "platform was identified as the single domain root."
+    ]
+  },
+  "conclusion": "Bounded discovery prevented broad repository exploration and context overflow, but instruction-only KSML syntax constraints were insufficient. The next A/B prompt should include one minimal valid root/entity example while retaining the same scope and retry limits."
+}

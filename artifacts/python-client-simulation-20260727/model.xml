@@ -1,0 +1,8 @@
+<root name="school-service" data_service="sqlite">
+  <platform _name="Platform" _module="Platforms" _module_key="platforms"
+            name="string()" platform_code="string()" created_at="createTime()"/>
+  <merchant _name="Merchant" _module="Merchants" _module_key="merchants"
+            name="string()" merchant_code="string()" contact_email="string()" platform="platform()"/>
+  <school _name="School" _module="Schools" _module_key="schools"
+          name="string()" school_code="string()" address="string()" merchant="merchant()"/>
+</root>

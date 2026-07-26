@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "captured_at_utc": "2026-07-26T17:02:19Z",
+  "collection_method": "Read-only SSH inspection of host identity, Docker metadata, HTTP access logs, file metadata, and MiMoCode SQLite aggregates",
+  "host": {
+    "hostname": "spark-007",
+    "architecture": "aarch64",
+    "gpu": "NVIDIA GB10",
+    "driver_version": "580.159.03",
+    "temperature_c": 46,
+    "utilization_percent": 0,
+    "power_draw_w": 11.87
+  },
+  "active_model_service": {
+    "container": "nemotron-super-server-64k",
+    "image": "vllm/vllm-openai:nightly",
+    "created_at_utc": "2026-07-24T15:07:53.354775041Z",
+    "started_at_utc": "2026-07-24T15:07:53.439177088Z",
+    "published_port": 30704,
+    "served_model": "nemotron-3-super",
+    "max_model_len": 65536,
+    "max_num_seqs": 1,
+    "kv_cache_dtype": "fp8",
+    "gpu_memory_utilization": 0.9,
+    "chunked_prefill": true,
+    "async_scheduling": true,
+    "tool_call_parser": "qwen3_coder",
+    "reasoning_parser": "super_v3",
+    "vllm_version": "0.23.1rc1.dev1181+g6a9f24aa8",
+    "weights_loaded_seconds": 392.74,
+    "weights_memory_gib": 69.62,
+    "application_ready_at_utc": "2026-07-24T15:19:30.240340447Z",
+    "chat_completion_http_counts": {
+      "200": 500,
+      "400": 10241
+    },
+    "first_chat_200_at_utc": "2026-07-24T15:22:39.499072519Z",
+    "last_chat_200_at_utc": "2026-07-25T05:47:46.572235256Z",
+    "first_chat_400_at_utc": "2026-07-25T02:20:22.044982749Z",
+    "last_chat_400_at_utc": "2026-07-25T05:48:03.414031376Z",
+    "server_error_log_count": 0
+  },
+  "historical_model_containers": [
+    {
+      "container": "qwen-agent-server-64k",
+      "max_model_len": 65536,
+      "started_at_utc": "2026-07-24T14:06:46.774840928Z",
+      "finished_at_utc": "2026-07-24T15:07:53.068335928Z",
+      "exit_code": 0,
+      "oom_killed": false,
+      "chat_200_count": 4,
+      "observed_engine_dead_error": "Triggered during explicit SIGTERM shutdown and container switch"
+    },
+    {
+      "container": "nemotron-super-server",
+      "max_model_len": 32768,
+      "started_at_utc": "2026-07-24T06:02:46.501674770Z",
+      "finished_at_utc": "2026-07-24T06:49:33.415734236Z",
+      "exit_code": 137,
+      "oom_killed": false,
+      "chat_200_count": 15,
+      "chat_400_count": 5
+    },
+    {
+      "container": "nemotron-server",
+      "max_model_len": 8192,
+      "finished_at_utc": "2026-07-24T05:18:22.861343237Z",
+      "exit_code": 0,
+      "oom_killed": false,
+      "chat_200_count": 29,
+      "chat_400_count": 6
+    },
+    {
+      "container": "omni-server",
+      "max_model_len": 8192,
+      "finished_at_utc": "2026-07-24T05:58:31.866815826Z",
+      "exit_code": 0,
+      "oom_killed": false,
+      "chat_200_count": 828,
+      "chat_400_count": 3,
+      "chat_500_count": 3
+    }
+  ],
+  "dgx_local_mimocode": {
+    "version": "0.1.9",
+    "launcher": "/home/dgx007/start-mimo-local.sh",
+    "launcher_modified_at_utc": "2026-07-25T02:12:07.893859829Z",
+    "working_directory": "/home/dgx007/workspace/A100",
+    "main_session": {
+      "message_window_utc": {
+        "first": "2026-07-25T03:18:59Z",
+        "last": "2026-07-25T05:47:46Z"
+      },
+      "user_messages": 10,
+      "assistant_messages": 142,
+      "checkpoint_count": 5,
+      "tool_part_count": 137
+    },
+    "checkpoint_writer_sessions": [
+      {
+        "user_messages": 2,
+        "assistant_messages": 24,
+        "tool_part_count": 22,
+        "outcome": "Normal-sized checkpoint session"
+      },
+      {
+        "user_messages": 1,
+        "assistant_messages": 3420,
+        "tool_part_count": 33,
+        "blank_finish_assistant_messages": 3387,
+        "blank_message_window_utc": {
+          "first": "2026-07-25T04:39:47Z",
+          "last": "2026-07-25T04:50:40Z"
+        },
+        "outcome": "Runaway retry/message storm; exact API validation text was not retained in the inspected log window"
+      },
+      {
+        "user_messages": 1,
+        "assistant_messages": 6864,
+        "tool_part_count": 25,
+        "blank_finish_assistant_messages": 6839,
+        "blank_message_window_utc": {
+          "first": "2026-07-25T05:22:41Z",
+          "last": "2026-07-25T05:48:03Z"
+        },
+        "confirmed_processor_context_errors": 847,
+        "confirmed_error_window_utc": {
+          "first": "2026-07-25T05:44:14Z",
+          "last": "2026-07-25T05:48:03Z"
+        },
+        "confirmed_error": "Requested 8192 output tokens with at least 57345 input tokens, requiring at least 65537 tokens against a 65536-token model limit",
+        "outcome": "Runaway checkpoint-writer retry loop"
+      }
+    ],
+    "main_build_agent_llm_error_count": 6,
+    "rotated_log_bytes_observed_approx": 208900000,
+    "database": "/home/dgx007/.local/share/mimocode/mimocode.db"
+  },
+  "remote_source_and_build_findings": {
+    "benchmark_repository_found_on_dgx": false,
+    "teaql_agent_kit_found": true,
+    "teaql_agent_kit_path": "/home/dgx007/workspace/A100/teaql-agent-kit",
+    "non_modeling_smoke_build_found": true,
+    "non_modeling_smoke_path": "/home/dgx007/Test/teaql-non-modeling-smoke-20260724"
+  },
+  "cautions": [
+    "HTTP request counts include health probes, retries, agent subrequests, and potentially unknown callers; they are not equivalent to benchmark round counts.",
+    "No private MiMoCode configuration, complete prompt content, API credential, or shell history was collected.",
+    "Raw MiMoCode logs and database were inspected in place and were not copied into the repository."
+  ]
+}

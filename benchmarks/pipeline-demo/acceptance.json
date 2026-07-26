@@ -1,0 +1,31 @@
+{
+  "root_attributes": {
+    "name": "school-service",
+    "data_service": "sqlite"
+  },
+  "exact_objects": [
+    "platform",
+    "merchant",
+    "school"
+  ],
+  "allow_extra_attributes": false,
+  "objects": {
+    "platform": {
+      "name": "string()",
+      "platform_code": "string()",
+      "created_at": "createTime()"
+    },
+    "merchant": {
+      "name": "string()",
+      "merchant_code": "string()",
+      "contact_email": "string()",
+      "platform": "platform()"
+    },
+    "school": {
+      "name": "string()",
+      "school_code": "string()",
+      "address": "string()",
+      "merchant": "merchant()"
+    }
+  }
+}

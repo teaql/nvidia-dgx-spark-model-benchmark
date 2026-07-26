@@ -1,0 +1,20 @@
+<school-service data_service="sqlite">
+  <platform _name="Platform" _module="platform" _module_key="platform">
+    <string>name</string>
+    <integer>code</integer>
+    <createTime>created_at</createTime>
+    <updateTime>updated_at</updateTime>
+  </platform>
+  <merchant _name="Merchant" _module="merchant" _module_key="merchant" platform="platform()">
+    <string>name</string>
+    <integer>merchant_id</integer>
+    <createTime>created_at</createTime>
+    <updateTime>updated_at</updateTime>
+  </merchant>
+  <school _name="School" _module="school" _module_key="school" merchant="merchant()">
+    <string>name</string>
+    <integer>school_id</integer>
+    <createTime>created_at</createTime>
+    <updateTime>updated_at</updateTime>
+  </school>
+</school-service>

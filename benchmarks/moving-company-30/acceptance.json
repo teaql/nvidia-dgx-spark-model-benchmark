@@ -1,0 +1,295 @@
+{
+  "root_attributes": {
+    "name": "moving-company-platform",
+    "data_service": "sqlite"
+  },
+  "exact_objects": [
+    "address",
+    "move_order",
+    "route_plan",
+    "time_slot",
+    "fulfillment_event",
+    "employee",
+    "job_assignment",
+    "work_log",
+    "payroll_record",
+    "leave_request",
+    "customer",
+    "private_customer_profile",
+    "corporate_customer_profile",
+    "customer_contact",
+    "service_product",
+    "moving_service",
+    "cleaning_service",
+    "box_rental",
+    "marketing_campaign",
+    "discount_code",
+    "sales_lead",
+    "invoice",
+    "payment",
+    "expense",
+    "vehicle",
+    "equipment",
+    "maintenance_schedule",
+    "role_definition",
+    "user_account",
+    "audit_log"
+  ],
+  "common_attributes": {
+    "record_version": "string()",
+    "deleted_at": "string()",
+    "updated_at": "updateTime()"
+  },
+  "allow_extra_attributes": false,
+  "module_groups": {
+    "operations-logistics": {
+      "name": "Operations and Logistics",
+      "objects": [
+        "address",
+        "move_order",
+        "route_plan",
+        "time_slot",
+        "fulfillment_event"
+      ]
+    },
+    "employees-payroll": {
+      "name": "Employees and Payroll",
+      "objects": [
+        "employee",
+        "job_assignment",
+        "work_log",
+        "payroll_record",
+        "leave_request"
+      ]
+    },
+    "customer-management": {
+      "name": "Customer Management",
+      "objects": [
+        "customer",
+        "private_customer_profile",
+        "corporate_customer_profile",
+        "customer_contact"
+      ]
+    },
+    "products-services": {
+      "name": "Products and Services",
+      "objects": [
+        "service_product",
+        "moving_service",
+        "cleaning_service",
+        "box_rental"
+      ]
+    },
+    "marketing-sales": {
+      "name": "Marketing and Sales",
+      "objects": [
+        "marketing_campaign",
+        "discount_code",
+        "sales_lead"
+      ]
+    },
+    "finance-accounting": {
+      "name": "Finance and Accounting",
+      "objects": [
+        "invoice",
+        "payment",
+        "expense"
+      ]
+    },
+    "asset-management": {
+      "name": "Asset Management",
+      "objects": [
+        "vehicle",
+        "equipment",
+        "maintenance_schedule"
+      ]
+    },
+    "platform-access-audit": {
+      "name": "Platform, Access, and Audit",
+      "objects": [
+        "role_definition",
+        "user_account",
+        "audit_log"
+      ]
+    }
+  },
+  "objects": {
+    "address": {
+      "label": "string()",
+      "line1": "string()",
+      "city": "string()",
+      "postal_code": "string()"
+    },
+    "customer": {
+      "customer_code": "string()",
+      "display_name": "string()",
+      "billing_address": "address()"
+    },
+    "private_customer_profile": {
+      "customer": "customer()",
+      "legal_name": "string()",
+      "personal_identifier": "string()",
+      "_audit_mask_fields": "personal_identifier"
+    },
+    "corporate_customer_profile": {
+      "customer": "customer()",
+      "company_name": "string()",
+      "vat_number": "string()",
+      "_audit_mask_fields": "vat_number"
+    },
+    "customer_contact": {
+      "customer": "customer()",
+      "full_name": "string()",
+      "email": "string()",
+      "phone": "string()",
+      "_audit_mask_fields": "email,phone"
+    },
+    "employee": {
+      "employee_code": "string()",
+      "full_name": "string()",
+      "payroll_number": "string()"
+    },
+    "leave_request": {
+      "employee": "employee()",
+      "leave_category": "string()",
+      "start_date": "string()",
+      "end_date": "string()",
+      "approval_status": "string()"
+    },
+    "move_order": {
+      "order_number": "string()",
+      "customer": "customer()",
+      "pickup_address": "address()",
+      "delivery_address": "address()",
+      "contract_document_url": "string()"
+    },
+    "route_plan": {
+      "move_order": "move_order()",
+      "route_code": "string()",
+      "planned_distance": "string()"
+    },
+    "time_slot": {
+      "move_order": "move_order()",
+      "slot_start": "string()",
+      "slot_end": "string()"
+    },
+    "fulfillment_event": {
+      "move_order": "move_order()",
+      "event_code": "string()",
+      "event_status": "string()",
+      "automation_hook": "string()"
+    },
+    "job_assignment": {
+      "employee": "employee()",
+      "move_order": "move_order()",
+      "assignment_role": "string()"
+    },
+    "work_log": {
+      "job_assignment": "job_assignment()",
+      "worked_date": "string()",
+      "worked_hours": "string()"
+    },
+    "payroll_record": {
+      "employee": "employee()",
+      "pay_period": "string()",
+      "gross_amount": "string()",
+      "bonus_amount": "string()"
+    },
+    "service_product": {
+      "service_code": "string()",
+      "service_name": "string()",
+      "service_category": "string()",
+      "base_price": "string()",
+      "configuration_schema": "string()"
+    },
+    "moving_service": {
+      "service_product": "service_product()",
+      "crew_size": "string()",
+      "duration_band": "string()"
+    },
+    "cleaning_service": {
+      "service_product": "service_product()",
+      "cleaning_scope": "string()",
+      "duration_band": "string()"
+    },
+    "box_rental": {
+      "service_product": "service_product()",
+      "box_size": "string()",
+      "rental_period": "string()"
+    },
+    "marketing_campaign": {
+      "campaign_code": "string()",
+      "campaign_name": "string()",
+      "channel": "string()"
+    },
+    "discount_code": {
+      "marketing_campaign": "marketing_campaign()",
+      "service_product": "service_product()",
+      "code": "string()",
+      "discount_value": "string()"
+    },
+    "sales_lead": {
+      "customer": "customer()",
+      "marketing_campaign": "marketing_campaign()",
+      "lead_stage": "string()",
+      "conversion_metric": "string()"
+    },
+    "invoice": {
+      "move_order": "move_order()",
+      "customer": "customer()",
+      "invoice_number": "string()",
+      "subtotal": "string()",
+      "vat_amount": "string()",
+      "total_amount": "string()"
+    },
+    "payment": {
+      "invoice": "invoice()",
+      "payment_reference": "string()",
+      "payment_method": "string()",
+      "paid_amount": "string()"
+    },
+    "expense": {
+      "move_order": "move_order()",
+      "employee": "employee()",
+      "expense_category": "string()",
+      "expense_amount": "string()"
+    },
+    "vehicle": {
+      "vehicle_code": "string()",
+      "registration_number": "string()",
+      "insurance_document_url": "string()"
+    },
+    "equipment": {
+      "equipment_code": "string()",
+      "equipment_name": "string()",
+      "vehicle": "vehicle()"
+    },
+    "maintenance_schedule": {
+      "vehicle": "vehicle()",
+      "equipment": "equipment()",
+      "scheduled_date": "string()",
+      "maintenance_status": "string()"
+    },
+    "role_definition": {
+      "role_code": "string()",
+      "role_name": "string()",
+      "permission_set": "string()"
+    },
+    "user_account": {
+      "username": "string()",
+      "email": "string()",
+      "role_definition": "role_definition()",
+      "customer": "customer()",
+      "employee": "employee()",
+      "magic_link_token": "string()",
+      "_audit_mask_fields": "email,magic_link_token"
+    },
+    "audit_log": {
+      "user_account": "user_account()",
+      "action_name": "string()",
+      "object_name": "string()",
+      "object_identifier": "string()",
+      "changed_at": "createTime()"
+    }
+  }
+}

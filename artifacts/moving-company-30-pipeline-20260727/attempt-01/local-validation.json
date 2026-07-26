@@ -1,0 +1,14 @@
+{
+  "valid": false,
+  "errors": [
+    "Expected objects ['address', 'move_order', 'route_plan', 'time_slot', 'fulfillment_event', 'employee', 'job_assignment', 'work_log', 'payroll_record', 'leave_request', 'customer', 'private_customer_profile', 'corporate_customer_profile', 'customer_contact', 'service_product', 'moving_service', 'cleaning_service', 'box_rental', 'marketing_campaign', 'discount_code', 'sales_lead', 'invoice', 'payment', 'expense', 'vehicle', 'equipment', 'maintenance_schedule', 'role_definition', 'user_account', 'audit_log'], got ['address', 'customer', 'private_customer_profile', 'corporate_customer_profile', 'customer_contact', 'employee', 'leave_request', 'move_order', 'route_plan', 'time_slot', 'fulfillment_event', 'job_assignment', 'work_log', 'payroll_record', 'service_product', 'moving_service', 'cleaning_service', 'box_rental', 'marketing_campaign', 'discount_code', 'sales_lead', 'invoice', 'payment', 'expense', 'vehicle', 'equipment', 'maintenance_schedule', 'role_definition', 'user_account', 'audit_log'].",
+    "Object 'address' expected module key 'operations-logistics', got 'customer-management'.",
+    "Object 'address' expected module name 'Operations and Logistics', got 'Customer Management'.",
+    "Object 'job_assignment' expected module key 'employees-payroll', got 'operations-logistics'.",
+    "Object 'job_assignment' expected module name 'Employees and Payroll', got 'Operations and Logistics'.",
+    "Object 'work_log' expected module key 'employees-payroll', got 'operations-logistics'.",
+    "Object 'work_log' expected module name 'Employees and Payroll', got 'Operations and Logistics'."
+  ],
+  "warnings": [],
+  "object_count": 30
+}

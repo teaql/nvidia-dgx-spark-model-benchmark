@@ -1,0 +1,34 @@
+{
+  "attempt": 1,
+  "kind": "seed_validation",
+  "duration_seconds": 0.0,
+  "estimated_prompt_tokens": 0,
+  "usage": {},
+  "finish_reason": null,
+  "reasoning_characters": 0,
+  "local_validation": {
+    "valid": false,
+    "errors": [
+      "Root tag must be 'root', got 'school-service'.",
+      "Root is missing the 'name' attribute.",
+      "Object 'platform' contains nested elements.",
+      "Object 'merchant' contains nested elements.",
+      "Object 'school' contains nested elements.",
+      "Root attribute 'name' expected 'school-service', got None.",
+      "platform.name expected 'string()', got None.",
+      "platform.platform_code expected 'string()', got None.",
+      "platform.created_at expected 'createTime()', got None.",
+      "merchant.name expected 'string()', got None.",
+      "merchant.merchant_code expected 'string()', got None.",
+      "merchant.contact_email expected 'string()', got None.",
+      "school.name expected 'string()', got None.",
+      "school.school_code expected 'string()', got None.",
+      "school.address expected 'string()', got None."
+    ],
+    "warnings": [],
+    "object_count": 3
+  },
+  "teaql": null,
+  "passed": false,
+  "pipeline_error": null
+}

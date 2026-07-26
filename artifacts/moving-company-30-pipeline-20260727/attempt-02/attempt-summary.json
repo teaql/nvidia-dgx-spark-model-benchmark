@@ -1,0 +1,23 @@
+{
+  "attempt": 2,
+  "kind": "repair",
+  "duration_seconds": 127.399,
+  "estimated_prompt_tokens": 6216,
+  "usage": {
+    "prompt_tokens": 3981,
+    "total_tokens": 6008,
+    "completion_tokens": 2027,
+    "prompt_tokens_details": null
+  },
+  "finish_reason": "stop",
+  "reasoning_characters": 0,
+  "local_validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "object_count": 30
+  },
+  "teaql": null,
+  "passed": true,
+  "pipeline_error": null
+}

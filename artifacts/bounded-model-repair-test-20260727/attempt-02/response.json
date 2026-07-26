@@ -1,0 +1,39 @@
+{
+  "id": "chatcmpl-a57dbba8212071d4",
+  "object": "chat.completion",
+  "created": 1785091109,
+  "model": "nemotron-3-super",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<root name=\"school-service\" data_service=\"sqlite\">\n  <platform _name=\"Platform\" _module=\"Platforms\" _module_key=\"platforms\"\n            name=\"string()\" platform_code=\"string()\" created_at=\"createTime()\"/>\n  <merchant _name=\"Merchant\" _module=\"Merchants\" _module_key=\"merchants\"\n            name=\"string()\" merchant_code=\"string()\" contact_email=\"string()\" platform=\"platform()\"/>\n  <school _name=\"School\" _module=\"Schools\" _module_key=\"schools\"\n          name=\"string()\" school_code=\"string()\" address=\"string()\" merchant=\"merchant()\"/>\n</root>",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.23.1rc1.dev1181+g6a9f24aa8-4c4b71d5",
+  "usage": {
+    "prompt_tokens": 898,
+    "total_tokens": 1036,
+    "completion_tokens": 138,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

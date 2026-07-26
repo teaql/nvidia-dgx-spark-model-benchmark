@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "test_date": "2026-07-27",
+  "timezone": "Asia/Shanghai",
+  "remote_host": "spark-007",
+  "client": "MiMoCode 0.1.9",
+  "model": "dgx/nemotron-3-super",
+  "context_tokens": 65536,
+  "test_subject": "Three-object bounded KSML modeling",
+  "attempts": [
+    {
+      "name": "A: instruction-only syntax constraints",
+      "artifact": "raw-model.xml",
+      "first_turn_input_tokens": 24039,
+      "file_write_turn_input_tokens": 24375,
+      "teaql": {
+        "errors": 15,
+        "warnings": 2,
+        "solids": 9,
+        "exit_code": 1
+      },
+      "finding": "Scope and references were correct, but the model used an invalid service root tag and child elements for fields."
+    },
+    {
+      "name": "B: add one unrelated minimal valid grammar example",
+      "artifact": "syntax-example-model.xml",
+      "first_turn_input_tokens": 24093,
+      "file_write_turn_input_tokens": 24992,
+      "teaql": {
+        "errors": 1,
+        "warnings": 8,
+        "solids": 10,
+        "exit_code": 1
+      },
+      "finding": "Root and attribute grammar became correct. The only error was unverified integer(), interpreted as a reference to a missing object."
+    },
+    {
+      "name": "C: grammar example plus verified value-form whitelist",
+      "artifact": "scalar-whitelist-model.xml",
+      "first_turn_input_tokens": 24067,
+      "file_write_turn_input_tokens": 25300,
+      "teaql": {
+        "errors": 0,
+        "warnings": 4,
+        "solids": 10,
+        "exit_code": 0
+      },
+      "finding": "Structural validation passed. Business-field quality remained weak because the model used attr1 and attr2 and did not fully satisfy the requested scalar-field count."
+    }
+  ],
+  "consistent_agent_findings": {
+    "broad_repository_discovery_observed": false,
+    "context_length_error_observed": false,
+    "unexpected_skill_search_per_attempt": 1,
+    "natural_exit_after_file_write": false,
+    "controlled_termination_required": true,
+    "controlled_process_exit_code": 137
+  },
+  "conclusion": "For this local 64K Nemotron agent, a minimal valid grammar example and a verified value-form whitelist were both necessary to reach zero structural errors. Scope instructions alone were insufficient. Structural success does not guarantee meaningful field naming or complete task compliance."
+}

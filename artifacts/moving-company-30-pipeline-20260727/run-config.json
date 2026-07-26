@@ -1,0 +1,18 @@
+{
+  "model": "nemotron-3-super",
+  "endpoint_path": "/v1/chat/completions",
+  "task_file": "benchmarks/moving-company-30/task.md",
+  "grammar_example": "benchmarks/moving-company-30/grammar-example.xml",
+  "value_whitelist": "benchmarks/moving-company-30/value-whitelist.txt",
+  "seed_model": "artifacts/moving-company-30-pipeline-20260727/final-model.xml",
+  "acceptance_spec": "benchmarks/moving-company-30/acceptance.json",
+  "max_repairs": 1,
+  "max_tokens": 4096,
+  "max_prompt_tokens": 48000,
+  "context_tokens": 65536,
+  "safety_tokens": 8192,
+  "stateless_attempts": true,
+  "tool_count": 0,
+  "thinking_enabled": false,
+  "teaql_enabled": false
+}

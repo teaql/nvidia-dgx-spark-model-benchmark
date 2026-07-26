@@ -1,0 +1,21 @@
+Allowed scalar value forms:
+- string()
+- createTime()
+- updateTime()
+
+Allowed relationship value forms:
+- address()
+- customer()
+- employee()
+- move_order()
+- job_assignment()
+- service_product()
+- marketing_campaign()
+- invoice()
+- vehicle()
+- equipment()
+- role_definition()
+- user_account()
+
+The literal value of `_audit_mask_fields` may be the exact field-name list
+specified in the task.

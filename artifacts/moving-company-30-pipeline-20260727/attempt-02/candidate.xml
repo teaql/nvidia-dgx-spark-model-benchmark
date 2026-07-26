@@ -1,0 +1,92 @@
+<root name="moving-company-platform" data_service="sqlite">
+  <address _name="Address" _module="Operations and Logistics" _module_key="operations-logistics"
+           record_version="string()" deleted_at="string()" updated_at="updateTime()"
+           label="string()" line1="string()" city="string()" postal_code="string()"/>
+  <move_order _name="Move Order" _module="Operations and Logistics" _module_key="operations-logistics"
+              record_version="string()" deleted_at="string()" updated_at="updateTime()"
+              order_number="string()" customer="customer()" pickup_address="address()" delivery_address="address()" contract_document_url="string()"/>
+  <route_plan _name="Route Plan" _module="Operations and Logistics" _module_key="operations-logistics"
+              record_version="string()" deleted_at="string()" updated_at="updateTime()"
+              move_order="move_order()" route_code="string()" planned_distance="string()"/>
+  <time_slot _name="Time Slot" _module="Operations and Logistics" _module_key="operations-logistics"
+             record_version="string()" deleted_at="string()" updated_at="updateTime()"
+             move_order="move_order()" slot_start="string()" slot_end="string()"/>
+  <fulfillment_event _name="Fulfillment Event" _module="Operations and Logistics" _module_key="operations-logistics"
+                     record_version="string()" deleted_at="string()" updated_at="updateTime()"
+                     move_order="move_order()" event_code="string()" event_status="string()" automation_hook="string()"/>
+  <employee _name="Employee" _module="Employees and Payroll" _module_key="employees-payroll"
+            record_version="string()" deleted_at="string()" updated_at="updateTime()"
+            employee_code="string()" full_name="string()" payroll_number="string()"/>
+  <job_assignment _name="Job Assignment" _module="Employees and Payroll" _module_key="employees-payroll"
+                  record_version="string()" deleted_at="string()" updated_at="updateTime()"
+                  employee="employee()" move_order="move_order()" assignment_role="string()"/>
+  <work_log _name="Work Log" _module="Employees and Payroll" _module_key="employees-payroll"
+            record_version="string()" deleted_at="string()" updated_at="updateTime()"
+            job_assignment="job_assignment()" worked_date="string()" worked_hours="string()"/>
+  <payroll_record _name="Payroll Record" _module="Employees and Payroll" _module_key="employees-payroll"
+                  record_version="string()" deleted_at="string()" updated_at="updateTime()"
+                  employee="employee()" pay_period="string()" gross_amount="string()" bonus_amount="string()"/>
+  <leave_request _name="Leave Request" _module="Employees and Payroll" _module_key="employees-payroll"
+                 record_version="string()" deleted_at="string()" updated_at="updateTime()"
+                 employee="employee()" leave_category="string()" start_date="string()" end_date="string()" approval_status="string()"/>
+  <customer _name="Customer" _module="Customer Management" _module_key="customer-management"
+            record_version="string()" deleted_at="string()" updated_at="updateTime()"
+            customer_code="string()" display_name="string()" billing_address="address()"/>
+  <private_customer_profile _name="Private Customer Profile" _module="Customer Management" _module_key="customer-management"
+                            record_version="string()" deleted_at="string()" updated_at="updateTime()"
+                            customer="customer()" legal_name="string()" personal_identifier="string()" _audit_mask_fields="personal_identifier"/>
+  <corporate_customer_profile _name="Corporate Customer Profile" _module="Customer Management" _module_key="customer-management"
+                              record_version="string()" deleted_at="string()" updated_at="updateTime()"
+                              customer="customer()" company_name="string()" vat_number="string()" _audit_mask_fields="vat_number"/>
+  <customer_contact _name="Customer Contact" _module="Customer Management" _module_key="customer-management"
+                    record_version="string()" deleted_at="string()" updated_at="updateTime()"
+                    customer="customer()" full_name="string()" email="string()" phone="string()" _audit_mask_fields="email,phone"/>
+  <service_product _name="Service Product" _module="Products and Services" _module_key="products-services"
+                   record_version="string()" deleted_at="string()" updated_at="updateTime()"
+                   service_code="string()" service_name="string()" service_category="string()" base_price="string()" configuration_schema="string()"/>
+  <moving_service _name="Moving Service" _module="Products and Services" _module_key="products-services"
+                  record_version="string()" deleted_at="string()" updated_at="updateTime()"
+                  service_product="service_product()" crew_size="string()" duration_band="string()"/>
+  <cleaning_service _name="Cleaning Service" _module="Products and Services" _module_key="products-services"
+                    record_version="string()" deleted_at="string()" updated_at="updateTime()"
+                    service_product="service_product()" cleaning_scope="string()" duration_band="string()"/>
+  <box_rental _name="Box Rental" _module="Products and Services" _module_key="products-services"
+              record_version="string()" deleted_at="string()" updated_at="updateTime()"
+              service_product="service_product()" box_size="string()" rental_period="string()"/>
+  <marketing_campaign _name="Marketing Campaign" _module="Marketing and Sales" _module_key="marketing-sales"
+                      record_version="string()" deleted_at="string()" updated_at="updateTime()"
+                      campaign_code="string()" campaign_name="string()" channel="string()"/>
+  <discount_code _name="Discount Code" _module="Marketing and Sales" _module_key="marketing-sales"
+                 record_version="string()" deleted_at="string()" updated_at="updateTime()"
+                 marketing_campaign="marketing_campaign()" service_product="service_product()" code="string()" discount_value="string()"/>
+  <sales_lead _name="Sales Lead" _module="Marketing and Sales" _module_key="marketing-sales"
+              record_version="string()" deleted_at="string()" updated_at="updateTime()"
+              customer="customer()" marketing_campaign="marketing_campaign()" lead_stage="string()" conversion_metric="string()"/>
+  <invoice _name="Invoice" _module="Finance and Accounting" _module_key="finance-accounting"
+           record_version="string()" deleted_at="string()" updated_at="updateTime()"
+           move_order="move_order()" customer="customer()" invoice_number="string()" subtotal="string()" vat_amount="string()" total_amount="string()"/>
+  <payment _name="Payment" _module="Finance and Accounting" _module_key="finance-accounting"
+           record_version="string()" deleted_at="string()" updated_at="updateTime()"
+           invoice="invoice()" payment_reference="string()" payment_method="string()" paid_amount="string()"/>
+  <expense _name="Expense" _module="Finance and Accounting" _module_key="finance-accounting"
+           record_version="string()" deleted_at="string()" updated_at="updateTime()"
+           move_order="move_order()" employee="employee()" expense_category="string()" expense_amount="string()"/>
+  <vehicle _name="Vehicle" _module="Asset Management" _module_key="asset-management"
+           record_version="string()" deleted_at="string()" updated_at="updateTime()"
+           vehicle_code="string()" registration_number="string()" insurance_document_url="string()"/>
+  <equipment _name="Equipment" _module="Asset Management" _module_key="asset-management"
+             record_version="string()" deleted_at="string()" updated_at="updateTime()"
+             equipment_code="string()" equipment_name="string()" vehicle="vehicle()"/>
+  <maintenance_schedule _name="Maintenance Schedule" _module="Asset Management" _module_key="asset-management"
+                        record_version="string()" deleted_at="string()" updated_at="updateTime()"
+                        vehicle="vehicle()" equipment="equipment()" scheduled_date="string()" maintenance_status="string()"/>
+  <role_definition _name="Role Definition" _module="Platform, Access, and Audit" _module_key="platform-access-audit"
+                   record_version="string()" deleted_at="string()" updated_at="updateTime()"
+                   role_code="string()" role_name="string()" permission_set="string()"/>
+  <user_account _name="User Account" _module="Platform, Access, and Audit" _module_key="platform-access-audit"
+                record_version="string()" deleted_at="string()" updated_at="updateTime()"
+                username="string()" email="string()" role_definition="role_definition()" customer="customer()" employee="employee()" magic_link_token="string()" _audit_mask_fields="email,magic_link_token"/>
+  <audit_log _name="Audit Log" _module="Platform, Access, and Audit" _module_key="platform-access-audit"
+             record_version="string()" deleted_at="string()" updated_at="updateTime()"
+             user_account="user_account()" action_name="string()" object_name="string()" object_identifier="string()" changed_at="createTime()"/>
+</root>

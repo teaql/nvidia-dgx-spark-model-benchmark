@@ -9,8 +9,22 @@ moving-company backend. It is designed as evidence for private-network AI
 coding: model inference stays on DGX Spark while source code and build tools
 remain inside the customer's engineering environment.
 
+## Agent design
+
+- [DGX Spark Ratatui coding-agent design](docs/DGX-SPARK-RATATUI-CODING-AGENT-DESIGN.md)
+
 ## Benchmark artifacts
 
+- [DGX Spark execution ledger and MiMoCode failure analysis](reports/DGX-SPARK-EXECUTION-LEDGER.md)
+- [DGX remote verification snapshot](artifacts/dgx-remote-verification-20260726.json)
+- [Bounded MiMoCode simple-model test](artifacts/simple-model-test-20260727/summary.json)
+- [Bounded modeling A/B refinement](artifacts/simple-model-test-20260727/ab-summary.json)
+- [Bounded direct Python client simulation](artifacts/python-client-simulation-20260727/summary.json)
+- [Bounded generate-validate-repair pipeline](reports/bounded-model-pipeline.md)
+- [Fresh pipeline run](artifacts/bounded-model-pipeline-20260727/summary.json)
+- [Failed-candidate repair run](artifacts/bounded-model-repair-test-20260727/summary.json)
+- [Moving-company 30-object pipeline run](reports/moving-company-30-pipeline.md)
+- [Moving-company 30-object final model](artifacts/moving-company-30-pipeline-20260727/final-model.xml)
 - [Round 1: DGX Spark and TeaQL feasibility report](reports/round-1-dgx-spark-teaql.md)
 - [Round 1 machine-readable system snapshot](artifacts/round-1/system-snapshot.json)
 - [Round 2: Nemotron 3 Super 120B modeling report](reports/round-2-nemotron-super-modeling.md)

@@ -1,0 +1,18 @@
+{
+  "model": "nemotron-3-super",
+  "endpoint_path": "/v1/chat/completions",
+  "task_file": "benchmarks/pipeline-demo/task.md",
+  "grammar_example": "benchmarks/pipeline-demo/grammar-example.xml",
+  "value_whitelist": "benchmarks/pipeline-demo/value-whitelist.txt",
+  "seed_model": "artifacts/simple-model-test-20260727/raw-model.xml",
+  "acceptance_spec": "benchmarks/pipeline-demo/acceptance.json",
+  "max_repairs": 1,
+  "max_tokens": 2048,
+  "max_prompt_tokens": 48000,
+  "context_tokens": 65536,
+  "safety_tokens": 8192,
+  "stateless_attempts": true,
+  "tool_count": 0,
+  "thinking_enabled": false,
+  "teaql_enabled": true
+}

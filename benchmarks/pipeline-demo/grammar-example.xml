@@ -1,0 +1,4 @@
+<root name="example-service" data_service="sqlite">
+  <account _name="Account" _module="Accounts" _module_key="accounts"
+           name="string()" created_at="createTime()"/>
+</root>

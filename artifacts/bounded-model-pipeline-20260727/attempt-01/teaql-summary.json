@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "exit_code": 0,
+  "duration_seconds": 1.088,
+  "counts": {
+    "errors": 0,
+    "warnings": 10,
+    "suggestions": 0,
+    "solids": 10
+  },
+  "command_error": null
+}

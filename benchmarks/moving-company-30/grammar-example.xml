@@ -1,0 +1,12 @@
+<root name="example-service" data_service="sqlite">
+  <account _name="Account" _module="Identity and Access"
+           _module_key="identity-access"
+           record_version="string()" deleted_at="string()"
+           updated_at="updateTime()" name="string()"/>
+  <account_event _name="Account Event" _module="Identity and Access"
+                 _module_key="identity-access"
+                 record_version="string()" deleted_at="string()"
+                 updated_at="updateTime()"
+                 account="account()" event_name="string()"
+                 changed_at="createTime()"/>
+</root>

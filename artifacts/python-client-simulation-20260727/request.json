@@ -1,0 +1,24 @@
+{
+  "endpoint_path": "/v1/chat/completions",
+  "payload": {
+    "model": "nemotron-3-super",
+    "messages": [
+      {
+        "role": "system",
+        "content": "/no_think\nYou generate TeaQL KSML. Return one complete XML document only.\nDo not use tools, search, Markdown fences, commentary, or explanations.\nFollow the supplied grammar and value whitelist exactly."
+      },
+      {
+        "role": "user",
+        "content": "Create a small school-service KSML model with exactly three entities:\n\n1. platform\n   - name=\"string()\"\n   - platform_code=\"string()\"\n   - created_at=\"createTime()\"\n2. merchant\n   - name=\"string()\"\n   - merchant_code=\"string()\"\n   - contact_email=\"string()\"\n   - platform=\"platform()\"\n3. school\n   - name=\"string()\"\n   - school_code=\"string()\"\n   - address=\"string()\"\n   - merchant=\"merchant()\"\n\nUse meaningful field names exactly as listed. Do not invent attr1/attr2.\n\nRequired grammar example:\n<root name=\"example-service\" data_service=\"sqlite\">\n  <account _name=\"Account\" _module=\"Accounts\" _module_key=\"accounts\"\n           name=\"string()\" created_at=\"createTime()\"/>\n</root>\n\nRules:\n- The root element must be <root name=\"school-service\" data_service=\"sqlite\">.\n- Entity names are element tags; fields and relationships are XML attributes.\n- Every entity must contain _name, _module, and _module_key.\n- Do not use <object>, <field>, nested field elements, id, or integer().\n- Allowed scalar values: string(), createTime(), updateTime().\n- Allowed relationship values: platform(), merchant().\n- Output XML only."
+      }
+    ],
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 2048,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "stateless": true,
+  "tool_count": 0
+}
